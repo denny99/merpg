@@ -1,0 +1,29 @@
+{
+    "development": {
+        "db_login": {
+            "auth_key": "alloweitheingliffeaddide",
+            "auth_secret": "38VOsvJOlAklrAdC8c54yT1c"
+        },
+        "db_list": {
+            "monsters": "zmonsters",
+            "characters": "zcharacters",
+            "items": "zitems",
+            "tables": "ztables",
+            "users": "zusers"
+        }
+    },
+
+    "production": {
+        "db_login": {
+            "auth_key": "alloweitheingliffeaddide",
+            "auth_secret": "38VOsvJOlAklrAdC8c54yT1c"
+        },
+        "db_list": {
+            "monsters": "monsters",
+            "characters": "characters",
+            "items": "items",
+            "tables": "tables",
+            "users": "users"
+        }
+    }
+}
