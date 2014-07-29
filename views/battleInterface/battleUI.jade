@@ -2,3 +2,76 @@
    Created by Denny on 29.07.2014.
 
 include battleLog
+
+block battleUI
+    .container-fluid
+        .row.merpg-battleUI
+            .merpg-well.battleUI-well
+                .container-fluid
+                    .row
+                        .col-xs-6
+                            a.thumbnail(href = "#")
+                                image.merpg-fill(src="/images/person-placeholder.jpg")
+                        .col-xs-6
+                            h4 Heldenname
+                    .row.form-group
+                        .col-md-12
+                            //TODO generate names depending on owner name
+                            .btn-group.btn-group-justified(data-toggle='buttons')
+                                label.btn.btn-primary.active.btn-sm
+                                    input.optionAttack(type='radio', name='heldenname')
+                                    | A
+                                label.btn.btn-primary.btn-sm
+                                    input.optionMove(type='radio', name='heldenname')
+                                    | B
+                                label.btn.btn-primary.btn-sm
+                                    input.optionCast(type='radio', name='heldenname')
+                                    | Z
+                                label.btn.btn-primary.btn-sm
+                                    input.optionCast(type='radio', name='heldenname')
+                                    | V
+                                label.btn.btn-primary.btn-sm
+                                    input.optionCast(type='radio', name='heldenname')
+                                    | C
+                                label.btn.btn-primary.btn-sm
+                                    input.optionCast(type='radio', name='heldenname')
+                                    | O
+
+                    //TODO only visible when A or Z is selected
+                    .row.form-group
+                        .col-md-12
+                            label.col-lg-4.control-label(for='selectAttackTarget') Angriffsziel
+                            .col-lg-8
+                                select#selectAttackTarget.form-control.input-sm
+                                    //TODO display all available Battle Members
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                                    option 5
+                    .row.form-group
+                        .col-md-12
+                            .col-md-12
+                                label
+                                    input#checkboxBlock(type='checkbox')
+                                    |  Blocken
+
+                    //TODO only visible when shield is available and player wants to block
+                    .row.form-group
+                        .col-md-12
+                            label.col-lg-4.control-label(for='selectBlockTarget') Blockziel
+                            .col-lg-8
+                                select#selectBlockTarget.form-control.input-sm
+                                    //TODO display all available Battle Members
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                                    option 5
+                    .row.form-group
+                        .col-md-12
+                            span.control-label(for='selectBlockTarget') OB Zuweisung
+                            input#obSlider(data-slider-id='obSlider', type="text", data-slider-min="0", data-slider-max="20", data-slider-step="1", data-slider-value="10")
+    script(type="text/javascript").
+        $('#obSlider').slider({
+        });

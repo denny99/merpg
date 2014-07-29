@@ -2,17 +2,46 @@
    Created by Denny on 29.07.2014.
 
 block battleLog
-    .container-fluid.jumbotron
+    .container-fluid.well.merpg-battleLog
         .row
-            .col-md-2.merpg-well
-                .container-fluid
+            .col-md-11
+                //TODO generate dynamic
+                .merpg-well
                     .row
-                        .col-md-4
-                            a.thumbnail(href = "#")
-                                image.merpg-fill(src="/images/person-placeholder.jpg")
-                        .col-md-6
-                            h4 Heldenname
-                            h5 5
-                        .col-md-2
-                            a.h5.merpg-hand
-                                span.glyphicon.glyphicon-pencil
+                        .col-md-12
+                            a.close.merpg-close(type='button')
+                                span(aria-hidden='true') ×
+                                    span.sr-only Close
+                    .container-fluid
+                            .row
+                                .col-xs-3
+                                    a(href = "#")
+                                        image.merpg-img-mini(src="/images/person-placeholder.jpg")
+                                .col-xs-5
+                                    span Heldenname
+                                .col-xs-1
+                                    span 5
+                                .col-xs-2
+                                    a.merpg-editPencil
+                                        span.glyphicon.glyphicon-pencil
+                            .row
+                                table.table.table-responsive.table-condensed
+                                    tbody
+                                        tr
+                                            th Treffer
+                                            td 0
+                                        tr
+                                            th Treffer pro Runde
+                                            td 0
+                                        tr
+                                            th Benommenheit
+                                            td 0
+                                        tr
+                                            th Runden bis zum Tod
+                                            td 0
+                                        tr
+                                            th Aktivität Bonus
+                                            td 0
+
+            .col-md-1
+                a.btn.btn-block.btn-primary Hinzufügen

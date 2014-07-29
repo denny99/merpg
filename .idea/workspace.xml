@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/person-placeholder.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/battleInterface/attackUI.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="MOVED" beforePath="C:\Users\Denny\WebstormProjects\merpg\views\mainmenu.jade" afterPath="$PROJECT_DIR$/views/mainMenu.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/js/API.js" afterPath="$PROJECT_DIR$/server/js/API.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api_v1.0.js" afterPath="$PROJECT_DIR$/routes/api_v1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/itemEditor.jade" afterPath="$PROJECT_DIR$/views/itemEditor.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap-slider.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/merpg.css" afterPath="$PROJECT_DIR$/public/css/merpg.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/monsterEditor.jade" afterPath="$PROJECT_DIR$/views/monsterEditor.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
@@ -38,31 +32,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleLog.jade" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.116838485" vertical-offset="0" max-vertical-offset="873">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="monsterEditor.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2431">
-              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1558" max-vertical-offset="2431">
+              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="53" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="battleUI.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24056605" vertical-offset="0" max-vertical-offset="1394">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+              <folding>
+                <marker date="1406655019366" expanded="true" signature="3819:3830" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="battleLog.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -71,48 +77,8 @@
       <file leaf-file-name="merpg.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/merpg.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-              <caret line="42" column="11" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleUI.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attackUI.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/attackUI.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api_v1.0.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1252" max-vertical-offset="2142">
-              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="API.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/js/API.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5219">
-              <caret line="235" column="26" selection-start-line="235" selection-start-column="17" selection-end-line="235" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1343">
+              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -145,10 +111,13 @@
         <option value="$PROJECT_DIR$/server/js/API.js" />
         <option value="$PROJECT_DIR$/views/itemEditor.jade" />
         <option value="$PROJECT_DIR$/views/mainMenu.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
+        <option value="$PROJECT_DIR$/public/js/test.js" />
+        <option value="$PROJECT_DIR$/public/js/bootstrap-slider.js" />
+        <option value="$PROJECT_DIR$/public/css/slider.css" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/css/merpg.css" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
+        <option value="$PROJECT_DIR$/public/css/merpg.css" />
+        <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
       </list>
     </option>
   </component>
@@ -376,8 +345,8 @@
       <recent name="C:\Users\Denny\WebstormProjects\merpg\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Denny\WebstormProjects\merpg\views" />
       <recent name="C:\Users\Denny\WebstormProjects\merpg\public\js" />
+      <recent name="C:\Users\Denny\WebstormProjects\merpg\views" />
       <recent name="C:\Users\Denny\WebstormProjects\MersBattleApp\public\js" />
       <recent name="C:\Users\Denny\WebstormProjects\MersBattleApp\public\fonts" />
       <recent name="C:\Users\Denny\WebstormProjects\MersBattleApp\public" />
@@ -460,7 +429,11 @@
       <created>1406638301212</created>
       <updated>1406638301212</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="itemEditor">
+      <created>1406645189632</created>
+      <updated>1406645189632</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -528,7 +501,8 @@
     <MESSAGE value="server" />
     <MESSAGE value="modules" />
     <MESSAGE value="monsterEditor and BS theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="monsterEditor and BS theme" />
+    <MESSAGE value="itemEditor" />
+    <option name="LAST_COMMIT_MESSAGE" value="itemEditor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,22 +522,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1105" max-vertical-offset="1309">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/jquery-1.11.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/layout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="255">
@@ -844,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="566">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/layout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14680484" vertical-offset="0" max-vertical-offset="579">
@@ -868,10 +818,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.min.css">
+    <entry file="file://$PROJECT_DIR$/views/mainMenu.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="70668" max-vertical-offset="116467">
-          <caret line="4181" column="49" selection-start-line="4181" selection-start-column="49" selection-end-line="4181" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.077892326" vertical-offset="0" max-vertical-offset="873">
+          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -887,15 +837,7 @@
     <entry file="file://$PROJECT_DIR$/server/js/API.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5219">
-          <caret line="235" column="26" selection-start-line="235" selection-start-column="17" selection-end-line="235" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0584192" vertical-offset="1575" max-vertical-offset="2941">
-          <caret line="147" column="72" selection-start-line="147" selection-start-column="72" selection-end-line="147" selection-end-column="72" />
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -908,51 +850,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
+    <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.25315005" vertical-offset="51" max-vertical-offset="2941">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/mainMenu.jade">
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.077892326" vertical-offset="0" max-vertical-offset="873">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.12215569" vertical-offset="0" max-vertical-offset="835">
+          <caret line="6" column="30266" selection-start-line="6" selection-start-column="30260" selection-end-line="6" selection-end-column="30266" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap-slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="6681">
+          <caret line="64" column="90" selection-start-line="64" selection-start-column="90" selection-end-line="64" selection-end-column="90" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25348836" vertical-offset="86788" max-vertical-offset="116467">
+          <caret line="5118" column="29" selection-start-line="5118" selection-start-column="23" selection-end-line="5118" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2516">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2431">
-          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/merpg.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="42" column="11" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="538" max-vertical-offset="2431">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="53" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.116838485" vertical-offset="0" max-vertical-offset="873">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/merpg.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1343">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24056605" vertical-offset="0" max-vertical-offset="1394">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <marker date="1406655019366" expanded="true" signature="3819:3830" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
