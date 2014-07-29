@@ -1,0 +1,111 @@
+//
+   Created by Denny on 29.07.2014.
+
+block monsterEditor
+    .container
+        .row
+            .col-md-6.col-md-offset-3.well
+                select#availableMonsters.form-control
+                    //TODO display all available Monsters
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+                form.form-horizontal
+                    fieldset
+                        legend Monster Editor
+                        .container-fluid
+                            .row
+                                .col-md-3
+                                    a.thumbnail(href = "#")
+                                        image.merpg-fill(src="/images/person-placeholder.jpg")
+                                .col-md-9
+                                    .container-fluid
+                                        .row.form-group
+                                            .col-md-6
+                                                input#inputMonstername.form-control(type='text', placeholder='Monstername')
+                                            .col-md-6
+                                                input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", value = "1")
+                                        .row.form-group
+                                            .col-md-12
+                                                textarea#monsterDescription.form-control(rows='3') Monsterbeschreibung
+                        .form-group
+                            label.col-md-2.control-label Größe
+                            .col-md-10
+                                .radio-inline
+                                    label
+                                        input#regular(type='radio', name='sizeRadios', value='normal', checked='')
+                                        | Normal
+                                .radio-inline
+                                    label
+                                        input#large(type='radio', name='sizeRadios', value='large')
+                                        | Groß
+                                .radio-inline
+                                    label
+                                        input#huge(type='radio', name='sizeRadios', value='huge')
+                                        | Riesig
+                        .form-group
+                            label.col-md-2.control-label Extras
+                            .col-md-10
+                                .checkbox-inline
+                                    label
+                                        input#bloodImmun(type='checkbox')
+                                        | von Blutungen betroffen
+                                .checkbox-inline
+                                    label
+                                        input#stunImmun(type='checkbox')
+                                        | von Benommenheit betroffen
+                        .container-fluid
+                            .row
+                                .col-md-6
+                                    .form-group
+                                        label.col-md-2.control-label(for='inputHits') Treffer
+                                        .col-md-10
+                                            input#inputHits.form-control.input-sm(type='number', placeholder='Treffer', min="1", max="400", value = "20")
+                                    .form-group
+                                        label.col-md-2.control-label(for='inputOB') OB
+                                        .col-md-10
+                                            input#inputOB.form-control.input-sm(type='number', placeholder='OB', min="0", max="240", value = "30")
+                                    .form-group
+                                        label.col-md-2.control-label(for='inputDB') DB
+                                        .col-md-10
+                                            input#inputDB.form-control.input-sm(type='number', placeholder='DB', min="0", max="75", value = "10")
+                                    .form-group
+                                        label.col-md-2.control-label(for='inputMM') BM
+                                        .col-md-10
+                                            input#inputMM.form-control.input-sm(type='number', placeholder='BM', min="0", max="50", value = "10")
+                                .col-md-6
+                                    .progress.progress-striped.active.merpg-bar-align
+                                        .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='400', style='width: 5%')
+                                    .progress.progress-striped.active.merpg-bar-align
+                                        .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='240', style='width: 8%;')
+                                    .progress.progress-striped.active.merpg-bar-align
+                                        .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='10', aria-valuemin='0', aria-valuemax='75', style='width: 13%;')
+                                    .progress.progress-striped.active.merpg-bar-align
+                                        .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='10', aria-valuemin='0', aria-valuemax='50', style='width: 20%;')
+                        .form-group
+                            label.col-lg-2.control-label(for='selectedWeapon') Equipment
+                            .col-lg-10
+                                select#selectedWeapon.form-control
+                                    //TODO display all available Weapons
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                                    option 5
+                                br
+                                select#selectedArmor.form-control
+                                    option(value = "none") Keine
+                                    option(value = "softLeather") Leichtes Leder
+                                    option(value = "rigidLeather") verstärktes Leder
+                                    option(value = "chain") Kette
+                                    option(value = "plate") Platte
+                        .form-group
+                            .col-lg-12
+                                button.btn.btn-danger.pull-right
+                                    span.glyphicon.glyphicon-remove
+                                button.btn.btn-success.pull-right(type = "submit")
+                                    span.glyphicon.glyphicon-ok
+
+

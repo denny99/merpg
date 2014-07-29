@@ -11,7 +11,7 @@ var app = express();
 //program config
 global.config = require('./server/settings/config.json')[app.get('env')];
 
-var routes = require('./routes/index');
+var routes = require('./routes/layout');
 var api = require('./routes/api_v1.0');
 
 //program params
@@ -24,12 +24,15 @@ app.set('view engine', 'jade');
 app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+//app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/', api);
+
+//pretty jade files
+app.locals.pretty = true;
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -61,6 +64,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;
