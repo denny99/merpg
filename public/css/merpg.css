@@ -24,3 +24,22 @@
     height: 31px;
     margin-bottom: 15px;
 }
+
+.well * .input-group-addon {
+    background-color: darkgray;
+}
+
+.merpg-well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #4e5d6c;
+    border: 1px solid grey;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0, 0, 0) !important;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49) !important;
+}
+
+.merpg-hand {
+    cursor: pointer;
+}

@@ -204,6 +204,99 @@ API = function() {
             }
         })
     };
+
+    /**
+     * list all item names of given type
+     * @param type filter option
+     * @param fn callback
+     */
+    this.listItem = function(type, fn) {
+        db.view("getItems", "listItems", {key: type}, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * list all table names of given type
+     * @param type filter option
+     * @param fn callback
+     */
+    this.listTable = function(type, fn) {
+        db.view("getTables", "listTables", {key: type}, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * list all monster names
+     * @param fn callback
+     */
+    this.listMonsters = function(fn) {
+        db.view("getMonsters", "listMonsters", {}, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * list all character names filtered by paramter
+     * @param player if given only characters of this player will be listed
+     * @param fn callback
+     */
+    this.listCharacters = function(player, fn) {
+        var param = {};
+        var view = "listCharacters";
+        if (player != characters) {
+            param = {key: player};
+            view += "OfPlayer";
+        }
+        db.view("getCharacters", view, param, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
 };
 
 exports.API = new API();
