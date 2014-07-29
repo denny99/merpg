@@ -1,3 +1,83 @@
-//
-   Created by Denny on 29.07.2014.
+block itemEditor
+    .container
+        .row
+            .col-md-6.col-md-offset-3.well
+                select#availableItems.form-control
+                    //TODO display all available Items
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+                form.form-horizontal
+                    fieldset
+                        legend Item Editor
+                        .container-fluid
+                            .row
+                                .col-md-3
+                                    a.thumbnail(href = "#")
+                                        image.merpg-fill(src="/images/person-placeholder.jpg")
+                                .col-md-9
+                                    .form-group
+                                        input#inputMonstername.form-control.input-sm(type='text', placeholder='Gegenstandsname')
+                                    .form-group
+                                        .input-group
+                                            input#inputPrice.form-control.input-sm(type='number', placeholder='Level', min="1", value = "1")
+                                            span.input-group-addon ZS
+                                    .form-group
+                                        .input-group
+                                            input#inputWeight.form-control.input-sm(type='text', placeholder='Level', value = "1")
+                                            span.input-group-addon kg
 
+                                     .form-group
+                                        textarea#monsterDescription.form-control(rows='3') Itembeschreibung
+                        .form-group
+                            label.col-md-2.control-label Typ
+                            .col-md-10
+                                .radio-inline
+                                    label
+                                        input#equipment(type='radio', name='typeRadios', value='equipment', checked='')
+                                        | Ausrüstung
+                                .radio-inline
+                                    label
+                                        input#weapon(type='radio', name='typeRadios', value='weapon')
+                                        | Waffe
+                                .radio-inline
+                                    label
+                                        input#shield(type='radio', name='typeRadios', value='shield')
+                                        | Schild
+                                .radio-inline
+                                    label
+                                        input#armor(type='radio', name='typeRadios', value='armor')
+                                        | Rüstung
+                        .form-group
+                            label.col-lg-2.control-label Radios
+                            .col-lg-10
+                                .radio
+                                    label
+                                        input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+                                        | Option one is this
+                                .radio
+                                    label
+                                        input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+                                        | Option two can be something else
+                        .form-group
+                            label.col-lg-2.control-label(for='select') Selects
+                            .col-lg-10
+                                select#select.form-control
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                                    option 5
+                                br
+                                select.form-control(multiple='')
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                                    option 5
+                        .form-group
+                            .col-lg-10.col-lg-offset-2
+                                button.btn.btn-default Cancel
+                                button.btn.btn-primary(type='submit') Submit
