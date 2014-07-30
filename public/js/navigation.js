@@ -693,6 +693,426 @@ $(document).ready(function () {
         }
     }
 
+    //unbalancing
+    for (var i = -49; i <= 120; i++) {
+        if (i >= -49 && i <= 5) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 6 && i <= 20) {
+            result[i.toString()] = {
+                text: "",
+                hits: 2,
+                activity: {
+                    bonus: -5,
+                    duration: 2
+                },
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 21 && i <= 35) {
+            result[i.toString()] = {
+                text: "",
+                hits: 4,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                noLegGreaves: {
+                    stunned: 2
+                }
+            }
+        }
+        if (i >= 36 && i <= 50) {
+            result[i.toString()] = {
+                text: "",
+                hits: 5,
+                activity: {
+                    bonus: -10,
+                    duration: 2
+                },
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 51 && i <= 65) {
+            result[i.toString()] = {
+                text: "",
+                hits: 5,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                noShield: {
+                    hits: 8,
+                    stunned: 2
+                }
+            }
+        }
+        if (i >= 66 && i <= 79) {
+            result[i.toString()] = {
+                text: "",
+                hits: 8,
+                activity: {
+                    bonus: -10,
+                    duration: 10
+                },
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 80 && i <= 80) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: -80,
+                stunned: 99,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 81 && i <= 86) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: 3,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 87 && i <= 89) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: 6,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 90 && i <= 90) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                knockedOut: true
+            }
+        }
+        if (i >= 91 && i <= 96) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: 6,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                noHelmet: {
+                    knockedOut: true
+                }
+            }
+        }
+        if (i >= 97 && i <= 99) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: 15,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 100 && i <= 100) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                knockedOut: true
+            }
+        }
+        if (i >= 101 && i <= 106) {
+            result[i.toString()] = {
+                text: "",
+                hits: 12,
+                activity: -50,
+                stunned: 1,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 107 && i <= 109) {
+            result[i.toString()] = {
+                text: "",
+                hits: 9,
+                activity: undefined,
+                stunned: 6,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                noHelmet: {
+                    knockedOut: true
+                }
+            }
+        }
+        if (i >= 110 && i <= 110) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 12
+            }
+        }
+        if (i >= 111 && i <= 116) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: -40,
+                stunned: 7,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 117 && i <= 119) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: -20,
+                stunned: 9,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                noShield: {
+                    knockedOut: true
+                }
+            }
+        }
+        if (i >= 120 && i <= 120) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 0
+            }
+        }
+    }
+
+    //large creature
+    for (var i = -49; i <= 120; i++) {
+        if (i >= -49 && i <= 5) {
+            result[i.toString()] = {
+                text: "",
+                hits: 10,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 6 && i <= 20) {
+            result[i.toString()] = {
+                text: "",
+                hits: 6,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 21 && i <= 35) {
+            result[i.toString()] = {
+                text: "",
+                hits: 12,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 36 && i <= 50) {
+            result[i.toString()] = {
+                text: "",
+                hits: 18,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 51 && i <= 65) {
+            result[i.toString()] = {
+                text: "",
+                hits: 20,
+                activity: -10,
+                stunned: 2,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 66 && i <= 79) {
+            result[i.toString()] = {
+                text: "",
+                hits: 18,
+                activity: -20,
+                stunned: 3,
+                hitsPerRound: 5,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 80 && i <= 80) {
+            result[i.toString()] = {
+                text: "",
+                hits: 15,
+                activity: -60,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 6
+            }
+        }
+        if (i >= 81 && i <= 86) {
+            result[i.toString()] = {
+                text: "",
+                hits: 25,
+                activity: -10,
+                stunned: 2,
+                hitsPerRound: 3,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 87 && i <= 89) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: {
+                    bonus: -30,
+                    duration: 4
+                },
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 10
+            }
+        }
+        if (i >= 90 && i <= 90) {
+            result[i.toString()] = {
+                text: "",
+                hits: 20,
+                activity: undefined,
+                stunned: 6,
+                hitsPerRound: undefined,
+                roundsTillDeath: 6
+            }
+        }
+        if (i >= 91 && i <= 96) {
+            result[i.toString()] = {
+                text: "",
+                hits: 15,
+                activity: -20,
+                stunned: 3,
+                hitsPerRound: 2,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 97 && i <= 99) {
+            result[i.toString()] = {
+                text: "",
+                hits: 30,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                knockedOut: true
+            }
+        }
+        if (i >= 100 && i <= 100) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 0
+            }
+        }
+        if (i >= 101 && i <= 106) {
+            result[i.toString()] = {
+                text: "",
+                hits: 15,
+                activity: undefined,
+                stunned: 3,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 107 && i <= 109) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: 2,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined
+            }
+        }
+        if (i >= 110 && i <= 110) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 0
+            }
+        }
+        if (i >= 111 && i <= 116) {
+            result[i.toString()] = {
+                text: "",
+                hits: 60,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: undefined,
+                knockedOut: true
+            }
+        }
+        if (i >= 117 && i <= 119) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 0
+            }
+        }
+        if (i >= 120 && i <= 120) {
+            result[i.toString()] = {
+                text: "",
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
+                hitsPerRound: undefined,
+                roundsTillDeath: 0
+            }
+        }
+    }
+
     //grappling
     for (var i = -49; i <= 120; i++) {
         if (i >= -49 && i <= 5) {
@@ -708,8 +1128,8 @@ $(document).ready(function () {
         if (i >= 6 && i <= 20) {
             result[i.toString()] = {
                 text: "",
-                hits: 5,
-                activity: -5,
+                hits: 2,
+                activity: undefined,
                 stunned: undefined,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined
@@ -718,14 +1138,14 @@ $(document).ready(function () {
         if (i >= 21 && i <= 35) {
             result[i.toString()] = {
                 text: "",
-                hits: 4,
-                activity: {
-                    bonus: -40,
-                    duration: 1
-                },
+                hits: 3,
+                activity: undefined,
                 stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: undefined
+                roundsTillDeath: undefined,
+                legGreaves: {
+                    stunned: 1
+                }
             }
         }
         if (i >= 36 && i <= 50) {
@@ -736,7 +1156,7 @@ $(document).ready(function () {
                 stunned: undefined,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined,
-                noArmGreaves: {
+                legGreaves: {
                     stunned: 1
                 }
             }
@@ -745,7 +1165,7 @@ $(document).ready(function () {
             result[i.toString()] = {
                 text: "",
                 hits: undefined,
-                activity: undefined,
+                activity: -50,
                 stunned: undefined,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined
@@ -754,8 +1174,8 @@ $(document).ready(function () {
         if (i >= 66 && i <= 79) {
             result[i.toString()] = {
                 text: "",
-                hits: 12,
-                activity: -40,
+                hits: undefined,
+                activity: -25,
                 stunned: 2,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined
@@ -764,19 +1184,20 @@ $(document).ready(function () {
         if (i >= 80 && i <= 80) {
             result[i.toString()] = {
                 text: "",
-                hits: 30,
+                hits: 9,
                 activity: undefined,
-                stunned: 24,
+                stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: undefined
+                roundsTillDeath: undefined,
+                knockedOut: true
             }
         }
         if (i >= 81 && i <= 86) {
             result[i.toString()] = {
                 text: "",
-                hits: 8,
-                activity: undefined,
-                stunned: 2,
+                hits: undefined,
+                activity: -40,
+                stunned: 3,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined
             }
@@ -784,21 +1205,23 @@ $(document).ready(function () {
         if (i >= 87 && i <= 89) {
             result[i.toString()] = {
                 text: "",
-                hits: 9,
-                activity: -60,
-                stunned: 3,
+                hits: undefined,
+                activity: undefined,
+                stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: undefined
+                roundsTillDeath: undefined,
+                knockedOut: true
             }
         }
         if (i >= 90 && i <= 90) {
             result[i.toString()] = {
                 text: "",
-                hits: 25,
-                activity: undefined,
+                hits: undefined,
+                activity: -60,
                 stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: undefined
+                roundsTillDeath: undefined,
+                knockedOut: true
             }
         }
         if (i >= 91 && i <= 96) {
@@ -806,22 +1229,20 @@ $(document).ready(function () {
                 text: "",
                 hits: undefined,
                 activity: undefined,
-                stunned: undefined,
+                stunned: 9,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined,
-                noHelmet: {
-                    hits: 20
-                }
+                knockedOut: true
             }
         }
         if (i >= 97 && i <= 99) {
             result[i.toString()] = {
                 text: "",
                 hits: undefined,
-                activity: undefined,
+                activity: -75,
                 stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: 6
+                roundsTillDeath: undefined
             }
         }
         if (i >= 100 && i <= 100) {
@@ -831,15 +1252,22 @@ $(document).ready(function () {
                 activity: undefined,
                 stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: undefined
+                roundsTillDeath: undefined,
+                noHelmet: {
+                    roundsTillDeath: 0
+                },
+                helmet: {
+                    stunned: 3,
+                    activity: -60
+                }
             }
         }
         if (i >= 101 && i <= 106) {
             result[i.toString()] = {
                 text: "",
-                hits: 15,
-                activity: -75,
-                stunned: 3,
+                hits: undefined,
+                activity: -10,
+                stunned: 5,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined
             }
@@ -847,21 +1275,28 @@ $(document).ready(function () {
         if (i >= 107 && i <= 109) {
             result[i.toString()] = {
                 text: "",
-                hits: undefined,
+                hits: 20,
                 activity: undefined,
-                stunned: 12,
+                stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: 12
+                knockedOut: true,
+                roundsTillDeath: undefined
             }
         }
         if (i >= 110 && i <= 110) {
             result[i.toString()] = {
                 text: "",
-                hits: 35,
+                hits: undefined,
                 activity: undefined,
-                stunned: 2,
+                stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: 6
+                roundsTillDeath: undefined,
+                noHelmet: {
+                    roundsTillDeath: 6
+                },
+                helmet: {
+                    stunned: 5
+                }
             }
         }
         if (i >= 111 && i <= 116) {
@@ -869,7 +1304,7 @@ $(document).ready(function () {
                 text: "",
                 hits: undefined,
                 activity: undefined,
-                stunned: 5,
+                stunned: 2,
                 hitsPerRound: undefined,
                 roundsTillDeath: undefined
             }
@@ -877,21 +1312,21 @@ $(document).ready(function () {
         if (i >= 117 && i <= 119) {
             result[i.toString()] = {
                 text: "",
-                hits: undefined,
-                activity: undefined,
-                stunned: 3,
+                hits: 20,
+                activity: -80,
+                stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: 3
+                roundsTillDeath: undefined
             }
         }
         if (i >= 120 && i <= 120) {
             result[i.toString()] = {
                 text: "",
-                hits: 25,
+                hits: undefined,
                 activity: undefined,
                 stunned: undefined,
                 hitsPerRound: undefined,
-                roundsTillDeath: undefined
+                roundsTillDeath: 0
             }
         }
     }

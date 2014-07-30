@@ -51,38 +51,54 @@ block itemEditor
                                      .form-group
                                         textarea#taMonsterDescription.form-control(rows='3') Itembeschreibung
                         #weaponOnly
-                            .form-group
-                                label.col-md-3.control-label(for='inputRange')
-                                    p Reichweite
-                                    p > 3m => Fernkampf
-                                .col-md-9
-                                    .input-group
-                                        input#inputRange.form-control.text-right(type='text', placeholder='Reichweite', value = "3")
-                                        span.input-group-addon m
-                            .form-group
-                                label.col-md-3.control-label(for='inputOBSL') OB vs. Leichtes Leder
-                                .col-md-9
-                                    .input-group
-                                        input#inputOBSL.form-control.text-right(type='number', placeholder='OB vs. Leichtes Leder', min="0", value = "0")
-                                        span.input-group-addon OB
-                            .form-group
-                                label.col-md-3.control-label(for='inputOBRL') OB vs. verst. Leder
-                                .col-md-9
-                                    .input-group
-                                        input#inputOBRL.form-control.text-right(type='number', placeholder='OB vs. Verst. Leder', min="0", value = "0")
-                                        span.input-group-addon OB
-                            .form-group
-                                label.col-md-3.control-label(for='inputOBChain') OB vs. Kette
-                                .col-md-9
-                                    .input-group
-                                        input#inputOBChain.form-control.text-right(type='number', placeholder='OB vs. Kette', min="0", value = "0")
-                                        span.input-group-addon OB
-                            .form-group
-                                label.col-md-3.control-label(for='inputOBPlate') OB vs. Platte
-                                .col-md-9
-                                    .input-group
-                                        input#inputOBPlate.form-control.text-right(type='number', placeholder='OB vs. Platte', min="0", value = "0")
-                                        span.input-group-addon OB
+                            .container-fluid
+                                .row
+                                    .col-md-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-6.control-label(for='inputRange')
+                                                span Reichweite
+                                            .col-md-6
+                                                .input-group
+                                                    input#inputRange.form-control.text-right(type='text', placeholder='Reichweite', value = "3")
+                                                    span.input-group-addon m
+                                    .col-md-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-6.control-label(for='inputRange')
+                                                p Patzer
+                                            .col-md-6
+                                                .input-group
+                                                    input#inputRange.form-control.text-right(type='number', placeholder='Patzer', value = "1", min = "1")
+                                                    span.input-group-addon %
+                                .row
+                                    .col-md-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-6.control-label(for='inputOBSL') OB vs. Leichtes Leder
+                                            .col-md-6
+                                                .input-group
+                                                    input#inputOBSL.form-control.text-right(type='number', placeholder='OB vs. Leichtes Leder', min="0", value = "0")
+                                                    span.input-group-addon OB
+                                    .col-md-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-6.control-label(for='inputOBRL') OB vs. verst. Leder
+                                            .col-md-6
+                                                .input-group
+                                                    input#inputOBRL.form-control.text-right(type='number', placeholder='OB vs. Verst. Leder', min="0", value = "0")
+                                                    span.input-group-addon OB
+                                .row
+                                    .col-md-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-6.control-label(for='inputOBChain') OB vs. Kette
+                                            .col-md-6
+                                                .input-group
+                                                    input#inputOBChain.form-control.text-right(type='number', placeholder='OB vs. Kette', min="0", value = "0")
+                                                    span.input-group-addon OB
+                                    .col-md-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-6.control-label(for='inputOBPlate') OB vs. Platte
+                                            .col-md-6
+                                                .input-group
+                                                    input#inputOBPlate.form-control.text-right(type='number', placeholder='OB vs. Platte', min="0", value = "0")
+                                                    span.input-group-addon OB
                             .form-group
                                 label.col-md-3.control-label(for='selectDamageType') Schadensart
                                 .col-md-9
