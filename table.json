@@ -1,0 +1,2686 @@
+{"1": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "2": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "3": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "4": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "5": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "6": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "7": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "8": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "9": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "10": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "11": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "12": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "13": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "14": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "15": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "16": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "17": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "18": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "19": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "20": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "21": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "22": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "23": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "24": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "25": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "26": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "27": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "28": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "29": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "30": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "31": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "32": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "33": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "34": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "35": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "36": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "37": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "38": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "39": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "40": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "41": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "42": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "43": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "44": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "45": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "46": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "47": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "48": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "49": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "50": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "51": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "52": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "53": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "54": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "55": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "56": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "57": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "58": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "59": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "60": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "61": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "62": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "63": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "64": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "65": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "66": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "67": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "68": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "69": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "70": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 0
+    }
+}, "71": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 1
+    }
+}, "72": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 1
+    }
+}, "73": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 1
+    }
+}, "74": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 1
+    }
+}, "75": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 0
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 0
+    },
+    "plate": {
+        "damage": 1
+    }
+}, "76": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 4
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 2
+    },
+    "plate": {
+        "damage": 2
+    }
+}, "77": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 4
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 2
+    },
+    "plate": {
+        "damage": 2
+    }
+}, "78": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 4
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 2
+    },
+    "plate": {
+        "damage": 2
+    }
+}, "79": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 4
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 2
+    },
+    "plate": {
+        "damage": 2
+    }
+}, "80": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 4
+    },
+    "rigidLeather": {
+        "damage": 0
+    },
+    "chain": {
+        "damage": 2
+    },
+    "plate": {
+        "damage": 2
+    }
+}, "81": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 6
+    },
+    "rigidLeather": {
+        "damage": 3
+    },
+    "chain": {
+        "damage": 4
+    },
+    "plate": {
+        "damage": 3
+    }
+}, "82": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 6
+    },
+    "rigidLeather": {
+        "damage": 3
+    },
+    "chain": {
+        "damage": 4
+    },
+    "plate": {
+        "damage": 3
+    }
+}, "83": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 6
+    },
+    "rigidLeather": {
+        "damage": 3
+    },
+    "chain": {
+        "damage": 4
+    },
+    "plate": {
+        "damage": 3
+    }
+}, "84": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 6
+    },
+    "rigidLeather": {
+        "damage": 3
+    },
+    "chain": {
+        "damage": 4
+    },
+    "plate": {
+        "damage": 3
+    }
+}, "85": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 6
+    },
+    "rigidLeather": {
+        "damage": 3
+    },
+    "chain": {
+        "damage": 4
+    },
+    "plate": {
+        "damage": 3
+    }
+}, "86": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 5
+    },
+    "chain": {
+        "damage": 6
+    },
+    "plate": {
+        "damage": 4
+    }
+}, "87": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 5
+    },
+    "chain": {
+        "damage": 6
+    },
+    "plate": {
+        "damage": 4
+    }
+}, "88": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 5
+    },
+    "chain": {
+        "damage": 6
+    },
+    "plate": {
+        "damage": 4
+    }
+}, "89": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 5
+    },
+    "chain": {
+        "damage": 6
+    },
+    "plate": {
+        "damage": 4
+    }
+}, "90": {
+    "none": {
+        "damage": 0
+    },
+    "softLeather": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 5
+    },
+    "chain": {
+        "damage": 6
+    },
+    "plate": {
+        "damage": 4
+    }
+}, "91": {
+    "none": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "softLeather": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 7,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 7
+    },
+    "plate": {
+        "damage": 5
+    }
+}, "92": {
+    "none": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "softLeather": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 7,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 7
+    },
+    "plate": {
+        "damage": 5
+    }
+}, "93": {
+    "none": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "softLeather": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 7,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 7
+    },
+    "plate": {
+        "damage": 5
+    }
+}, "94": {
+    "none": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "softLeather": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 7,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 7
+    },
+    "plate": {
+        "damage": 5
+    }
+}, "95": {
+    "none": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "softLeather": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "rigidLeather": {
+        "damage": 7,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 7
+    },
+    "plate": {
+        "damage": 5
+    }
+}, "96": {
+    "none": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "softLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 9,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 6
+    }
+}, "97": {
+    "none": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "softLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 9,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 6
+    }
+}, "98": {
+    "none": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "softLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 9,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 6
+    }
+}, "99": {
+    "none": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "softLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 9,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 6
+    }
+}, "100": {
+    "none": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "softLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 9,
+        "critical": "A"
+    },
+    "chain": {
+        "damage": 8,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 6
+    }
+}, "101": {
+    "none": {
+        "damage": 11,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 7
+    }
+}, "102": {
+    "none": {
+        "damage": 11,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 7
+    }
+}, "103": {
+    "none": {
+        "damage": 11,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 7
+    }
+}, "104": {
+    "none": {
+        "damage": 11,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 7
+    }
+}, "105": {
+    "none": {
+        "damage": 11,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 10,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 10,
+        "critical": "A"
+    },
+    "plate": {
+        "damage": 7
+    }
+}, "106": {
+    "none": {
+        "damage": 13,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 8,
+        "critical": "A"
+    }
+}, "107": {
+    "none": {
+        "damage": 13,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 8,
+        "critical": "A"
+    }
+}, "108": {
+    "none": {
+        "damage": 13,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 8,
+        "critical": "A"
+    }
+}, "109": {
+    "none": {
+        "damage": 13,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 8,
+        "critical": "A"
+    }
+}, "110": {
+    "none": {
+        "damage": 13,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "rigidLeather": {
+        "damage": 12,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 8,
+        "critical": "A"
+    }
+}, "111": {
+    "none": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 16,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 9,
+        "critical": "A"
+    }
+}, "112": {
+    "none": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 16,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 9,
+        "critical": "A"
+    }
+}, "113": {
+    "none": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 16,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 9,
+        "critical": "A"
+    }
+}, "114": {
+    "none": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 16,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 9,
+        "critical": "A"
+    }
+}, "115": {
+    "none": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "softLeather": {
+        "damage": 16,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 13,
+        "critical": "B"
+    },
+    "chain": {
+        "damage": 14,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 9,
+        "critical": "A"
+    }
+}, "116": {
+    "none": {
+        "damage": 16,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 16,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 10,
+        "critical": "A"
+    }
+}, "117": {
+    "none": {
+        "damage": 16,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 16,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 10,
+        "critical": "A"
+    }
+}, "118": {
+    "none": {
+        "damage": 16,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 16,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 10,
+        "critical": "A"
+    }
+}, "119": {
+    "none": {
+        "damage": 16,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 16,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 10,
+        "critical": "A"
+    }
+}, "120": {
+    "none": {
+        "damage": 16,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "rigidLeather": {
+        "damage": 15,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 16,
+        "critical": "B"
+    },
+    "plate": {
+        "damage": 10,
+        "critical": "A"
+    }
+}, "121": {
+    "none": {
+        "damage": 18,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "122": {
+    "none": {
+        "damage": 18,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "123": {
+    "none": {
+        "damage": 18,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "124": {
+    "none": {
+        "damage": 18,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "125": {
+    "none": {
+        "damage": 18,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "chain": {
+        "damage": 17,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "126": {
+    "none": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 19,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "127": {
+    "none": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 19,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "128": {
+    "none": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 19,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "129": {
+    "none": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 19,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "130": {
+    "none": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "softLeather": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 19,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 19,
+        "critical": "C"
+    },
+    "plate": {
+        "damage": 11,
+        "critical": "B"
+    }
+}, "131": {
+    "none": {
+        "damage": 22,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 21,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 12,
+        "critical": "C"
+    }
+}, "132": {
+    "none": {
+        "damage": 22,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 21,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 12,
+        "critical": "C"
+    }
+}, "133": {
+    "none": {
+        "damage": 22,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 21,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 12,
+        "critical": "C"
+    }
+}, "134": {
+    "none": {
+        "damage": 22,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 21,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 12,
+        "critical": "C"
+    }
+}, "135": {
+    "none": {
+        "damage": 22,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "rigidLeather": {
+        "damage": 21,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 20,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 12,
+        "critical": "C"
+    }
+}, "136": {
+    "none": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 23,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 13,
+        "critical": "C"
+    }
+}, "137": {
+    "none": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 23,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 13,
+        "critical": "C"
+    }
+}, "138": {
+    "none": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 23,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 13,
+        "critical": "C"
+    }
+}, "139": {
+    "none": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 23,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 13,
+        "critical": "C"
+    }
+}, "140": {
+    "none": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 23,
+        "critical": "D"
+    },
+    "chain": {
+        "damage": 22,
+        "critical": "D"
+    },
+    "plate": {
+        "damage": 13,
+        "critical": "C"
+    }
+}, "141": {
+    "none": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 14,
+        "critical": "D"
+    }
+}, "142": {
+    "none": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 14,
+        "critical": "D"
+    }
+}, "143": {
+    "none": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 14,
+        "critical": "D"
+    }
+}, "144": {
+    "none": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 14,
+        "critical": "D"
+    }
+}, "145": {
+    "none": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 23,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 14,
+        "critical": "D"
+    }
+}, "146": {
+    "none": {
+        "damage": 27,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 15,
+        "critical": "E"
+    }
+}, "147": {
+    "none": {
+        "damage": 27,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 15,
+        "critical": "E"
+    }
+}, "148": {
+    "none": {
+        "damage": 27,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 15,
+        "critical": "E"
+    }
+}, "149": {
+    "none": {
+        "damage": 27,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 15,
+        "critical": "E"
+    }
+}, "150": {
+    "none": {
+        "damage": 27,
+        "critical": "E"
+    },
+    "softLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "rigidLeather": {
+        "damage": 26,
+        "critical": "E"
+    },
+    "chain": {
+        "damage": 25,
+        "critical": "E"
+    },
+    "plate": {
+        "damage": 15,
+        "critical": "E"
+    }
+}} 

@@ -1,0 +1,116 @@
+//
+   Created by Denny on 29.07.2014.
+
+.container-fluid.merpg-strong-pad-top
+    .row.text-center
+        .col-sm-3
+            .merpg-well.merpg-battleUI-well
+                .container-fluid.text-left
+                    .row
+                        .col-xs-6
+                            a.thumbnail(href = "#")
+                                image.merpg-fill(src="/images/person-placeholder.jpg")
+                        .col-xs-6
+                            h4 Heldenname
+                            p OB
+                            p DB
+                    .row.form-group
+                        .col-md-12
+                            table.table.table-responsive
+                                tbody
+                                    tr
+                                        th Waffe
+                                        td Schwert
+                                    tr
+                                        th Schild
+                                        td Wallschild
+                                    tr
+                                        th Rüstung
+                                        td Kette
+                    .row.form-group
+                        .col-md-12
+                            .progress.progress-striped.active.merpg-bar-align
+                                #progressHitsCombatant1.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='400', style='width: 5%')
+        .col-sm-4
+            .merpg-well.merpg-attackResult-well
+                .container-fluid
+                    .row
+                        .col-md-12
+                            table.table.table-responsive.text-left
+                                thead
+                                    tr
+                                        th Typ
+                                        th Wurf
+                                        th Ergebnis
+                                tbody
+                                    tr
+                                        td Angriff
+                                        td
+                                            input.merpg-tableInput(type = "text", value = "0")
+                                        td 5A
+                                    tr
+                                        td Primär Krit
+                                        td
+                                            input.merpg-tableInput(type = "text", value = "0")
+                                        td Ergebnis
+                                    tr
+                                        td Sekundär Krit
+                                        td
+                                            input.merpg-tableInput(type = "text", value = "0")
+                                        td Ergebnis
+        .col-sm-2
+            .merpg-well.text-left
+                .container-fluid
+                    .row
+                        .col-md-12
+                            .checkbox
+                                label
+                                    input#checkboxFlankAttack(type='checkbox')
+                                    | Flankenangriff
+                            .checkbox
+                                label
+                                    input#checkboxRearAttack(type='checkbox')
+                                    | Angriff von Hinten
+                            .checkbox
+                                label
+                                    input#checkboxSurprised(type='checkbox')
+                                    | Überraschungsangriff
+                            .checkbox
+                                label
+                                    input#checkboxStunned(type='checkbox')
+                                    | Verteidiger benommen
+                            .checkbox
+                                label
+                                    input#checkboxChangedWeapons(type='checkbox')
+                                    | Waffe gewechselt
+                    .row
+                        .col-md-12
+                            input#inputSpecial(type='number', value = "0")
+        .col-sm-3
+            .merpg-well.merpg-battleUI-well
+                .container-fluid.text-left
+                    .row
+                        .col-xs-6
+                            a.thumbnail(href = "#")
+                                image.merpg-fill(src="/images/person-placeholder.jpg")
+                        .col-xs-6
+                            h4 Heldenname
+                            p OB
+                            p DB
+                    .row.form-group
+                        .col-md-12
+                            table.table.table-responsive
+                                tbody
+                                    tr
+                                        th Waffe
+                                        td Schwert
+                                    tr
+                                        th Schild
+                                        td Wallschild
+                                    tr
+                                        th Rüstung
+                                        td Kette
+                    .row.form-group
+                        .col-md-12
+                            .progress.progress-striped.active.merpg-bar-align
+                                #progressHitsCombatant2.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='400', style='width: 5%')

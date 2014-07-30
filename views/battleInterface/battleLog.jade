@@ -29,19 +29,44 @@ block battleLog
                                     tbody
                                         tr
                                             th Treffer
-                                            td 0
+                                            td
+                                                input.merpg-tableInput(type = "text", value = "0")
                                         tr
                                             th Treffer pro Runde
-                                            td 0
+                                            td
+                                                input.merpg-tableInput(type = "text", value = "0")
                                         tr
                                             th Benommenheit
-                                            td 0
+                                            td
+                                                input.merpg-tableInput(type = "text", value = "0")
                                         tr
                                             th Runden bis zum Tod
-                                            td 0
+                                            td
+                                                input.merpg-tableInput(type = "text", value = "0")
                                         tr
                                             th Aktivität Bonus
-                                            td 0
+                                            td
+                                                input.merpg-tableInput(type = "text", value = "0")
 
             .col-md-1
-                a.btn.btn-block.btn-primary Hinzufügen
+                a.btn.btn-block.btn-primary(data-toggle="modal", data-target="#modalAddMonster") Hinzufügen
+
+                #modalAddMonster.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalAddMonsterTitle', aria-hidden='true')
+                    .modal-dialog.modal-lg
+                        .modal-content
+                            .modal-header
+                                button.close(type='button', data-dismiss='modal')
+                                    span(aria-hidden='true') ×
+                                    span.sr-only Close
+                                h4#modalAddMonsterTitle.modal-title Monster hinzufügen
+                            .modal-body
+                                +monsterEditor(true)
+                            .modal-footer
+                                button.btn.btn-default(type='button', data-dismiss='modal') Abbrechen
+                                button.btn.btn-primary(type='button') Hinzufügen
+                        //
+                           /.modal-content
+                        //
+                           /.modal-dialog
+                    //
+                       /.modal

@@ -12,20 +12,25 @@ html
         script(src="/js/bootstrap.min.js")
         script(src="/js/bootstrap-slider.js")
         script(src="/js/knockout-3.1.0.js")
+        script(src="/js/navigation.js")
     body
-        .merpg-pad-top
+        include ./monsterEditor
+
+        .merpg-pad-top#mainMenu
             include ./mainMenu
-        .merpg-pad-top
-            include ./monsterEditor
-        .merpg-pad-top
+        .merpg-pad-top#monsterEditor
+            +monsterEditor(false)
+        .merpg-pad-top#itemEditor
             include ./itemEditor
         include ./battleInterface/battleUI
+        //include ./battleInterface/physicalAttackUI
+        //include ./battleInterface/castAttackUI
         //TODO fluid on battleUI
-        .container
+        .container#pager
             ul.pager
                 li.previous.pull-left
-                    button.btn.btn-danger.btn-lg
+                    a#buttonBackward.btn.btn-danger.btn-lg
                         span.glyphicon.glyphicon-backward
                 li.next.pull-right
-                    button.btn.btn-success.btn-lg
-                        span.glyphicon.glyphicon-forward
+                    button#buttonForward.btn.btn-success.btn-lg
+                        span.glyphicon.glyphicon-ok

@@ -69,6 +69,15 @@
     height: 25px;
 }
 
-.battleUI-well {
+.merpg-battleUI-well {
     width: 400px;
+}
+
+.merpg-attackResult-well {
+    width: 100%;
+}
+
+.merpg-tableInput {
+    max-width: 40px;
+    text-align: right;
 }
