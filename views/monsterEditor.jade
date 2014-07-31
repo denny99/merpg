@@ -43,6 +43,14 @@ mixin form(modal)
                 .col-md-10
                     .radio-inline
                         label
+                            input#radioTiny(type='radio', name='sizeRadios', value='tiny', checked='')
+                            | Winzig
+                    .radio-inline
+                        label
+                            input#radioSmall(type='radio', name='sizeRadios', value='small', checked='')
+                            | Klein
+                    .radio-inline
+                        label
                             input#radioRegular(type='radio', name='sizeRadios', value='normal', checked='')
                             | Normal
                     .radio-inline

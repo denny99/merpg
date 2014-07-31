@@ -85,3 +85,7 @@
 .merpg-noPadding {
     padding: 0 0 0 0;
 }
+
+.merpg-label-margin {
+    margin-left: 5px !important;
+}

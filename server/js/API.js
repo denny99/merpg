@@ -90,6 +90,7 @@ API = function() {
     this.insertMonster = function(monster, fn) {
         monsters.insert(monster, {}, function (err, body) {
             if (err) {
+                console.log(err);
                 fn(err.status_code);
             }
             else {
@@ -106,6 +107,7 @@ API = function() {
     this.insertCharacter = function(character, fn) {
         characters.insert(character, {}, function (err, body) {
             if (err) {
+                console.log(err);
                 fn(err.status_code);
             }
             else {
@@ -122,6 +124,7 @@ API = function() {
     this.insertItem = function(item, fn) {
         items.insert(item, {}, function (err, body) {
             if (err) {
+                console.log(err);
                 fn(err.status_code);
             }
             else {
@@ -141,6 +144,7 @@ API = function() {
             if (!err) {
                 monsters.destroy(body._id, body._rev, function() {
                     if (err) {
+                        console.log(err);
                         fn(err.status_code)
                     }
                     else {
@@ -166,6 +170,7 @@ API = function() {
             if (!err) {
                 characters.destroy(body._id, body._rev, function() {
                     if (err) {
+                        console.log(err);
                         fn(err.status_code)
                     }
                     else {
@@ -191,6 +196,7 @@ API = function() {
             if (!err) {
                 items.destroy(body._id, body._rev, function() {
                     if (err) {
+                        console.log(err);
                         fn(err.status_code)
                     }
                     else {
@@ -211,7 +217,7 @@ API = function() {
      * @param fn callback
      */
     this.listItem = function(type, fn) {
-        db.view("getItems", "listItems", {key: type}, function(err, body) {
+        items.view("getItems", "listItems", {key: type}, function(err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -233,7 +239,7 @@ API = function() {
      * @param fn callback
      */
     this.listTable = function(type, fn) {
-        db.view("getTables", "listTables", {key: type}, function(err, body) {
+        tables.view("getTables", "listTables", {key: type}, function(err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -254,7 +260,7 @@ API = function() {
      * @param fn callback
      */
     this.listMonsters = function(fn) {
-        db.view("getMonsters", "listMonsters", {}, function(err, body) {
+        monsters.view("getMonsters", "listMonsters", {}, function(err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -282,7 +288,7 @@ API = function() {
             param = {key: player};
             view += "OfPlayer";
         }
-        db.view("getCharacters", view, param, function(err, body) {
+        characters.view("getCharacters", view, param, function(err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -290,6 +296,85 @@ API = function() {
                 });
 
                 fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * updates a item from item db
+     * @param item new object for item
+     * @param fn callback
+     */
+    this.updateItem = function (item, fn) {
+        //get requested item for rev
+        items.get(item._id, {}, function (err,body) {
+            if (!err) {
+                item._rev = body._rev;
+                items.insert(item, {}, function (err, body) {
+                    if (err) {
+                        console.log(err);
+                        fn(err.status_code);
+                    }
+                    else {
+                        fn(200);
+                    }
+                });
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        });
+    };
+
+    /**
+     * updates a monster from item db
+     * @param monster new object for monster
+     * @param fn callback
+     */
+    this.updateMonster = function (monster, fn) {
+        //get requested item for rev
+        items.get(monster._id, {}, function (err,body) {
+            monster._rev = body._rev;
+            if (!err) {
+                monsters.insert(monster, {}, function (err, body) {
+                    if (err) {
+                        fn(err.status_code);
+                    }
+                    else {
+                        fn(200);
+                    }
+                });
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * updates a character from character db
+     * @param character new object for character
+     * @param fn callback
+     */
+    this.updateCharacter = function (character, fn) {
+        //get requested item for rev
+        characters.get(character._id, {}, function (err,body) {
+            character._rev = body._rev;
+            if (!err) {
+                items.insert(character, {}, function (err, body) {
+                    if (err) {
+                        fn(err.status_code);
+                    }
+                    else {
+                        fn(200);
+                    }
+                });
             }
             else {
                 console.log(err);

@@ -2,14 +2,13 @@ block itemEditor
     .container
         .row
             .col-md-6.col-md-offset-3.well
-                select#selectAvailableItems.form-control
-                    //TODO display all available Items
-                    option 1
-                    option 2
-                    option 3
-                    option 4
-                    option 5
-                form.form-horizontal
+                .row
+                    .col-md-10
+                        select#selectAvailableItems.form-control(data-bind = "options: itemsList, optionsText: 'name', optionsValue: $data, value: selectedItem")
+                    .col-md-2
+                        a.btn.bg-primary(data-bind = "click: loadSelectedItem, css: {disabled: selectedItem().type == undefined}")
+                            span.glyphicon.glyphicon-floppy-open
+                form#itemEditorForm.form-horizontal
                     fieldset
                         legend Item Editor
                         .container-fluid
@@ -22,105 +21,116 @@ block itemEditor
                                         .col-md-10
                                             .radio
                                                 label
-                                                    input#radioEquipment(type='radio', name='typeRadios', value='equipment', checked='')
+                                                    input#radioEquipment(type='radio', name='itemTypeRadios', value='equipment', data-bind = "checked: type")
                                                     | Ausrüstung
                                             .radio
                                                 label
-                                                    input#radioWeapon(type='radio', name='typeRadios', value='weapon')
+                                                    input#radioWeapon(type='radio', name='itemTypeRadios', value='weapon', data-bind = "checked: type")
                                                     | Waffe
                                             .radio
                                                 label
-                                                    input#radioShield(type='radio', name='typeRadios', value='shield')
+                                                    input#radioShield(type='radio', name='itemTypeRadios', value='shield', data-bind = "checked: type")
                                                     | Schild
                                             .radio
                                                 label
-                                                    input#radioArmor(type='radio', name='typeRadios', value='armor')
+                                                    input#radioArmor(type='radio', name='itemTypeRadios', value='armor', data-bind = "checked: type")
                                                     | Rüstung
                                 .col-md-9
                                     .form-group
-                                        input#inputMonstername.form-control(type='text', placeholder='Gegenstandsname')
+                                        input#inputItemName.form-control(type='text', placeholder='Gegenstandsname', data-bind = "value: name")
                                     .form-group
                                         .input-group
-                                            input#inputPrice.form-control.text-right(type='number', placeholder='Preis', min="1", value = "1")
+                                            input#inputPrice.form-control.text-right(type='number', placeholder='Preis', min="1", data-bind = "value: price")
                                             span.input-group-addon ZS
                                     .form-group
                                         .input-group
-                                            input#inputWeight.form-control.text-right(type='text', placeholder='Gewicht', value = "1")
+                                            input#inputWeight.form-control.text-right(type='text', placeholder='Gewicht', data-bind = "value: weight")
                                             span.input-group-addon kg
 
                                      .form-group
-                                        textarea#taMonsterDescription.form-control(rows='3') Itembeschreibung
-                        #weaponOnly
+                                        textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description") Itembeschreibung
+                        #weaponOnly(data-bind = "visible: type() == 'weapon'")
                             .container-fluid
                                 .row
-                                    .col-md-6.merpg-noPadding
+                                    .col-md-12
+                                        .radio-inline
+                                            label
+                                                input#radioEquipment(type='radio', name='weaponType', value='melee', data-bind = "checked: weaponType")
+                                                | Nahkampf
+                                        .radio-inline
+                                            label
+                                                input#radioWeapon(type='radio', name='weaponType', value='ranged', data-bind = "checked: weaponType")
+                                                | Fernkampf
+                                        .radio-inline
+                                            label
+                                                input#radioShield(type='radio', name='weaponType', value='both', data-bind = "checked: weaponType")
+                                                | Nah- und Fernkampf
+                                .row
+                                    .col-lg-6.merpg-noPadding(data-bind = "visible: weaponType() != 'melee'")
                                         .form-group
                                             label.col-md-6.control-label(for='inputRange')
                                                 span Reichweite
                                             .col-md-6
                                                 .input-group
-                                                    input#inputRange.form-control.text-right(type='text', placeholder='Reichweite', value = "3")
+                                                    input#inputRange.form-control.text-right(type='number', placeholder='Reichweite', min = "1", data-bind = "value: range")
                                                     span.input-group-addon m
-                                    .col-md-6.merpg-noPadding
+                                    .merpg-noPadding(data-bind = "css: {'col-lg-6': weaponType() != 'melee', 'col-lg-12': weaponType() == 'melee'}")
                                         .form-group
-                                            label.col-md-6.control-label(for='inputRange')
+                                            label.control-label(for='inputRange', data-bind = "css: {'col-md-6': weaponType() != 'melee', 'col-md-3': weaponType() == 'melee'}")
                                                 p Patzer
-                                            .col-md-6
+                                            div(data-bind = "css: {'col-md-6': weaponType() != 'melee', 'col-md-9': weaponType() == 'melee'}")
                                                 .input-group
-                                                    input#inputRange.form-control.text-right(type='number', placeholder='Patzer', value = "1", min = "1")
+                                                    input#inputFumbleRange.form-control.text-right(type='number', placeholder='Patzer', min = "1", data-bind = "value: fumbleRange")
                                                     span.input-group-addon %
                                 .row
-                                    .col-md-6.merpg-noPadding
+                                    .col-lg-12.merpg-noPadding
                                         .form-group
-                                            label.col-md-6.control-label(for='inputOBSL') OB vs. Leichtes Leder
-                                            .col-md-6
+                                            label.col-md-4.control-label(for='inputOBSL') Keine Rüstung
+                                            .col-md-8
                                                 .input-group
-                                                    input#inputOBSL.form-control.text-right(type='number', placeholder='OB vs. Leichtes Leder', min="0", value = "0")
-                                                    span.input-group-addon OB
-                                    .col-md-6.merpg-noPadding
-                                        .form-group
-                                            label.col-md-6.control-label(for='inputOBRL') OB vs. verst. Leder
-                                            .col-md-6
-                                                .input-group
-                                                    input#inputOBRL.form-control.text-right(type='number', placeholder='OB vs. Verst. Leder', min="0", value = "0")
+                                                    input#inputOBNone.form-control.text-right(type='number', placeholder='OB vs. Keine Rüstung', min="0", data-bind = "value: OBNone")
                                                     span.input-group-addon OB
                                 .row
-                                    .col-md-6.merpg-noPadding
+                                    .col-lg-6.merpg-noPadding
                                         .form-group
-                                            label.col-md-6.control-label(for='inputOBChain') OB vs. Kette
-                                            .col-md-6
+                                            label.col-md-4.control-label(for='inputOBSL') Leichtes Leder
+                                            .col-md-8
                                                 .input-group
-                                                    input#inputOBChain.form-control.text-right(type='number', placeholder='OB vs. Kette', min="0", value = "0")
+                                                    input#inputOBSL.form-control.text-right(type='number', placeholder='OB vs. Leichtes Leder', min="0", data-bind = "value: OBSL")
                                                     span.input-group-addon OB
-                                    .col-md-6.merpg-noPadding
+                                    .col-lg-6.merpg-noPadding
                                         .form-group
-                                            label.col-md-6.control-label(for='inputOBPlate') OB vs. Platte
-                                            .col-md-6
+                                            label.col-md-4.control-label(for='inputOBRL') verst. Leder
+                                            .col-md-8
                                                 .input-group
-                                                    input#inputOBPlate.form-control.text-right(type='number', placeholder='OB vs. Platte', min="0", value = "0")
+                                                    input#inputOBRL.form-control.text-right(type='number', placeholder='OB vs. Verst. Leder', min="0", data-bind = "value: OBRL")
+                                                    span.input-group-addon OB
+                                .row
+                                    .col-lg-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-4.control-label(for='inputOBChain') Kette
+                                            .col-md-8
+                                                .input-group
+                                                    input#inputOBChain.form-control.text-right(type='number', placeholder='OB vs. Kette', min="0", data-bind = "value: OBChain")
+                                                    span.input-group-addon OB
+                                    .col-lg-6.merpg-noPadding
+                                        .form-group
+                                            label.col-md-4.control-label(for='inputOBPlate') Platte
+                                            .col-md-8
+                                                .input-group
+                                                    input#inputOBPlate.form-control.text-right(type='number', placeholder='OB vs. Platte', min="0", data-bind = "value: OBPlate")
                                                     span.input-group-addon OB
                             .form-group
                                 label.col-md-3.control-label(for='selectDamageType') Schadensart
                                 .col-md-9
-                                    select#selectDamageType.form-control
-                                        //TODO display all available DamageTypes
-                                        option 1
-                                        option 2
-                                        option 3
-                                        option 4
-                                        option 5
+                                    select#selectDamageType.form-control(data-bind = "options: damageTablesList, optionsText: 'displayName', optionsValue: 'name', value: attackType, attr: {'disabled': weaponType() == 'ranged'}")
                             .form-group
                                 label.col-md-3.control-label(for='selectPrimaryCritical') Primär Krit
                                 .col-md-6
-                                    select#selectPrimaryCritical.form-control
-                                        //TODO display all available CriticalTypes
-                                        option 1
-                                        option 2
-                                        option 3
-                                        option 4
-                                        option 5
+                                    select#selectPrimaryCritical.form-control(data-bind = "options: criticalTablesList, optionsText: 'displayName', optionsValue: 'name', value: primaryCriticalType")
                                 .col-md-3
-                                    select#selectPrimaryCriticalMax.form-control
+                                    select#selectPrimaryCriticalMax.form-control(data-bind = "value: primaryCriticalMax")
+                                        option T
                                         option A
                                         option B
                                         option C
@@ -128,33 +138,29 @@ block itemEditor
                                         option E
                             .form-group
                                 label.col-md-3.control-label(for='selectSecondaryCritical') Sekundär Krit
-                                .col-md-6
-                                    select#selectSecondaryCritical.form-control
-                                        //TODO display all available CriticalTypes
-                                        option 1
-                                        option 2
-                                        option 3
-                                        option 4
-                                        option 5
-                                .col-md-3
-                                    select#selectPrimaryCriticalMax.form-control
+                                    input#checkboxSecondaryCritical.merpg-label-margin(type='checkbox', data-bind = "checked: secondaryCritical")
+                                .col-md-6(data-bind = "visible: secondaryCritical")
+                                    select#selectSecondaryCritical.form-control(data-bind = "options: criticalTablesList, optionsText: 'displayName', optionsValue: 'name', value: secondaryCriticalType")
+                                .col-md-3(data-bind = "visible: secondaryCritical")
+                                    select#selectSecondaryCriticalMax.form-control(data-bind = "value: secondaryCriticalMax")
+                                        option T
                                         option A
                                         option B
                                         option C
                                         option D
                                         option E
-                        #shieldOnly
+                        #shieldOnly(data-bind = "visible: type() == 'shield'")
                             .form-group
                                 label.col-md-3.control-label(for='inputShieldDB') Defensiv Bonus
                                 .col-md-9
                                     .input-group
-                                        input#inputShieldDB.form-control.text-right(type='number', placeholder='DB', min="1", value = "1")
+                                        input#inputShieldDB.form-control.text-right(type='number', placeholder='DB', min="1", data-bind = "value: DBBonus")
                                         span.input-group-addon DB
-                        #armorOnly
+                        #armorOnly(data-bind = "visible: type() == 'armor'")
                             .form-group
                                 label.col-lg-2.control-label(for='selectArmor') Rüstungstyp
                                 .col-lg-10
-                                    select#selectArmor.form-control
+                                    select#selectArmor.form-control(data-bind = "value: armorType")
                                         option(value = "none") Keine
                                         option(value = "softLeather") Leichtes Leder
                                         option(value = "rigidLeather") verstärktes Leder
@@ -165,19 +171,21 @@ block itemEditor
                                 .col-md-10
                                     .checkbox-inline
                                         label
-                                            input#checkboxHelmet(type='checkbox')
+                                            input#checkboxHelmet(type='checkbox', data-bind = "checked: helmet")
                                             | Helm
                                     .checkbox-inline
                                         label
-                                            input#checkBoxArmGreaves(type='checkbox')
+                                            input#checkBoxArmGreaves(type='checkbox', data-bind = "checked: armGreaves")
                                             | Armschienen
                                     .checkbox-inline
                                         label
-                                            input#checkBoxLegGreaves(type='checkbox')
+                                            input#checkBoxLegGreaves(type='checkbox', data-bind = "checked: legGreaves")
                                             | Beinschienen
                         .form-group
                             .col-lg-12
-                                button#buttonCancel.btn.btn-danger.pull-right
-                                    span.glyphicon.glyphicon-remove
-                                button#buttonSubmit.btn.btn-success.pull-right(type = "submit")
-                                    span.glyphicon.glyphicon-ok
+                                button#buttonDelete.btn.btn-danger.pull-right(data-bind = "click: deleteLoadedItem, visible: loadedItem")
+                                    span.glyphicon.glyphicon-floppy-remove
+                                button#buttonSubmit.btn.btn-success.pull-right(data-bind = "click: saveItem")
+                                    span.glyphicon.glyphicon-floppy-save
+                                button#buttonCancel.btn.btn-info.pull-right(data-bind = "click: reset")
+                                    span.glyphicon.glyphicon-file
