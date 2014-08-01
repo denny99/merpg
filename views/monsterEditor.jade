@@ -13,14 +13,13 @@ mixin monsterEditor(modal)
                 .col-md-6.col-md-offset-3.well
                     +form(modal)
 mixin form(modal)
-    select#selectAvailableMonsters.form-control
-        //TODO display all available Monsters
-        option 1
-        option 2
-        option 3
-        option 4
-        option 5
-    form.form-horizontal
+    .row
+        .col-md-10
+            select#selectAvailableMonsters.form-control(data-bind = "options: monstersList, optionsText: 'name', value: selectedMonster")
+        .col-md-2
+            a.btn.bg-primary(data-bind = "click: loadSelectedMonster, css: {disabled: monstersList().length == 0}")
+                span.glyphicon.glyphicon-floppy-open
+    form#monsterEditorForm.form-horizontal
         fieldset
             legend Monster Editor
             .container-fluid
@@ -32,59 +31,73 @@ mixin form(modal)
                         .container-fluid
                             .row.form-group
                                 .col-md-6
-                                    input#inputMonstername.form-control(type='text', placeholder='Monstername')
+                                    input#inputMonstername.form-control(type='text', placeholder='Monstername', data-bind = "value: name, valueUpdate: 'afterkeydown'")
                                 .col-md-6
-                                    input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", value = "1")
+                                    input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", data-bind = "value: level")
                             .row.form-group
                                 .col-md-12
-                                    textarea#taMonsterDescription.form-control(rows='3') Monsterbeschreibung
+                                    textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description") Monsterbeschreibung
             .form-group
                 label.col-md-2.control-label Größe
                 .col-md-10
                     .radio-inline
                         label
-                            input#radioTiny(type='radio', name='sizeRadios', value='tiny', checked='')
+                            input#radioTiny(type='radio', name='sizeRadios', value='tiny', data-bind = "checked: size")
                             | Winzig
                     .radio-inline
                         label
-                            input#radioSmall(type='radio', name='sizeRadios', value='small', checked='')
+                            input#radioSmall(type='radio', name='sizeRadios', value='small', data-bind = "checked: size")
                             | Klein
                     .radio-inline
                         label
-                            input#radioRegular(type='radio', name='sizeRadios', value='normal', checked='')
+                            input#radioRegular(type='radio', name='sizeRadios', value='normal', data-bind = "checked: size")
                             | Normal
                     .radio-inline
                         label
-                            input#radioLarge(type='radio', name='sizeRadios', value='large')
+                            input#radioLarge(type='radio', name='sizeRadios', value='large', data-bind = "checked: size")
                             | Groß
                     .radio-inline
                         label
-                            input#radioHuge(type='radio', name='sizeRadios', value='huge')
+                            input#radioHuge(type='radio', name='sizeRadios', value='huge', data-bind = "checked: size")
                             | Riesig
+            .form-group
+                label.col-lg-3.control-label(for='selectWeapon') Waffe
+                .col-lg-9
+                    select#selectWeapon.form-control(data-bind = "options: weaponsList, optionsText: 'name', optionsValue: 'name', value: weapon")
+            .form-group
+                label.col-md-3.control-label(for='selectShield') Schild
+                    input#checkboxShield.merpg-label-margin(type='checkbox', data-bind = "checked: hasShield")
+                .col-lg-9
+                    select#selectShield.form-control(data-bind = "options: shieldsList, optionsText: 'name', optionsValue: 'name', visible: hasShield, value: shield")
+            .form-group
+                label.col-md-3.control-label(for='selectArmor') Rüstung
+                    input#checkboxArmor.merpg-label-margin(type='checkbox', data-bind = "checked: hasArmor")
+                .col-lg-9
+                    select#selectArmor.form-control(data-bind = "options: armorsList, optionsText: 'name', optionsValue: 'name', visible: hasArmor, value: armor")
             .form-group
                 label.col-md-2.control-label Extras
                 .col-md-10
                     .checkbox-inline
                         label
-                            input#checkboxHelmet(type='checkbox')
+                            input#checkboxHelmet(type='checkbox', data-bind = "checked: helmet, disable: nativeHelmet")
                             | Helm
                     .checkbox-inline
                         label
-                            input#checkBoxArmGreaves(type='checkbox')
+                            input#checkBoxArmGreaves(type='checkbox', data-bind = "checked: armGreaves, disable: nativeArmGreaves")
                             | Armschienen
                     .checkbox-inline
                         label
-                            input#checkBoxLegGreaves(type='checkbox')
+                            input#checkBoxLegGreaves(type='checkbox', data-bind = "checked: legGreaves, disable: nativeLegGreaves")
                             | Beinschienen
                     br
                     .checkbox-inline
                         label
-                            input#checkboxBloodImmun(type='checkbox')
-                            | von Blutungen betroffen
+                            input#checkboxBloodImmun(type='checkbox', data-bind = "checked: bloodImmun")
+                            | nicht von Blutungen betroffen
                     .checkbox-inline
                         label
-                            input#checkboxStunImmun(type='checkbox')
-                            | von Benommenheit betroffen
+                            input#checkboxStunImmun(type='checkbox', data-bind = "checked: stunImmun")
+                            | nicht von Benommenheit betroffen
 
             .container-fluid
                 .row
@@ -92,63 +105,36 @@ mixin form(modal)
                         .form-group
                             label.col-md-2.control-label(for='inputHits') Treffer
                             .col-md-10
-                                input#inputHits.form-control.input-sm(type='number', placeholder='Treffer', min="1", max="400", value = "20")
+                                input#inputHits.form-control.input-sm(type='number', placeholder='Treffer', min="1", max="450", data-bind = "value: hits, valueUpdate: 'afterkeydown'")
                         .form-group
                             label.col-md-2.control-label(for='inputOB') OB
                             .col-md-10
-                                input#inputOB.form-control.input-sm(type='number', placeholder='OB', min="0", max="240", value = "30")
+                                input#inputOB.form-control.input-sm(type='number', placeholder='OB', min="0", max="240", data-bind = "value: OB, valueUpdate: 'afterkeydown'")
                         .form-group
                             label.col-md-2.control-label(for='inputDB') DB
                             .col-md-10
-                                input#inputDB.form-control.input-sm(type='number', placeholder='DB', min="0", max="75", value = "10")
+                                input#inputDB.form-control.input-sm(type='number', placeholder='DB', min="0", max="75", data-bind = "value: DB, valueUpdate: 'afterkeydown'")
                         .form-group
                             label.col-md-2.control-label(for='inputMM') BM
                             .col-md-10
-                                input#inputMM.form-control.input-sm(type='number', placeholder='BM', min="0", max="50", value = "10")
+                                input#inputMM.form-control.input-sm(type='number', placeholder='BM', min="-85", max="50", data-bind = "value: MM, valueUpdate: 'afterkeydown'")
                     .col-md-6
                         .progress.progress-striped.active.merpg-bar-align
-                            #progressCompareHits.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='400', style='width: 5%')
+                            #progressCompareHits.progress-bar.progress-bar-danger(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': maxHits}, style: {width: compareHits}")
                         .progress.progress-striped.active.merpg-bar-align
-                            #progressCompareOB.progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='30', aria-valuemin='0', aria-valuemax='240', style='width: 8%;')
+                            #progressCompareOB.progress-bar.progress-bar-warning(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': maxOB}, style: {width: compareOB}")
                         .progress.progress-striped.active.merpg-bar-align
-                            #progressCompareDB.progress-bar.progress-bar-success(role='progressbar', aria-valuenow='10', aria-valuemin='0', aria-valuemax='75', style='width: 13%;')
+                            #progressCompareDB.progress-bar.progress-bar-success(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': maxDB}, style: {width: compareDB}")
                         .progress.progress-striped.active.merpg-bar-align
-                            #progressCompareHitsMM.progress-bar.progress-bar-info(role='progressbar', aria-valuenow='10', aria-valuemin='0', aria-valuemax='50', style='width: 20%;')
-            .form-group
-                label.col-lg-2.control-label(for='selectWeapon') Waffe
-                .col-lg-10
-                    select#selectWeapon.form-control
-                        //TODO display all available Weapons
-                        option 1
-                        option 2
-                        option 3
-                        option 4
-                        option 5
-            .form-group
-                label.col-lg-2.control-label(for='selectShield') Schild
-                .col-lg-10
-                    select#selectShield.form-control
-                        //TODO display all available shields
-                        option Keines
-                        option 2
-                        option 3
-                        option 4
-                        option 5
-            .form-group
-                label.col-lg-2.control-label(for='selectArmor') Rüstung
-                .col-lg-10
-                    select#selectArmor.form-control
-                        option(value = "none") Keine
-                        option(value = "softLeather") Leichtes Leder
-                        option(value = "rigidLeather") verstärktes Leder
-                        option(value = "chain") Kette
-                        option(value = "plate") Platte
+                            #progressCompareHitsMM.progress-bar.progress-bar-info(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': maxMM}, style: {width: compareMM}")
             unless modal
                 .form-group
                     .col-lg-12
-                        button#buttonCancel.btn.btn-danger.pull-right
-                            span.glyphicon.glyphicon-remove
-                        button#buttonSubmit.btn.btn-success.pull-right(type = "submit")
-                            span.glyphicon.glyphicon-ok
+                        button#buttonDelete.btn.btn-danger.pull-right(data-bind = "click: deleteLoadedMonster, visible: loadedMonster")
+                            span.glyphicon.glyphicon-floppy-remove
+                        button#buttonSubmit.btn.btn-success.pull-right(data-bind = "click: saveMonster")
+                            span.glyphicon.glyphicon-floppy-save
+                        button#buttonCancel.btn.btn-info.pull-right(data-bind = "click: reset")
+                            span.glyphicon.glyphicon-file
 
 

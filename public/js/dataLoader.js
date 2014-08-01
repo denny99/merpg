@@ -13,13 +13,13 @@ DataLoader = function() {
     //3. weapons
     loadData("weapon");
     //4. armor
-
+    loadData("armor");
     //5. shields
-
+    loadData("shield");
     //6. equipment (future update)
 
     //7. monsters
-
+    loadData("monster");
     //8. hero's (future update)
 
     /**
@@ -56,6 +56,7 @@ DataLoader = function() {
                                     }
 
                                     damageTablesList.push({name: data._id, displayName: data.displayName});
+                                    damageTablesList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
                                 case "criticalTable":
                                     if (data.subtype == "creature") {
@@ -64,21 +65,29 @@ DataLoader = function() {
                                     else {
                                         criticalTables[data._id] = new CriticalTable(data._id, data.content);
                                         criticalTablesList.push({name: data._id, displayName: data.displayName});
+                                        criticalTablesList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     }
 
                                     break;
                                 case "weapon":
                                     weapons[data._id] = data;
                                     weaponsList.push({name: data._id, type: data.type});
+                                    weaponsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
                                 case "shield":
                                     shields[data._id] = data;
                                     shieldsList.push({name: data._id, type: data.type});
+                                    shieldsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
                                 case "armor":
-                                    armor[data._id] = data;
-                                    armorList.push({name: data._id, type: data.type});
+                                    armors[data._id] = data;
+                                    armorsList.push({name: data._id, type: data.type});
+                                    armorsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
+                                case "monster":
+                                    monsters[data._id] = data;
+                                    monstersList.push({name: data._id});
+                                    monstersList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                             }
                         }
                     }).done(function() {

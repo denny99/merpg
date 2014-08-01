@@ -9,7 +9,7 @@ $('#obSlider').slider({
 var damageTables = {};
 var criticalTables = {};
 var weapons = {};
-var armor = {};
+var armors = {};
 var shields = {};
 var monsters = {};
 
@@ -17,11 +17,11 @@ var monsters = {};
 var damageTablesList = ko.observableArray([]);
 var criticalTablesList = ko.observableArray([]);
 var weaponsList = ko.observableArray([]);
-var armorList = ko.observableArray([]);
+var armorsList = ko.observableArray([]);
 var shieldsList = ko.observableArray([]);
 var monstersList = ko.observableArray([]);
 var itemsList = ko.computed(function () {
-    return [{name: "----Waffen----"}].concat(weaponsList(), [{name: "----Rüstungen----"}], armorList(), [{name: "----Schilde----"}], shieldsList());
+    return [{name: "----Waffen----"}].concat(weaponsList(), [{name: "----Rüstungen----"}], armorsList(), [{name: "----Schilde----"}], shieldsList());
 });
 
 

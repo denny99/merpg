@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/dataLoader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/knockout/itemEditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tables.js" />
-      <change type="DELETED" beforePath="C:\Users\Denny\WebstormProjects\merpg\public\js\radio.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Denny\WebstormProjects\merpg\table.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bonus_middle_earth_map.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/knockout/monsterEditor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/js/API.js" afterPath="$PROJECT_DIR$/server/js/API.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api_v1.0.js" afterPath="$PROJECT_DIR$/routes/api_v1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/error.jade" afterPath="$PROJECT_DIR$/views/error.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/dataLoader.js" afterPath="$PROJECT_DIR$/public/js/dataLoader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/helper.js" afterPath="$PROJECT_DIR$/public/js/helper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/init.js" afterPath="$PROJECT_DIR$/public/js/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/itemEditor.jade" afterPath="$PROJECT_DIR$/views/itemEditor.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/knockout/itemEditor.js" afterPath="$PROJECT_DIR$/public/js/knockout/itemEditor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/merpg.css" afterPath="$PROJECT_DIR$/public/css/merpg.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/monsterEditor.jade" afterPath="$PROJECT_DIR$/views/monsterEditor.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/navigation.js" afterPath="$PROJECT_DIR$/public/js/navigation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
@@ -43,73 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-              <caret line="23" column="130" selection-start-line="23" selection-start-column="130" selection-end-line="23" selection-end-column="130" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="717" max-vertical-offset="1428">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itemEditor.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="itemEditor.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3349">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itemEditor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/knockout/itemEditor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.6" vertical-offset="3587" max-vertical-offset="4386">
-              <caret line="231" column="52" selection-start-line="231" selection-start-column="52" selection-end-line="231" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataLoader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/dataLoader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="1632">
-              <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api_v1.0.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2043" max-vertical-offset="2754">
-              <caret line="135" column="22" selection-start-line="135" selection-start-column="22" selection-end-line="135" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="API.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/js/API.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42086956" vertical-offset="5062" max-vertical-offset="6664">
-              <caret line="312" column="36" selection-start-line="312" selection-start-column="36" selection-end-line="312" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.54448396" vertical-offset="357" max-vertical-offset="3349">
+              <caret line="39" column="170" selection-start-line="39" selection-start-column="170" selection-end-line="39" selection-end-column="170" />
               <folding />
             </state>
           </provider>
@@ -135,32 +68,33 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/mainmenu.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
         <option value="$PROJECT_DIR$/public/js/test.js" />
         <option value="$PROJECT_DIR$/public/js/bootstrap-slider.js" />
         <option value="$PROJECT_DIR$/public/css/slider.css" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/mainMenu.jade" />
         <option value="$PROJECT_DIR$/public/js/radio.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" />
         <option value="$PROJECT_DIR$/table.json" />
         <option value="$PROJECT_DIR$/views/error.jade" />
-        <option value="$PROJECT_DIR$/views/monsterEditor.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
-        <option value="$PROJECT_DIR$/public/js/helper.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
         <option value="$PROJECT_DIR$/public/js/tables.js" />
         <option value="$PROJECT_DIR$/public/css/merpg.css" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/js/init.js" />
-        <option value="$PROJECT_DIR$/public/js/dataLoader.js" />
-        <option value="$PROJECT_DIR$/views/itemEditor.jade" />
-        <option value="$PROJECT_DIR$/public/js/navigation.js" />
-        <option value="$PROJECT_DIR$/public/js/knockout/itemEditor.js" />
         <option value="$PROJECT_DIR$/routes/api_v1.0.js" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/public/js/navigation.js" />
+        <option value="$PROJECT_DIR$/public/js/init.js" />
+        <option value="$PROJECT_DIR$/public/js/knockout/itemEditor.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/js/API.js" />
+        <option value="$PROJECT_DIR$/public/js/knockout/monsterEditor.js" />
+        <option value="$PROJECT_DIR$/public/js/helper.js" />
+        <option value="$PROJECT_DIR$/public/js/dataLoader.js" />
+        <option value="$PROJECT_DIR$/views/monsterEditor.jade" />
+        <option value="$PROJECT_DIR$/views/itemEditor.jade" />
       </list>
     </option>
   </component>
@@ -196,6 +130,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -388,7 +323,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,6 +342,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Denny\WebstormProjects\merpg\public\images" />
       <recent name="C:\Users\Denny\WebstormProjects\merpg\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -419,6 +354,14 @@
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Run">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -429,12 +372,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -442,16 +387,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -553,7 +488,11 @@
       <created>1406730137869</created>
       <updated>1406730137869</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Item-Editor">
+      <created>1406825664139</created>
+      <updated>1406825664139</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -583,7 +522,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299435" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33446327" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33296338" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15745129" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39844617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -593,12 +533,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -617,9 +556,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15745129" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3263041" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3263041" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -646,7 +585,8 @@
     <MESSAGE value="battleUI + battleLog" />
     <MESSAGE value="ui Interaction" />
     <MESSAGE value="demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo" />
+    <MESSAGE value="Item-Editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Item-Editor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -871,20 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.20623916" vertical-offset="680" max-vertical-offset="1258">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46279493" vertical-offset="0" max-vertical-offset="551">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/mainMenu.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -896,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1411">
           <caret line="54" column="67" selection-start-line="52" selection-start-column="47" selection-end-line="54" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -904,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.9081633" vertical-offset="0" max-vertical-offset="1683">
           <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -912,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="745">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -920,15 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2057">
           <caret line="83" column="58" selection-start-line="83" selection-start-column="58" selection-end-line="83" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33508542" vertical-offset="0" max-vertical-offset="761">
-          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,14 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3302" max-vertical-offset="4063">
           <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50591326" vertical-offset="465" max-vertical-offset="2720">
-          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -972,56 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79826087" vertical-offset="170" max-vertical-offset="799">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="23" column="130" selection-start-line="23" selection-start-column="130" selection-end-line="23" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="717" max-vertical-offset="1428">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3349">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/dataLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="1632">
-          <caret line="79" column="41" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/knockout/itemEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6" vertical-offset="3587" max-vertical-offset="4386">
-          <caret line="231" column="52" selection-start-line="231" selection-start-column="52" selection-end-line="231" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2043" max-vertical-offset="2754">
@@ -1030,10 +886,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1564">
+          <caret line="76" column="25" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36914286" vertical-offset="0" max-vertical-offset="875">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="816">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49544626" vertical-offset="0" max-vertical-offset="549">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.64" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/js/API.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42086956" vertical-offset="5062" max-vertical-offset="6664">
-          <caret line="312" column="36" selection-start-line="312" selection-start-column="36" selection-end-line="312" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.67478263" vertical-offset="5375" max-vertical-offset="6664">
+          <caret line="339" column="36" selection-start-line="339" selection-start-column="36" selection-end-line="339" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/itemEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="5168">
+          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/monsterEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="3995">
+          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4973913" vertical-offset="207" max-vertical-offset="782">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/dataLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67478263" vertical-offset="1125" max-vertical-offset="1819">
+          <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6208696" vertical-offset="204" max-vertical-offset="2482">
+          <caret line="33" column="136" selection-start-line="33" selection-start-column="136" selection-end-line="33" selection-end-column="165" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54448396" vertical-offset="357" max-vertical-offset="3349">
+          <caret line="39" column="170" selection-start-line="39" selection-start-column="170" selection-end-line="39" selection-end-column="170" />
           <folding />
         </state>
       </provider>

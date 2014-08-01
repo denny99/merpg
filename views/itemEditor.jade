@@ -37,7 +37,7 @@ block itemEditor
                                                     | Rüstung
                                 .col-md-9
                                     .form-group
-                                        input#inputItemName.form-control(type='text', placeholder='Gegenstandsname', data-bind = "value: name")
+                                        input#inputItemName.form-control(type='text', placeholder='Gegenstandsname', data-bind = "value: name, valueUpdate: 'afterkeydown'")
                                     .form-group
                                         .input-group
                                             input#inputPrice.form-control.text-right(type='number', placeholder='Preis', min="1", data-bind = "value: price")

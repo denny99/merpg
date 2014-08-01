@@ -338,9 +338,9 @@ API = function() {
      */
     this.updateMonster = function (monster, fn) {
         //get requested item for rev
-        items.get(monster._id, {}, function (err,body) {
-            monster._rev = body._rev;
+        monsters.get(monster._id, {}, function (err,body) {
             if (!err) {
+                monster._rev = body._rev;
                 monsters.insert(monster, {}, function (err, body) {
                     if (err) {
                         fn(err.status_code);
@@ -365,9 +365,9 @@ API = function() {
     this.updateCharacter = function (character, fn) {
         //get requested item for rev
         characters.get(character._id, {}, function (err,body) {
-            character._rev = body._rev;
             if (!err) {
-                items.insert(character, {}, function (err, body) {
+                character._rev = body._rev;
+                characters.insert(character, {}, function (err, body) {
                     if (err) {
                         fn(err.status_code);
                     }

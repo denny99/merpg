@@ -8,6 +8,8 @@ ItemEditorViewModel = function () {
     //load attributes
     self.selectedItem = ko.observable("");
     self.loadedItem = ko.observable(undefined);
+    self.loadedItemBackup = ko.observable(undefined);
+    self.loadedName = ko.observable("notEmpty");
 
     /**
      * loads selectedItem from item jsons
@@ -19,12 +21,15 @@ ItemEditorViewModel = function () {
                 self.loadedItem(weapons[self.selectedItem().name]);
                 break;
             case "armor":
-                self.loadedItem(armor[self.selectedItem().name]);
+                self.loadedItem(armors[self.selectedItem().name]);
                 break;
             case "shield":
                 self.loadedItem(shields[self.selectedItem().name]);
                 break;
         }
+
+        self.loadedName(self.loadedItem()._id);
+        self.loadedItemBackup(self.loadedItem());
         setAttributes(self.loadedItem());
     };
 
@@ -32,6 +37,9 @@ ItemEditorViewModel = function () {
         $.ajax({
             url: "/api_v1.0/delete/" + self.loadedItem().type + "/" + self.loadedItem()._id
         }).done(function () {
+            weaponsList.remove({name: self.loadedItem()._id, type: self.loadedItem().type});
+            armorsList.remove({name: self.loadedItem()._id, type: self.loadedItem().type});
+            shieldsList.remove({name: self.loadedItem()._id, type: self.loadedItem().type});
             self.reset();
         })
     };
@@ -90,9 +98,17 @@ ItemEditorViewModel = function () {
         self.DBBonus(item.DBBonus);
 
         self.armorType(item.armorType);
-        self.helmet(item.helmet);
-        self.armGreaves(item.armGreaves);
-        self.legGreaves(item.legGreaves);
+
+        if (item.type == "armor") {
+            self.helmet(JSON.parse(item.helmet));
+            self.armGreaves(JSON.parse(item.armGreaves));
+            self.legGreaves(JSON.parse(item.legGreaves));
+        }
+        else {
+            self.helmet(false);
+            self.armGreaves(false);
+            self.legGreaves(false);
+        }
     }
 
     //item attributes
@@ -146,6 +162,8 @@ ItemEditorViewModel = function () {
      * resets form to initial state except radio buttons
      */
     self.reset = function () {
+        self.loadedItem(undefined);
+
         self.name("");
         self.type("equipment");
         self.description("");
@@ -219,18 +237,26 @@ ItemEditorViewModel = function () {
                     };
                 }
                 weapons[item._id] = item;
-                if (self.loadedItem() && item._id == self.loadedItem()._id) {
+                if (!self.loadedItem() || item._id != self.loadedItem()._id) {
                     weaponsList.push({name: item._id, type: item.type});
                 }
                 break;
             case "shield":
                 item.DBBonus = self.DBBonus();
+                shields[item._id] = item;
+                if (!self.loadedItem() || item._id != self.loadedItem()._id) {
+                    shieldsList.push({name: item._id, type: item.type});
+                }
                 break;
             case "armor":
                 item.armorType = self.armorType();
                 item.helmet = self.helmet();
                 item.legGreaves = self.legGreaves();
                 item.armGreaves = self.armGreaves();
+                armors[item._id] = item;
+                if (!self.loadedItem() || item._id != self.loadedItem()._id) {
+                    armorsList.push({name: item._id, type: item.type});
+                }
                 break;
         }
         var url = "/api_v1.0/insert/" + item.type;
@@ -244,7 +270,27 @@ ItemEditorViewModel = function () {
                 self.reset();
             }
         });
-    }
+    };
+
+    /**
+     * disables delete button on changing existing item name
+     * enables it again when re changing the name
+     * @type {*|void}
+     */
+    self.loadedNameChanged = ko.computed(function() {
+        if (self.loadedItem()) {
+            if (self.loadedName() != self.name()) {
+                self.loadedItem(undefined);
+            }
+        }
+        else {
+            if (self.loadedName() == self.name()) {
+                self.loadedItem(self.loadedItemBackup());
+            }
+        }
+    }).extend({
+        throttle: 500
+    });
 };
 
 
