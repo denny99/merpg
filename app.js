@@ -12,6 +12,7 @@ var app = express();
 global.config = require('./server/settings/config.json')[app.get('env')];
 
 var routes = require('./routes/layout');
+var login = require('./routes/login');
 var api = require('./routes/api_v1.0');
 
 //program params
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/', api);
+app.use('/', login);
 
 //pretty jade files
 app.locals.pretty = true;
