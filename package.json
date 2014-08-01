@@ -16,6 +16,7 @@
         "nano": "5.10.0",
         "serve-favicon" : "2.0.1",
         "passport-facebook" : "*",
-        "passport": "*"
+        "passport": "*",
+        "express-session": "1.7.2"
     }
 }

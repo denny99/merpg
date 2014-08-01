@@ -5,9 +5,13 @@
 var express = require('express');
 var router = express.Router();
 
+var auth = require('../server/js/auth');
 var apiConfig = require('../server/js/API');
 
 /* set apiConfig.API routes. */
+router.use('/api_v1.0/delete', auth.isAuthenticated);
+router.use('/api_v1.0/insert', auth.isAuthenticated);
+router.use('/api_v1.0/update', auth.isAuthenticated);
 
 router.get('/api_v1.0/list/:type', function (req, res) {
     switch (req.params.type) {

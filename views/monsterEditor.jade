@@ -15,7 +15,7 @@ mixin monsterEditor(modal)
 mixin form(modal)
     .row
         .col-md-10
-            select#selectAvailableMonsters.form-control(data-bind = "options: monstersList, optionsText: 'name', value: selectedMonster")
+            select#selectAvailableMonsters.form-control(data-bind = "options: monstersList, optionsText: 'name', optionsValue: 'name', value: selectedMonster")
         .col-md-2
             a.btn.bg-primary(data-bind = "click: loadSelectedMonster, css: {disabled: monstersList().length == 0}")
                 span.glyphicon.glyphicon-floppy-open
