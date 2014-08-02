@@ -70,22 +70,22 @@ DataLoader = function() {
 
                                     break;
                                 case "weapon":
-                                    weapons[data._id] = data;
+                                    weapons[data._id] = new Weapon(data);
                                     weaponsList.push({name: data._id, type: data.type});
                                     weaponsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
                                 case "shield":
-                                    shields[data._id] = data;
+                                    shields[data._id] = new Shield(data);
                                     shieldsList.push({name: data._id, type: data.type});
                                     shieldsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
                                 case "armor":
-                                    armors[data._id] = data;
+                                    armors[data._id] = new Armor(data);
                                     armorsList.push({name: data._id, type: data.type});
                                     armorsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                                     break;
                                 case "monster":
-                                    monsters[data._id] = data;
+                                    monsters[data._id] = new Monster(data);
                                     monstersList.push({name: data._id});
                                     monstersList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
                             }

@@ -27,11 +27,11 @@ MonsterEditorViewModel = function () {
         self.description(self.loadedMonster().description);
         self.size(self.loadedMonster().size);
 
-        self.helmet(JSON.parse(self.loadedMonster().helmet));
-        self.armGreaves(JSON.parse(self.loadedMonster().armGreaves));
-        self.legGreaves(JSON.parse(self.loadedMonster().legGreaves));
-        self.stunImmun(JSON.parse(self.loadedMonster().stunImmun));
-        self.bloodImmun(JSON.parse(self.loadedMonster().bloodImmun));
+        self.helmet(self.loadedMonster().helmet);
+        self.armGreaves(self.loadedMonster().armGreaves);
+        self.legGreaves(self.loadedMonster().legGreaves);
+        self.stunImmun(self.loadedMonster().stunImmun);
+        self.bloodImmun(self.loadedMonster().bloodImmun);
 
         self.weapon(self.loadedMonster().weapon);
         self.hasShield(self.loadedMonster().shield != undefined);
@@ -87,12 +87,12 @@ MonsterEditorViewModel = function () {
         if (self.hasArmor() && self.armor() != "") {
             var armor = armors[self.armor()];
 
-            self.helmet(JSON.parse(armor.helmet));
-            self.nativeHelmet(JSON.parse(armor.helmet));
-            self.armGreaves(JSON.parse(armor.armGreaves));
-            self.nativeArmGreaves(JSON.parse(armor.armGreaves));
-            self.legGreaves(JSON.parse(armor.legGreaves));
-            self.nativeLegGreaves(JSON.parse(armor.legGreaves));
+            self.helmet(armor.helmet);
+            self.nativeHelmet(armor.helmet);
+            self.armGreaves(armor.armGreaves);
+            self.nativeArmGreaves(armor.armGreaves);
+            self.legGreaves(armor.legGreaves);
+            self.nativeLegGreaves(armor.legGreaves);
         }
         else {
             self.helmet(false);
@@ -164,7 +164,7 @@ MonsterEditorViewModel = function () {
             url: url,
             data: monster,
             success: function () {
-                monsters[monster._id] = monster;
+                monsters[monster._id] = new Monster(monster);
                 monstersList.push(monster._id);
                 self.reset();
             }

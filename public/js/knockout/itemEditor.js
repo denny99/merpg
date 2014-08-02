@@ -100,9 +100,9 @@ ItemEditorViewModel = function () {
         self.armorType(item.armorType);
 
         if (item.type == "armor") {
-            self.helmet(JSON.parse(item.helmet));
-            self.armGreaves(JSON.parse(item.armGreaves));
-            self.legGreaves(JSON.parse(item.legGreaves));
+            self.helmet(item.helmet);
+            self.armGreaves(item.armGreaves);
+            self.legGreaves(item.legGreaves);
         }
         else {
             self.helmet(false);
@@ -236,14 +236,14 @@ ItemEditorViewModel = function () {
                         max: self.secondaryCriticalMax()
                     };
                 }
-                weapons[item._id] = item;
+                weapons[item._id] = new Weapon(item);
                 if (!self.loadedItem() || item._id != self.loadedItem()._id) {
                     weaponsList.push({name: item._id, type: item.type});
                 }
                 break;
             case "shield":
                 item.DBBonus = self.DBBonus();
-                shields[item._id] = item;
+                shields[item._id] = new Shield(item);
                 if (!self.loadedItem() || item._id != self.loadedItem()._id) {
                     shieldsList.push({name: item._id, type: item.type});
                 }
@@ -253,7 +253,7 @@ ItemEditorViewModel = function () {
                 item.helmet = self.helmet();
                 item.legGreaves = self.legGreaves();
                 item.armGreaves = self.armGreaves();
-                armors[item._id] = item;
+                armors[item._id] = new Armor(item);
                 if (!self.loadedItem() || item._id != self.loadedItem()._id) {
                     armorsList.push({name: item._id, type: item.type});
                 }
