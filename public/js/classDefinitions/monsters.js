@@ -39,15 +39,11 @@ Monster = function (dbMonster) {
      */
     function scaleUp() {
         self.currentHits(Math.ceil(
-                (self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 2 / 3) - 10 * (self.currentLevel() - self.level))) > (self.hits + 10) ?
-                self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 2 / 3) - 10 * (self.currentLevel() - self.level)) :
-                self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 2 / 3))
+                self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 1 / 5))
         ));
 
         self.currentOB(Math.ceil(
-                self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 2)) - 7.5 * (self.currentLevel() - self.level) > (self.OB + 40) ?
-                self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 2)) - 7.5 * (self.currentLevel() - self.level) :
-                self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 2))
+                self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 4))
         ));
         self.currentDB(min(self.DB + 2 * (self.currentLevel() - self.level), 75));
 
