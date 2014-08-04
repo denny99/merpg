@@ -2,9 +2,6 @@
  * Created by Denny on 31.07.2014.
  */
 
-$('#obSlider').slider({
-});
-
 //data storages
 var damageTables = {};
 var criticalTables = {};
@@ -21,8 +18,13 @@ var armorsList = ko.observableArray([]);
 var shieldsList = ko.observableArray([]);
 var monstersList = ko.observableArray([]);
 var itemsList = ko.computed(function () {
-    return [{name: "----Waffen----"}].concat(weaponsList(), [{name: "----Rüstungen----"}], armorsList(), [{name: "----Schilde----"}], shieldsList());
+    return [
+        {name: "----Waffen----"}
+    ].concat(weaponsList(), [
+        {name: "----Rüstungen----"}
+    ], armorsList(), [
+        {name: "----Schilde----"}
+    ], shieldsList());
 });
-
 
 var dataLoader = new DataLoader();

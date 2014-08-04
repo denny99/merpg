@@ -30,6 +30,7 @@ Weapon = function (dbWeapon) {
         type: dbWeapon.primaryCritical.type,
         max: dbWeapon.primaryCritical.max
     };
+
     if (dbWeapon.secondaryCritical) {
         self.secondaryCritical = {
             type: dbWeapon.secondaryCritical.type,

@@ -4,13 +4,12 @@
 block battleLog
     .container-fluid.well.merpg-battleLog
         .row
-            .col-md-11
-                //TODO generate dynamic
+            .col-md-11(data-bind = "foreach: battleLogEntries")
                 .merpg-well
                     .row
                         .col-md-12
                             a.close.merpg-close(type='button')
-                                span(aria-hidden='true') ×
+                                span(aria-hidden='true', data-bind = "click: $parent.removeCombatant") ×
                                     span.sr-only Close
                     .container-fluid
                             .row
@@ -18,9 +17,9 @@ block battleLog
                                     a(href = "#")
                                         image.merpg-img-mini(src="/images/person-placeholder.jpg")
                                 .col-xs-5
-                                    span Heldenname
+                                    span(data-bind = "text: _id")
                                 .col-xs-1
-                                    span 5
+                                    span(data-bind = "text: currentLevel")
                                 .col-xs-2
                                     a.merpg-editPencil
                                         span.glyphicon.glyphicon-pencil
@@ -28,36 +27,39 @@ block battleLog
                                 table.table.table-responsive.table-condensed
                                     tbody
                                         tr
-                                            th Treffer
+                                            th Treffer erhalten
                                             td
-                                                input.merpg-tableInput(type = "text", value = "0")
+                                                input.merpg-tableInput(type = "text", data-bind = "value: hitsTaken, valueUpdate: 'input'")
                                         tr
                                             th Treffer pro Runde
                                             td
-                                                input.merpg-tableInput(type = "text", value = "0")
+                                                input.merpg-tableInput(type = "text", data-bind = "value: hitsPerRound, valueUpdate: 'input'")
                                         tr
                                             th Benommenheit
                                             td
-                                                input.merpg-tableInput(type = "text", value = "0")
+                                                input.merpg-tableInput(type = "text", data-bind = "value: stunned, valueUpdate: 'input'")
                                         tr
                                             th Runden bis zum Tod
                                             td
-                                                input.merpg-tableInput(type = "text", value = "0")
+                                                input.merpg-tableInput(type = "text", data-bind = "value: roundsTillDeath, valueUpdate: 'input'")
                                         tr
                                             th Aktivität Bonus
                                             td
-                                                input.merpg-tableInput(type = "text", value = "0")
+                                                input.merpg-tableInput(type = "text", data-bind = "value: bonus, valueUpdate: 'input'")
                                         tr
                                             td
                                                 .checkbox-inline
                                                     label
-                                                        input.merpg-tableInput(type='checkbox')
+                                                        input.merpg-tableInput(type='checkbox', data-bind = "checked: knockedOut")
                                                         | Kampfunfähig
 
             .col-md-1
-                a.btn.btn-block.btn-primary(data-toggle="modal", data-target="#modalAddMonster") Hinzufügen
+                .btn-group-vertical
+                    a.btn.btn-block.btn-primary(data-toggle="modal", data-target="#modalAddMonster") Hinzufügen
+                    a.btn.btn-success.btn(data-bind = "click: nextAction")
+                        span.glyphicon.glyphicon-forward
 
-                #modalAddMonster.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalAddMonsterTitle', aria-hidden='true')
+                #modalAddMonster.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalAddMonsterTitle', aria-hidden='true', data-bind = "with: quickMonsterEditor")
                     .modal-dialog.modal-lg
                         .modal-content
                             .modal-header
@@ -66,10 +68,123 @@ block battleLog
                                     span.sr-only Close
                                 h4#modalAddMonsterTitle.modal-title Monster hinzufügen
                             .modal-body
-                                +monsterEditor(true)
+                                .container-fluid
+                                    .row
+                                        .col-md-8.col-md-offset-2
+                                            .row
+                                                .col-md-10
+                                                    select#selectAvailableMonsters.form-control(data-bind = "options: monstersList, optionsText: 'name', optionsValue: 'name', value: selectedMonster")
+                                                .col-md-2
+                                                    a.btn.bg-primary(data-bind = "click: loadSelectedMonster, css: {disabled: monstersList().length == 0}")
+                                                        span.glyphicon.glyphicon-floppy-open
+                                            form#monsterEditorForm.form-horizontal(data-bind = "visible: loadedMonster")
+                                                fieldset(data-bind = "with: loadedMonster")
+                                                    legend Monster Editor
+                                                    .container-fluid
+                                                        .row
+                                                            .col-md-3
+                                                                a.thumbnail(href = "#")
+                                                                    image.merpg-fill(src="/images/person-placeholder.jpg")
+                                                            .col-md-9
+                                                                .container-fluid
+                                                                    .row.form-group
+                                                                        .col-md-6
+                                                                            input#inputMonstername.form-control(type='text', placeholder='Monstername', data-bind = "value: _id, valueUpdate: 'afterkeydown'")
+                                                                        .col-md-6
+                                                                            input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", data-bind = "value: $parent.level, valueUpdate: 'afterkeydown'")
+                                                                    .row.form-group
+                                                                        .col-md-12
+                                                                            textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description") Monsterbeschreibung
+                                                    .form-group
+                                                        label.col-md-2.control-label Größe
+                                                        .col-md-10
+                                                            .radio-inline
+                                                                label
+                                                                    input#radioTiny(type='radio', name='sizeRadios', value='tiny', data-bind = "checked: size")
+                                                                    | Winzig
+                                                            .radio-inline
+                                                                label
+                                                                    input#radioSmall(type='radio', name='sizeRadios', value='small', data-bind = "checked: size")
+                                                                    | Klein
+                                                            .radio-inline
+                                                                label
+                                                                    input#radioRegular(type='radio', name='sizeRadios', value='normal', data-bind = "checked: size")
+                                                                    | Normal
+                                                            .radio-inline
+                                                                label
+                                                                    input#radioLarge(type='radio', name='sizeRadios', value='large', data-bind = "checked: size")
+                                                                    | Groß
+                                                            .radio-inline
+                                                                label
+                                                                    input#radioHuge(type='radio', name='sizeRadios', value='huge', data-bind = "checked: size")
+                                                                    | Riesig
+                                                    .form-group
+                                                        label.col-lg-3.control-label(for='selectWeapon') Waffe
+                                                        .col-lg-9
+                                                            select#selectWeapon.form-control(data-bind = "options: weaponsList, optionsText: 'name', optionsValue: 'name', value: weaponName")
+                                                    .form-group
+                                                        label.col-md-3.control-label(for='selectShield') Schild
+                                                        .col-lg-9
+                                                            select#selectShield.form-control(data-bind = "options: shieldsList, optionsText: 'name', optionsValue: 'name', value: shieldName, valueAllowUnset: true")
+                                                    .form-group
+                                                        label.col-md-3.control-label(for='selectArmor') Rüstung
+                                                        .col-lg-9
+                                                            select#selectArmor.form-control(data-bind = "options: armorsList, optionsText: 'name', optionsValue: 'name', value: armorName, valueAllowUnset: true")
+                                                    .form-group
+                                                        label.col-md-2.control-label Extras
+                                                        .col-md-10
+                                                            .checkbox-inline
+                                                                label
+                                                                    input#checkboxHelmet(type='checkbox', data-bind = "checked: helmet")
+                                                                    | Helm
+                                                            .checkbox-inline
+                                                                label
+                                                                    input#checkBoxArmGreaves(type='checkbox', data-bind = "checked: armGreaves")
+                                                                    | Armschienen
+                                                            .checkbox-inline
+                                                                label
+                                                                    input#checkBoxLegGreaves(type='checkbox', data-bind = "checked: legGreaves")
+                                                                    | Beinschienen
+                                                            br
+                                                            .checkbox-inline
+                                                                label
+                                                                    input#checkboxBloodImmun(type='checkbox', data-bind = "checked: bloodImmun")
+                                                                    | nicht von Blutungen betroffen
+                                                            .checkbox-inline
+                                                                label
+                                                                    input#checkboxStunImmun(type='checkbox', data-bind = "checked: stunImmun")
+                                                                    | nicht von Benommenheit betroffen
+                                                                    .container-fluid
+                                                        .row
+                                                            .col-md-6
+                                                                .form-group
+                                                                    label.col-md-2.control-label(for='inputHits') Treffer
+                                                                    .col-md-10
+                                                                        input#inputHits.form-control.input-sm(type='number', placeholder='Treffer', min="1", max="450", data-bind = "value: currentHits, valueUpdate: 'afterkeydown'")
+                                                                .form-group
+                                                                    label.col-md-2.control-label(for='inputOB') OB
+                                                                    .col-md-10
+                                                                        input#inputOB.form-control.input-sm(type='number', placeholder='OB', min="0", max="240", data-bind = "value: currentOB, valueUpdate: 'afterkeydown'")
+                                                                .form-group
+                                                                    label.col-md-2.control-label(for='inputDB') DB
+                                                                    .col-md-10
+                                                                        input#inputDB.form-control.input-sm(type='number', placeholder='DB', min="0", max="75", data-bind = "value: currentDB, valueUpdate: 'afterkeydown'")
+                                                                .form-group
+                                                                    label.col-md-2.control-label(for='inputMM') BM
+                                                                    .col-md-10
+                                                                        input#inputMM.form-control.input-sm(type='number', placeholder='BM', min="-85", max="50", data-bind = "value: currentMM, valueUpdate: 'afterkeydown'")
+                                                            .col-md-6
+                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                    #progressCompareHits.progress-bar.progress-bar-danger(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxHits}, style: {width: $parent.compareHits}")
+                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                    #progressCompareOB.progress-bar.progress-bar-warning(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxOB}, style: {width: $parent.compareOB}")
+                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                    #progressCompareDB.progress-bar.progress-bar-success(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxDB}, style: {width: $parent.compareDB}")
+                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                    #progressCompareHitsMM.progress-bar.progress-bar-info(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxMM}, style: {width: $parent.compareMM}")
                             .modal-footer
-                                button.btn.btn-default(type='button', data-dismiss='modal') Abbrechen
-                                button.btn.btn-primary(type='button') Hinzufügen
+                                button.btn.btn-default(type='button') Abbrechen
+                                button.btn.btn-primary(type='button', data-bind = "click: $parent.addMonster, visible: loadedMonster", data-dismiss='modal') Hinzufügen
                         //
                            /.modal-content
                         //

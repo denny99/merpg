@@ -5,8 +5,8 @@ block battleUI
     #battleUI
         include battleLog
         .container-fluid
-            .row.merpg-battleUI
-                .merpg-well.merpg-battleUI-well
+            .row.merpg-battleUI(data-bind = "foreach: battleCombatants")
+                .merpg-well.merpg-battleUI-well(data-bind = "css: {'merpg-battleUI-done': done}")
                     .container-fluid
                         .row
                             .col-xs-6
@@ -15,71 +15,58 @@ block battleUI
                             .col-xs-6
                                 .container-fluid
                                     .row
-                                        h4 Heldenname
+                                        h4(data-bind = "text: _id")
                                     .row
-                                        p OB
+                                        span.text-warning(data-bind = "text: currentOB() + ' OB'")
                                     .row
-                                        p DB
-                                    .row
+                                        span.text-success(data-bind = "text: currentDB() + ' DB'")
+                                    .row.form-group
+                                        span.text-danger
+                                            span.glyphicon.glyphicon-heart
+                                            span(data-bind = "text: currentHits() - hitsTaken() + ' Treffer'")
+                                    .row.form-group
                                         .progress.progress-striped.active.merpg-bar-align
-                                            #progressHitsCombatant2.progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='400', style='width: 5%')
+                                            .progress-bar.progress-bar-danger(role='progressbar',
+                                            data-bind = "attr: {'aria-valuenow': currentHits() - hitsTaken(), 'aria-valuemax': currentHits()}, style: {width: max((currentHits() - hitsTaken()) / currentHits() * 100, 0) + '%'}", aria-valuemin='0')
                         .row.form-group
                             .col-md-12
-                                //TODO generate names depending on owner name
-                                .btn-group.btn-group-justified(data-toggle='buttons')
-                                    label.btn.btn-primary.active.btn-sm
-                                        input.optionAttack(type='radio', name='heldenname')
-                                        | A
-                                    label.btn.btn-primary.btn-sm
-                                        input.optionMove(type='radio', name='heldenname')
-                                        | B
-                                    label.btn.btn-primary.btn-sm
-                                        input.optionCast(type='radio', name='heldenname')
-                                        | Z
-                                    label.btn.btn-primary.btn-sm
-                                        input.optionCast(type='radio', name='heldenname')
-                                        | V
-                                    label.btn.btn-primary.btn-sm
-                                        input.optionCast(type='radio', name='heldenname')
-                                        | C
-                                    label.btn.btn-primary.btn-sm
-                                        input.optionCast(type='radio', name='heldenname')
-                                        | O
+                                select#selectAction.form-control(data-bind = "value: currentAction, attr: {disabled: done}")
+                                    option(value = "meleeAttack") Nahkampfangriff
+                                    option(value = "missileAttack", data-bind = "visible: weapon.weaponType == 'ranged' || weapon.weaponType == 'both'") Fernangriff
+                                    option(value = "cast") Zaubern
+                                    option(value = "move") Bewegen
+                                    option(value = "prepare") Vorbereiten
+                                    option(value = "other") Sonstiges
 
                         //TODO only visible when A or Z is selected
-                        .row.form-group
+                        .row.form-group(data-bind = "visible: currentAction() == 'meleeAttack' || currentAction() == 'cast' || currentAction() == 'missileAttack'")
                             .col-md-12
                                 label.col-lg-4.control-label(for='selectAttackTarget') Angriffsziel
                                 .col-lg-8
-                                    select#selectAttackTarget.form-control.input-sm
-                                        //TODO display all available Battle Members
-                                        option 1
-                                        option 2
-                                        option 3
-                                        option 4
-                                        option 5
-                        .row.form-group
+                                    select#selectAttackTarget.form-control.input-sm(data-bind = "options: $parent.battleCombatants, optionsText: '_id', value: attackTarget, attr: {disabled: done}")
+                        .row.form-group(data-bind = "visible: shield")
                             .col-md-12
                                 .col-md-12
                                     label
-                                        input#checkboxBlock(type='checkbox')
+                                        input#checkboxBlock(type='checkbox', data-bind = "checked: blocking, attr: {disabled: done}")
                                         |  Blocken
 
-                        //TODO only visible when shield is available and player wants to block
-                        .row.form-group
+                        .row.form-group(data-bind = "visible: shield && blocking()")
                             .col-md-12
                                 label.col-lg-4.control-label(for='selectBlockTarget') Blockziel
                                 .col-lg-8
-                                    select#selectBlockTarget.form-control.input-sm
-                                        //TODO display all available Battle Members
-                                        option 1
-                                        option 2
-                                        option 3
-                                        option 4
-                                        option 5
+                                    select#selectBlockTarget.form-control.input-sm(data-bind = "options: $parent.battleCombatants, optionsText: '_id', value: blockTarget, attr: {disabled: done}")
                         .row.form-group
                             .col-md-12
-                                span.control-label(for='selectBlockTarget') OB Zuweisung
-                                input#obSlider(data-slider-id='obSlider', type="text", data-slider-min="0", data-slider-max="20", data-slider-step="1", data-slider-value="10")
-        include castAttackUI
+                                span.control-label
+                                    | OB für Parieren
+                                    input.pull-right(type = "number", min = "0", data-bind = "value: parryDB, valueUpdate: 'afterkeydown', attr: {max: getMaxParryAssignment, disabled: done}")
+                                input.obParrySlider(type="range", min = "0", step = "1", data-bind = "attr: {disabled: done, max: getMaxParryAssignment, value: parryDB, id: _id + 'ParrySlider'}, value: parryDB, valueUpdate: 'input'")
+                        .row.form-group(data-bind = "visible: shield && blocking()")
+                            .col-md-12
+                                span.control-label
+                                    | OB für Blocken
+                                    input.pull-right(type = "number", min = "0", data-bind = "value: blockDB, valueUpdate: 'afterkeydown', attr: {max: getMaxBlockAssignment, disabled: done}")
+                                input.obBlockSlider(type="range", min = "0", step = "1", data-bind = "attr: {disabled: done, max: getMaxBlockAssignment, value: blockDB, id: _id + 'ParrySlider'}, value: blockDB, valueUpdate: 'input'")
+        //include castAttackUI
         include physicalAttackUI

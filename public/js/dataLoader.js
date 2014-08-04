@@ -2,7 +2,7 @@
  * Created by Denny on 31.07.2014.
  */
 
-DataLoader = function() {
+DataLoader = function () {
 
     //load data from db and prepare it
 
@@ -30,72 +30,74 @@ DataLoader = function() {
         var url = "/api_v1.0";
         //get list of names
         $.ajax({
-            url: url + "/list/" + type,
-            beforeSend: function() {
+            url: url + "/list/" + type + "/details",
+            beforeSend: function () {
                 //console.log(type + " loading...");
             },
-            success: function(data, status, jqXHR) {
+            success: function (data, status, jqXHR) {
 
                 //load data for each name
-                data.forEach(function (name) {
+                data.forEach(function (doc) {
                     //get data from API
-                    $.ajax({
-                        url: url + "/get/" + type + "/" + name,
-                        beforeSend: function() {
-                            //console.log(name + " loading...");
-                        },
-                        success: function(data, status, jqXHR) {
-                            //build js objects based on type
-                            switch (data.type) {
-                                case "damageTable":
-                                    if (data.subtype == "creature") {
-                                        damageTables[data._id] = new CreatureDamageTable(data._id, data.content);
-                                    }
-                                    else {
-                                        damageTables[data._id] = new DamageTable(data._id, data.content);
-                                    }
-
-                                    damageTablesList.push({name: data._id, displayName: data.displayName});
-                                    damageTablesList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
-                                    break;
-                                case "criticalTable":
-                                    if (data.subtype == "creature") {
-                                        criticalTables[data._id] = new CreatureCriticalTable(data._id, data.content);
-                                    }
-                                    else {
-                                        criticalTables[data._id] = new CriticalTable(data._id, data.content);
-                                        criticalTablesList.push({name: data._id, displayName: data.displayName});
-                                        criticalTablesList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
-                                    }
-
-                                    break;
-                                case "weapon":
-                                    weapons[data._id] = new Weapon(data);
-                                    weaponsList.push({name: data._id, type: data.type});
-                                    weaponsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
-                                    break;
-                                case "shield":
-                                    shields[data._id] = new Shield(data);
-                                    shieldsList.push({name: data._id, type: data.type});
-                                    shieldsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
-                                    break;
-                                case "armor":
-                                    armors[data._id] = new Armor(data);
-                                    armorsList.push({name: data._id, type: data.type});
-                                    armorsList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
-                                    break;
-                                case "monster":
-                                    monsters[data._id] = new Monster(data);
-                                    monstersList.push({name: data._id});
-                                    monstersList.sort(sort_by('name', true, function(a){return a.toUpperCase()}));
+                    switch (doc.type) {
+                        case "damageTable":
+                            if (doc.subtype == "creature") {
+                                damageTables[doc._id] = new CreatureDamageTable(doc._id, doc.content);
                             }
-                        }
-                    }).done(function() {
-                        //console.log(name + " loaded.");
-                    });
+                            else {
+                                damageTables[doc._id] = new DamageTable(doc._id, doc.content);
+                            }
+
+                            damageTablesList.push({name: doc._id, displayName: doc.displayName});
+                            damageTablesList.sort(sort_by('name', true, function (a) {
+                                return a.toUpperCase()
+                            }));
+                            break;
+                        case "criticalTable":
+                            if (doc.subtype == "creature") {
+                                criticalTables[doc._id] = new CreatureCriticalTable(doc._id, doc.content);
+                            }
+                            else {
+                                criticalTables[doc._id] = new CriticalTable(doc._id, doc.content);
+                                criticalTablesList.push({name: doc._id, displayName: doc.displayName});
+                                criticalTablesList.sort(sort_by('name', true, function (a) {
+                                    return a.toUpperCase()
+                                }));
+                            }
+
+                            break;
+                        case "weapon":
+                            weapons[doc._id] = new Weapon(doc);
+                            weaponsList.push({name: doc._id, type: doc.type});
+                            weaponsList.sort(sort_by('name', true, function (a) {
+                                return a.toUpperCase()
+                            }));
+                            break;
+                        case "shield":
+                            shields[doc._id] = new Shield(doc);
+                            shieldsList.push({name: doc._id, type: doc.type});
+                            shieldsList.sort(sort_by('name', true, function (a) {
+                                return a.toUpperCase()
+                            }));
+                            break;
+                        case "armor":
+                            armors[doc._id] = new Armor(doc);
+                            armorsList.push({name: doc._id, type: doc.type});
+                            armorsList.sort(sort_by('name', true, function (a) {
+                                return a.toUpperCase()
+                            }));
+                            break;
+                        case "monster":
+                            monsters[doc._id] = new Monster(doc);
+                            monstersList.push({name: doc._id});
+                            monstersList.sort(sort_by('name', true, function (a) {
+                                return a.toUpperCase()
+                            }));
+                    }
+
                 });
             }
-        }).done(function() {
+        }).done(function () {
             //console.log(type + " loaded.");
         });
     }

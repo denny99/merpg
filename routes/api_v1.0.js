@@ -9,9 +9,7 @@ var auth = require('../server/js/auth');
 var apiConfig = require('../server/js/API');
 
 /* set apiConfig.API routes. */
-router.use('/api_v1.0/delete', auth.isAuthenticated);
-router.use('/api_v1.0/insert', auth.isAuthenticated);
-router.use('/api_v1.0/update', auth.isAuthenticated);
+router.use('/api_v1.0/', auth.isAuthenticated);
 
 router.get('/api_v1.0/list/:type', function (req, res) {
     switch (req.params.type) {
@@ -36,6 +34,38 @@ router.get('/api_v1.0/list/:type', function (req, res) {
         case "damageTable":
         case "criticalTable":
             apiConfig.API.listTable(req.params.type, function (result) {
+                res.send(result);
+            });
+            break;
+        default:
+            res.status(404, {err: "Command not supported"}).end();
+            break;
+    }
+});
+
+router.get('/api_v1.0/list/:type/details', function (req, res) {
+    switch (req.params.type) {
+        case "equipment":
+        case "armor":
+        case "shield":
+        case "weapon":
+            apiConfig.API.listItemDetails(req.params.type, function (result) {
+                res.send(result);
+            });
+            break;
+        case "monster":
+            apiConfig.API.listMonstersDetails(function (result) {
+                res.send(result);
+            });
+            break;
+        case "character":
+            apiConfig.API.listCharactersDetails(req.params.type, function (result) {
+                res.send(result);
+            });
+            break;
+        case "damageTable":
+        case "criticalTable":
+            apiConfig.API.listTableDetails(req.params.type, function (result) {
                 res.send(result);
             });
             break;

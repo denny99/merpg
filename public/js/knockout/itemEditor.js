@@ -14,7 +14,6 @@ ItemEditorViewModel = function () {
     /**
      * loads selectedItem from item jsons
      */
-
     self.loadSelectedItem = function () {
         switch (self.selectedItem().type) {
             case "weapon":
@@ -33,6 +32,9 @@ ItemEditorViewModel = function () {
         setAttributes(self.loadedItem());
     };
 
+    /**
+     *
+     */
     self.deleteLoadedItem = function() {
         $.ajax({
             url: "/api_v1.0/delete/" + self.loadedItem().type + "/" + self.loadedItem()._id
@@ -292,7 +294,6 @@ ItemEditorViewModel = function () {
         throttle: 500
     });
 };
-
 
 var itemEditorViewModel = new ItemEditorViewModel();
 

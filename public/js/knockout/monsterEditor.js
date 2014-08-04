@@ -33,11 +33,11 @@ MonsterEditorViewModel = function () {
         self.stunImmun(self.loadedMonster().stunImmun);
         self.bloodImmun(self.loadedMonster().bloodImmun);
 
-        self.weapon(self.loadedMonster().weapon);
+        self.weapon(self.loadedMonster().weaponName);
         self.hasShield(self.loadedMonster().shield != undefined);
-        self.shield(self.loadedMonster().shield);
+        self.shield(self.loadedMonster().shieldName);
         self.hasArmor(self.loadedMonster().armor != undefined);
-        self.armor(self.loadedMonster().armor);
+        self.armor(self.loadedMonster().armorName);
 
         self.hits(self.loadedMonster().hits);
         self.OB(self.loadedMonster().OB);

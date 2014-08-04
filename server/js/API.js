@@ -305,6 +305,99 @@ API = function() {
     };
 
     /**
+     * list all item docs of given type
+     * @param type filter option
+     * @param fn callback
+     */
+    this.listItemDetails = function(type, fn) {
+        items.view("getItems", "listItemsDetails", {key: type}, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * list all table docs of given type
+     * @param type filter option
+     * @param fn callback
+     */
+    this.listTableDetails = function(type, fn) {
+        tables.view("getTables", "listTablesDetails", {key: type}, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * list all monster docs
+     * @param fn callback
+     */
+    this.listMonstersDetails = function(fn) {
+        monsters.view("getMonsters", "listMonstersDetails", {}, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
+     * list all character docs filtered by paramter
+     * @param player if given only characters of this player will be listed
+     * @param fn callback
+     */
+    this.listCharactersDetails = function(player, fn) {
+        var param = {};
+        var view = "listCharactersDetails";
+        if (player != characters) {
+            param = {key: player};
+            view += "OfPlayerDetails";
+        }
+        characters.view("getCharacters", view, param, function(err, body) {
+            if (!err) {
+                var result = [];
+                body.rows.forEach(function (doc) {
+                    result.push(doc.value);
+                });
+
+                fn(result)
+            }
+            else {
+                console.log(err);
+                fn(err.status_code);
+            }
+        })
+    };
+
+    /**
      * updates a item from item db
      * @param item new object for item
      * @param fn callback

@@ -39,6 +39,7 @@
     -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49) !important;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.49) !important;
     width: 225px;
+    height: 250px;
     display: inline-block;
     white-space: normal;
 }
@@ -71,6 +72,12 @@
 
 .merpg-battleUI-well {
     width: 400px;
+    height: 500px;
+}
+
+.merpg-attackUI-well {
+    width: 400px;
+    height: 100%;
 }
 
 .merpg-attackResult-well {
@@ -88,4 +95,8 @@
 
 .merpg-label-margin {
     margin-left: 5px !important;
+}
+
+.merpg-battleUI-done {
+    opacity: 0.5;
 }

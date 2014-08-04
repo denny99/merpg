@@ -13,36 +13,43 @@ Monster = function (dbMonster) {
     self.OB = parseInt(dbMonster.OB);
     self.DB = parseInt(dbMonster.DB);
     self.MM = parseInt(dbMonster.MM);
-    self.weapon = dbMonster.weapon;
-    self.armor = dbMonster.armor;
-    self.shield = dbMonster.shield;
+    self.weaponName = dbMonster.weapon;
+    self.armorName = dbMonster.armor;
+    self.shieldName = dbMonster.shield;
+    self.weapon = weapons[dbMonster.weapon];
+    self.armor = armors[dbMonster.armor];
+    self.shield = shields[dbMonster.shield];
     self.helmet = JSON.parse(dbMonster.helmet);
     self.armGreaves = JSON.parse(dbMonster.armGreaves);
     self.legGreaves = JSON.parse(dbMonster.legGreaves);
     self.bloodImmun = JSON.parse(dbMonster.bloodImmun);
     self.stunImmun = JSON.parse(dbMonster.stunImmun);
 
+    self.blocking = ko.observable(false);
+    self.currentAction = ko.observable("other");
+
     self.currentLevel = ko.observable(parseInt(dbMonster.level));
     self.currentHits = ko.observable(parseInt(dbMonster.hits));
     self.currentOB = ko.observable(parseInt(dbMonster.OB));
     self.currentDB = ko.observable(parseInt(dbMonster.DB));
+    self.currentMM = ko.observable(parseInt(dbMonster.MM));
 
     /**
      * scales monster up depending on currentLevel
      */
     function scaleUp() {
-        self.currentHits(
+        self.currentHits(Math.ceil(
                 (self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 2 / 3) - 10 * (self.currentLevel() - self.level))) > (self.hits + 10) ?
                 self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 2 / 3) - 10 * (self.currentLevel() - self.level)) :
                 self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 2 / 3))
-        );
+        ));
 
-        self.currentOB(
+        self.currentOB(Math.ceil(
                 self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 2)) - 7.5 * (self.currentLevel() - self.level) > (self.OB + 40) ?
                 self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 2)) - 7.5 * (self.currentLevel() - self.level) :
                 self.OB / (self.level / (self.level + (self.currentLevel() - self.level) / 2))
-        );
-        self.currentDB(self.DB + 2 * (self.currentLevel() - self.level));
+        ));
+        self.currentDB(min(self.DB + 2 * (self.currentLevel() - self.level), 75));
 
     }
 
@@ -50,25 +57,30 @@ Monster = function (dbMonster) {
      * scales monster down depending on currentLevel
      */
     function scaleDown() {
-        self.currentDB(self.DB + 2 * (self.currentLevel() - self.level));
-        self.currentHits(self.hits * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) * 2 / 3)));
-        self.currentOB(self.OB * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) / 10)));
+        self.currentDB(max(self.DB + 2 * (self.currentLevel() - self.level), 0));
+        self.currentHits(Math.ceil(self.hits * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) * 3 / 4))));
+        self.currentOB(Math.ceil(self.OB * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) * 9/10))));
     }
 
     /**
      * scales monsters attribute up or down depending on level difference
      * @param newLevel new level for the monster
      */
-    function scale(newLevel) {
+    self.scale = function(newLevel) {
         self.currentLevel(newLevel);
 
-        if (self.currentLevel > self.level) {
+        if (self.currentLevel() > self.level) {
             scaleUp();
-        }
-        if (self.currentLevel < self.level) {
+        } else if (self.currentLevel() < self.level) {
             scaleDown();
         }
-    }
+        else {
+            self.currentHits(self.hits);
+            self.currentOB(self.OB);
+            self.currentDB(self.DB);
+            self.currentMM(self.MM);
+        }
+    };
 
     //battle attributes
 
@@ -76,6 +88,7 @@ Monster = function (dbMonster) {
     self.parryDB = ko.observable(0);
     self.blockDB = ko.observable(0);
     self.bonus = ko.observable(0);
+    self.hitsTaken = ko.observable(0);
     self.hitsPerRound = ko.observable(0);
     self.roundsTillDeath = ko.observable(undefined);
     self.stunned = ko.observable(0);
@@ -96,6 +109,7 @@ Monster = function (dbMonster) {
      * monster moves in battle
      */
     self.move = function() {
+        self.prepared = false;
         self.done(true);
     };
 
@@ -103,6 +117,7 @@ Monster = function (dbMonster) {
      * monster has special effect handles manual
      */
     self.other = function() {
+        self.prepared = false;
         self.done(true);
     };
 
@@ -117,7 +132,9 @@ Monster = function (dbMonster) {
      * monster channels spell
      */
     self.channel = function() {
+        self.prepared = false;
         self.channeling(true);
+        self.done(true);
     };
 
     /**
@@ -125,6 +142,7 @@ Monster = function (dbMonster) {
      * does much more when spells are implemented
      */
     self.cast = function() {
+        self.prepared = false;
         self.done(true);
     };
 
@@ -136,7 +154,8 @@ Monster = function (dbMonster) {
      * @returns {void | string | number}
      */
     self.attack = function(roll) {
-        if (roll <= self.weapon().fumbleRange) {
+        self.prepared = false;
+        if (roll <= self.weapon.fumbleRange) {
             return "fumble";
         }
         var attackOB = roll + self.currentOB();
@@ -156,6 +175,7 @@ Monster = function (dbMonster) {
 
             return attackOB;
         }
+        self.done(true);
     };
 
     /**
@@ -185,32 +205,46 @@ Monster = function (dbMonster) {
         return enemyOB - self.blockDB();
     };
 
-    /**
-     * assigns ob to parry and block DB's
-     * and reduces OB
-     * @param parryAmount amount for parry
-     * @param blockAmount amount for block
-     */
-    self.assignOB = function(parryAmount, blockAmount) {
-        self.parryDB(parryAmount);
-        self.blockDB(blockAmount);
+    self.getMaxParryAssignment = ko.computed(function() {
+        var amount = 0;
+        if (self.weapon.attackType == 'twoHanded') {
+            amount = Math.ceil(self.currentOB / 2);
+        }
+        else {
+            amount = self.currentOB();
+        }
 
-        self.OB(self.OB() - parryAmount - blockAmount);
-    };
+        return amount - self.blockDB();
+    });
+
+    self.getMaxBlockAssignment = ko.computed(function() {
+        var amount = 0;
+        if (self.blockTarget()) {
+            if (self.blockTarget().weapon.attackType == 'missile') {
+                amount =  Math.ceil(self.currentOB / 2);
+            }
+            else {
+                amount = self.currentOB();
+            }
+        }
+
+        return amount - self.parryDB();
+    });
 
     /**
      * trigger effects for next round
      */
     self.nextRound = function() {
         self.done(false);
+
         if (self.roundsTillDeath()) {
             if (self.roundsTillDeath() == 0) {
-                self.currentHits(0);
+                self.hitsTaken(self.currentHits());
             }
             else {
                 self.roundsTillDeath(self.roundsTillDeath() - 1);
-                self.currentHits(
-                    self.currentHits() -
+                self.hitsTaken(
+                    self.hitsTaken() +
                         self.hitsPerRound()
                 );
             }

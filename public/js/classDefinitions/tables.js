@@ -15,6 +15,7 @@ DamageTable = function (name, content) {
      * calculates roll result depending on mods and returns amount of damage and critical type
      * @param roll dice roll
      * @param melee attack was a melee attack or not
+     * @param armor armor type of defender
      * @param flankAttack attack was a flank attack
      * @param rearAttack attack was a attack from behind
      * @param defenderSurprised defender was surprised
@@ -24,7 +25,7 @@ DamageTable = function (name, content) {
      * @param special
      * @returns {JSON}
      */
-    this.calculateDamage = function (roll, melee, flankAttack, rearAttack, defenderSurprised, defenderStunned, attackerChangedWeapons, healthMalus, special) {
+    this.calculateDamage = function (roll, melee, armor, flankAttack, rearAttack, defenderSurprised, defenderStunned, attackerChangedWeapons, healthMalus, special) {
         var result = roll;
 
         //apply mods
@@ -50,7 +51,7 @@ DamageTable = function (name, content) {
             result += special;
         }
 
-        return content[min(result, 150)];
+        return content[min(result, 150)][armor];
     }
 
 };
@@ -113,6 +114,7 @@ CreatureDamageTable = function (name, content) {
      * calculates roll result depending on mods and returns amount of damage and critical type
      * @param roll dice roll
      * @param melee attack was a melee attack or not
+     * @param armor armor type of defender
      * @param attackSize attack size of the creature
      * @param flankAttack attack was a flank attack
      * @param rearAttack attack was a attack from behind
@@ -123,9 +125,9 @@ CreatureDamageTable = function (name, content) {
      * @param special
      * @returns {JSON}
      */
-    this.calculateDamage = function (roll, melee, attackSize, flankAttack, rearAttack, defenderSurprised, defenderStunned, attackerChangedWeapons, healthMalus, special) {
+    this.calculateDamage = function (roll, melee, armor, attackSize, flankAttack, rearAttack, defenderSurprised, defenderStunned, attackerChangedWeapons, healthMalus, special) {
         var result = roll;
-
+        console.log(flankAttack)
         //apply mods
         if (flankAttack && !rearAttack && melee) {
             result += 15;
@@ -148,6 +150,8 @@ CreatureDamageTable = function (name, content) {
         if (special) {
             result += special;
         }
+
+        console.log(result);
 
         //determine attack caps
         switch (attackSize) {
@@ -181,7 +185,9 @@ CreatureDamageTable = function (name, content) {
                 break;
         }
 
-        return content[result];
+        console.log(result);
+
+        return content[result][armor];
     }
 
 };
