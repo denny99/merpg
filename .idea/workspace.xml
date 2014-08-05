@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="missile table when throwing weapon">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/knockout/battleUI.js" afterPath="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" afterPath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
+    <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/js/login.js" afterPath="$PROJECT_DIR$/server/js/login.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
@@ -27,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="monsters.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="monsters.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74684995" vertical-offset="2850" max-vertical-offset="5525">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2850" max-vertical-offset="5525">
               <caret line="206" column="49" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
               <folding />
             </state>
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="login.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="646">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.19473082" vertical-offset="0" max-vertical-offset="873">
+              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -124,12 +123,12 @@
         <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
         <option value="$PROJECT_DIR$/public/js/knockout/monsterEditor.js" />
         <option value="$PROJECT_DIR$/views/itemEditor.jade" />
-        <option value="$PROJECT_DIR$/server/js/login.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
         <option value="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" />
         <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
         <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
+        <option value="$PROJECT_DIR$/server/js/login.js" />
       </list>
     </option>
   </component>
@@ -576,7 +575,11 @@
       <created>1407250419146</created>
       <updated>1407250419146</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="obbonus fix">
+      <created>1407250720514</created>
+      <updated>1407250720514</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -681,7 +684,8 @@
     <MESSAGE value="form group fix" />
     <MESSAGE value="smaller fixes and ob bonus" />
     <MESSAGE value="missile table when throwing weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="missile table when throwing weapon" />
+    <MESSAGE value="obbonus fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="obbonus fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1024,14 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="646">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.3501804" vertical-offset="1843" max-vertical-offset="3366">
@@ -1068,8 +1064,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74684995" vertical-offset="2850" max-vertical-offset="5525">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2850" max-vertical-offset="5525">
           <caret line="206" column="49" selection-start-line="206" selection-start-column="49" selection-end-line="206" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19473082" vertical-offset="0" max-vertical-offset="873">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
           <folding />
         </state>
       </provider>
