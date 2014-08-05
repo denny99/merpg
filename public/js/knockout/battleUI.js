@@ -262,7 +262,6 @@ BattleUI = function () {
      * @param combatant attacker
      */
     self.cancelAttack = function (combatant) {
-        console.log(combatant.currentAction());
         if (combatant.currentAction() == "cast") {
             self.magicalAttackUIActive(false);
             self.magicalAttack().attacker().bonusOverTime.remove(cancelMalus);
@@ -282,7 +281,6 @@ BattleUI = function () {
      * @param combatant attacker
      */
     self.endAttack = function (combatant) {
-        console.log(combatant.currentAction());
         if (combatant.currentAction() == "cast") {
             self.magicalAttackUIActive(false);
             self.magicalAttack().attacker().done(true);

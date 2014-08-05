@@ -203,7 +203,8 @@ Monster = function (dbMonster) {
                 attackOB = defender.block(attackOB);
             }
 
-            attackOB += self.weapon.OBBonus[self.attackTarget().armor.armorType];
+            var armor = self.attackTarget().armor ? self.attackTarget().armor.armorType : "none";
+            attackOB += self.weapon.OBBonus[armor];
 
             attackOB = max(9, attackOB);
 
