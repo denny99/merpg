@@ -1,10 +1,10 @@
 //
    Created by Denny on 29.07.2014.
 
-.container-fluid.merpg-strong-pad-top(data-bind = "visible: physicalAttackUIActive, with: physicalAttack")
+.container-fluid(data-bind = "visible: physicalAttackUIActive, with: physicalAttack")
     .row.text-center
-        .col-lg-3.form-group
-            .merpg-well.merpg-attackUI-well(data-bind = "with: attacker")
+        .col-lg-3.form-group(data-bind = "with: attacker")
+            .merpg-well.merpg-attackUI-well
                 .container-fluid.text-left
                     .row
                         .col-xs-6
@@ -36,7 +36,7 @@
                                 .progress-bar.progress-bar-danger(role='progressbar',
                                 data-bind = "attr: {'aria-valuenow': currentHits() - hitsTaken(), 'aria-valuemax': currentHits()}, style: {width: max((currentHits() - hitsTaken()) / currentHits() * 100, 0) + '%'}", aria-valuemin='0')
         .col-lg-4.form-group
-            .merpg-well
+            .merpg-well.merpg-attackResult-well
                 .container-fluid
                     .row
                         .col-md-12
@@ -50,21 +50,36 @@
                                     tr
                                         td Angriff
                                         td
-                                            input.merpg-tableInput(type = "text", data-bind = "value: attackRoll")
-                                        td(data-bind = "text: attackResult")
-                                    tr
+                                            input.merpg-tableInput(type = "text", data-bind = "value: attackRoll, valueUpdate: 'afterkeydown'")
+                                        td(data-bind = "text: attackResultText")
+                                    tr(data-bind = "visible: attackResult().critical")
                                         td Primär Krit
                                         td
-                                            input.merpg-tableInput(type = "text", data-bind = "value: primaryCriticalRoll")
-                                        td Ergebnis
-                                    tr
+                                            input.merpg-tableInput(type = "text", data-bind = "value: primaryCriticalRoll, valueUpdate: 'afterkeydown'")
+                                        td(data-bind = "text: primaryCriticalResultText")
+                                    tr(data-bind = "visible: attacker().weapon.secondaryCritical && attackResult().critical >= 'C' && !(defender().size == 'large' || defender().size == 'huge')")
                                         td Sekundär Krit
                                         td
-                                            input.merpg-tableInput(type = "text", data-bind = "value: secondaryCriticalRoll")
-                                        td Ergebnis
+                                            input.merpg-tableInput(type = "text", data-bind = "value: secondaryCriticalRoll, valueUpdate: 'afterkeydown'")
+                                        td(data-bind = "text: secondaryCriticalResultText")
+                                    tr
+                                        td(colspan="2")
+                                            a.btn.btn-success.btn-block(data-bind = "click: applyResults")
+                                                | Ausführen
+                                        td(colspan="1")
+                                            a.btn.btn-danger.btn-block(data-bind = "click: cancelAttack")
+                                                | Abbrechen
         .col-lg-2.form-group
             .merpg-well.text-left
                 .container-fluid
+                    .row.merpg-pad-top(data-bind = "visible: defender().size == 'large' || defender().size == 'huge'")
+                        .col-md-12
+                            select.form-control(data-bind = "value: weaponType")
+                                option(value = "regular") Normale Waffe
+                                option(value = "magic") Magische Waffe
+                                option(value = "mithril") Mithril Waffe
+                                option(value = "holy") Heilige Waffe
+                                option(value = "slaying") Göttliche Waffe
                     .row
                         .col-md-12
                             .checkbox
@@ -86,8 +101,8 @@
                     .row
                         .col-md-12
                             input#inputSpecial(type='number', value = "0")
-        .col-lg-3.form-group
-            .merpg-well.merpg-attackUI-well(data-bind = "with: defender")
+        .col-lg-3.form-group(data-bind = "with: defender")
+            .merpg-well.merpg-attackUI-well(data-bind = "css: {'merpg-battleUI-dead': dead}")
                 .container-fluid.text-left
                     .row
                         .col-xs-6

@@ -5,58 +5,58 @@ block battleLog
     .container-fluid.well.merpg-battleLog
         .row
             .col-md-11(data-bind = "foreach: battleLogEntries")
-                .merpg-well
+                .merpg-well(data-bind = "css: {'merpg-battleUI-dead': dead}")
                     .row
                         .col-md-12
                             a.close.merpg-close(type='button')
                                 span(aria-hidden='true', data-bind = "click: $parent.removeCombatant") ×
                                     span.sr-only Close
                     .container-fluid
-                            .row
-                                .col-xs-3
-                                    a(href = "#")
-                                        image.merpg-img-mini(src="/images/person-placeholder.jpg")
-                                .col-xs-5
-                                    span(data-bind = "text: _id")
-                                .col-xs-1
-                                    span(data-bind = "text: currentLevel")
-                                .col-xs-2
-                                    a.merpg-editPencil
-                                        span.glyphicon.glyphicon-pencil
-                            .row
-                                table.table.table-responsive.table-condensed
-                                    tbody
-                                        tr
-                                            th Treffer erhalten
-                                            td
-                                                input.merpg-tableInput(type = "text", data-bind = "value: hitsTaken, valueUpdate: 'input'")
-                                        tr
-                                            th Treffer pro Runde
-                                            td
-                                                input.merpg-tableInput(type = "text", data-bind = "value: hitsPerRound, valueUpdate: 'input'")
-                                        tr
-                                            th Benommenheit
-                                            td
-                                                input.merpg-tableInput(type = "text", data-bind = "value: stunned, valueUpdate: 'input'")
-                                        tr
-                                            th Runden bis zum Tod
-                                            td
-                                                input.merpg-tableInput(type = "text", data-bind = "value: roundsTillDeath, valueUpdate: 'input'")
-                                        tr
-                                            th Aktivität Bonus
-                                            td
-                                                input.merpg-tableInput(type = "text", data-bind = "value: bonus, valueUpdate: 'input'")
-                                        tr
-                                            td
-                                                .checkbox-inline
-                                                    label
-                                                        input.merpg-tableInput(type='checkbox', data-bind = "checked: knockedOut")
-                                                        | Kampfunfähig
+                        .row
+                            .col-xs-3
+                                a(href = "#")
+                                    image.merpg-img-mini(src="/images/person-placeholder.jpg")
+                            .col-xs-5
+                                span(data-bind = "text: _id")
+                            .col-xs-1
+                                span(data-bind = "text: currentLevel")
+                            .col-xs-2
+                                a.merpg-editPencil
+                                    span.glyphicon.glyphicon-pencil(data-toggle="modal", data-target="#modalAddMonster", data-bind = "click: $parent.editExistingMonster")
+                        .row
+                            table.table.table-responsive.table-condensed
+                                tbody
+                                    tr
+                                        th Treffer erhalten
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: hitsTaken, valueUpdate: 'input'")
+                                    tr
+                                        th Treffer pro Runde
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: hitsPerRound, valueUpdate: 'input'")
+                                    tr
+                                        th Benommenheit
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: stunned, valueUpdate: 'input'")
+                                    tr
+                                        th Runden bis zum Tod
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: roundsTillDeath, valueUpdate: 'input'")
+                                    tr
+                                        th Aktivität Bonus
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: bonus, valueUpdate: 'input'")
+                                    tr
+                                        td
+                                            .checkbox-inline
+                                                label
+                                                    input.merpg-tableInput(type='checkbox', data-bind = "checked: knockedOut")
+                                                    | Kampfunfähig
 
             .col-md-1
                 .btn-group-vertical
-                    a.btn.btn-block.btn-primary(data-toggle="modal", data-target="#modalAddMonster") Hinzufügen
-                    a.btn.btn-success.btn(data-bind = "click: nextAction")
+                    a.btn.btn-block.btn-primary.btn-block(data-toggle="modal", data-target="#modalAddMonster", data-bind = "visible: !physicalAttackUIActive()") Hinzufügen
+                    a.btn.btn-success.btn.btn-block(data-bind = "click: nextAction, visible: !physicalAttackUIActive()")
                         span.glyphicon.glyphicon-forward
 
                 #modalAddMonster.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalAddMonsterTitle', aria-hidden='true', data-bind = "with: quickMonsterEditor")

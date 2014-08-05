@@ -17,7 +17,7 @@ MonsterEditorViewModel = function () {
     /**
      * loads selected monster from monster json
      */
-    self.loadSelectedMonster = function() {
+    self.loadSelectedMonster = function () {
         self.loadedMonster(monsters[self.selectedMonster()]);
         self.loadedName(self.loadedMonster()._id);
         self.loadedMonsterBackup(self.loadedMonster());
@@ -83,7 +83,7 @@ MonsterEditorViewModel = function () {
     /**
      * set Attributes by selected armor
      */
-    self.setArmorValues = ko.computed(function(){
+    self.setArmorValues = ko.computed(function () {
         if (self.hasArmor() && self.armor() != "") {
             var armor = armors[self.armor()];
 
@@ -174,7 +174,7 @@ MonsterEditorViewModel = function () {
     /**
      * resets form to default values
      */
-    self.reset = function() {
+    self.reset = function () {
         self.loadedMonster(undefined);
 
         self.name("");
@@ -208,7 +208,7 @@ MonsterEditorViewModel = function () {
      * enables it again when re changing the name
      * @type {*|void}
      */
-    self.loadedNameChanged = ko.computed(function() {
+    self.loadedNameChanged = ko.computed(function () {
         if (self.loadedMonster()) {
             if (self.loadedName() != self.name()) {
                 self.loadedMonster(undefined);

@@ -75,7 +75,7 @@ router.get('/api_v1.0/list/:type/details', function (req, res) {
     }
 });
 
-router.get('/api_v1.0/get/:type/:name', function(req, res) {
+router.get('/api_v1.0/get/:type/:name', function (req, res) {
     switch (req.params.type) {
         case "equipment":
         case "armor":
@@ -102,20 +102,20 @@ router.get('/api_v1.0/get/:type/:name', function(req, res) {
     }
 });
 
-router.get('/api_v1.0/get/character/:playerID/:name', function(req, res) {
+router.get('/api_v1.0/get/character/:playerID/:name', function (req, res) {
     apiConfig.API.getCharacter(req.params.name, req.params.playerID, function (character) {
         res.send(character);
     });
 });
 
 
-router.get('/api_v1.0/delete/character/:playerID/:name', function(req, res) {
+router.get('/api_v1.0/delete/character/:playerID/:name', function (req, res) {
     apiConfig.API.deleteCharacter(req.params.name, function (character) {
         res.send(character);
     });
 });
 
-router.get('/api_v1.0/delete/:type/:name', function(req, res) {
+router.get('/api_v1.0/delete/:type/:name', function (req, res) {
     switch (req.params.type) {
         case "equipment":
         case "armor":
@@ -136,7 +136,7 @@ router.get('/api_v1.0/delete/:type/:name', function(req, res) {
     }
 });
 
-router.get('/api_v1.0/insert/:type', function(req, res) {
+router.get('/api_v1.0/insert/:type', function (req, res) {
     switch (req.params.type) {
         case "equipment":
         case "armor":
@@ -152,9 +152,9 @@ router.get('/api_v1.0/insert/:type', function(req, res) {
             });
             break;
         case "character":
-                apiConfig.API.insertCharacter(req.query, function (status) {
-                    res.status(status).end();
-                });
+            apiConfig.API.insertCharacter(req.query, function (status) {
+                res.status(status).end();
+            });
             break;
         default:
             res.status(404, {err: "Command not supported"}).end();
@@ -162,7 +162,7 @@ router.get('/api_v1.0/insert/:type', function(req, res) {
     }
 });
 
-router.get('/api_v1.0/update/:type', function(req, res) {
+router.get('/api_v1.0/update/:type', function (req, res) {
     switch (req.params.type) {
         case "equipment":
         case "armor":

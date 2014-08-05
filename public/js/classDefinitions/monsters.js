@@ -4,6 +4,9 @@
 
 Monster = function (dbMonster) {
     var self = this;
+
+    self.original = dbMonster;
+
     self._id = dbMonster._id;
     self.type = dbMonster.type;
     self.description = dbMonster.description;
@@ -13,17 +16,35 @@ Monster = function (dbMonster) {
     self.OB = parseInt(dbMonster.OB);
     self.DB = parseInt(dbMonster.DB);
     self.MM = parseInt(dbMonster.MM);
-    self.weaponName = dbMonster.weapon;
-    self.armorName = dbMonster.armor;
-    self.shieldName = dbMonster.shield;
-    self.weapon = weapons[dbMonster.weapon];
-    self.armor = armors[dbMonster.armor];
-    self.shield = shields[dbMonster.shield];
-    self.helmet = JSON.parse(dbMonster.helmet);
-    self.armGreaves = JSON.parse(dbMonster.armGreaves);
-    self.legGreaves = JSON.parse(dbMonster.legGreaves);
+    self.weaponName = ko.observable(dbMonster.weapon);
+    self.armorName = ko.observable(dbMonster.armor);
+    self.shieldName = ko.observable(dbMonster.shield);
+    self.helmet = ko.observable(JSON.parse(dbMonster.helmet));
+    self.armGreaves = ko.observable(JSON.parse(dbMonster.armGreaves));
+    self.legGreaves = ko.observable(JSON.parse(dbMonster.legGreaves));
     self.bloodImmun = JSON.parse(dbMonster.bloodImmun);
     self.stunImmun = JSON.parse(dbMonster.stunImmun);
+    self.weapon = weapons[dbMonster.weapon];
+    self.weaponChange = ko.computed(function () {
+        self.weapon = weapons[self.weaponName()];
+    });
+    self.armor = armors[dbMonster.armor];
+    self.armorChange = ko.computed(function () {
+        if (self.armor) {
+            self.armor = armors[self.armorName()];
+            self.helmet(self.armor.helmet);
+            self.armGreaves(self.armor.armGreaves);
+            self.legGreaves(self.armor.legGreaves);
+        } else {
+            self.helmet(false);
+            self.armGreaves(false);
+            self.legGreaves(false);
+        }
+    });
+    self.shield = shields[dbMonster.shield];
+    self.shieldChange = ko.computed(function () {
+        self.shield = shields[self.shieldName()];
+    });
 
     self.blocking = ko.observable(false);
     self.currentAction = ko.observable("other");
@@ -55,14 +76,14 @@ Monster = function (dbMonster) {
     function scaleDown() {
         self.currentDB(max(self.DB + 2 * (self.currentLevel() - self.level), 0));
         self.currentHits(Math.ceil(self.hits * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) * 3 / 4))));
-        self.currentOB(Math.ceil(self.OB * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) * 9/10))));
+        self.currentOB(Math.ceil(self.OB * (self.currentLevel() / (self.level + (self.currentLevel() - self.level) * 9 / 10))));
     }
 
     /**
      * scales monsters attribute up or down depending on level difference
      * @param newLevel new level for the monster
      */
-    self.scale = function(newLevel) {
+    self.scale = function (newLevel) {
         self.currentLevel(newLevel);
 
         if (self.currentLevel() > self.level) {
@@ -84,6 +105,7 @@ Monster = function (dbMonster) {
     self.parryDB = ko.observable(0);
     self.blockDB = ko.observable(0);
     self.bonus = ko.observable(0);
+    self.bonusOverTime = ko.observableArray([]);
     self.hitsTaken = ko.observable(0);
     self.hitsPerRound = ko.observable(0);
     self.roundsTillDeath = ko.observable(undefined);
@@ -94,6 +116,16 @@ Monster = function (dbMonster) {
     self.knockedOut = ko.observable(false);
     self.prepared = ko.observable(false);
     self.channeling = ko.observable(false);
+    self.dead = ko.computed(function () {
+        return self.hitsTaken() >= self.currentHits();
+    });
+    self.setDone = ko.computed(function () {
+        if (self.knockedOut()) {
+            self.parryDB(0);
+            self.blockDB(0);
+            self.done(true);
+        }
+    });
 
     //target
     self.attackTarget = ko.observable(undefined);
@@ -104,31 +136,32 @@ Monster = function (dbMonster) {
     /**
      * monster moves in battle
      */
-    self.move = function() {
-        self.prepared = false;
+    self.move = function () {
+        self.prepared(false);
         self.done(true);
     };
 
     /**
      * monster has special effect handles manual
      */
-    self.other = function() {
-        self.prepared = false;
+    self.other = function () {
+        self.prepared(false);
         self.done(true);
     };
 
     /**
      * monster prepares for fight
      */
-    self.prepare = function() {
+    self.prepare = function () {
         self.prepared(true);
+        self.done(true);
     };
 
     /**
      * monster channels spell
      */
-    self.channel = function() {
-        self.prepared = false;
+    self.channel = function () {
+        self.prepared(false);
         self.channeling(true);
         self.done(true);
     };
@@ -137,8 +170,8 @@ Monster = function (dbMonster) {
      * monster casts a spell
      * does much more when spells are implemented
      */
-    self.cast = function() {
-        self.prepared = false;
+    self.cast = function () {
+        self.prepared(false);
         self.done(true);
     };
 
@@ -149,12 +182,17 @@ Monster = function (dbMonster) {
      * @param roll dice roll
      * @returns {void | string | number}
      */
-    self.attack = function(roll) {
-        self.prepared = false;
+    self.attack = function (roll) {
+        self.prepared(false);
         if (roll <= self.weapon.fumbleRange) {
             return "fumble";
         }
-        var attackOB = roll + self.currentOB();
+        var attackOB = roll + self.currentOB() + self.bonus() - self.parryDB() - self.blockDB();
+
+        self.bonusOverTime().forEach(function (bonus) {
+            attackOB += bonus.bonus;
+        });
+
         if (self.attackTarget()) {
             var defender = self.attackTarget();
 
@@ -171,7 +209,6 @@ Monster = function (dbMonster) {
 
             return attackOB;
         }
-        self.done(true);
     };
 
     /**
@@ -179,7 +216,7 @@ Monster = function (dbMonster) {
      * @param enemyOB attack OB Bonus
      * @returns {number} resultingOB
      */
-    self.defend = function(enemyOB) {
+    self.defend = function (enemyOB) {
         return enemyOB - self.currentDB();
     };
 
@@ -188,7 +225,7 @@ Monster = function (dbMonster) {
      * @param enemyOB attack OB Bonus
      * @returns {number} resultingOB
      */
-    self.parry = function(enemyOB) {
+    self.parry = function (enemyOB) {
         return enemyOB - self.parryDB();
     };
 
@@ -197,14 +234,14 @@ Monster = function (dbMonster) {
      * @param enemyOB attack OB Bonus
      * @returns {number} resultingOB
      */
-    self.block = function(enemyOB) {
+    self.block = function (enemyOB) {
         return enemyOB - self.blockDB();
     };
 
-    self.getMaxParryAssignment = ko.computed(function() {
+    self.getMaxParryAssignment = ko.computed(function () {
         var amount = 0;
-        if (self.weapon.attackType == 'twoHanded') {
-            amount = Math.ceil(self.currentOB / 2);
+        if (self.weapon.attackType == 'twoHanded' || self.stunned() > 0) {
+            amount = Math.ceil(self.currentOB() / 2);
         }
         else {
             amount = self.currentOB();
@@ -213,11 +250,11 @@ Monster = function (dbMonster) {
         return amount - self.blockDB();
     });
 
-    self.getMaxBlockAssignment = ko.computed(function() {
+    self.getMaxBlockAssignment = ko.computed(function () {
         var amount = 0;
         if (self.blockTarget()) {
-            if (self.blockTarget().weapon.attackType == 'missile') {
-                amount =  Math.ceil(self.currentOB / 2);
+            if (self.blockTarget().weapon.attackType == 'missile' || self.stunned() > 0) {
+                amount = Math.ceil(self.currentOB() / 2);
             }
             else {
                 amount = self.currentOB();
@@ -227,23 +264,54 @@ Monster = function (dbMonster) {
         return amount - self.parryDB();
     });
 
+    self.attackTargetChange = ko.computed(function () {
+        if (self.attackTarget()) {
+            self.parryDB(0);
+        }
+    });
+    self.blockTargetChange = ko.computed(function () {
+        if (self.blockTarget()) {
+            self.blockDB(0);
+        }
+    });
+    self.getsStunned = ko.computed(function () {
+        if (self.stunned() > 0 && self.attackTarget() != self && (self.currentAction() == "meleeAttack" || self.currentAction() == "missileAttack" || self.currentAction() == "cast")) {
+            self.currentAction("other");
+        }
+    });
+
     /**
      * trigger effects for next round
      */
-    self.nextRound = function() {
-        self.done(false);
+    self.nextRound = function () {
+        if (!self.knockedOut()) {
+            self.done(false);
+        }
 
-        if (self.roundsTillDeath()) {
+        var list = self.bonusOverTime();
+        list.forEach(function (bonus) {
+            bonus.duration--;
+            if (bonus.duration == 0) {
+                self.bonusOverTime.remove(bonus);
+            }
+        });
+
+        if (self.stunned() > 0) {
+            self.stunned(self.stunned() - 1);
+        }
+
+        if (self.roundsTillDeath() != undefined) {
             if (self.roundsTillDeath() == 0) {
                 self.hitsTaken(self.currentHits());
             }
             else {
                 self.roundsTillDeath(self.roundsTillDeath() - 1);
-                self.hitsTaken(
-                    self.hitsTaken() +
-                        self.hitsPerRound()
-                );
             }
         }
+
+        self.hitsTaken(
+                parseInt(self.hitsTaken()) +
+                parseInt(self.hitsPerRound())
+        );
     }
 };

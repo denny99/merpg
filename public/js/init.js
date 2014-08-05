@@ -21,10 +21,10 @@ var itemsList = ko.computed(function () {
     return [
         {name: "----Waffen----"}
     ].concat(weaponsList(), [
-        {name: "----Rüstungen----"}
-    ], armorsList(), [
-        {name: "----Schilde----"}
-    ], shieldsList());
+            {name: "----Rüstungen----"}
+        ], armorsList(), [
+            {name: "----Schilde----"}
+        ], shieldsList());
 });
 
 var dataLoader = new DataLoader();

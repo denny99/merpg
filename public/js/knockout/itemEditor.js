@@ -35,7 +35,7 @@ ItemEditorViewModel = function () {
     /**
      *
      */
-    self.deleteLoadedItem = function() {
+    self.deleteLoadedItem = function () {
         $.ajax({
             url: "/api_v1.0/delete/" + self.loadedItem().type + "/" + self.loadedItem()._id
         }).done(function () {
@@ -279,7 +279,7 @@ ItemEditorViewModel = function () {
      * enables it again when re changing the name
      * @type {*|void}
      */
-    self.loadedNameChanged = ko.computed(function() {
+    self.loadedNameChanged = ko.computed(function () {
         if (self.loadedItem()) {
             if (self.loadedName() != self.name()) {
                 self.loadedItem(undefined);

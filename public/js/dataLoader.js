@@ -3,30 +3,13 @@
  */
 
 DataLoader = function () {
-
-    //load data from db and prepare it
-
-    //1. damageTables
-    loadData("damageTable");
-    //2. criticalTables
-    loadData("criticalTable");
-    //3. weapons
-    loadData("weapon");
-    //4. armor
-    loadData("armor");
-    //5. shields
-    loadData("shield");
-    //6. equipment (future update)
-
-    //7. monsters
-    loadData("monster");
-    //8. hero's (future update)
+    var self = this;
 
     /**
      * loads all data object from db of given type
      * @param type type of objects
      */
-    function loadData(type) {
+    self.loadData = function (type) {
         var url = "/api_v1.0";
         //get list of names
         $.ajax({
@@ -100,5 +83,24 @@ DataLoader = function () {
         }).done(function () {
             //console.log(type + " loaded.");
         });
-    }
+    };
+    //load data from db and prepare it
+
+    //1. damageTables
+    self.loadData("damageTable");
+    //2. criticalTables
+    self.loadData("criticalTable");
+    //3. weapons
+    self.loadData("weapon");
+    //4. armor
+    self.loadData("armor");
+    //5. shields
+    self.loadData("shield");
+    //6. equipment (future update)
+
+    //7. monsters
+    setTimeout(function () {
+        self.loadData('monster')
+    }, 600);
+    //8. hero's (future update)
 };

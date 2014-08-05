@@ -11,8 +11,8 @@ passport.use(new GoogleStrategy({
         callbackURL: "http://merpg.herokuapp.com/login/google/callback"
         //callbackURL: "http://127.0.0.1:3000/login/google/callback"
     },
-    function(accessToken, refreshToken, profile, done) {
-            return done(null, profile);
+    function (accessToken, refreshToken, profile, done) {
+        return done(null, profile);
     }
 ));
 

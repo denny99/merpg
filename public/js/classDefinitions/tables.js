@@ -127,7 +127,6 @@ CreatureDamageTable = function (name, content) {
      */
     this.calculateDamage = function (roll, melee, armor, attackSize, flankAttack, rearAttack, defenderSurprised, defenderStunned, attackerChangedWeapons, healthMalus, special) {
         var result = roll;
-        console.log(flankAttack)
         //apply mods
         if (flankAttack && !rearAttack && melee) {
             result += 15;
@@ -150,8 +149,6 @@ CreatureDamageTable = function (name, content) {
         if (special) {
             result += special;
         }
-
-        console.log(result);
 
         //determine attack caps
         switch (attackSize) {
@@ -185,8 +182,6 @@ CreatureDamageTable = function (name, content) {
                 break;
         }
 
-        console.log(result);
-
         return content[result][armor];
     }
 
@@ -219,7 +214,7 @@ CreatureCriticalTable = function (name, content) {
         switch (weaponType) {
             case "tooth":
             case "claw":
-            case "normal":
+            case "regular":
                 result += -20;
                 break;
             case "magic":
@@ -237,6 +232,7 @@ CreatureCriticalTable = function (name, content) {
             default:
                 break;
         }
+
         return content[result];
     }
 };

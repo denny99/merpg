@@ -66,17 +66,17 @@ $(document).ready(function () {
         currentPosition = "itemEditor";
     });
 
-    $('#itemEditorForm').bind("keyup keypress", function(e) {
+    $('#itemEditorForm').bind("keyup keypress", function (e) {
         var code = e.keyCode || e.which;
-        if (code  == 13) {
+        if (code == 13) {
             e.preventDefault();
             return false;
         }
     });
 
-    $('#monsterEditorForm').bind("keyup keypress", function(e) {
+    $('#monsterEditorForm').bind("keyup keypress", function (e) {
         var code = e.keyCode || e.which;
-        if (code  == 13) {
+        if (code == 13) {
             e.preventDefault();
             return false;
         }

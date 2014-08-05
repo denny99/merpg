@@ -7,7 +7,7 @@ var monsters = settings.getDB("monsters");
 var characters = settings.getDB("characters");
 var items = settings.getDB("items");
 
-API = function() {
+API = function () {
     /**
      * Returns a table from table db
      * @param tablename name of requested table
@@ -15,7 +15,7 @@ API = function() {
      */
     this.getTable = function (tablename, fn) {
         //get requested table
-        tables.get(tablename, {}, function (err,body) {
+        tables.get(tablename, {}, function (err, body) {
             if (!err) {
                 fn(body);
             }
@@ -33,7 +33,7 @@ API = function() {
      */
     this.getMonster = function (monsterName, fn) {
         //get requested monster
-        monsters.get(monsterName, {}, function (err,body) {
+        monsters.get(monsterName, {}, function (err, body) {
             if (!err) {
                 fn(body);
             }
@@ -53,7 +53,7 @@ API = function() {
     this.getCharacter = function (characterName, player, fn) {
         //get requested character
         //TODO needs to be replaced
-        characters.get(characterName, {}, function (err,body) {
+        characters.get(characterName, {}, function (err, body) {
             if (!err) {
                 fn(body);
             }
@@ -71,7 +71,7 @@ API = function() {
      */
     this.getItem = function (itemname, fn) {
         //get requested item
-        items.get(itemname, {}, function (err,body) {
+        items.get(itemname, {}, function (err, body) {
             if (!err) {
                 fn(body);
             }
@@ -87,7 +87,7 @@ API = function() {
      * @param monster monster json to insert
      * @param fn callback
      */
-    this.insertMonster = function(monster, fn) {
+    this.insertMonster = function (monster, fn) {
         monsters.insert(monster, {}, function (err, body) {
             if (err) {
                 console.log(err);
@@ -104,7 +104,7 @@ API = function() {
      * @param character character json to insert
      * @param fn callback
      */
-    this.insertCharacter = function(character, fn) {
+    this.insertCharacter = function (character, fn) {
         characters.insert(character, {}, function (err, body) {
             if (err) {
                 console.log(err);
@@ -121,7 +121,7 @@ API = function() {
      * @param item item json to insert
      * @param fn callback
      */
-    this.insertItem = function(item, fn) {
+    this.insertItem = function (item, fn) {
         items.insert(item, {}, function (err, body) {
             if (err) {
                 console.log(err);
@@ -140,9 +140,9 @@ API = function() {
      */
     this.deleteMonster = function (monsterName, fn) {
         //get requested monster
-        monsters.get(monsterName, {}, function (err,body) {
+        monsters.get(monsterName, {}, function (err, body) {
             if (!err) {
-                monsters.destroy(body._id, body._rev, function() {
+                monsters.destroy(body._id, body._rev, function () {
                     if (err) {
                         console.log(err);
                         fn(err.status_code)
@@ -166,9 +166,9 @@ API = function() {
      */
     this.deleteCharacter = function (characterName, fn) {
         //get requested character
-        characters.get(characterName, {}, function (err,body) {
+        characters.get(characterName, {}, function (err, body) {
             if (!err) {
-                characters.destroy(body._id, body._rev, function() {
+                characters.destroy(body._id, body._rev, function () {
                     if (err) {
                         console.log(err);
                         fn(err.status_code)
@@ -192,9 +192,9 @@ API = function() {
      */
     this.deleteItem = function (itemName, fn) {
         //get requested item
-        items.get(itemName, {}, function (err,body) {
+        items.get(itemName, {}, function (err, body) {
             if (!err) {
-                items.destroy(body._id, body._rev, function() {
+                items.destroy(body._id, body._rev, function () {
                     if (err) {
                         console.log(err);
                         fn(err.status_code)
@@ -216,8 +216,8 @@ API = function() {
      * @param type filter option
      * @param fn callback
      */
-    this.listItem = function(type, fn) {
-        items.view("getItems", "listItems", {key: type}, function(err, body) {
+    this.listItem = function (type, fn) {
+        items.view("getItems", "listItems", {key: type}, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -238,8 +238,8 @@ API = function() {
      * @param type filter option
      * @param fn callback
      */
-    this.listTable = function(type, fn) {
-        tables.view("getTables", "listTables", {key: type}, function(err, body) {
+    this.listTable = function (type, fn) {
+        tables.view("getTables", "listTables", {key: type}, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -259,8 +259,8 @@ API = function() {
      * list all monster names
      * @param fn callback
      */
-    this.listMonsters = function(fn) {
-        monsters.view("getMonsters", "listMonsters", {}, function(err, body) {
+    this.listMonsters = function (fn) {
+        monsters.view("getMonsters", "listMonsters", {}, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -281,14 +281,14 @@ API = function() {
      * @param player if given only characters of this player will be listed
      * @param fn callback
      */
-    this.listCharacters = function(player, fn) {
+    this.listCharacters = function (player, fn) {
         var param = {};
         var view = "listCharacters";
         if (player != characters) {
             param = {key: player};
             view += "OfPlayer";
         }
-        characters.view("getCharacters", view, param, function(err, body) {
+        characters.view("getCharacters", view, param, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -309,8 +309,8 @@ API = function() {
      * @param type filter option
      * @param fn callback
      */
-    this.listItemDetails = function(type, fn) {
-        items.view("getItems", "listItemsDetails", {key: type}, function(err, body) {
+    this.listItemDetails = function (type, fn) {
+        items.view("getItems", "listItemsDetails", {key: type}, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -331,8 +331,8 @@ API = function() {
      * @param type filter option
      * @param fn callback
      */
-    this.listTableDetails = function(type, fn) {
-        tables.view("getTables", "listTablesDetails", {key: type}, function(err, body) {
+    this.listTableDetails = function (type, fn) {
+        tables.view("getTables", "listTablesDetails", {key: type}, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -352,8 +352,8 @@ API = function() {
      * list all monster docs
      * @param fn callback
      */
-    this.listMonstersDetails = function(fn) {
-        monsters.view("getMonsters", "listMonstersDetails", {}, function(err, body) {
+    this.listMonstersDetails = function (fn) {
+        monsters.view("getMonsters", "listMonstersDetails", {}, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -374,14 +374,14 @@ API = function() {
      * @param player if given only characters of this player will be listed
      * @param fn callback
      */
-    this.listCharactersDetails = function(player, fn) {
+    this.listCharactersDetails = function (player, fn) {
         var param = {};
         var view = "listCharactersDetails";
         if (player != characters) {
             param = {key: player};
             view += "OfPlayerDetails";
         }
-        characters.view("getCharacters", view, param, function(err, body) {
+        characters.view("getCharacters", view, param, function (err, body) {
             if (!err) {
                 var result = [];
                 body.rows.forEach(function (doc) {
@@ -404,7 +404,7 @@ API = function() {
      */
     this.updateItem = function (item, fn) {
         //get requested item for rev
-        items.get(item._id, {}, function (err,body) {
+        items.get(item._id, {}, function (err, body) {
             if (!err) {
                 item._rev = body._rev;
                 items.insert(item, {}, function (err, body) {
@@ -431,7 +431,7 @@ API = function() {
      */
     this.updateMonster = function (monster, fn) {
         //get requested item for rev
-        monsters.get(monster._id, {}, function (err,body) {
+        monsters.get(monster._id, {}, function (err, body) {
             if (!err) {
                 monster._rev = body._rev;
                 monsters.insert(monster, {}, function (err, body) {
@@ -457,7 +457,7 @@ API = function() {
      */
     this.updateCharacter = function (character, fn) {
         //get requested item for rev
-        characters.get(character._id, {}, function (err,body) {
+        characters.get(character._id, {}, function (err, body) {
             if (!err) {
                 character._rev = body._rev;
                 characters.insert(character, {}, function (err, body) {

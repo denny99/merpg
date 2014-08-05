@@ -8,7 +8,7 @@
  * @param b {int|float} second param
  * @returns {int|float}
  */
-function min(a,b) {
+function min(a, b) {
     return a <= b ? a : b;
 }
 
@@ -18,7 +18,7 @@ function min(a,b) {
  * @param b {int|float} second param
  * @returns {int|float}
  */
-function max(a,b) {
+function max(a, b) {
     return a >= b ? a : b;
 }
 
@@ -29,11 +29,15 @@ function max(a,b) {
  * @param primer function used on attribute (e.g. parseInt)
  * @returns {Function}
  */
-var sort_by = function(field, reverse, primer){
+var sort_by = function (field, reverse, primer) {
 
     var key = primer ?
-        function(x) {return primer(x[field])} :
-        function(x) {return x[field]};
+        function (x) {
+            return primer(x[field])
+        } :
+        function (x) {
+            return x[field]
+        };
 
     reverse = [-1, 1][+!!reverse];
 

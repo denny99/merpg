@@ -18,7 +18,7 @@ QuickMonsterEditor = function () {
     self.level = ko.observable(undefined);
     self.selectedMonster = ko.observable('');
     self.loadSelectedMonster = function () {
-        self.loadedMonster(monsters[self.selectedMonster()]);
+        self.loadedMonster(new Monster(owl.deepCopy(monsters[self.selectedMonster()].original)));
         self.level(self.loadedMonster().level);
     };
 
@@ -74,6 +74,9 @@ BattleUI = function () {
             return a.toUpperCase();
         }));
         self.otherCombatants.push(self.quickMonsterEditor.loadedMonster());
+
+        self.quickMonsterEditor.loadedMonster(undefined);
+        self.quickMonsterEditor.level(undefined);
     };
 
     self.battleLogEntries = ko.observableArray();
@@ -99,14 +102,14 @@ BattleUI = function () {
             return a();
         }));
 
-        self.movingCombatants.sort(sort_by("currentMM", true, function (a) {
+        self.movingCombatants.sort(sort_by("currentMM", false, function (a) {
             return a();
         }));
         self.movingCombatants.sort(sort_by("prepared", false, function (a) {
             return a();
         }));
 
-        self.meleeCombatants.sort(sort_by("currentMM", true, function (a) {
+        self.meleeCombatants.sort(sort_by("currentMM", false, function (a) {
             return a();
         }));
         self.meleeCombatants.sort(sort_by("prepared", false, function (a) {
@@ -120,7 +123,7 @@ BattleUI = function () {
         }));
 
         return list;
-    }).extend({throttle: 500});
+    });
 
     /**
      * removes combatant from battle
@@ -176,22 +179,19 @@ BattleUI = function () {
                     break;
             }
         });
-    }).extend({throttle: 100});
+    });
 
     /**
      * triggers next action in fight
      */
     self.nextAction = function () {
-        self.physicalAttackUIActive(false);
         var combatant = self.battleCombatants()[0];
         if (!combatant.done()) {
             switch (combatant.currentAction()) {
                 case "meleeAttack":
                 case "missileAttack":
-                    self.openPhysicalAttackUI(combatant);
-                    break;
                 case "cast":
-                    combatant.cast();
+                    self.openAttackUI(combatant);
                     break;
                 case "move":
                     combatant.move();
@@ -208,21 +208,77 @@ BattleUI = function () {
         }
         else {
             //start next round
-            self.battleCombatants.forEach(function (combatant) {
+            self.battleCombatants().forEach(function (combatant) {
                 combatant.nextRound();
             });
         }
     };
 
     self.physicalAttackUIActive = ko.observable(false);
+    self.magicalAttackUIActive = ko.observable(false);
     self.physicalAttack = ko.observable("");
+    self.magicalAttack = ko.observable("");
 
     /**
      * opens attack UI for calculating dealt damage
      */
-    self.openPhysicalAttackUI = function (combatant) {
-        self.physicalAttackUIActive(true);
-        self.physicalAttack(new PhysicalAttack(combatant, combatant.attackTarget()));
+    self.openAttackUI = function (combatant) {
+        if (combatant.currentAction() == "cast") {
+            self.magicalAttackUIActive(true);
+            self.magicalAttack(new MagicalAttack(combatant, combatant.attackTarget()));
+        }
+        else {
+            self.physicalAttackUIActive(true);
+            self.physicalAttack(new PhysicalAttack(combatant, combatant.attackTarget()));
+        }
+    };
+
+    var cancelMalus = {
+        bonus: -30,
+        duration: 1
+    };
+
+    /**
+     * cancles attack and adds malus of -30
+     * @param combatant attacker
+     */
+    self.cancelAttack = function (combatant) {
+        console.log(combatant.currentAction());
+        if (combatant.currentAction() == "cast") {
+            self.magicalAttackUIActive(false);
+            self.magicalAttack().attacker().bonusOverTime.remove(cancelMalus);
+            self.magicalAttack().attacker().bonusOverTime.push(cancelMalus);
+            self.magicalAttack("");
+        }
+        else {
+            self.physicalAttackUIActive(false);
+            self.physicalAttack().attacker().bonusOverTime.remove(cancelMalus);
+            self.physicalAttack().attacker().bonusOverTime.push(cancelMalus);
+            self.physicalAttack("");
+        }
+    };
+
+    /**
+     * ends fight and sets attacker on done
+     * @param combatant attacker
+     */
+    self.endAttack = function (combatant) {
+        console.log(combatant.currentAction());
+        if (combatant.currentAction() == "cast") {
+            self.magicalAttackUIActive(false);
+            self.magicalAttack().attacker().done(true);
+            self.magicalAttack("");
+        } else {
+            self.physicalAttackUIActive(false);
+            self.physicalAttack().attacker().done(true);
+            self.physicalAttack("");
+        }
+    };
+
+    self.editExistingMonster = function (data) {
+        self.quickMonsterEditor.loadedMonster(data);
+        self.quickMonsterEditor.level(data.level);
+        self.removeCombatant(data);
     }
 };
 
