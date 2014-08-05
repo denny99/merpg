@@ -100,7 +100,7 @@
                                     | Waffe gewechselt
                     .row
                         .col-md-12
-                            input#inputSpecial(type='number', value = "0")
+                            input#inputSpecial(type='number', data-bind = "value: special")
         .col-lg-3.form-group(data-bind = "with: defender")
             .merpg-well.merpg-attackUI-well(data-bind = "css: {'merpg-battleUI-dead': dead}")
                 .container-fluid.text-left
