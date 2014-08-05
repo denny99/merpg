@@ -51,7 +51,7 @@ DamageTable = function (name, content) {
             result += special;
         }
 
-        return content[min(result, 150)][armor];
+        return content[min(max(result, 9), 150)][armor];
     }
 
 };
@@ -182,7 +182,7 @@ CreatureDamageTable = function (name, content) {
                 break;
         }
 
-        return content[result][armor];
+        return content[max(result, 9)][armor];
     }
 
 };
