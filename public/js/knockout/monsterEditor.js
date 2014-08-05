@@ -27,17 +27,17 @@ MonsterEditorViewModel = function () {
         self.description(self.loadedMonster().description);
         self.size(self.loadedMonster().size);
 
-        self.helmet(self.loadedMonster().helmet);
-        self.armGreaves(self.loadedMonster().armGreaves);
-        self.legGreaves(self.loadedMonster().legGreaves);
+        self.helmet(self.loadedMonster().helmet());
+        self.armGreaves(self.loadedMonster().armGreaves());
+        self.legGreaves(self.loadedMonster().legGreaves());
         self.stunImmun(self.loadedMonster().stunImmun);
         self.bloodImmun(self.loadedMonster().bloodImmun);
 
-        self.weapon(self.loadedMonster().weaponName);
+        self.weapon(self.loadedMonster().weaponName());
         self.hasShield(self.loadedMonster().shield != undefined);
-        self.shield(self.loadedMonster().shieldName);
+        self.shield(self.loadedMonster().shieldName());
         self.hasArmor(self.loadedMonster().armor != undefined);
-        self.armor(self.loadedMonster().armorName);
+        self.armor(self.loadedMonster().armorName());
 
         self.hits(self.loadedMonster().hits);
         self.OB(self.loadedMonster().OB);
