@@ -171,7 +171,9 @@ PhysicalAttack = function (attacker, defender) {
             }
         }
 
-        self.defender().hitsTaken(self.defender().hitsTaken() + self.attackResult().damage);
+        if (self.attackResult() != "") {
+            self.defender().hitsTaken(self.defender().hitsTaken() + self.attackResult().damage);
+        }
 
         apply(self.primaryCriticalResult());
         getSpecials(self.primaryCriticalResult());

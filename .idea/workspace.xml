@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Bootstrap.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Knockout3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jQuery.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/MersBattleApp.iml" afterPath="$PROJECT_DIR$/.idea/MersBattleApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/itemEditor.jade" afterPath="$PROJECT_DIR$/views/itemEditor.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" afterPath="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/knockout/battleUI.js" afterPath="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/js/login.js" afterPath="$PROJECT_DIR$/server/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" afterPath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
@@ -31,41 +31,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="monsterEditor.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/knockout/monsterEditor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="3995">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="monsters.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="5406">
-              <caret line="58" column="94" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
+            <state vertical-scroll-proportion="-9.92" vertical-offset="4614" max-vertical-offset="5508">
+              <caret line="286" column="28" selection-start-line="286" selection-start-column="28" selection-end-line="286" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itemEditor.jade" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
+      <file leaf-file-name="battleUI.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.887471" vertical-offset="85" max-vertical-offset="3349">
-              <caret line="50" column="60" selection-start-line="49" selection-start-column="36" selection-end-line="50" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
+              <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monsterEditor.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
+      <file leaf-file-name="battleLog.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2329">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2557" max-vertical-offset="3366">
+              <caret line="185" column="128" selection-start-line="185" selection-start-column="112" selection-end-line="185" selection-end-column="128" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="battleUI.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/knockout/battleUI.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.56" vertical-offset="194" max-vertical-offset="5253">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="attacks.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/attacks.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="4.572202" vertical-offset="408" max-vertical-offset="5814">
+              <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/js/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="646">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -120,18 +142,18 @@
         <option value="$PROJECT_DIR$/public/js/deepCopy.js" />
         <option value="$PROJECT_DIR$/public/js/helper.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
         <option value="$PROJECT_DIR$/public/css/merpg.css" />
         <option value="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
-        <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" />
-        <option value="$PROJECT_DIR$/server/js/login.js" />
         <option value="$PROJECT_DIR$/public/js/knockout/monsterEditor.js" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
         <option value="$PROJECT_DIR$/views/itemEditor.jade" />
+        <option value="$PROJECT_DIR$/server/js/login.js" />
+        <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
+        <option value="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" />
+        <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
+        <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
+        <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
       </list>
     </option>
   </component>
@@ -566,7 +588,11 @@
       <created>1407245364244</created>
       <updated>1407245364244</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="form group fix">
+      <created>1407248071560</created>
+      <updated>1407248071560</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -593,6 +619,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299435" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -602,13 +629,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3337041" sideWeight="0.5002633" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3407325" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3403782" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3263041" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -668,7 +694,8 @@
     <MESSAGE value="scale balancing" />
     <MESSAGE value="bet" />
     <MESSAGE value="monster editor fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="monster editor fix" />
+    <MESSAGE value="form group fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="form group fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -909,6 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3321859" vertical-offset="1575" max-vertical-offset="5185">
           <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -923,6 +951,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63085717" vertical-offset="298" max-vertical-offset="1173">
           <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -947,34 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.15315315" vertical-offset="408" max-vertical-offset="3366">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5522042" vertical-offset="612" max-vertical-offset="2380">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="70" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="447" max-vertical-offset="1309">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleUI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3791" max-vertical-offset="4947">
-          <caret line="265" column="47" selection-start-line="265" selection-start-column="47" selection-end-line="265" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1938">
@@ -996,24 +997,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/attacks.js">
+    <entry file="file://$PROJECT_DIR$/public/css/merpg.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4471" max-vertical-offset="5780">
-          <caret line="260" column="13" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.72" vertical-offset="1173" max-vertical-offset="2023">
+          <caret line="105" column="0" selection-start-line="104" selection-start-column="17" selection-end-line="105" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="2329">
+        <state vertical-scroll-proportion="0.08994709" vertical-offset="0" max-vertical-offset="2329">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2761733" vertical-offset="85" max-vertical-offset="3349">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1026,26 +1029,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/merpg.css">
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72" vertical-offset="1173" max-vertical-offset="2023">
-          <caret line="105" column="0" selection-start-line="104" selection-start-column="17" selection-end-line="105" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8592058" vertical-offset="612" max-vertical-offset="2380">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="70" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="5406">
-          <caret line="58" column="94" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
+        <state vertical-scroll-proportion="-9.92" vertical-offset="4614" max-vertical-offset="5508">
+          <caret line="286" column="28" selection-start-line="286" selection-start-column="28" selection-end-line="286" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
+    <entry file="file://$PROJECT_DIR$/server/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.887471" vertical-offset="85" max-vertical-offset="3349">
-          <caret line="50" column="60" selection-start-line="49" selection-start-column="36" selection-end-line="50" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="646">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
+          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleUI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.56" vertical-offset="194" max-vertical-offset="5253">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2557" max-vertical-offset="3366">
+          <caret line="185" column="128" selection-start-line="185" selection-start-column="112" selection-end-line="185" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/attacks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.572202" vertical-offset="408" max-vertical-offset="5814">
+          <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

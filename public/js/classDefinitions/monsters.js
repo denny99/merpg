@@ -51,12 +51,14 @@ Monster = function (dbMonster) {
     self.currentDB = ko.observable(parseInt(dbMonster.DB));
     self.currentMM = ko.observable(parseInt(dbMonster.MM));
 
+    self.decided = ko.observable(false);
+
     /**
      * scales monster up depending on currentLevel
      */
     function scaleUp() {
         self.currentHits(Math.ceil(
-                self.hits / (self.level / (self.level + (self.currentLevel() - self.level) * 1 / 5))
+                self.hits / (self.level / (self.level + (self.currentLevel() - self.level) / 5))
         ));
 
         self.currentOB(Math.ceil(
@@ -201,6 +203,8 @@ Monster = function (dbMonster) {
                 attackOB = defender.block(attackOB);
             }
 
+            attackOB += self.weapon.OBBonus[self.attackTarget().armor.armorType];
+
             attackOB = max(9, attackOB);
 
             return attackOB;
@@ -271,7 +275,7 @@ Monster = function (dbMonster) {
         }
     });
     self.getsStunned = ko.computed(function () {
-        if (self.stunned() > 0 && self.attackTarget() != self && (self.currentAction() == "meleeAttack" || self.currentAction() == "missileAttack" || self.currentAction() == "cast")) {
+        if (self.stunned() > 0 && self.attackTarget() != self && (self.currentAction() == "cast")) {
             self.currentAction("other");
         }
     });
@@ -280,6 +284,8 @@ Monster = function (dbMonster) {
      * trigger effects for next round
      */
     self.nextRound = function () {
+        self.decided(false);
+
         if (!self.knockedOut()) {
             self.done(false);
         }

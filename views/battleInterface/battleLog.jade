@@ -55,7 +55,7 @@ block battleLog
 
             .col-md-1
                 .btn-group-vertical
-                    a.btn.btn-block.btn-primary.btn-block(data-toggle="modal", data-target="#modalAddMonster", data-bind = "visible: !physicalAttackUIActive()") Hinzufügen
+                    a.btn.btn-block.btn-primary.btn-block(data-toggle="modal", data-target="#modalAddMonster", data-bind = "visible: !physicalAttackUIActive() && !magicalAttackUIActive()") Hinzufügen
                     a.btn.btn-success.btn.btn-block(data-bind = "click: nextAction, visible: !physicalAttackUIActive()")
                         span.glyphicon.glyphicon-forward
 
@@ -183,7 +183,7 @@ block battleLog
                                                                 .progress.progress-striped.active.merpg-bar-align
                                                                     #progressCompareHitsMM.progress-bar.progress-bar-info(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxMM}, style: {width: $parent.compareMM}")
                             .modal-footer
-                                button.btn.btn-default(type='button') Abbrechen
+                                button.btn.btn-default(type='button', data-dismiss='modal', data-bind = "click: closeQuickEditor") Abbrechen
                                 button.btn.btn-primary(type='button', data-bind = "click: $parent.addMonster, visible: loadedMonster", data-dismiss='modal') Hinzufügen
                         //
                            /.modal-content

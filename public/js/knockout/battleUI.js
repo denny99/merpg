@@ -22,6 +22,11 @@ QuickMonsterEditor = function () {
         self.level(self.loadedMonster().level);
     };
 
+    self.closeQuickEditor = function() {
+        self.loadedMonster(undefined);
+        self.level(undefined);
+    };
+
     self.compareHits = ko.computed(function () {
         if (self.loadedMonster()) {
             return self.loadedMonster().currentHits() / self.maxHits * 100 + "%";
@@ -69,14 +74,15 @@ BattleUI = function () {
     self.quickMonsterEditor = new QuickMonsterEditor();
 
     self.addMonster = function () {
+        self.removeCombatant(self.quickMonsterEditor.loadedMonster());
+
         self.battleLogEntries.push(self.quickMonsterEditor.loadedMonster());
         self.battleLogEntries.sort(sort_by("_id", true, function (a) {
             return a.toUpperCase();
         }));
         self.otherCombatants.push(self.quickMonsterEditor.loadedMonster());
 
-        self.quickMonsterEditor.loadedMonster(undefined);
-        self.quickMonsterEditor.level(undefined);
+        self.quickMonsterEditor.closeQuickEditor();
     };
 
     self.battleLogEntries = ko.observableArray();
@@ -184,14 +190,26 @@ BattleUI = function () {
     /**
      * triggers next action in fight
      */
+    var firstTime = true;
     self.nextAction = function () {
+        if (firstTime) {
+            self.battleCombatants().forEach(function (combatant) {
+                combatant.decided(true);
+            });
+        }
+        firstTime = false;
         var combatant = self.battleCombatants()[0];
         if (!combatant.done()) {
             switch (combatant.currentAction()) {
                 case "meleeAttack":
                 case "missileAttack":
                 case "cast":
-                    self.openAttackUI(combatant);
+                    if (combatant.stunned() == 0) {
+                        self.openAttackUI(combatant);
+                    }
+                    else {
+                        combatant.done(true);
+                    }
                     break;
                 case "move":
                     combatant.move();
@@ -208,6 +226,7 @@ BattleUI = function () {
         }
         else {
             //start next round
+            firstTime = true;
             self.battleCombatants().forEach(function (combatant) {
                 combatant.nextRound();
             });
@@ -278,7 +297,6 @@ BattleUI = function () {
     self.editExistingMonster = function (data) {
         self.quickMonsterEditor.loadedMonster(data);
         self.quickMonsterEditor.level(data.level);
-        self.removeCombatant(data);
     }
 };
 
