@@ -32,13 +32,9 @@ Monster = function (dbMonster) {
     self.armorChange = ko.computed(function () {
         if (self.armor) {
             self.armor = armors[self.armorName()];
-            self.helmet(self.armor.helmet);
-            self.armGreaves(self.armor.armGreaves);
-            self.legGreaves(self.armor.legGreaves);
-        } else {
-            self.helmet(false);
-            self.armGreaves(false);
-            self.legGreaves(false);
+            self.helmet(self.armor.helmet || self.helmet());
+            self.armGreaves(self.armor.armGreaves || self.armGreaves());
+            self.legGreaves(self.armor.legGreaves || self.legGreaves());
         }
     });
     self.shield = shields[dbMonster.shield];
