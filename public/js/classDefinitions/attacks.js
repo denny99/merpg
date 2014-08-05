@@ -50,7 +50,14 @@ PhysicalAttack = function (attacker, defender) {
         else {
             //calculate attack Damage
             var melee = self.attacker().currentAction() == 'meleeAttack';
-            var damageTable = damageTables[self.attacker().weapon.attackType];
+            var damageTable;
+            if (self.attacker().currentAction() == 'missileAttack') {
+                damageTable = damageTables["missile"];
+            }
+            else {
+                 damageTable = damageTables[self.attacker().weapon.attackType];
+            }
+
 
             var armor = self.defender().armor ? self.defender().armor.armorType : "none";
 

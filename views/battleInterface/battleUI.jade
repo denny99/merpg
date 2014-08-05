@@ -43,7 +43,7 @@ block battleUI
                             .col-md-12
                                 label.col-lg-4.control-label(for='selectAttackTarget') Angriffsziel
                                 .col-lg-8
-                                    select#selectAttackTarget.form-control.input-sm(data-bind = "options: $parent.battleCombatants, optionsText: '_id', value: attackTarget, attr: {disabled: done() || dead() || (decided() && currentAction() != 'prepare')}")
+                                    select#selectAttackTarget.form-control.input-sm(data-bind = "options: $parent.battleLogEntries, optionsText: '_id', value: attackTarget, attr: {disabled: done() || dead() || (decided() && currentAction() != 'prepare')}")
                         .row.form-group(data-bind = "visible: shield")
                             .col-md-12
                                 .col-md-12
@@ -55,7 +55,7 @@ block battleUI
                             .col-md-12
                                 label.col-lg-4.control-label(for='selectBlockTarget') Blockziel
                                 .col-lg-8
-                                    select#selectBlockTarget.form-control.input-sm(data-bind = "options: $parent.battleCombatants, optionsText: '_id', value: blockTarget, attr: {disabled: done() || dead() || (decided() && currentAction() != 'prepare')}")
+                                    select#selectBlockTarget.form-control.input-sm(data-bind = "options: $parent.battleLogEntries, optionsText: '_id', value: blockTarget, attr: {disabled: done() || dead() || (decided() && currentAction() != 'prepare')}")
                         .row.form-group(data-bind = "visible: (attackTarget() != blockTarget() || !blocking()) && (currentAction() == 'meleeAttack' || currentAction() == 'missileAttack')")
                             .col-md-12
                                 span.control-label
