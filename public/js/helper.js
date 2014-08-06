@@ -4,19 +4,35 @@
 
 /**
  * return min(a,b)
- * @param a {int|float} first param
- * @param b {int|float} second param
- * @returns {int|float}
+ * @param a {int|float|string} first param
+ * @param b {int|float|string} second param
+ * @returns {int|float|string}
  */
 function min(a, b) {
     return a <= b ? a : b;
 }
 
 /**
+ * return min(a,b)
+ * @param a {string} first param
+ * @param b {string} second param
+ * @returns {string}
+ */
+function minCritical(a, b) {
+    if (a == "T") {
+        return a;
+    }
+    if (b == "T") {
+        return b;
+    }
+    return a <= b ? a : b;
+}
+
+/**
  * return max(a,b)
- * @param a {int|float} first param
- * @param b {int|float} second param
- * @returns {int|float}
+ * @param a {int|float|string} first param
+ * @param b {int|float|string} second param
+ * @returns {int|float|string}
  */
 function max(a, b) {
     return a >= b ? a : b;

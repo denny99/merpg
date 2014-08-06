@@ -79,6 +79,7 @@ PhysicalAttack = function (attacker, defender) {
 
             var result = self.attackResult().damage;
             if (self.attackResult().critical) {
+                self.attackResult().critical = minCritical(self.attackResult().critical, self.attacker().weapon.primaryCritical.max);
                 result += ' ' + self.attackResult().critical;
             }
 
@@ -100,7 +101,7 @@ PhysicalAttack = function (attacker, defender) {
 
                 //calculate secondary critical
                 if (self.secondaryCriticalRoll() != "" && self.attacker().weapon.secondaryCritical && self.attackResult().critical >= "C" && !(self.defender().size == 'large' || self.defender().size == 'huge')) {
-                    var criticalType = String.fromCharCode(self.attackResult().critical.charCodeAt(0) - 2);
+                    var criticalType = minCritical(String.fromCharCode(self.attackResult().critical.charCodeAt(0) - 2), self.attacker().weapon.secondaryCritical.max);
                     criticalTable = criticalTables[self.attacker().weapon.secondaryCritical.type];
                     critical = criticalTable.calculateCritical(secondaryCriticalRoll, criticalType);
 
