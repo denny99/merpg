@@ -8,7 +8,7 @@ var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(new GoogleStrategy({
         clientID: "335800780801-v5o7ahbg84ulgepb6ev3822l945bsjsj.apps.googleusercontent.com",
         clientSecret: "XhZhfUp-E2kE_6HBvj7s5o43",
-        callbackURL: settings.baseURL + "/login/google/callback"
+        callbackURL: "/login/google/callback"
     },
     function (accessToken, refreshToken, profile, done) {
         return done(null, profile);

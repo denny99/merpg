@@ -10,8 +10,7 @@
             "items": "zitems",
             "tables": "ztables",
             "users": "zusers"
-        },
-        "baseURL": "http://127.0.0.1:3000"
+        }
     },
 
     "production": {
@@ -25,7 +24,6 @@
             "items": "items",
             "tables": "tables",
             "users": "users"
-        },
-        "baseURL": "http://merpg.herokuapp.com"
+        }
     }
 }
