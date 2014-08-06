@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/js/login.js" afterPath="$PROJECT_DIR$/server/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
@@ -48,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.329806" vertical-offset="0" max-vertical-offset="646">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
               <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="magicalAttackUI.jade" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4348837" vertical-offset="663" max-vertical-offset="2669">
+              <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -135,12 +145,12 @@
         <option value="$PROJECT_DIR$/public/js/dataLoader.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
         <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
         <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
         <option value="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" />
         <option value="$PROJECT_DIR$/server/js/login.js" />
+        <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
       </list>
     </option>
   </component>
@@ -594,7 +604,11 @@
       <created>1407338267631</created>
       <updated>1407338267631</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="login switch">
+      <created>1407338283920</created>
+      <updated>1407338283920</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -631,7 +645,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3337041" sideWeight="0.5002633" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3403782" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3403782" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -680,7 +694,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="server" />
     <MESSAGE value="modules" />
     <MESSAGE value="monsterEditor and BS theme" />
     <MESSAGE value="itemEditor" />
@@ -705,7 +718,8 @@
     <MESSAGE value="min of 9 in damagetables" />
     <MESSAGE value="advanced spell calc + performance fix" />
     <MESSAGE value="spell bonus vs special armors" />
-    <option name="LAST_COMMIT_MESSAGE" value="spell bonus vs special armors" />
+    <MESSAGE value="login switch" />
+    <option name="LAST_COMMIT_MESSAGE" value="login switch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1045,14 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18345323" vertical-offset="0" max-vertical-offset="2669">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3366">
@@ -1099,8 +1105,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.329806" vertical-offset="0" max-vertical-offset="646">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
           <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4348837" vertical-offset="663" max-vertical-offset="2669">
+          <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
           <folding />
         </state>
       </provider>
