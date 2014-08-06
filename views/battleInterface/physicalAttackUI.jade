@@ -2,7 +2,7 @@
    Created by Denny on 29.07.2014.
 
 .container-fluid(data-bind = "visible: physicalAttackUIActive, with: physicalAttack")
-    .row.text-center
+    .row.text-center(data-bind = "visible: attacker() && defender()")
         .col-lg-3.form-group(data-bind = "with: attacker")
             .merpg-well.merpg-attackUI-well
                 .container-fluid.text-left

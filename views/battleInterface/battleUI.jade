@@ -61,12 +61,12 @@ block battleUI
                                 span.control-label
                                     | OB für Parieren
                                     input.pull-right(type = "number", min = "0", data-bind = "value: parryDB, valueUpdate: 'afterkeydown', attr: {max: getMaxParryAssignment, disabled: done() || dead() || (decided() && currentAction() != 'prepare')}")
-                                input.obParrySlider(type="range", min = "0", step = "1", data-bind = "attr: {disabled: done() || dead(), max: getMaxParryAssignment, value: parryDB, id: _id + 'ParrySlider'}, value: parryDB, valueUpdate: 'input'")
+                                input.obParrySlider(type="range", min = "0", step = "1", data-bind = "disable: done() || dead(), attr: {max: getMaxParryAssignment, value: parryDB, id: _id + 'ParrySlider'}, value: parryDB, valueUpdate: 'input'")
                         .row.form-group(data-bind = "visible: shield && blocking()")
                             .col-md-12
                                 span.control-label
                                     | OB für Blocken
                                     input.pull-right(type = "number", min = "0", data-bind = "value: blockDB, valueUpdate: 'afterkeydown', attr: {max: getMaxBlockAssignment, disabled: done() || dead() || (decided() && currentAction() != 'prepare')}")
-                                input.obBlockSlider(type="range", min = "0", step = "1", data-bind = "attr: {disabled: done() || dead(), max: getMaxBlockAssignment, value: blockDB, id: _id + 'ParrySlider'}, value: blockDB, valueUpdate: 'input'")
+                                input.obBlockSlider(type="range", min = "0", step = "1", data-bind = "disable: done() || dead(), attr: {max: getMaxBlockAssignment, value: blockDB, id: _id + 'ParrySlider'}, value: blockDB, valueUpdate: 'input'")
         include magicalAttackUI
         include physicalAttackUI

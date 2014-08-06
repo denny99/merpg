@@ -56,7 +56,7 @@ block battleLog
             .col-md-1
                 .btn-group-vertical
                     a.btn.btn-block.btn-primary.btn-block(data-toggle="modal", data-target="#modalAddMonster", data-bind = "visible: !physicalAttackUIActive() && !magicalAttackUIActive()") Hinzufügen
-                    a.btn.btn-success.btn.btn-block(data-bind = "click: nextAction, visible: !physicalAttackUIActive()")
+                    a.btn.btn-success.btn.btn-block(data-bind = "click: nextAction, visible: !physicalAttackUIActive() && !magicalAttackUIActive() && battleCombatants().length > 0")
                         span.glyphicon.glyphicon-forward
 
                 #modalAddMonster.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalAddMonsterTitle', aria-hidden='true', data-bind = "with: quickMonsterEditor")

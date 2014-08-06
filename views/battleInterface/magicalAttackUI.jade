@@ -45,29 +45,71 @@
                             table.table.table-responsive.text-left
                                 tbody
                                     tr
-                                        th Treffer
-                                        th Treffer pro Runde
+                                        th Zauber OB
+                                        th Vorb. Runden
                                     tr
                                         td
-                                            input.merpg-tableInput(type='number', data-bind = "value: hitsTaken")
+                                            input.merpg-tableInput(type = "number", data-bind = "value: spellOB, valueUpdate: 'afterkeydown'")
                                         td
-                                            input.merpg-tableInput(type='number', data-bind = "value: hitsPerRound")
-                                        td
-                                            .checkbox-inline
-                                                label
-                                                    input.merpg-tableInput(type='checkbox', data-bind = "checked: knockedOut")
-                                                    | Kampfunfähig
+                                            input.merpg-tableInput(type = "number", data-bind = "value: preparedRounds, valueUpdate: 'afterkeydown'")
                                     tr
-                                        th Benommenheit
-                                        th Aktivität
-                                        th Runden bis zum Tod
+                                        th Distanz
+                                        th Spezial
                                     tr
                                         td
-                                            input.merpg-tableInput(type='number', data-bind = "value: stunned")
+                                            input.merpg-tableInput(type = "number", data-bind = "value: range, valueUpdate: 'afterkeydown'")
                                         td
-                                            input.merpg-tableInput(type='number', data-bind = "value: activity")
+                                            input.merpg-tableInput(type = "number", data-bind = "value: special, valueUpdate: 'afterkeydown'")
+                    .row
+                        .col-md-12
+                            table.table.table-responsive.text-left
+                                tbody
+                                    tr
+                                        th Zauber
+                                        th P. Krit
+                                        th S. Krit
+                                    tr
                                         td
-                                            input.merpg-tableInput(type='number', data-bind = "value: roundsTillDeath")
+                                            select.form-control.input-sm(data-bind = "value: spellType")
+                                                option(value = "shockBolt") Schockstrahl
+                                                option(value = "waterBolt") Wasserstrahl
+                                                option(value = "iceBolt") Eisstrahl
+                                                option(value = "fireBolt") Feuerstrahl
+                                                option(value = "lightningBolt") Blitzstrahl
+                                                option(value = "coldBall") Kälteball
+                                                option(value = "fireBall") Feuerball
+                                        td
+                                            select.form-control.input-sm(data-bind = "value: primarySpellCritical")
+                                                option(value = "cold") Kälteschaden
+                                                option(value = "electricity") Elektrizitätsschaden
+                                                option(value = "impact") Schlagschaden
+                                                option(value = "heat") Hitzeschaden
+                                        td
+                                            select.form-control.input-sm(data-bind = "value: secondarySpellCritical")
+                                                option(value = "none") Keinen
+                                                option(value = "cold") Kälteschaden
+                                                option(value = "electricity") Elektrizitätsschaden
+                                                option(value = "impact") Schlagschaden
+                                                option(value = "heat") Hitzeschaden
+                    .row
+                        .col-md-12
+                            table.table.table-responsive.text-left
+                                tbody
+                                    tr
+                                        td Angriff
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: attackRoll, valueUpdate: 'afterkeydown'")
+                                        td(data-bind = "text: attackResultText")
+                                    tr(data-bind = "visible: attackResult().critical")
+                                        td Primär Krit
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: primaryCriticalRoll, valueUpdate: 'afterkeydown'")
+                                        td(data-bind = "text: primaryCriticalResultText")
+                                    tr(data-bind = "visible: secondarySpellCritical() != 'none' && attackResult().critical >= 'C' && !(defender().size == 'large' || defender().size == 'huge')")
+                                        td Sekundär Krit
+                                        td
+                                            input.merpg-tableInput(type = "text", data-bind = "value: secondaryCriticalRoll, valueUpdate: 'afterkeydown'")
+                                        td(data-bind = "text: secondaryCriticalResultText")
                                     tr
                                         td(colspan="2")
                                             a.btn.btn-success.btn-block(data-bind = "click: applyResults")
@@ -75,6 +117,7 @@
                                         td(colspan="1")
                                             a.btn.btn-danger.btn-block(data-bind = "click: cancelAttack")
                                                 | Abbrechen
+
         .col-lg-4.form-group(data-bind = "with: defender")
             .merpg-well.merpg-attackUI-well(data-bind = "css: {'merpg-battleUI-dead': dead}")
                 .container-fluid.text-left

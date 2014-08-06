@@ -235,8 +235,8 @@ BattleUI = function () {
 
     self.physicalAttackUIActive = ko.observable(false);
     self.magicalAttackUIActive = ko.observable(false);
-    self.physicalAttack = ko.observable("");
-    self.magicalAttack = ko.observable("");
+    self.physicalAttack = ko.observable(undefined);
+    self.magicalAttack = ko.observable(undefined);
 
     /**
      * opens attack UI for calculating dealt damage
@@ -244,11 +244,21 @@ BattleUI = function () {
     self.openAttackUI = function (combatant) {
         if (combatant.currentAction() == "cast") {
             self.magicalAttackUIActive(true);
-            self.magicalAttack(new MagicalAttack(combatant, combatant.attackTarget()));
+            if (!self.magicalAttack()) {
+                self.magicalAttack(new MagicalAttack(combatant, combatant.attackTarget()));
+            }
+            else {
+                self.magicalAttack().createAttack(combatant, combatant.attackTarget());
+            }
         }
         else {
             self.physicalAttackUIActive(true);
-            self.physicalAttack(new PhysicalAttack(combatant, combatant.attackTarget()));
+            if (!self.physicalAttack()) {
+                self.physicalAttack(new PhysicalAttack(combatant, combatant.attackTarget()));
+            }
+            else {
+                self.physicalAttack().createAttack(combatant, combatant.attackTarget());
+            }
         }
     };
 
@@ -266,13 +276,11 @@ BattleUI = function () {
             self.magicalAttackUIActive(false);
             self.magicalAttack().attacker().bonusOverTime.remove(cancelMalus);
             self.magicalAttack().attacker().bonusOverTime.push(cancelMalus);
-            self.magicalAttack("");
         }
         else {
             self.physicalAttackUIActive(false);
             self.physicalAttack().attacker().bonusOverTime.remove(cancelMalus);
             self.physicalAttack().attacker().bonusOverTime.push(cancelMalus);
-            self.physicalAttack("");
         }
     };
 
@@ -284,11 +292,9 @@ BattleUI = function () {
         if (combatant.currentAction() == "cast") {
             self.magicalAttackUIActive(false);
             self.magicalAttack().attacker().done(true);
-            self.magicalAttack("");
         } else {
             self.physicalAttackUIActive(false);
             self.physicalAttack().attacker().done(true);
-            self.physicalAttack("");
         }
     };
 
