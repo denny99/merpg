@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(favicon("./public/images/bonus_middle_earth_map.ico"));
-app.use(logger('dev'));
+app.use(logger());
 app.use(bodyParser.json());
 app.use(session({secret: 'keyboard cat'}))
 
