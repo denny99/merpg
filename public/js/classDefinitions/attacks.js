@@ -222,8 +222,8 @@ PhysicalAttack = function (attacker, defender) {
         self.reset();
         battleUI.cancelAttack(self.attacker());
     };
-    
-    self.reset = function() {
+
+    self.reset = function () {
         self.fumble(false);
         self.flankAttack(false);
         self.rearAttack(false);
@@ -335,6 +335,46 @@ MagicalAttack = function (attacker, defender) {
 
 
         var armor = self.defender().armor ? self.defender().armor.armorType : "none";
+
+        //determine OB bonus for spells against armor
+        switch (armor) {
+            case "plate":
+                switch (self.spellType()) {
+                    case "shockBolt":
+                        attackOB += 10;
+                        break;
+                    case "waterBolt":
+                        attackOB += -10;
+                        break;
+                    case "iceBolt":
+                        attackOB += -5;
+                        break;
+                    case "lightningBolt":
+                        attackOB += 10;
+                        break;
+                }
+                break;
+            case "chain":
+                switch (self.spellType()) {
+                    case "shockBolt":
+                        attackOB += 10;
+                        break;
+                    case "lightningBolt":
+                        attackOB += 10;
+                        break;
+                }
+                break;
+            case "rigidLeather":
+                switch (self.spellType()) {
+                    case "waterBolt":
+                        attackOB += -10;
+                        break;
+                    case "iceBolt":
+                        attackOB += -5;
+                        break;
+                }
+                break;
+        }
 
         var damage;
         if (damageTable instanceof BoltDamageTable) {
@@ -493,7 +533,7 @@ MagicalAttack = function (attacker, defender) {
         battleUI.cancelAttack(self.attacker());
     };
 
-    self.reset = function() {
+    self.reset = function () {
         self.fumble(false);
         self.flankAttack(false);
         self.rearAttack(false);
