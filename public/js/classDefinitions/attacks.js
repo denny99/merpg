@@ -287,18 +287,6 @@ MagicalAttack = function (attacker, defender) {
     self.spellType = ko.observable("shockBolt");
     self.primarySpellCritical = ko.observable("electricity");
     self.secondarySpellCritical = ko.observable("none");
-
-    self.primaryCriticalResultComputed = ko.computed(function () {
-        self.primaryCriticalResult({
-            hits: self.hitsTaken(),
-            hitsPerRound: self.hitsPerRound(),
-            activity: self.activity(),
-            stunned: self.stunned(),
-            knockedOut: self.knockedOut(),
-            roundsTillDeath: self.roundsTillDeath()
-        });
-    });
-
     /**
      * evaluates results in tables
      */
@@ -317,11 +305,19 @@ MagicalAttack = function (attacker, defender) {
             case "fireBolt":
             case "lightningBolt":
                 damageTable = damageTables["bolt"];
+                if (self.attackRoll() <= 2) {
+                    self.attackResultText("Fumble");
+                    return;
+                }
                 break;
 
             case "coldBall":
             case "fireBall":
                 damageTable = damageTables["ball"];
+                if (self.attackRoll() <= 4) {
+                    self.attackResultText("Fumble");
+                    return;
+                }
                 break;
         }
 
@@ -526,13 +522,12 @@ MagicalAttack = function (attacker, defender) {
     };
 
     self.reset = function () {
-        self.fumble(false);
-        self.flankAttack(false);
-        self.rearAttack(false);
-        self.surprised(false);
-        self.changedWeapon(false);
-        self.special(false);
-        self.weaponType("regular");
+        self.special(0);
+        self.spellOB (0);
+        self.preparedRounds(0);
+        self.range(0);
+        self.special(0);
+
 
         self.attackRoll(0);
         self.attackResult("");

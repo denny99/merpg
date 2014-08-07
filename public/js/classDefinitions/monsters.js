@@ -30,6 +30,7 @@ Monster = function (dbMonster) {
     });
     self.armor = armors[dbMonster.armor];
     self.armorChange = ko.computed(function () {
+        self.armor = armors[self.armorName()];
         if (self.armor) {
             self.armor = armors[self.armorName()];
             self.helmet(self.armor.helmet || self.helmet());
@@ -287,7 +288,7 @@ Monster = function (dbMonster) {
         if (self.stunned() > 0 && (self.currentAction() == "cast")) {
             self.currentAction("other");
         }
-    });
+    }).extend({throttle: 2000});
 
     /**
      * trigger effects for next round
