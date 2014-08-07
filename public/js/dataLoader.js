@@ -33,12 +33,11 @@ DataLoader = function () {
                                 }
                                 else {
                                     damageTables[doc._id] = new DamageTable(doc._id, doc.content);
+                                    damageTablesList.push({name: doc._id, displayName: doc.displayName});
+                                    damageTablesList.sort(sort_by('name', true, function (a) {
+                                        return a.toUpperCase()
+                                    }));
                                 }
-
-                                damageTablesList.push({name: doc._id, displayName: doc.displayName});
-                                damageTablesList.sort(sort_by('name', true, function (a) {
-                                    return a.toUpperCase()
-                                }));
                                 break;
                             case
                             "criticalTable"
@@ -48,10 +47,12 @@ DataLoader = function () {
                                 }
                                 else {
                                     criticalTables[doc._id] = new CriticalTable(doc._id, doc.content);
-                                    criticalTablesList.push({name: doc._id, displayName: doc.displayName});
-                                    criticalTablesList.sort(sort_by('name', true, function (a) {
-                                        return a.toUpperCase()
-                                    }));
+                                    if (doc._id != "largeCreatureSpell") {
+                                        criticalTablesList.push({name: doc._id, displayName: doc.displayName});
+                                        criticalTablesList.sort(sort_by('name', true, function (a) {
+                                            return a.toUpperCase()
+                                        }));
+                                    }
                                 }
 
                                 break;

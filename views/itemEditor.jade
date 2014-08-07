@@ -37,18 +37,18 @@ block itemEditor
                                                     | Rüstung
                                 .col-md-9
                                     .form-group
-                                        input#inputItemName.form-control(type='text', placeholder='Gegenstandsname', data-bind = "value: name, valueUpdate: 'afterkeydown'")
+                                        input#inputItemName.form-control(type='text', placeholder='Gegenstandsname', data-bind = "value: name")
                                     .form-group
                                         .input-group
-                                            input#inputPrice.form-control.text-right(type='number', placeholder='Preis', min="1", data-bind = "value: price")
+                                            input#inputPrice.form-control.text-right(type='number', placeholder='Preis', min="1", data-bind = "value: price, valueUpdate: 'afterkeydown'")
                                             span.input-group-addon ZS
                                     .form-group
                                         .input-group
-                                            input#inputWeight.form-control.text-right(type='text', placeholder='Gewicht', data-bind = "value: weight")
+                                            input#inputWeight.form-control.text-right(type='text', placeholder='Gewicht', data-bind = "value: weight, valueUpdate: 'afterkeydown'")
                                             span.input-group-addon kg
 
                                     .form-group
-                                        textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description") Itembeschreibung
+                                        textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description, valueUpdate: 'afterkeydown'") Itembeschreibung
                         #weaponOnly(data-bind = "visible: type() == 'weapon'")
                             .container-fluid
                                 .row
@@ -72,7 +72,7 @@ block itemEditor
                                                 span Reichweite
                                             .col-md-6
                                                 .input-group
-                                                    input#inputRange.form-control.text-right(type='number', placeholder='Reichweite', min = "1", data-bind = "value: range")
+                                                    input#inputRange.form-control.text-right(type='number', placeholder='Reichweite', min = "1", data-bind = "value: range, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon m
                                     .merpg-noPadding(data-bind = "css: {'col-lg-6': weaponType() != 'melee', 'col-lg-12': weaponType() == 'melee'}")
                                         .form-group
@@ -80,7 +80,7 @@ block itemEditor
                                                 p Patzer
                                             div(data-bind = "css: {'col-md-6': weaponType() != 'melee', 'col-md-9': weaponType() == 'melee'}")
                                                 .input-group
-                                                    input#inputFumbleRange.form-control.text-right(type='number', placeholder='Patzer', min = "1", data-bind = "value: fumbleRange")
+                                                    input#inputFumbleRange.form-control.text-right(type='number', placeholder='Patzer', min = "1", data-bind = "value: fumbleRange, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon %
                                 .row
                                     .col-lg-12.merpg-noPadding
@@ -88,7 +88,7 @@ block itemEditor
                                             label.col-md-4.control-label(for='inputOBSL') Keine Rüstung
                                             .col-md-8
                                                 .input-group
-                                                    input#inputOBNone.form-control.text-right(type='number', placeholder='OB vs. Keine Rüstung', min="0", data-bind = "value: OBNone")
+                                                    input#inputOBNone.form-control.text-right(type='number', placeholder='OB vs. Keine Rüstung', min="0", data-bind = "value: OBNone, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon OB
                                 .row
                                     .col-lg-6.merpg-noPadding
@@ -96,14 +96,14 @@ block itemEditor
                                             label.col-md-4.control-label(for='inputOBSL') Leichtes Leder
                                             .col-md-8
                                                 .input-group
-                                                    input#inputOBSL.form-control.text-right(type='number', placeholder='OB vs. Leichtes Leder', min="0", data-bind = "value: OBSL")
+                                                    input#inputOBSL.form-control.text-right(type='number', placeholder='OB vs. Leichtes Leder', min="0", data-bind = "value: OBSL, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon OB
                                     .col-lg-6.merpg-noPadding
                                         .form-group
                                             label.col-md-4.control-label(for='inputOBRL') verst. Leder
                                             .col-md-8
                                                 .input-group
-                                                    input#inputOBRL.form-control.text-right(type='number', placeholder='OB vs. Verst. Leder', min="0", data-bind = "value: OBRL")
+                                                    input#inputOBRL.form-control.text-right(type='number', placeholder='OB vs. Verst. Leder', min="0", data-bind = "value: OBRL, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon OB
                                 .row
                                     .col-lg-6.merpg-noPadding
@@ -111,14 +111,14 @@ block itemEditor
                                             label.col-md-4.control-label(for='inputOBChain') Kette
                                             .col-md-8
                                                 .input-group
-                                                    input#inputOBChain.form-control.text-right(type='number', placeholder='OB vs. Kette', min="0", data-bind = "value: OBChain")
+                                                    input#inputOBChain.form-control.text-right(type='number', placeholder='OB vs. Kette', min="0", data-bind = "value: OBChain, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon OB
                                     .col-lg-6.merpg-noPadding
                                         .form-group
                                             label.col-md-4.control-label(for='inputOBPlate') Platte
                                             .col-md-8
                                                 .input-group
-                                                    input#inputOBPlate.form-control.text-right(type='number', placeholder='OB vs. Platte', min="0", data-bind = "value: OBPlate")
+                                                    input#inputOBPlate.form-control.text-right(type='number', placeholder='OB vs. Platte', min="0", data-bind = "value: OBPlate, valueUpdate: 'afterkeydown'")
                                                     span.input-group-addon OB
                             .form-group
                                 label.col-md-3.control-label(for='selectDamageType') Schadensart
@@ -154,7 +154,7 @@ block itemEditor
                                 label.col-md-3.control-label(for='inputShieldDB') Defensiv Bonus
                                 .col-md-9
                                     .input-group
-                                        input#inputShieldDB.form-control.text-right(type='number', placeholder='DB', min="1", data-bind = "value: DBBonus")
+                                        input#inputShieldDB.form-control.text-right(type='number', placeholder='DB', min="1", data-bind = "value: DBBonus, valueUpdate: 'afterkeydown'")
                                         span.input-group-addon DB
                         #armorOnly(data-bind = "visible: type() == 'armor'")
                             .form-group

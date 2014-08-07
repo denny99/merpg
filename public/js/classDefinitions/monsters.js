@@ -45,11 +45,11 @@ Monster = function (dbMonster) {
     self.blocking = ko.observable(false);
     self.currentAction = ko.observable("other");
 
-    self.currentLevel = ko.observable(parseInt(dbMonster.level));
-    self.currentHits = ko.observable(parseInt(dbMonster.hits));
-    self.currentOB = ko.observable(parseInt(dbMonster.OB));
-    self.currentDB = ko.observable(parseInt(dbMonster.DB));
-    self.currentMM = ko.observable(parseInt(dbMonster.MM));
+    self.currentLevel = ko.observable(dbMonster.level).extend({numeric: 0});
+    self.currentHits = ko.observable(dbMonster.hits).extend({numeric: 0});
+    self.currentOB = ko.observable(dbMonster.OB).extend({numeric: 0});
+    self.currentDB = ko.observable(dbMonster.DB).extend({numeric: 0});
+    self.currentMM = ko.observable(dbMonster.MM).extend({numeric: 0});
 
     self.decided = ko.observable(false);
 
@@ -100,20 +100,14 @@ Monster = function (dbMonster) {
     //battle attributes
 
     //int attributes
-    self.parryDB = ko.observable(0);
-    self.blockDB = ko.observable(0);
-    self.bonus = ko.observable(0);
+    self.parryDB = ko.observable(0).extend({numeric: 0});
+    self.blockDB = ko.observable(0).extend({numeric: 0});
+    self.bonus = ko.observable(0).extend({numeric: 0});
     self.bonusOverTime = ko.observableArray([]);
-    self.hitsTaken = ko.observable(0);
-    self.hitsPerRound = ko.observable(0);
-    self.roundsTillDeath = ko.observable(undefined);
-    self.stunned = ko.observable(0);
-
-    self.resetRoundTillDeath = ko.computed(function() {
-        if (parseInt(self.roundsTillDeath()) == -1) {
-            self.roundsTillDeath(undefined);
-        }
-    });
+    self.hitsTaken = ko.observable(0).extend({numeric: 0});
+    self.hitsPerRound = ko.observable(0).extend({numeric: 0});
+    self.roundsTillDeath = ko.observable(undefined).extend({intOrNull: 0});
+    self.stunned = ko.observable(0).extend({numeric: 0});
 
     //bool attributes
     self.done = ko.observable(false);
@@ -199,7 +193,7 @@ Monster = function (dbMonster) {
         if (roll <= self.weapon.fumbleRange) {
             return "fumble";
         }
-        var attackOB = roll + parseInt(self.currentOB()) + parseInt(self.bonus()) - parseInt(self.parryDB()) - parseInt(self.blockDB());
+        var attackOB = roll + self.currentOB() + self.bonus() - self.parryDB() - self.blockDB();
 
         self.bonusOverTime().forEach(function (bonus) {
             attackOB += bonus.bonus;
@@ -232,7 +226,7 @@ Monster = function (dbMonster) {
      * @returns {number} resultingOB
      */
     self.defend = function (enemyOB) {
-        return enemyOB - parseInt(self.currentDB());
+        return enemyOB - self.currentDB();
     };
 
     /**
@@ -241,7 +235,7 @@ Monster = function (dbMonster) {
      * @returns {number} resultingOB
      */
     self.parry = function (enemyOB) {
-        return enemyOB - parseInt(self.parryDB());
+        return enemyOB - self.parryDB();
     };
 
     /**
@@ -250,7 +244,7 @@ Monster = function (dbMonster) {
      * @returns {number} resultingOB
      */
     self.block = function (enemyOB) {
-        return enemyOB - parseInt(self.blockDB());
+        return enemyOB - self.blockDB();
     };
 
     self.getMaxParryAssignment = ko.computed(function () {
@@ -327,8 +321,8 @@ Monster = function (dbMonster) {
         }
 
         self.hitsTaken(
-                parseInt(self.hitsTaken()) +
-                parseInt(self.hitsPerRound())
+                self.hitsTaken() +
+                self.hitsPerRound()
         );
     }
 };

@@ -23,12 +23,12 @@ block monsterEditor
                                     .container-fluid
                                         .row.form-group
                                             .col-md-6
-                                                input#inputMonstername.form-control(type='text', placeholder='Monstername', data-bind = "value: name, valueUpdate: 'afterkeydown'")
+                                                input#inputMonstername.form-control(type='text', placeholder='Monstername', data-bind = "value: name")
                                             .col-md-6
-                                                input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", data-bind = "value: level")
+                                                input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", data-bind = "value: level, valueUpdate: 'afterkeydown'")
                                         .row.form-group
                                             .col-md-12
-                                                textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description") Monsterbeschreibung
+                                                textarea#taMonsterDescription.form-control(rows='3', data-bind = "value: description, valueUpdate: 'afterkeydown'") Monsterbeschreibung
                         .form-group
                             label.col-md-2.control-label Größe
                             .col-md-10

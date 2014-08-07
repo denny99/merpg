@@ -44,8 +44,8 @@ QuickMonsterEditor = function () {
     });
     self.compareMM = ko.computed(function () {
         if (self.loadedMonster()) {
-            if (parseInt(self.loadedMonster().currentMM()) >= 0) {
-                return (parseInt(self.loadedMonster().currentMM())) / (self.maxMM ) * 100 + "%";
+            if (self.loadedMonster().currentMM() >= 0) {
+                return (self.loadedMonster().currentMM()) / (self.maxMM ) * 100 + "%";
             }
             else {
                 return "0%";

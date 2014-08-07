@@ -60,8 +60,8 @@ MonsterEditorViewModel = function () {
     /**
      * create attributes
      */
-    self.name = ko.observable("");
-    self.level = ko.observable(1);
+    self.name = ko.observable("Name").extend({id: 0});
+    self.level = ko.observable(1).extend({numeric: 0});
     self.description = ko.observable("");
     self.size = ko.observable("normal");
 
@@ -109,10 +109,10 @@ MonsterEditorViewModel = function () {
     self.maxDB = 75;
     self.maxMM = 50;
 
-    self.hits = ko.observable(20);
-    self.OB = ko.observable(30);
-    self.DB = ko.observable(10);
-    self.MM = ko.observable(10);
+    self.hits = ko.observable(20).extend({numeric: 0});
+    self.OB = ko.observable(30).extend({numeric: 0});
+    self.DB = ko.observable(10).extend({numeric: 0});
+    self.MM = ko.observable(10).extend({numeric: 0});
 
     self.compareHits = ko.computed(function () {
         return self.hits() / self.maxHits * 100 + "%";
@@ -124,8 +124,8 @@ MonsterEditorViewModel = function () {
         return self.DB() / self.maxDB * 100 + "%";
     });
     self.compareMM = ko.computed(function () {
-        if (parseInt(self.MM()) >= 0) {
-            return (parseInt(self.MM())) / (self.maxMM ) * 100 + "%";
+        if (self.MM() >= 0) {
+            return (self.MM()) / (self.maxMM ) * 100 + "%";
         }
         else {
             return "0%";

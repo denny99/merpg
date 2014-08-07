@@ -115,17 +115,17 @@ ItemEditorViewModel = function () {
 
     //item attributes
     self.type = ko.observable("equipment");
-    self.name = ko.observable("");
+    self.name = ko.observable("Name").extend({id: 0});
     self.description = ko.observable("");
-    self.price = ko.observable(1);
-    self.weight = ko.observable(1);
-    self.range = ko.observable(3);
-    self.fumbleRange = ko.observable(1);
-    self.OBNone = ko.observable(0);
-    self.OBSL = ko.observable(0);
-    self.OBRL = ko.observable(0);
-    self.OBChain = ko.observable(0);
-    self.OBPlate = ko.observable(0);
+    self.price = ko.observable(1).extend({numeric: 0});
+    self.weight = ko.observable(1).extend({numeric: 2});
+    self.range = ko.observable(3).extend({numeric: 0});
+    self.fumbleRange = ko.observable(1).extend({numeric: 0});
+    self.OBNone = ko.observable(0).extend({numeric: 0});
+    self.OBSL = ko.observable(0).extend({numeric: 0});
+    self.OBRL = ko.observable(0).extend({numeric: 0});
+    self.OBChain = ko.observable(0).extend({numeric: 0});
+    self.OBPlate = ko.observable(0).extend({numeric: 0});
 
     self.weaponType = ko.observable("melee");
     self.attackType = ko.observable("");
@@ -153,7 +153,7 @@ ItemEditorViewModel = function () {
     self.secondaryCriticalType = ko.observable("");
     self.secondaryCriticalMax = ko.observable("");
 
-    self.DBBonus = ko.observable(1);
+    self.DBBonus = ko.observable(1).extend({numeric: 0});
 
     self.armorType = ko.observable("");
     self.helmet = ko.observable(false);

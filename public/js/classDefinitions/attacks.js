@@ -23,18 +23,18 @@ PhysicalAttack = function (attacker, defender) {
     self.rearAttack = ko.observable(false);
     self.surprised = ko.observable(false);
     self.changedWeapon = ko.observable(false);
-    self.special = ko.observable(false);
+    self.special = ko.observable(0).extend({numeric: 0});;
     self.weaponType = ko.observable("regular");
 
-    self.attackRoll = ko.observable(0);
+    self.attackRoll = ko.observable(0).extend({numeric: 0});
     self.attackResult = ko.observable("");
     self.attackResultText = ko.observable("");
 
-    self.primaryCriticalRoll = ko.observable(0);
+    self.primaryCriticalRoll = ko.observable(0).extend({numeric: 0});
     self.primaryCriticalResult = ko.observable("");
     self.primaryCriticalResultText = ko.observable("");
 
-    self.secondaryCriticalRoll = ko.observable(0);
+    self.secondaryCriticalRoll = ko.observable(0).extend({numeric: 0});
     self.secondaryCriticalResult = ko.observable("");
     self.secondaryCriticalResultText = ko.observable("");
 
@@ -42,9 +42,9 @@ PhysicalAttack = function (attacker, defender) {
      * evaluates results in tables
      */
     self.calculateAttack = ko.computed(function () {
-        var attackOB = self.attacker().attack(parseInt(self.attackRoll()));
-        var primaryCriticalRoll = parseInt(self.primaryCriticalRoll());
-        var secondaryCriticalRoll = parseInt(self.secondaryCriticalRoll());
+        var attackOB = self.attacker().attack(self.attackRoll());
+        var primaryCriticalRoll = self.primaryCriticalRoll();
+        var secondaryCriticalRoll = self.secondaryCriticalRoll();
 
         var healthMalus = (self.attacker().hitsTaken() > (self.attacker().currentHits() / 2));
 
@@ -68,10 +68,10 @@ PhysicalAttack = function (attacker, defender) {
 
             var damage;
             if (damageTable instanceof CreatureDamageTable) {
-                damage = damageTable.calculateDamage(attackOB, melee, armor, self.attacker().size, self.flankAttack(), self.rearAttack(), self.surprised(), self.defender().stunned() > 0 || self.defender().knockedOut(), self.changedWeapon(), healthMalus, parseInt(self.special()));
+                damage = damageTable.calculateDamage(attackOB, melee, armor, self.attacker().size, self.flankAttack(), self.rearAttack(), self.surprised(), self.defender().stunned() > 0 || self.defender().knockedOut(), self.changedWeapon(), healthMalus, self.special());
             }
             else {
-                damage = damageTable.calculateDamage(attackOB, melee, armor, self.flankAttack(), self.rearAttack(), self.surprised(), self.defender().stunned() > 0 || self.defender().knockedOut(), self.changedWeapon(), healthMalus, parseInt(self.special()));
+                damage = damageTable.calculateDamage(attackOB, melee, armor, self.flankAttack(), self.rearAttack(), self.surprised(), self.defender().stunned() > 0 || self.defender().knockedOut(), self.changedWeapon(), healthMalus, self.special());
             }
 
 
@@ -122,16 +122,16 @@ PhysicalAttack = function (attacker, defender) {
          */
         function apply(object) {
             if (object.hits) {
-                self.defender().hitsTaken(parseInt(self.defender().hitsTaken()) + parseInt(object.hits));
+                self.defender().hitsTaken(self.defender().hitsTaken() + object.hits);
             }
 
             if (object.hitsPerRound && !self.defender().bloodImmun) {
-                self.defender().hitsPerRound(parseInt(self.defender().hitsPerRound()) + parseInt(object.hitsPerRound));
+                self.defender().hitsPerRound(self.defender().hitsPerRound() + object.hitsPerRound);
             }
 
             if (object.activity) {
                 if (typeof object.activity == "number") {
-                    self.defender().bonus(parseInt(self.defender().bonus()) + parseInt(object.activity));
+                    self.defender().bonus(self.defender().bonus() + object.activity);
                 }
                 else {
                     self.defender().bonusOverTime.push(self.primaryCriticalResult.activity);
@@ -139,14 +139,14 @@ PhysicalAttack = function (attacker, defender) {
             }
 
             if (object.stunned && !self.defender().stunImmun) {
-                self.defender().stunned(parseInt(self.defender().stunned()) + parseInt(object.stunned));
+                self.defender().stunned(self.defender().stunned() + object.stunned);
                 if (self.defender().done()) {
                     self.defender().stunned(self.defender().stunned() + 1);
                 }
             }
 
             if (object.roundsTillDeath) {
-                self.defender().roundsTillDeath(min(parseInt(self.defender().roundsTillDeath()), parseInt(object.roundsTillDeath)));
+                self.defender().roundsTillDeath(min(self.defender().roundsTillDeath(), object.roundsTillDeath));
             }
             if (object.knockedOut) {
                 self.defender().knockedOut(object.knockedOut);
@@ -266,20 +266,20 @@ MagicalAttack = function (attacker, defender) {
 
     self.fumble = ko.observable(false);
 
-    self.spellOB = ko.observable(0);
-    self.preparedRounds = ko.observable(0);
-    self.range = ko.observable(0);
-    self.special = ko.observable(0);
+    self.spellOB = ko.observable(0).extend({numeric: 0});
+    self.preparedRounds = ko.observable(0).extend({numeric: 0});
+    self.range = ko.observable(0).extend({numeric: 0});
+    self.special = ko.observable(0).extend({numeric: 0});
 
-    self.attackRoll = ko.observable(0);
+    self.attackRoll = ko.observable(0).extend({numeric: 0});
     self.attackResult = ko.observable("");
     self.attackResultText = ko.observable("");
 
-    self.primaryCriticalRoll = ko.observable(0);
+    self.primaryCriticalRoll = ko.observable(0).extend({numeric: 0});
     self.primaryCriticalResult = ko.observable("");
     self.primaryCriticalResultText = ko.observable("");
 
-    self.secondaryCriticalRoll = ko.observable(0);
+    self.secondaryCriticalRoll = ko.observable(0).extend({numeric: 0});
     self.secondaryCriticalResult = ko.observable("");
     self.secondaryCriticalResultText = ko.observable("");
 
@@ -287,15 +287,6 @@ MagicalAttack = function (attacker, defender) {
     self.spellType = ko.observable("shockBolt");
     self.primarySpellCritical = ko.observable("electricity");
     self.secondarySpellCritical = ko.observable("none");
-
-    //simplified calculation pretends to only have primary critical
-    //remove when enhancing
-    self.hitsTaken = ko.observable(0);
-    self.hitsPerRound = ko.observable(0);
-    self.stunned = ko.observable(0);
-    self.activity = ko.observable(0);
-    self.roundsTillDeath = ko.observable(0);
-    self.knockedOut = ko.observable(false);
 
     self.primaryCriticalResultComputed = ko.computed(function () {
         self.primaryCriticalResult({
@@ -312,9 +303,9 @@ MagicalAttack = function (attacker, defender) {
      * evaluates results in tables
      */
     self.calculateAttack = ko.computed(function () {
-        var attackOB = self.attacker().cast(parseInt(self.attackRoll())) + parseInt(self.spellOB());
-        var primaryCriticalRoll = parseInt(self.primaryCriticalRoll());
-        var secondaryCriticalRoll = parseInt(self.secondaryCriticalRoll());
+        var attackOB = self.attacker().cast(self.attackRoll()) + self.spellOB();
+        var primaryCriticalRoll = self.primaryCriticalRoll();
+        var secondaryCriticalRoll = self.secondaryCriticalRoll();
 
         //calculate attack Damage
 
@@ -379,10 +370,10 @@ MagicalAttack = function (attacker, defender) {
 
         var damage;
         if (damageTable instanceof BoltDamageTable) {
-            damage = damageTable.calculateDamage(attackOB, armor, parseInt(self.range()), parseInt(self.special()), parseInt(self.preparedRounds()), self.spellType());
+            damage = damageTable.calculateDamage(attackOB, armor, self.range(), self.special(), self.preparedRounds(), self.spellType());
         }
         else {
-            damage = damageTable.calculateDamage(attackOB, armor, parseInt(self.range()), parseInt(self.special()), parseInt(self.preparedRounds()));
+            damage = damageTable.calculateDamage(attackOB, armor, self.range(), self.special(), self.preparedRounds());
         }
 
 
@@ -431,16 +422,16 @@ MagicalAttack = function (attacker, defender) {
          */
         function apply(object) {
             if (object.hits) {
-                self.defender().hitsTaken(parseInt(self.defender().hitsTaken()) + parseInt(object.hits));
+                self.defender().hitsTaken(self.defender().hitsTaken() + object.hits);
             }
 
             if (object.hitsPerRound && !self.defender().bloodImmun) {
-                self.defender().hitsPerRound(parseInt(self.defender().hitsPerRound()) + parseInt(object.hitsPerRound));
+                self.defender().hitsPerRound(self.defender().hitsPerRound() + object.hitsPerRound);
             }
 
             if (object.activity) {
                 if (typeof object.activity == "number") {
-                    self.defender().bonus(parseInt(self.defender().bonus()) + parseInt(object.activity));
+                    self.defender().bonus(self.defender().bonus() + object.activity);
                 }
                 else {
                     self.defender().bonusOverTime.push(self.primaryCriticalResult.activity);
@@ -448,14 +439,14 @@ MagicalAttack = function (attacker, defender) {
             }
 
             if (object.stunned && !self.defender().stunImmun) {
-                self.defender().stunned(parseInt(self.defender().stunned()) + parseInt(object.stunned));
+                self.defender().stunned(self.defender().stunned() + object.stunned);
                 if (self.defender().done()) {
                     self.defender().stunned(self.defender().stunned());
                 }
             }
 
             if (object.roundsTillDeath) {
-                self.defender().roundsTillDeath(min(parseInt(self.defender().roundsTillDeath()), parseInt(object.roundsTillDeath)));
+                self.defender().roundsTillDeath(min(self.defender().roundsTillDeath(), object.roundsTillDeath));
             }
             if (object.knockedOut) {
                 self.defender().knockedOut(object.knockedOut);
