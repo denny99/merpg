@@ -165,7 +165,7 @@ MonsterEditorViewModel = function () {
             data: monster,
             success: function () {
                 monsters[monster._id] = new Monster(monster);
-                monstersList.push(monster._id);
+                monstersList.push({name: monster._id});
                 self.reset();
             }
         });
@@ -177,7 +177,7 @@ MonsterEditorViewModel = function () {
     self.reset = function () {
         self.loadedMonster(undefined);
 
-        self.name("");
+        self.name("Name");
         self.level(1);
         self.description("");
         self.size("normal");
