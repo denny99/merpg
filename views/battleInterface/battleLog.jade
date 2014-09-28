@@ -151,7 +151,13 @@ block battleLog
                                                                 label
                                                                     input#checkboxStunImmun(type='checkbox', data-bind = "checked: stunImmun")
                                                                     | nicht von Benommenheit betroffen
-                                                                    .container-fluid
+                                                    .container-fluid
+                                                        .row.form-group
+                                                            .col-md-12
+                                                                .checkbox-inline
+                                                                    label
+                                                                        input#checkboxOverwrite(type='checkbox', data-bind = "checked: manualOverwrite")
+                                                                        | Manuelle Zuweisung
                                                         .row
                                                             .col-md-6
                                                                 .form-group
