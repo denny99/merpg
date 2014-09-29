@@ -18,7 +18,9 @@ QuickMonsterEditor = function () {
     self.level = ko.observable(undefined);
     self.selectedMonster = ko.observable('');
     self.loadSelectedMonster = function () {
-        self.loadedMonster(new Monster(owl.deepCopy(monsters[self.selectedMonster()].original)));
+	    var monster = new Monster(owl.deepCopy(monsters[self.selectedMonster()].original))
+	    monster._id += generateId();
+        self.loadedMonster(monster);
         self.level(self.loadedMonster().level);
     };
 
