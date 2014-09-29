@@ -183,7 +183,7 @@ block battleLog
                             .col-xs-12.col-lg-6
                                 .container-fluid.visible-lg
                                     .row
-                                        h4(data-bind = "text: _id")
+                                        h4(data-bind = "text: _id + generateId()")
                                     .row
                                         span.text-warning(data-bind = "text: currentOB() + ' OB'")
                                     .row
