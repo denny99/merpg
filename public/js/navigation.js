@@ -9,6 +9,7 @@ $(document).ready(function () {
     $('#monsterEditor').hide();
     $('#itemEditor').hide();
     $('#battleUI').hide();
+    $('#battleLog').hide();
     $('#pager').hide();
     $('#buttonForward').hide();
 
@@ -16,6 +17,7 @@ $(document).ready(function () {
     $('#buttonBackward').click(function () {
         var pager = $('#pager');
         var mainMenu = $('#mainMenu');
+        var forward = $('#buttonForward');
         switch (currentPosition) {
             default:
                 currentPosition = "mainMenu";
@@ -24,11 +26,18 @@ $(document).ready(function () {
                 break;
             case "battleUI":
                 $('#battleUI').hide();
-                $('#buttonForward').hide();
+	            forward.hide();
                 currentPosition = "mainMenu";
                 pager.hide();
                 mainMenu.fadeIn();
                 break;
+	        case "battleLog":
+		        $('#battleLog').hide();
+		        forward.hide();
+		        currentPosition = "mainMenu";
+		        pager.hide();
+		        mainMenu.fadeIn();
+		        break;
             case "monsterEditor":
                 $('#monsterEditor').hide();
                 currentPosition = "mainMenu";
@@ -51,6 +60,14 @@ $(document).ready(function () {
         $('#buttonForward').fadeIn();
         currentPosition = "battleUI";
     });
+
+	$('#buttonBattleLog').click(function () {
+		$('#battleLog').fadeIn();
+		$('#mainMenu').hide();
+		$('#pager').fadeIn();
+		$('#buttonForward').fadeIn();
+		currentPosition = "battleLog";
+	});
 
     $('#buttonMonsterEditor').click(function () {
         $('#monsterEditor').fadeIn();

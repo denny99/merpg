@@ -32,7 +32,6 @@
 .merpg-well {
     position: relative;
     padding: 0 5px 5px 5px;
-    margin-left: 20px;
     background-color: #4e5d6c;
     border: 1px solid grey;
     border-radius: 10px;
@@ -70,9 +69,21 @@
     height: 25px;
 }
 
-.merpg-battleUI-well {
-    width: 400px;
-    height: 500px;
+@media (min-width: 1280px) {
+    .merpg-battleUI-well {
+        width: 400px;
+        height: 500px;
+    }
+    .merpg-well {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .merpg-battleUI-well {
+        width: 100%;
+        height: 225px;
+    }
 }
 
 .merpg-attackUI-well {
@@ -89,8 +100,17 @@
     text-align: right;
 }
 
+.merpg-tableInputFill {
+    width: 100%;
+    text-align: right;
+}
+
 .merpg-noPadding {
     padding: 0 0 0 0;
+}
+
+.merpg-noMargin {
+    margin: 0 0 0 0;
 }
 
 .merpg-label-margin {

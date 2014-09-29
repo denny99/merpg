@@ -99,7 +99,7 @@ ko.extenders.numeric = function(target, precision) {
                 }
             }
         }
-    }).extend({ notify: 'always' });
+    }).extend({ notify: 'always'});
 
     //initialize with current value to make sure it is rounded appropriately
     result(target());
