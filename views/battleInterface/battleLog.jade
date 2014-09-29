@@ -86,7 +86,7 @@ block battleLog
                                                                 .container-fluid
                                                                     .row.form-group
                                                                         .col-md-6
-                                                                            input#inputMonstername.form-control(type='text', placeholder='Monstername', data-bind = "value: _id, valueUpdate: 'afterkeydown'")
+                                                                            input#inputMonstername.form-control(type='text', placeholder='Monstername', data-bind = "value: _id + generateId(), valueUpdate: 'afterkeydown'")
                                                                         .col-md-6
                                                                             input#inputLevel.form-control(type='number', placeholder='Level', min="1", max="60", data-bind = "value: $parent.level, valueUpdate: 'afterkeydown'")
                                                                     .row.form-group

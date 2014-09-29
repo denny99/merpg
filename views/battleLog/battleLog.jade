@@ -204,7 +204,7 @@ block battleLog
                                             tbody
                                                 tr
                                                     td
-                                                        h4.merpg-noMargin(data-bind = "text: _id")
+                                                        h4.merpg-noMargin(data-bind = "text: _id + generateId()")
                                                     td
                                                         h4.merpg-noMargin.text-warning(data-bind = "text: currentOB() + ' OB'")
                                                     td
