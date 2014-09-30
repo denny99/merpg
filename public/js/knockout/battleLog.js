@@ -44,23 +44,23 @@ BattleLog = function () {
 		self.quickMonsterEditor.level(data.level);
 	};
 
-	self.counterSpeed = ko.observable(1000).extend({numeric: 0});
+	self.counterSpeed = ko.observable(1).extend({numeric: 0});
 
 	var clock = new FlipClock($('.clock'), {
 		autoStart    : false,
 		language     : "german",
-		interval     : self.counterSpeed(),
-		animationRate: self.counterSpeed()
+		interval     : self.counterSpeed() * 1000,
+		animationRate: self.counterSpeed() * 1000
 	});
 	self.clock = ko.computed(function () {
 		clock.stop();
 		clock.setTime(0);
-		clock.setOption("interval", self.counterSpeed());
-		clock.face.setOption("interval", self.counterSpeed());
-		clock.timer.setOption("interval", self.counterSpeed());
-		clock.setOption("animationRate", self.counterSpeed());
-		clock.face.setOption("animationRate", self.counterSpeed());
-		clock.timer.setOption("animationRate", self.counterSpeed());
+		clock.setOption("interval", self.counterSpeed() * 1000);
+		clock.face.setOption("interval", self.counterSpeed() * 1000);
+		clock.timer.setOption("interval", self.counterSpeed() * 1000);
+		clock.setOption("animationRate", self.counterSpeed() * 1000);
+		clock.face.setOption("animationRate", self.counterSpeed() * 1000);
+		clock.timer.setOption("animationRate", self.counterSpeed() * 1000);
 		return clock;
 	});
 
