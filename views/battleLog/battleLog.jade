@@ -5,11 +5,24 @@ block battleLog
     #battleLog
         .container-fluid.well.merpg-battleLog
             .row
-                .col-md-12
+                .col-md-4(style = "margin-bottom: 5px")
+                    .input-group
+                        input.form-control(type = "number", data-bind = "value: counterSpeed, valueUpdate: 'afterkeydown'")
+                        span.input-group-btn
+                            a.btn.btn-danger(data-bind = "click: stopCounter")
+                                span.glyphicon.glyphicon-stop
+                            a.btn.btn-warning(data-bind = "click: resetCounter")
+                                span.glyphicon.glyphicon-repeat
+                            a.btn.btn-success(data-bind = "click: startCounter")
+                                span.glyphicon.glyphicon-check
+                .col-md-8
                     .btn-group-vertical.btn-group-justified
                         a.btn.btn-block.btn-primary.btn-block(data-toggle="modal", data-target="#modalAddLogMonster") Hinzufügen
                         a.btn.btn-success.btn.btn-block(data-bind = "click: nextAction")
                             span.glyphicon.glyphicon-forward
+            .row
+                .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-3.col-lg-4.col-lg-offset-4.text-center
+                    .clock
 
                 #modalAddLogMonster.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modalAddMonsterTitle', aria-hidden='true', data-bind = "with: quickMonsterEditor")
                     .modal-dialog.modal-lg

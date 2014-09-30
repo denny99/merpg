@@ -132,3 +132,7 @@
     background: radial-gradient(ellipse at center, #a90329 0%, #8f0222 44%, #6d0019 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
+
+.clock {
+    margin: 20px auto 0 auto
+}
