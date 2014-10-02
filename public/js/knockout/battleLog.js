@@ -63,7 +63,7 @@ BattleLog = function () {
 		clock.start();
 		return clock;
 	}).extend({
-		          throttle: 500
+		          throttle: 10000
 	          });
 
 	self.startCounter = function () {

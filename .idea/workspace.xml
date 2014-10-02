@@ -762,7 +762,11 @@
       <created>1412247952269</created>
       <updated>1412247952269</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="counter stop on reset">
+      <created>1412248056994</created>
+      <updated>1412248056994</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
