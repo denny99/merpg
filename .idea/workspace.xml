@@ -50,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2157969" vertical-offset="0" max-vertical-offset="833">
-              <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -716,7 +716,15 @@
       <created>1412242135118</created>
       <updated>1412242135118</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="log buttons">
+      <created>1412242518310</created>
+      <updated>1412242518310</updated>
+    </task>
+    <task id="LOCAL-00062" summary="no device width">
+      <created>1412242613199</created>
+      <updated>1412242613199</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -802,7 +810,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="bet" />
     <MESSAGE value="monster editor fix" />
     <MESSAGE value="form group fix" />
     <MESSAGE value="smaller fixes and ob bonus" />
@@ -827,7 +834,8 @@
     <MESSAGE value="timer" />
     <MESSAGE value="timer in seconds" />
     <MESSAGE value="log buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="log buttons" />
+    <MESSAGE value="no device width" />
+    <option name="LAST_COMMIT_MESSAGE" value="no device width" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1206,7 +1214,7 @@
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2157969" vertical-offset="0" max-vertical-offset="833">
-          <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
           <folding />
         </state>
       </provider>
