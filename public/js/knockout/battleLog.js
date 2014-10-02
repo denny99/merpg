@@ -44,7 +44,7 @@ BattleLog = function () {
 		self.quickMonsterEditor.level(data.level);
 	};
 
-	self.counterSpeed = ko.observable(1).extend({numeric: 0});
+	self.counterSpeed = ko.observable(10).extend({numeric: 0});
 
 	var clock = new FlipClock($('.clock'), {
 		autoStart    : false,
@@ -53,6 +53,7 @@ BattleLog = function () {
 		animationRate: self.counterSpeed() * 100
 	});
 	self.clock = ko.computed(function () {
+		var running = clock.running;
 		clock.stop();
 		clock.setOption("interval", self.counterSpeed() * 100);
 		clock.face.setOption("interval", self.counterSpeed() * 100);
@@ -60,10 +61,12 @@ BattleLog = function () {
 		clock.setOption("animationRate", self.counterSpeed() * 100);
 		clock.face.setOption("animationRate", self.counterSpeed() * 100);
 		clock.timer.setOption("animationRate", self.counterSpeed() * 100);
-		clock.start();
+		if (running) {
+			clock.start();
+		}
 		return clock;
 	}).extend({
-		          throttle: 10000
+		          throttle: 3000
 	          });
 
 	self.startCounter = function () {
