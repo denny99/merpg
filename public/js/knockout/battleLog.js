@@ -53,16 +53,18 @@ BattleLog = function () {
 		animationRate: self.counterSpeed() * 100
 	});
 	self.clock = ko.computed(function () {
-		self.clock().stop();
+		clock.stop();
 		clock.setOption("interval", self.counterSpeed() * 100);
 		clock.face.setOption("interval", self.counterSpeed() * 100);
 		clock.timer.setOption("interval", self.counterSpeed() * 100);
 		clock.setOption("animationRate", self.counterSpeed() * 100);
 		clock.face.setOption("animationRate", self.counterSpeed() * 100);
 		clock.timer.setOption("animationRate", self.counterSpeed() * 100);
-		self.clock().start();
+		clock.start();
 		return clock;
-	});
+	}).extend({
+		          throttle: 500
+	          });
 
 	self.startCounter = function () {
 		self.clock().start();
@@ -77,7 +79,7 @@ BattleLog = function () {
 		self.clock().stop();
 	};
 
-	self.resetValue = function(attr, monster) {
+	self.resetValue = function (attr, monster) {
 		switch (attr) {
 			case "hitsTaken":
 				monster.hitsTaken(0);
@@ -97,7 +99,7 @@ BattleLog = function () {
 		}
 	};
 
-	self.addValue = function(attr, monster) {
+	self.addValue = function (attr, monster) {
 		switch (attr) {
 			case "hitsTaken":
 				monster.hitsTaken(monster.hitsTaken() + 1);
@@ -120,7 +122,7 @@ BattleLog = function () {
 		}
 	};
 
-	self.subtractValue = function(attr, monster) {
+	self.subtractValue = function (attr, monster) {
 		switch (attr) {
 			case "hitsTaken":
 				monster.hitsTaken(monster.hitsTaken() - 1);
@@ -132,7 +134,7 @@ BattleLog = function () {
 				monster.stunned(monster.stunned() - 1);
 				break;
 			case "roundsTillDeath":
-				console.log(monster.roundsTillDeath() );
+				console.log(monster.roundsTillDeath());
 				if (monster.roundsTillDeath() - 1 <= 0) {
 					monster.roundsTillDeath(undefined);
 				}
