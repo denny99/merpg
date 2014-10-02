@@ -53,12 +53,14 @@ BattleLog = function () {
 		animationRate: self.counterSpeed() * 100
 	});
 	self.clock = ko.computed(function () {
+		self.clock().stop();
 		clock.setOption("interval", self.counterSpeed() * 100);
 		clock.face.setOption("interval", self.counterSpeed() * 100);
 		clock.timer.setOption("interval", self.counterSpeed() * 100);
 		clock.setOption("animationRate", self.counterSpeed() * 100);
 		clock.face.setOption("animationRate", self.counterSpeed() * 100);
 		clock.timer.setOption("animationRate", self.counterSpeed() * 100);
+		self.clock().start();
 		return clock;
 	});
 
