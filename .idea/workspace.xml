@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/init.js" afterPath="$PROJECT_DIR$/public/js/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -36,6 +37,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/init.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="battleLog.jade" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,8 +60,8 @@
       <file leaf-file-name="layout.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2157969" vertical-offset="0" max-vertical-offset="833">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.047954865" vertical-offset="119" max-vertical-offset="833">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -94,7 +105,6 @@
         <option value="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" />
         <option value="$PROJECT_DIR$/test.json.ts" />
         <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/public/js/init.js" />
         <option value="$PROJECT_DIR$/public/js/classDefinitions/tables.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
@@ -120,6 +130,7 @@
         <option value="$PROJECT_DIR$/public/js/knockout/battleLog.js" />
         <option value="$PROJECT_DIR$/public/css/merpg.css" />
         <option value="$PROJECT_DIR$/views/battleLog/battleLog.jade" />
+        <option value="$PROJECT_DIR$/public/js/init.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
       </list>
     </option>
@@ -724,7 +735,15 @@
       <created>1412242613199</created>
       <updated>1412242613199</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="no device width">
+      <created>1412242673337</created>
+      <updated>1412242673337</updated>
+    </task>
+    <task id="LOCAL-00064" summary="disable tab zoom">
+      <created>1412243334446</created>
+      <updated>1412243334446</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -810,7 +829,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="monster editor fix" />
     <MESSAGE value="form group fix" />
     <MESSAGE value="smaller fixes and ob bonus" />
     <MESSAGE value="missile table when throwing weapon" />
@@ -835,7 +853,8 @@
     <MESSAGE value="timer in seconds" />
     <MESSAGE value="log buttons" />
     <MESSAGE value="no device width" />
-    <option name="LAST_COMMIT_MESSAGE" value="no device width" />
+    <MESSAGE value="disable tab zoom" />
+    <option name="LAST_COMMIT_MESSAGE" value="disable tab zoom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1100,13 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56766254" vertical-offset="0" max-vertical-offset="595">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32130584" vertical-offset="0" max-vertical-offset="1853">
@@ -1147,6 +1159,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="5355">
           <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,14 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="2669">
-          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.04" vertical-offset="68" max-vertical-offset="5678">
@@ -1211,10 +1216,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1335" max-vertical-offset="2669">
+          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2157969" vertical-offset="0" max-vertical-offset="833">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.047954865" vertical-offset="119" max-vertical-offset="833">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
         </state>
       </provider>
