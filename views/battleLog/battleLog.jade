@@ -7,7 +7,7 @@ block battleLog
             .row
                 .col-sm-4(style = "margin-bottom: 5px")
                     .input-group
-                        input.form-control(type = "number", data-bind = "value: counterSpeed, valueUpdate: 'afterkeydown'")
+                        input.form-control(style = "width: 75px", type = "number", data-bind = "value: counterSpeed, valueUpdate: 'afterkeydown'")
                         span.input-group-btn
                             a.btn.btn-danger(data-bind = "click: stopCounter")
                                 span.glyphicon.glyphicon-stop
@@ -276,11 +276,6 @@ block battleLog
                                             th Benommenheit
                                             th Runden bis zum Tod
                                             th Aktivität Malus
-                                            th
-                                                .checkbox-inline
-                                                    label
-                                                        input(type='checkbox', data-bind = "checked: knockedOut")
-                                                        | Kampfunfähig
                                         tr
                                             td
                                                 .input-group.input-group-sm
