@@ -49,18 +49,18 @@ BattleLog = function () {
 	var clock = new FlipClock($('.clock'), {
 		autoStart    : false,
 		language     : "german",
-		interval     : self.counterSpeed() * 1000,
-		animationRate: self.counterSpeed() * 1000
+		interval     : self.counterSpeed() * 100,
+		animationRate: self.counterSpeed() * 100
 	});
 	self.clock = ko.computed(function () {
 		clock.stop();
 		clock.setTime(0);
-		clock.setOption("interval", self.counterSpeed() * 1000);
-		clock.face.setOption("interval", self.counterSpeed() * 1000);
-		clock.timer.setOption("interval", self.counterSpeed() * 1000);
-		clock.setOption("animationRate", self.counterSpeed() * 1000);
-		clock.face.setOption("animationRate", self.counterSpeed() * 1000);
-		clock.timer.setOption("animationRate", self.counterSpeed() * 1000);
+		clock.setOption("interval", self.counterSpeed() * 100);
+		clock.face.setOption("interval", self.counterSpeed() * 100);
+		clock.timer.setOption("interval", self.counterSpeed() * 100);
+		clock.setOption("animationRate", self.counterSpeed() * 100);
+		clock.face.setOption("animationRate", self.counterSpeed() * 100);
+		clock.timer.setOption("animationRate", self.counterSpeed() * 100);
 		return clock;
 	});
 
@@ -74,7 +74,76 @@ BattleLog = function () {
 
 	self.resetCounter = function () {
 		self.clock().setTime(0);
-	}
+	};
+
+	self.resetValue = function(attr, monster) {
+		switch (attr) {
+			case "hitsTaken":
+				monster.hitsTaken(0);
+				break;
+			case "hitsPerRound":
+				monster.hitsPerRound(0);
+				break;
+			case "stunned":
+				monster.stunned(0);
+				break;
+			case "roundsTillDeath":
+				monster.roundsTillDeath(undefined);
+				break;
+			case "bonus":
+				monster.bonus(0);
+				break;
+		}
+	};
+
+	self.addValue = function(attr, monster) {
+		switch (attr) {
+			case "hitsTaken":
+				monster.hitsTaken(monster.hitsTaken() + 1);
+				break;
+			case "hitsPerRound":
+				monster.hitsPerRound(monster.hitsPerRound() + 1);
+				break;
+			case "stunned":
+				monster.stunned(monster.stunned() + 1);
+				break;
+			case "roundsTillDeath":
+				if (monster.roundsTillDeath() == undefined) {
+					monster.roundsTillDeath(0);
+				}
+				monster.roundsTillDeath(monster.roundsTillDeath() + 1);
+				break;
+			case "bonus":
+				monster.bonus(monster.bonus() + 5);
+				break;
+		}
+	};
+
+	self.subtractValue = function(attr, monster) {
+		switch (attr) {
+			case "hitsTaken":
+				monster.hitsTaken(monster.hitsTaken() - 1);
+				break;
+			case "hitsPerRound":
+				monster.hitsPerRound(monster.hitsPerRound() - 1);
+				break;
+			case "stunned":
+				monster.stunned(monster.stunned() - 1);
+				break;
+			case "roundsTillDeath":
+				console.log(monster.roundsTillDeath() );
+				if (monster.roundsTillDeath() - 1 <= 0) {
+					monster.roundsTillDeath(undefined);
+				}
+				else {
+					monster.roundsTillDeath(monster.roundsTillDeath() - 1);
+				}
+				break;
+			case "bonus":
+				monster.bonus(monster.bonus() - 5);
+				break;
+		}
+	};
 };
 
 
