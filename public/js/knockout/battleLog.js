@@ -72,6 +72,7 @@ BattleLog = function () {
 
 	self.resetCounter = function () {
 		self.clock().setTime(0);
+		self.clock().stop();
 	};
 
 	self.resetValue = function(attr, monster) {

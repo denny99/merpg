@@ -29,8 +29,8 @@
       <file leaf-file-name="battleLog.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27503526" vertical-offset="723" max-vertical-offset="2635">
-              <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.7545839" vertical-offset="723" max-vertical-offset="2652">
+              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -750,7 +750,11 @@
       <created>1412243596667</created>
       <updated>1412243596667</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="counter continues on chanigin speed">
+      <created>1412247731113</created>
+      <updated>1412247731113</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -836,7 +840,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="form group fix" />
     <MESSAGE value="smaller fixes and ob bonus" />
     <MESSAGE value="missile table when throwing weapon" />
     <MESSAGE value="obbonus fix" />
@@ -861,7 +864,8 @@
     <MESSAGE value="log buttons" />
     <MESSAGE value="no device width" />
     <MESSAGE value="disable tab zoom" />
-    <option name="LAST_COMMIT_MESSAGE" value="disable tab zoom" />
+    <MESSAGE value="counter continues on chanigin speed" />
+    <option name="LAST_COMMIT_MESSAGE" value="counter continues on chanigin speed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1241,8 +1245,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27503526" vertical-offset="723" max-vertical-offset="2635">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.7545839" vertical-offset="723" max-vertical-offset="2652">
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
           <folding />
         </state>
       </provider>
