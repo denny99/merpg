@@ -69,6 +69,7 @@ Monster = function (dbMonster, session) {
 		var session = {};
 		session._id = self.original._id;
 		session.name = self._id;
+		session.manualOverwrite(self.manualOverwrite());
 		session.currentLevel = self.currentLevel();
 		session.currentHits = self.currentHits();
 		session.currentOB = self.currentOB();
@@ -84,6 +85,7 @@ Monster = function (dbMonster, session) {
 	};
 	self.restoreFromSession = function (session) {
 		self._id = session.name;
+		self.manualOverwrite(session.manualOverwrite);
 		self.currentLevel(session.currentLevel);
 		self.currentHits(session.currentHits);
 		self.currentOB(session.currentOB);
