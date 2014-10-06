@@ -25,7 +25,7 @@ block battleUI
                                             span.glyphicon.glyphicon-heart
                                             span(data-bind = "text: currentHits() - hitsTaken() + ' Treffer'")
                                     .row.form-group
-                                        .progress.progress-striped.active.merpg-bar-align
+                                        .progress.merpg-bar-align
                                             .progress-bar.progress-bar-danger(role='progressbar',
                                             data-bind = "attr: {'aria-valuenow': currentHits() - hitsTaken(), 'aria-valuemax': currentHits()}, style: {width: max((currentHits() - hitsTaken()) / currentHits() * 100, 0) + '%'}", aria-valuemin='0')
                         .row.form-group

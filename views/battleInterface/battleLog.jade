@@ -177,13 +177,13 @@ block battleLog
                                                                     .col-md-10
                                                                         input#inputMM.form-control.input-sm(type='number', placeholder='BM', min="-85", max="50", data-bind = "value: currentMM, valueUpdate: 'afterkeydown'")
                                                             .col-md-6
-                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                .progress.merpg-bar-align
                                                                     #progressCompareHits.progress-bar.progress-bar-danger(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxHits}, style: {width: $parent.compareHits}")
-                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                .progress.merpg-bar-align
                                                                     #progressCompareOB.progress-bar.progress-bar-warning(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxOB}, style: {width: $parent.compareOB}")
-                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                .progress.merpg-bar-align
                                                                     #progressCompareDB.progress-bar.progress-bar-success(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxDB}, style: {width: $parent.compareDB}")
-                                                                .progress.progress-striped.active.merpg-bar-align
+                                                                .progress.merpg-bar-align
                                                                     #progressCompareHitsMM.progress-bar.progress-bar-info(role='progressbar', aria-valuemin='0', data-bind = "attr: {'aria-valuemax': $parent.maxMM}, style: {width: $parent.compareMM}")
                             .modal-footer
                                 button.btn.btn-default(type='button', data-dismiss='modal', data-bind = "click: closeQuickEditor") Abbrechen
