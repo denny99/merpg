@@ -193,7 +193,7 @@ router.get('/api_v1.0/session/:type', function (req, res) {
 		case "save":
 			req.query._id = req.user.id;
 			apiConfig.API.saveSession(req.query, function (status) {
-				res.status(status).send("test").end();
+				res.status(status).end();
 			});
 			break;
 		case "load":

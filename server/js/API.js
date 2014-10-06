@@ -515,8 +515,15 @@ API = function () {
 				});
 			}
 			else {
-				console.log(err);
-				fn(err.status_code);
+				sessions.insert(session, {}, function (err, body) {
+					if (err) {
+						console.log(err);
+						fn(err.status_code);
+					}
+					else {
+						fn(200);
+					}
+				});
 			}
 		});
 	};
