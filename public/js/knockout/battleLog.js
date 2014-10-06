@@ -150,6 +150,44 @@ BattleLog = function () {
 				break;
 		}
 	};
+
+	self.saveSession = function () {
+		var data = {
+			monsters: []
+		};
+		self.battleLogEntries().forEach(function (monster) {
+			data.monsters.push(monster.convertToSession());
+		});
+		$.ajax({
+			       url       : "/api_v1.0/session/save",
+			       data      : data,
+			       beforeSend: function () {
+				       //console.log(type + " loading...");
+			       },
+			       success   : function (data, status, jqXHR) {
+			       }
+		       }).done(function () {
+			//console.log(type + " loaded.");
+		});
+	};
+
+	self.loadSession = function () {
+		self.battleLogEntries([]);
+		$.ajax({
+			       url       : "/api_v1.0/session/load",
+			       beforeSend: function () {
+				       //console.log(type + " loading...");
+			       },
+			       success   : function (data, status, jqXHR) {
+				       data.monsters.forEach(function (session) {
+					       var monster = new Monster(owl.deepCopy(monsters[session._id].original), session);
+					       self.battleLogEntries.push(monster);
+				       })
+			       }
+		       }).done(function () {
+			//console.log(type + " loaded.");
+		});
+	}
 };
 
 

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/views/battleLog/battleLog.jade" line="24" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/js/API.js" afterPath="$PROJECT_DIR$/server/js/API.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api_v1.0.js" afterPath="$PROJECT_DIR$/routes/api_v1.0.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleLog/battleLog.jade" afterPath="$PROJECT_DIR$/views/battleLog/battleLog.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/monsterEditor.jade" afterPath="$PROJECT_DIR$/views/monsterEditor.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" afterPath="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/knockout/battleLog.js" afterPath="$PROJECT_DIR$/public/js/knockout/battleLog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/knockout/battleUI.js" afterPath="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/settings/config.json" afterPath="$PROJECT_DIR$/server/settings/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" afterPath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
@@ -34,88 +38,122 @@
       <file leaf-file-name="battleLog.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="2771">
-              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+            <state vertical-scroll-proportion="-5.52" vertical-offset="2820" max-vertical-offset="3417">
+              <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/init.js">
+      <file leaf-file-name="API.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/js/API.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="595">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.76" vertical-offset="8481" max-vertical-offset="9010">
+              <caret line="500" column="25" selection-start-line="500" selection-start-column="25" selection-end-line="500" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="battleLog.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="api_v1.0.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3152" max-vertical-offset="3604">
+              <caret line="195" column="35" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/settings/config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="612">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monsters.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2788">
+              <caret line="69" column="19" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="19" />
+              <folding>
+                <element signature="e#1110#1158#0" expanded="false" />
+                <element signature="e#1244#1535#0" expanded="false" />
+                <element signature="e#1305#1532#0" expanded="false" />
+                <element signature="e#1625#1673#0" expanded="false" />
+                <element signature="e#3680#3736#0" expanded="false" />
+                <element signature="e#3757#4078#0" expanded="false" />
+                <element signature="e#4081#4139#0" expanded="false" />
+                <element signature="e#4162#4491#0" expanded="false" />
+                <element signature="e#4494#4619#0" expanded="false" />
+                <element signature="e#4654#4996#0" expanded="false" />
+                <element signature="e#4687#4993#0" expanded="false" />
+                <element signature="e#4763#4784#0" expanded="false" />
+                <element signature="e#4831#4854#0" expanded="false" />
+                <element signature="e#4863#4989#0" expanded="false" />
+                <element signature="e#5362#5415#0" expanded="false" />
+                <element signature="e#5458#5584#0" expanded="false" />
+                <element signature="e#5516#5581#0" expanded="false" />
+                <element signature="e#5712#5748#0" expanded="false" />
+                <element signature="e#5774#5821#0" expanded="false" />
+                <element signature="e#5825#5879#0" expanded="false" />
+                <element signature="e#5906#5953#0" expanded="false" />
+                <element signature="e#5957#5996#0" expanded="false" />
+                <element signature="e#6025#6071#0" expanded="false" />
+                <element signature="e#6075#6110#0" expanded="false" />
+                <element signature="e#6139#6211#0" expanded="false" />
+                <element signature="e#6215#6322#0" expanded="false" />
+                <element signature="e#6352#6563#0" expanded="false" />
+                <element signature="e#6488#6521#0" expanded="false" />
+                <element signature="e#6567#6762#0" expanded="false" />
+                <element signature="e#6794#7557#0" expanded="false" />
+                <element signature="e#6859#6884#0" expanded="false" />
+                <element signature="e#7025#7058#0" expanded="false" />
+                <element signature="e#7089#7554#0" expanded="false" />
+                <element signature="e#7221#7268#0" expanded="false" />
+                <element signature="e#7316#7363#0" expanded="false" />
+                <element signature="e#7561#7667#0" expanded="false" />
+                <element signature="e#7702#7743#0" expanded="false" />
+                <element signature="e#7747#7853#0" expanded="false" />
+                <element signature="e#7887#7926#0" expanded="false" />
+                <element signature="e#7930#8035#0" expanded="false" />
+                <element signature="e#8069#8108#0" expanded="false" />
+                <element signature="e#8165#8383#0" expanded="false" />
+                <element signature="e#8252#8302#0" expanded="false" />
+                <element signature="e#8310#8345#0" expanded="false" />
+                <element signature="e#8441#8709#0" expanded="false" />
+                <element signature="e#8487#8671#0" expanded="false" />
+                <element signature="e#8569#8621#0" expanded="false" />
+                <element signature="e#8630#8667#0" expanded="false" />
+                <element signature="e#8764#8821#0" expanded="false" />
+                <element signature="e#8793#8818#0" expanded="false" />
+                <element signature="e#8874#8930#0" expanded="false" />
+                <element signature="e#8902#8927#0" expanded="false" />
+                <element signature="e#8977#9081#0" expanded="false" />
+                <element signature="e#9041#9078#0" expanded="false" />
+                <element signature="e#9111#9154#0" expanded="false" />
+                <element signature="e#9185#9779#0" expanded="false" />
+                <element signature="e#9237#9263#0" expanded="false" />
+                <element signature="e#9332#9431#0" expanded="false" />
+                <element signature="e#9383#9427#0" expanded="false" />
+                <element signature="e#9461#9503#0" expanded="false" />
+                <element signature="e#9548#9705#0" expanded="false" />
+                <element signature="e#9586#9632#0" expanded="false" />
+                <element signature="e#9641#9701#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="battleLog.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="4437">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleLog.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2557" max-vertical-offset="3417">
-              <caret line="185" column="73" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleUI.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1309">
-              <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="magicalAttackUI.jade" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33255813" vertical-offset="326" max-vertical-offset="2669">
-              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="physicalAttackUI.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1813" max-vertical-offset="2380">
-              <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monsterEditor.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/monsterEditor.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="2329">
-              <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="816">
-              <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.81321186" vertical-offset="51" max-vertical-offset="4505">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -152,8 +190,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/routes/routes.js" />
         <option value="$PROJECT_DIR$/public/js/items.js" />
-        <option value="$PROJECT_DIR$/routes/api_v1.0.js" />
-        <option value="$PROJECT_DIR$/server/js/API.js" />
         <option value="$PROJECT_DIR$/public/js/classDefinitions/items.js" />
         <option value="$PROJECT_DIR$/public/js/deepCopy.js" />
         <option value="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" />
@@ -163,7 +199,6 @@
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/server/js/login.js" />
-        <option value="$PROJECT_DIR$/server/settings/config.json" />
         <option value="$PROJECT_DIR$/public/js/dataLoader.js" />
         <option value="$PROJECT_DIR$/views/itemEditor.jade" />
         <option value="$PROJECT_DIR$/public/js/knockout/itemEditor.js" />
@@ -172,20 +207,23 @@
         <option value="$PROJECT_DIR$/views/battleLog/battleUI.jade" />
         <option value="$PROJECT_DIR$/public/js/navigation.js" />
         <option value="$PROJECT_DIR$/views/mainMenu.jade" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
         <option value="$PROJECT_DIR$/public/js/helper.js" />
-        <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
         <option value="$PROJECT_DIR$/public/js/frameworks/flipclock.js" />
         <option value="$PROJECT_DIR$/public/css/merpg.css" />
         <option value="$PROJECT_DIR$/public/js/init.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/public/js/knockout/battleLog.js" />
-        <option value="$PROJECT_DIR$/views/battleLog/battleLog.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
         <option value="$PROJECT_DIR$/views/monsterEditor.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
         <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
+        <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
+        <option value="$PROJECT_DIR$/routes/api_v1.0.js" />
+        <option value="$PROJECT_DIR$/server/settings/config.json" />
+        <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
+        <option value="$PROJECT_DIR$/server/js/API.js" />
+        <option value="$PROJECT_DIR$/public/js/knockout/battleLog.js" />
+        <option value="$PROJECT_DIR$/views/battleLog/battleLog.jade" />
       </list>
     </option>
   </component>
@@ -342,6 +380,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MersBattleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merpg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -391,6 +443,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="frameworks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MersBattleApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merpg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classDefinitions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -837,7 +911,11 @@
       <created>1412585942179</created>
       <updated>1412585942179</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="no progress striped active">
+      <created>1412586037001</created>
+      <updated>1412586037001</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -876,7 +954,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15903106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18242492" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4682981" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -923,7 +1001,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="missile table when throwing weapon" />
     <MESSAGE value="obbonus fix" />
     <MESSAGE value="login" />
     <MESSAGE value="fix for special input" />
@@ -948,7 +1025,8 @@
     <MESSAGE value="disable tab zoom" />
     <MESSAGE value="counter continues on chanigin speed" />
     <MESSAGE value="counter stop on reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="counter stop on reset" />
+    <MESSAGE value="no progress striped active" />
+    <option name="LAST_COMMIT_MESSAGE" value="no progress striped active" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1066,13 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/js/API.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="725" max-vertical-offset="8245">
-          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="459">
@@ -1129,13 +1200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/dataLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9415808" vertical-offset="370" max-vertical-offset="2176">
-          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/itemEditor.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41415313" vertical-offset="306" max-vertical-offset="3349">
@@ -1157,13 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/knockout/monsterEditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3995">
-          <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doku/MERS BattleApp UML.graphml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21693735" vertical-offset="0" max-vertical-offset="9554">
@@ -1171,24 +1228,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17828572" vertical-offset="1295" max-vertical-offset="3332">
-          <caret line="67" column="42" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/attacks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4675174" vertical-offset="8403" max-vertical-offset="9299">
           <caret line="520" column="8" selection-start-line="520" selection-start-column="8" selection-end-line="520" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/settings/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1203,20 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.84707904" vertical-offset="0" max-vertical-offset="595">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5028" max-vertical-offset="5746">
-          <caret line="320" column="31" selection-start-line="320" selection-start-column="31" selection-end-line="320" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleUI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="5355">
-          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -1278,22 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="2771">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.36" vertical-offset="0" max-vertical-offset="4437">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1813" max-vertical-offset="2380">
@@ -1328,8 +1341,144 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33255813" vertical-offset="326" max-vertical-offset="2669">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/monsterEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3995">
+          <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleUI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2712264" vertical-offset="76" max-vertical-offset="5355">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/dataLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2982456" vertical-offset="0" max-vertical-offset="2176">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/settings/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847" vertical-offset="0" max-vertical-offset="612">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2788">
+          <caret line="69" column="19" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="19" />
+          <folding>
+            <element signature="e#1110#1158#0" expanded="false" />
+            <element signature="e#1244#1535#0" expanded="false" />
+            <element signature="e#1305#1532#0" expanded="false" />
+            <element signature="e#1625#1673#0" expanded="false" />
+            <element signature="e#3680#3736#0" expanded="false" />
+            <element signature="e#3757#4078#0" expanded="false" />
+            <element signature="e#4081#4139#0" expanded="false" />
+            <element signature="e#4162#4491#0" expanded="false" />
+            <element signature="e#4494#4619#0" expanded="false" />
+            <element signature="e#4654#4996#0" expanded="false" />
+            <element signature="e#4687#4993#0" expanded="false" />
+            <element signature="e#4763#4784#0" expanded="false" />
+            <element signature="e#4831#4854#0" expanded="false" />
+            <element signature="e#4863#4989#0" expanded="false" />
+            <element signature="e#5362#5415#0" expanded="false" />
+            <element signature="e#5458#5584#0" expanded="false" />
+            <element signature="e#5516#5581#0" expanded="false" />
+            <element signature="e#5712#5748#0" expanded="false" />
+            <element signature="e#5774#5821#0" expanded="false" />
+            <element signature="e#5825#5879#0" expanded="false" />
+            <element signature="e#5906#5953#0" expanded="false" />
+            <element signature="e#5957#5996#0" expanded="false" />
+            <element signature="e#6025#6071#0" expanded="false" />
+            <element signature="e#6075#6110#0" expanded="false" />
+            <element signature="e#6139#6211#0" expanded="false" />
+            <element signature="e#6215#6322#0" expanded="false" />
+            <element signature="e#6352#6563#0" expanded="false" />
+            <element signature="e#6488#6521#0" expanded="false" />
+            <element signature="e#6567#6762#0" expanded="false" />
+            <element signature="e#6794#7557#0" expanded="false" />
+            <element signature="e#6859#6884#0" expanded="false" />
+            <element signature="e#7025#7058#0" expanded="false" />
+            <element signature="e#7089#7554#0" expanded="false" />
+            <element signature="e#7221#7268#0" expanded="false" />
+            <element signature="e#7316#7363#0" expanded="false" />
+            <element signature="e#7561#7667#0" expanded="false" />
+            <element signature="e#7702#7743#0" expanded="false" />
+            <element signature="e#7747#7853#0" expanded="false" />
+            <element signature="e#7887#7926#0" expanded="false" />
+            <element signature="e#7930#8035#0" expanded="false" />
+            <element signature="e#8069#8108#0" expanded="false" />
+            <element signature="e#8165#8383#0" expanded="false" />
+            <element signature="e#8252#8302#0" expanded="false" />
+            <element signature="e#8310#8345#0" expanded="false" />
+            <element signature="e#8441#8709#0" expanded="false" />
+            <element signature="e#8487#8671#0" expanded="false" />
+            <element signature="e#8569#8621#0" expanded="false" />
+            <element signature="e#8630#8667#0" expanded="false" />
+            <element signature="e#8764#8821#0" expanded="false" />
+            <element signature="e#8793#8818#0" expanded="false" />
+            <element signature="e#8874#8930#0" expanded="false" />
+            <element signature="e#8902#8927#0" expanded="false" />
+            <element signature="e#8977#9081#0" expanded="false" />
+            <element signature="e#9041#9078#0" expanded="false" />
+            <element signature="e#9111#9154#0" expanded="false" />
+            <element signature="e#9185#9779#0" expanded="false" />
+            <element signature="e#9237#9263#0" expanded="false" />
+            <element signature="e#9332#9431#0" expanded="false" />
+            <element signature="e#9383#9427#0" expanded="false" />
+            <element signature="e#9461#9503#0" expanded="false" />
+            <element signature="e#9548#9705#0" expanded="false" />
+            <element signature="e#9586#9632#0" expanded="false" />
+            <element signature="e#9641#9701#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3152" max-vertical-offset="3604">
+          <caret line="195" column="35" selection-start-line="195" selection-start-column="35" selection-end-line="195" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/js/API.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.76" vertical-offset="8481" max-vertical-offset="9010">
+          <caret line="500" column="25" selection-start-line="500" selection-start-column="25" selection-end-line="500" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.52" vertical-offset="2820" max-vertical-offset="3417">
+          <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.81321186" vertical-offset="51" max-vertical-offset="4505">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>

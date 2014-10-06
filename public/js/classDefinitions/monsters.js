@@ -2,7 +2,13 @@
  * Created by Denny on 02.08.2014.
  */
 
-Monster = function (dbMonster) {
+/**
+ * A Mers Monster
+ * @param dbMonster dbMonster Object
+ * @param [session] optional sessionObject
+ * @constructor
+ */
+Monster = function (dbMonster, session) {
 	var self = this;
 
 	self.original = dbMonster;
@@ -46,13 +52,52 @@ Monster = function (dbMonster) {
 	self.blocking = ko.observable(false);
 	self.currentAction = ko.observable("other");
 
-	self.manualOverwrite = ko.observable(false);
+	//log attributes
 	self.currentLevel = ko.observable(dbMonster.level).extend({numeric: 0});
 	self.currentHits = ko.observable(dbMonster.hits).extend({numeric: 0});
 	self.currentOB = ko.observable(dbMonster.OB).extend({numeric: 0});
 	self.currentDB = ko.observable(dbMonster.DB).extend({numeric: 0});
 	self.currentMM = ko.observable(dbMonster.MM).extend({numeric: 0});
+	self.bonus = ko.observable(0).extend({numeric: 0});
+	self.bonusOverTime = ko.observableArray([]);
+	self.hitsTaken = ko.observable(0).extend({numeric: 0});
+	self.hitsPerRound = ko.observable(0).extend({numeric: 0});
+	self.roundsTillDeath = ko.observable(undefined).extend({intOrNull: 0});
+	self.stunned = ko.observable(0).extend({numeric: 0});
 
+	self.convertToSession = function () {
+		var session = {};
+		session._id = self.original._id;
+		session.name = self._id;
+		session.currentLevel = self.currentLevel();
+		session.currentHits = self.currentHits();
+		session.currentOB = self.currentOB();
+		session.currentDB = self.currentDB();
+		session.currentMM = self.currentMM();
+		session.bonus = self.bonus();
+		session.bonusOverTime = self.bonusOverTime();
+		session.hitsTaken = self.hitsTaken();
+		session.hitsPerRound = self.hitsPerRound();
+		session.roundsTillDeath = self.roundsTillDeath();
+		session.stunned = self.stunned();
+		return session;
+	};
+	self.restoreFromSession = function (session) {
+		self._id = session.name;
+		self.currentLevel(session.currentLevel);
+		self.currentHits(session.currentHits);
+		self.currentOB(session.currentOB);
+		self.currentDB(session.currentDB);
+		self.currentMM(session.currentMM);
+		self.bonus(session.bonus);
+		self.bonusOverTime(session.bonusOverTime);
+		self.hitsTaken(session.hitsTaken);
+		self.hitsPerRound(session.hitsPerRound);
+		self.roundsTillDeath(session.roundsTillDeath);
+		self.stunned(session.stunned);
+	};
+
+	self.manualOverwrite = ko.observable(false);
 	self.decided = ko.observable(false);
 
 	/**
@@ -107,12 +152,6 @@ Monster = function (dbMonster) {
 	//int attributes
 	self.parryDB = ko.observable(0).extend({numeric: 0});
 	self.blockDB = ko.observable(0).extend({numeric: 0});
-	self.bonus = ko.observable(0).extend({numeric: 0});
-	self.bonusOverTime = ko.observableArray([]);
-	self.hitsTaken = ko.observable(0).extend({numeric: 0});
-	self.hitsPerRound = ko.observable(0).extend({numeric: 0});
-	self.roundsTillDeath = ko.observable(undefined).extend({intOrNull: 0});
-	self.stunned = ko.observable(0).extend({numeric: 0});
 
 	//bool attributes
 	self.done = ko.observable(false);
@@ -329,5 +368,9 @@ Monster = function (dbMonster) {
 				self.hitsTaken() +
 				self.hitsPerRound()
 		);
+	};
+
+	if (session) {
+		self.restoreFromSession(session)
 	}
 };

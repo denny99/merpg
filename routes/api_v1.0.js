@@ -188,4 +188,20 @@ router.get('/api_v1.0/update/:type', function (req, res) {
     }
 });
 
+router.get('/api_v1.0/session/:type', function (req, res) {
+	switch (req.params.type) {
+		case "save":
+			req.query._id = req.user.id;
+			apiConfig.API.saveSession(req.query, function (status) {
+				res.status(status).end();
+			});
+			break;
+		case "load":
+			apiConfig.API.loadSession(req.user.id, function (item) {
+				res.send(item);
+			});
+			break;
+	}
+});
+
 module.exports = router;

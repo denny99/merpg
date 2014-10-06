@@ -9,7 +9,8 @@
             "characters": "zcharacters",
             "items": "zitems",
             "tables": "ztables",
-            "users": "zusers"
+            "users": "zusers",
+            "sessions": "zsessions"
         }
     },
 
@@ -23,7 +24,8 @@
             "characters": "characters",
             "items": "items",
             "tables": "tables",
-            "users": "users"
+            "users": "users",
+	        "sessions": "sessions"
         }
     }
 }
