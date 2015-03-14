@@ -68,9 +68,7 @@ block battleLog
 
                                                     .container-fluid
                                                         .row.form-group
-                                                            .col-xs-6
-                                                                input#inputCount.form-control(type='text', placeholder='Anzahl', data-bind = "value: $parent.count, valueUpdate: 'afterkeydown'")
-                                                            .col-xs-6
+                                                            .col-xs-12
                                                                 .checkbox-inline
                                                                     label
                                                                         input#checkboxOverwrite(type='checkbox', data-bind = "checked: manualOverwrite")
@@ -123,10 +121,7 @@ block battleLog
                                 a.merpg-editPencil.pull-right.visible-lg(style="padding: 5px 5px 0 0; font-size: 12px")
                                     span.glyphicon.glyphicon-pencil(data-toggle="modal", data-target="#modalAddLogMonster", data-bind = "click: $parent.editExistingMonster")
                         .row
-                            .col-xs-6.visible-lg
-                                a.thumbnail(href = "#")
-                                    image.merpg-fill(src="/images/person-placeholder.jpg")
-                            .col-xs-12.col-lg-6
+                            .col-xs-12
                                 .container-fluid
                                     .row.form-group
                                         table.table.table-responsive.table-condensed.merpg-noMargin

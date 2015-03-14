@@ -16,7 +16,6 @@ QuickMonsterEditor = function () {
 
     self.loadedMonster = ko.observable(undefined);
     self.level = ko.observable(undefined);
-    self.count = ko.observable(1).extend({numeric: 1});
     self.selectedMonster = ko.observable('');
     self.loadSelectedMonster = function () {
 	    var monster = new Monster(owl.deepCopy(monsters[self.selectedMonster()].original));
@@ -27,8 +26,6 @@ QuickMonsterEditor = function () {
 
     self.closeQuickEditor = function() {
         self.loadedMonster(undefined);
-        self.level(undefined);
-	    self.count(1);
     };
 
     self.compareHits = ko.computed(function () {
