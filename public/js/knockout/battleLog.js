@@ -165,6 +165,7 @@ BattleLog = function () {
 				       //console.log(type + " loading...");
 			       },
 			       success   : function (data, status, jqXHR) {
+				       alert("Gespeichert!")
 			       }
 		       }).done(function () {
 			//console.log(type + " loaded.");
