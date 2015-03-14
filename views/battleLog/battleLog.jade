@@ -68,7 +68,9 @@ block battleLog
 
                                                     .container-fluid
                                                         .row.form-group
-                                                            .col-md-12
+                                                            .col-xs-6
+                                                                input#inputCount.form-control(type='text', placeholder='Anzahl', data-bind = "value: count, valueUpdate: 'afterkeydown'")
+                                                            .col-xs-6
                                                                 .checkbox-inline
                                                                     label
                                                                         input#checkboxOverwrite(type='checkbox', data-bind = "checked: manualOverwrite")
@@ -125,140 +127,89 @@ block battleLog
                                 a.thumbnail(href = "#")
                                     image.merpg-fill(src="/images/person-placeholder.jpg")
                             .col-xs-12.col-lg-6
-                                if(locals.os !== "android")
-                                    .container-fluid
-                                        .row
-                                            h4(data-bind = "text: _id")
-                                        .row
-                                            span.text-warning(data-bind = "text: currentOB() + ' OB'")
-                                        .row
-                                            span.text-success(data-bind = "text: currentDB() + ' DB'")
-                                        .row
-                                            span.text-info(data-bind = "text: currentMM() + ' MM'")
-                                        .row.form-group
-                                            span.text-danger
-                                                span.glyphicon.glyphicon-heart
-                                                span(data-bind = "text: currentHits() - hitsTaken() + '   Treffer'")
-                                        .row.form-group
-                                            .progress.merpg-bar-align
-                                                .progress-bar.progress-bar-danger(role='progressbar',
-                                                data-bind = "attr: {'aria-valuenow': currentHits() - hitsTaken(), 'aria-valuemax': currentHits()}, style: {width: max((currentHits() - hitsTaken()) / currentHits() * 100, 0) + '%'}", aria-valuemin='0')
-                                else
-                                    .container-fluid
-                                        .row.form-group
-                                            table.table.table-responsive.table-condensed.merpg-noMargin
-                                                tbody
-                                                    tr
-                                                        td
-                                                            h4.merpg-noMargin(data-bind = "text: _id")
-                                                        td
-                                                            h4.merpg-noMargin.text-warning(data-bind = "text: currentOB() + ' OB'")
-                                                        td
-                                                            h4.merpg-noMargin.text-success(data-bind = "text: currentDB() + ' DB'")
-                                                        td
-                                                            h4.merpg-noMargin.text-info(data-bind = "text: currentMM() + ' MM'")
-                                                        td
-                                                            h4.merpg-noMargin.text-danger
-                                                                span.glyphicon.glyphicon-heart
-                                                                span
-                                                                span(data-bind = "text: currentHits() - hitsTaken() + ' Treffer'")
-                                                        td
-                                                            a.merpg-editPencil.btn.btn-block.btn-warning.btn-sm
-                                                                span.glyphicon.glyphicon-pencil(data-toggle="modal", data-target="#modalAddLogMonster", data-bind = "click: $parent.editExistingMonster")
-                                        .row.form-group
-                                            .progress.merpg-bar-align
-                                                .progress-bar.progress-bar-danger(role='progressbar',
-                                                data-bind = "attr: {'aria-valuenow': currentHits() - hitsTaken(), 'aria-valuemax': currentHits()}, style: {width: max((currentHits() - hitsTaken()) / currentHits() * 100, 0) + '%'}", aria-valuemin='0')
-                        if(locals.os !== "android")
-                            .row
-                                .col-md-12
-                                    table.table.table-responsive.table-condensed
-                                        tbody
-                                            tr
-                                                th Treffer erhalten
-                                                td
-                                                    input.text-right(type = "number", data-bind = "value: hitsTaken, valueUpdate: 'input'")
-                                            tr
-                                                th Treffer pro Runde
-                                                td
-                                                    input.text-right(type = "number", data-bind = "value: hitsPerRound, valueUpdate: 'input'")
-                                            tr
-                                                th Benommenheit
-                                                td
-                                                    input.text-right(type = "number", data-bind = "value: stunned, valueUpdate: 'input'")
-                                            tr
-                                                th Runden bis zum Tod
-                                                td
-                                                    input.text-right(type = "number", data-bind = "value: roundsTillDeath, valueUpdate: 'input'")
-                                            tr
-                                                th Aktivität Malus
-                                                td
-                                                    input.text-right(type = "number", data-bind = "value: bonus, valueUpdate: 'input'")
-                                            tr
-                                                td
-                                                    .checkbox-inline
-                                                        label
-                                                            input(type='checkbox', data-bind = "checked: knockedOut")
-                                                            | Kampfunfähig
-                        else
-                            .row
-                                .col-md-12
-                                    table.table.table-responsive.table-condensed
-                                        tbody
-                                            tr
-                                                th Treffer erhalten
-                                                th Treffer pro Runde
-                                                th Benommenheit
-                                                th Runden bis zum Tod
-                                                th Aktivität Malus
-                                            tr
-                                                td
-                                                    .input-group.input-group-sm
-                                                        input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: hitsTaken, valueUpdate: 'input'")
-                                                        span.input-group-btn.merpg-tableInputFill
-                                                            a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'hitsTaken')")
-                                                                span.glyphicon.glyphicon-repeat
-                                                            a.btn.btn-danger(data-bind = "attr: {disabled: hitsTaken() <= 0}, click: $parent.subtractValue.bind($data, 'hitsTaken')")
-                                                                span.glyphicon.glyphicon-minus
-                                                            a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'hitsTaken')")
-                                                                span.glyphicon.glyphicon-plus
-                                                td
-                                                    .input-group.input-group-sm
-                                                        input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: hitsPerRound, valueUpdate: 'input'")
-                                                        span.input-group-btn.merpg-tableInputFill
-                                                            a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'hitsPerRound')")
-                                                                span.glyphicon.glyphicon-repeat
-                                                            a.btn.btn-danger(data-bind = "attr: {disabled: hitsPerRound() <= 0}, click: $parent.subtractValue.bind($data, 'hitsPerRound')")
-                                                                span.glyphicon.glyphicon-minus
-                                                            a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'hitsPerRound')")
-                                                                span.glyphicon.glyphicon-plus
-                                                td
-                                                    .input-group.input-group-sm
-                                                        input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: stunned, valueUpdate: 'input'")
-                                                        span.input-group-btn.merpg-tableInputFill
-                                                            a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'stunned')")
-                                                                span.glyphicon.glyphicon-repeat
-                                                            a.btn.btn-danger(data-bind = "attr: {disabled: stunned() <= 0}, click: $parent.subtractValue.bind($data, 'stunned')")
-                                                                span.glyphicon.glyphicon-minus
-                                                            a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'stunned')")
-                                                                span.glyphicon.glyphicon-plus
-                                                td
-                                                    .input-group.input-group-sm
-                                                        input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: roundsTillDeath, valueUpdate: 'input'")
-                                                        span.input-group-btn.merpg-tableInputFill
-                                                            a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'roundsTillDeath')")
-                                                                span.glyphicon.glyphicon-repeat
-                                                            a.btn.btn-danger(data-bind = "attr: {disabled: roundsTillDeath() == undefined}, click: $parent.subtractValue.bind($data, 'roundsTillDeath')")
-                                                                span.glyphicon.glyphicon-minus
-                                                            a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'roundsTillDeath')")
-                                                                span.glyphicon.glyphicon-plus
-                                                td
-                                                    .input-group.input-group-sm
-                                                        input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: bonus, valueUpdate: 'input'")
-                                                        span.input-group-btn.merpg-tableInputFill
-                                                            a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'bonus')")
-                                                                span.glyphicon.glyphicon-repeat
-                                                            a.btn.btn-danger(data-bind = "attr: {disabled: bonus() <= 5}, click: $parent.subtractValue.bind($data, 'bonus')")
-                                                                span.glyphicon.glyphicon-minus
-                                                            a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'bonus')")
-                                                                span.glyphicon.glyphicon-plus
+                                .container-fluid
+                                    .row.form-group
+                                        table.table.table-responsive.table-condensed.merpg-noMargin
+                                            tbody
+                                                tr
+                                                    td
+                                                        h4.merpg-noMargin(data-bind = "text: _id")
+                                                    td
+                                                        h4.merpg-noMargin.text-warning(data-bind = "text: currentOB() + ' OB'")
+                                                    td
+                                                        h4.merpg-noMargin.text-success(data-bind = "text: currentDB() + ' DB'")
+                                                    td
+                                                        h4.merpg-noMargin.text-info(data-bind = "text: currentMM() + ' MM'")
+                                                    td
+                                                        h4.merpg-noMargin.text-danger
+                                                            span.glyphicon.glyphicon-heart
+                                                            span
+                                                            span(data-bind = "text: currentHits() - hitsTaken() + ' Treffer'")
+                                                    td
+                                                        a.merpg-editPencil.btn.btn-block.btn-warning.btn-sm
+                                                            span.glyphicon.glyphicon-pencil(data-toggle="modal", data-target="#modalAddLogMonster", data-bind = "click: $parent.editExistingMonster")
+                                    .row.form-group
+                                        .progress.merpg-bar-align
+                                            .progress-bar.progress-bar-danger(role='progressbar',
+                                            data-bind = "attr: {'aria-valuenow': currentHits() - hitsTaken(), 'aria-valuemax': currentHits()}, style: {width: max((currentHits() - hitsTaken()) / currentHits() * 100, 0) + '%'}", aria-valuemin='0')
+                        .row
+                            .col-md-12
+                                table.table.table-responsive.table-condensed
+                                    tbody
+                                        tr
+                                            th Treffer erhalten
+                                            th Treffer pro Runde
+                                            th Benommenheit
+                                            th Runden bis zum Tod
+                                            th Aktivität Malus
+                                        tr
+                                            td
+                                                .input-group.input-group-sm
+                                                    input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: hitsTaken, valueUpdate: 'input'")
+                                                    span.input-group-btn.merpg-tableInputFill
+                                                        a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'hitsTaken')")
+                                                            span.glyphicon.glyphicon-repeat
+                                                        a.btn.btn-danger(data-bind = "attr: {disabled: hitsTaken() <= 0}, click: $parent.subtractValue.bind($data, 'hitsTaken')")
+                                                            span.glyphicon.glyphicon-minus
+                                                        a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'hitsTaken')")
+                                                            span.glyphicon.glyphicon-plus
+                                            td
+                                                .input-group.input-group-sm
+                                                    input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: hitsPerRound, valueUpdate: 'input'")
+                                                    span.input-group-btn.merpg-tableInputFill
+                                                        a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'hitsPerRound')")
+                                                            span.glyphicon.glyphicon-repeat
+                                                        a.btn.btn-danger(data-bind = "attr: {disabled: hitsPerRound() <= 0}, click: $parent.subtractValue.bind($data, 'hitsPerRound')")
+                                                            span.glyphicon.glyphicon-minus
+                                                        a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'hitsPerRound')")
+                                                            span.glyphicon.glyphicon-plus
+                                            td
+                                                .input-group.input-group-sm
+                                                    input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: stunned, valueUpdate: 'input'")
+                                                    span.input-group-btn.merpg-tableInputFill
+                                                        a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'stunned')")
+                                                            span.glyphicon.glyphicon-repeat
+                                                        a.btn.btn-danger(data-bind = "attr: {disabled: stunned() <= 0}, click: $parent.subtractValue.bind($data, 'stunned')")
+                                                            span.glyphicon.glyphicon-minus
+                                                        a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'stunned')")
+                                                            span.glyphicon.glyphicon-plus
+                                            td
+                                                .input-group.input-group-sm
+                                                    input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: roundsTillDeath, valueUpdate: 'input'")
+                                                    span.input-group-btn.merpg-tableInputFill
+                                                        a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'roundsTillDeath')")
+                                                            span.glyphicon.glyphicon-repeat
+                                                        a.btn.btn-danger(data-bind = "attr: {disabled: roundsTillDeath() == undefined}, click: $parent.subtractValue.bind($data, 'roundsTillDeath')")
+                                                            span.glyphicon.glyphicon-minus
+                                                        a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'roundsTillDeath')")
+                                                            span.glyphicon.glyphicon-plus
+                                            td
+                                                .input-group.input-group-sm
+                                                    input.form-control.input-sm(style = "width: 75px", type = "number", data-bind = "value: bonus, valueUpdate: 'input'")
+                                                    span.input-group-btn.merpg-tableInputFill
+                                                        a.btn.btn-warning(data-bind = "click: $parent.resetValue.bind($data, 'bonus')")
+                                                            span.glyphicon.glyphicon-repeat
+                                                        a.btn.btn-danger(data-bind = "attr: {disabled: bonus() <= 5}, click: $parent.subtractValue.bind($data, 'bonus')")
+                                                            span.glyphicon.glyphicon-minus
+                                                        a.btn.btn-success(data-bind = "click: $parent.addValue.bind($data, 'bonus')")
+                                                            span.glyphicon.glyphicon-plus

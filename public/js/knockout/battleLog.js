@@ -12,7 +12,12 @@ BattleLog = function () {
 	self.addMonster = function () {
 		self.removeCombatant(self.quickMonsterEditor.loadedMonster());
 
-		self.battleLogEntries.push(self.quickMonsterEditor.loadedMonster());
+		for (var i = 0; i < self.quickMonsterEditor.count(); i++) {
+			var temp = self.quickMonsterEditor.loadedMonster()._id;
+			self.quickMonsterEditor.loadedMonster()._id = self.quickMonsterEditor.loadedMonster()._id + i.toString();
+			self.battleLogEntries.push(self.quickMonsterEditor.loadedMonster());
+			self.quickMonsterEditor.loadedMonster()._id = temp;
+		}
 		self.battleLogEntries.sort(sort_by("_id", true, function (a) {
 			return a.toUpperCase();
 		}));
