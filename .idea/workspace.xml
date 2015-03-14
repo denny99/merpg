@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" afterPath="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/battleLog/battleLog.jade" afterPath="$PROJECT_DIR$/views/battleLog/battleLog.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MersBattleApp.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,125 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="battleLog.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.52" vertical-offset="2820" max-vertical-offset="3417">
-              <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="API.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/js/API.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.56" vertical-offset="8532" max-vertical-offset="9129">
-              <caret line="513" column="21" selection-start-line="513" selection-start-column="21" selection-end-line="513" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api_v1.0.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3026" max-vertical-offset="3604">
-              <caret line="194" column="34" selection-start-line="194" selection-start-column="34" selection-end-line="194" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/settings/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="612">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monsters.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5641593" vertical-offset="714" max-vertical-offset="2822">
-              <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
-              <folding>
-                <element signature="e#1110#1158#0" expanded="false" />
-                <element signature="e#1244#1535#0" expanded="false" />
-                <element signature="e#1305#1532#0" expanded="false" />
-                <element signature="e#1625#1673#0" expanded="false" />
-                <element signature="e#3781#3837#0" expanded="false" />
-                <element signature="e#3858#4179#0" expanded="false" />
-                <element signature="e#4182#4240#0" expanded="false" />
-                <element signature="e#4263#4592#0" expanded="false" />
-                <element signature="e#4595#4720#0" expanded="false" />
-                <element signature="e#4755#5097#0" expanded="false" />
-                <element signature="e#4788#5094#0" expanded="false" />
-                <element signature="e#4864#4885#0" expanded="false" />
-                <element signature="e#4932#4955#0" expanded="false" />
-                <element signature="e#4964#5090#0" expanded="false" />
-                <element signature="e#5463#5516#0" expanded="false" />
-                <element signature="e#5559#5685#0" expanded="false" />
-                <element signature="e#5617#5682#0" expanded="false" />
-                <element signature="e#5813#5849#0" expanded="false" />
-                <element signature="e#5875#5922#0" expanded="false" />
-                <element signature="e#5926#5980#0" expanded="false" />
-                <element signature="e#6007#6054#0" expanded="false" />
-                <element signature="e#6058#6097#0" expanded="false" />
-                <element signature="e#6126#6172#0" expanded="false" />
-                <element signature="e#6176#6211#0" expanded="false" />
-                <element signature="e#6240#6312#0" expanded="false" />
-                <element signature="e#6316#6423#0" expanded="false" />
-                <element signature="e#6453#6664#0" expanded="false" />
-                <element signature="e#6589#6622#0" expanded="false" />
-                <element signature="e#6668#6863#0" expanded="false" />
-                <element signature="e#6895#7658#0" expanded="false" />
-                <element signature="e#6960#6985#0" expanded="false" />
-                <element signature="e#7126#7159#0" expanded="false" />
-                <element signature="e#7190#7655#0" expanded="false" />
-                <element signature="e#7322#7369#0" expanded="false" />
-                <element signature="e#7417#7464#0" expanded="false" />
-                <element signature="e#7662#7768#0" expanded="false" />
-                <element signature="e#7803#7844#0" expanded="false" />
-                <element signature="e#7848#7954#0" expanded="false" />
-                <element signature="e#7988#8027#0" expanded="false" />
-                <element signature="e#8031#8136#0" expanded="false" />
-                <element signature="e#8170#8209#0" expanded="false" />
-                <element signature="e#8266#8484#0" expanded="false" />
-                <element signature="e#8353#8403#0" expanded="false" />
-                <element signature="e#8411#8446#0" expanded="false" />
-                <element signature="e#8542#8810#0" expanded="false" />
-                <element signature="e#8588#8772#0" expanded="false" />
-                <element signature="e#8670#8722#0" expanded="false" />
-                <element signature="e#8731#8768#0" expanded="false" />
-                <element signature="e#8865#8922#0" expanded="false" />
-                <element signature="e#8894#8919#0" expanded="false" />
-                <element signature="e#8975#9031#0" expanded="false" />
-                <element signature="e#9003#9028#0" expanded="false" />
-                <element signature="e#9078#9182#0" expanded="false" />
-                <element signature="e#9142#9179#0" expanded="false" />
-                <element signature="e#9212#9255#0" expanded="false" />
-                <element signature="e#9286#9880#0" expanded="false" />
-                <element signature="e#9338#9364#0" expanded="false" />
-                <element signature="e#9433#9532#0" expanded="false" />
-                <element signature="e#9484#9528#0" expanded="false" />
-                <element signature="e#9562#9604#0" expanded="false" />
-                <element signature="e#9649#9806#0" expanded="false" />
-                <element signature="e#9687#9733#0" expanded="false" />
-                <element signature="e#9742#9802#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="battleLog.jade" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="battleLog.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="4505">
-              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.4278846" vertical-offset="2729" max-vertical-offset="4573">
+              <caret line="171" column="38" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -161,69 +50,21 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/mainmenu.jade" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
-        <option value="$PROJECT_DIR$/public/js/test.js" />
-        <option value="$PROJECT_DIR$/public/js/bootstrap-slider.js" />
-        <option value="$PROJECT_DIR$/public/css/slider.css" />
-        <option value="$PROJECT_DIR$/public/js/radio.js" />
-        <option value="$PROJECT_DIR$/table.json" />
-        <option value="$PROJECT_DIR$/views/error.jade" />
-        <option value="$PROJECT_DIR$/public/js/tables.js" />
-        <option value="$PROJECT_DIR$/routes/auth.js" />
-        <option value="$PROJECT_DIR$/server/js/auth.js" />
-        <option value="$PROJECT_DIR$/routes/login.js" />
-        <option value="$PROJECT_DIR$/routes/layout.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/routes/routes.js" />
-        <option value="$PROJECT_DIR$/public/js/items.js" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/items.js" />
-        <option value="$PROJECT_DIR$/public/js/deepCopy.js" />
-        <option value="$PROJECT_DIR$/views/battleInterface/castAttackUI.jade" />
-        <option value="$PROJECT_DIR$/test.json.ts" />
-        <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/tables.js" />
-        <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/server/js/login.js" />
-        <option value="$PROJECT_DIR$/public/js/dataLoader.js" />
-        <option value="$PROJECT_DIR$/views/itemEditor.jade" />
-        <option value="$PROJECT_DIR$/public/js/knockout/itemEditor.js" />
-        <option value="$PROJECT_DIR$/public/js/knockout/monsterEditor.js" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/attacks.js" />
-        <option value="$PROJECT_DIR$/views/battleLog/battleUI.jade" />
-        <option value="$PROJECT_DIR$/public/js/navigation.js" />
-        <option value="$PROJECT_DIR$/views/mainMenu.jade" />
-        <option value="$PROJECT_DIR$/public/js/helper.js" />
-        <option value="$PROJECT_DIR$/public/js/frameworks/flipclock.js" />
-        <option value="$PROJECT_DIR$/public/css/merpg.css" />
-        <option value="$PROJECT_DIR$/public/js/init.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/physicalAttackUI.jade" />
-        <option value="$PROJECT_DIR$/views/monsterEditor.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/battleLog.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/battleUI.jade" />
-        <option value="$PROJECT_DIR$/views/battleInterface/magicalAttackUI.jade" />
-        <option value="$PROJECT_DIR$/public/js/knockout/battleUI.js" />
-        <option value="$PROJECT_DIR$/server/settings/config.json" />
-        <option value="$PROJECT_DIR$/public/js/knockout/battleLog.js" />
         <option value="$PROJECT_DIR$/views/battleLog/battleLog.jade" />
-        <option value="$PROJECT_DIR$/routes/api_v1.0.js" />
-        <option value="$PROJECT_DIR$/server/js/API.js" />
-        <option value="$PROJECT_DIR$/public/js/classDefinitions/monsters.js" />
       </list>
     </option>
   </component>
   <component name="JsBowerSettings">
     <exe-path />
     <config-path />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="NamedScopeManager">
     <scope name="Unnamed" pattern="!file:*&amp;&amp;!file:*/||file:app.js||file:views/battleInterface/*||file:views//*||file:server/settings//*||file:server/js//*||file:routes//*||file:public/js/knockout//*||file:public/js/*||file:public/js/classDefinitions/*||file:public/css/merpg.css" />
@@ -431,50 +272,6 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="frameworks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MersBattleApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merpg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classDefinitions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MersBattleApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merpg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -528,6 +325,7 @@
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
     <property name="LayoutCode.rearrangeEntriesPlain text" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -547,27 +345,9 @@
   </component>
   <component name="RunManager" selected="Node.js.Run">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="name" value="Dart" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
@@ -587,12 +367,23 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
     <configuration default="false" name="Run" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="NODE_ENV" value="production" />
       </envs>
+      <RunnerSettings RunnerId="Basic" />
       <RunnerSettings RunnerId="NodeJS.debug" />
       <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="NodeJS.debug" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
@@ -610,329 +401,304 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="7aa1487f-fbb5-452c-90b0-327606a6de16" name="Default" comment="" />
       <created>1406535320464</created>
+      <option name="number" value="Default" />
       <updated>1406535320464</updated>
-    </task>
-    <task id="LOCAL-00001" summary="server">
-      <created>1406568872999</created>
-      <updated>1406568872999</updated>
-    </task>
-    <task id="LOCAL-00002" summary="modules">
-      <created>1406569027818</created>
-      <updated>1406569027818</updated>
-    </task>
-    <task id="LOCAL-00003" summary="monsterEditor and BS theme">
-      <created>1406633285291</created>
-      <updated>1406633285291</updated>
-    </task>
-    <task id="LOCAL-00004" summary="monsterEditor and BS theme">
-      <created>1406638301212</created>
-      <updated>1406638301212</updated>
-    </task>
-    <task id="LOCAL-00005" summary="itemEditor">
-      <created>1406645189632</created>
-      <updated>1406645189632</updated>
-    </task>
-    <task id="LOCAL-00006" summary="battleUI + battleLog">
-      <created>1406655987237</created>
-      <updated>1406655987237</updated>
-    </task>
-    <task id="LOCAL-00007" summary="demo">
-      <created>1406661200463</created>
-      <updated>1406661200463</updated>
-    </task>
-    <task id="LOCAL-00008" summary="demo">
-      <created>1406661884558</created>
-      <updated>1406661884558</updated>
-    </task>
-    <task id="LOCAL-00009" summary="demo">
-      <created>1406661921847</created>
-      <updated>1406661921847</updated>
-    </task>
-    <task id="LOCAL-00010" summary="demo">
-      <created>1406662103407</created>
-      <updated>1406662103407</updated>
-    </task>
-    <task id="LOCAL-00011" summary="demo">
-      <created>1406662109115</created>
-      <updated>1406662109115</updated>
-    </task>
-    <task id="LOCAL-00012" summary="demo">
-      <created>1406662183471</created>
-      <updated>1406662183471</updated>
-    </task>
-    <task id="LOCAL-00013" summary="demo">
-      <created>1406662372275</created>
-      <updated>1406662372275</updated>
-    </task>
-    <task id="LOCAL-00014" summary="demo">
-      <created>1406662391741</created>
-      <updated>1406662391741</updated>
-    </task>
-    <task id="LOCAL-00015" summary="demo">
-      <created>1406662425589</created>
-      <updated>1406662425589</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ui Interaction">
-      <created>1406723903010</created>
-      <updated>1406723903010</updated>
-    </task>
-    <task id="LOCAL-00017" summary="demo">
-      <created>1406723954302</created>
-      <updated>1406723954302</updated>
-    </task>
-    <task id="LOCAL-00018" summary="demo">
-      <created>1406730137869</created>
-      <updated>1406730137869</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Item-Editor">
-      <created>1406825664139</created>
-      <updated>1406825664139</updated>
-    </task>
-    <task id="LOCAL-00020" summary="monsterEditor">
-      <created>1406906437083</created>
-      <updated>1406906437083</updated>
-    </task>
-    <task id="LOCAL-00021" summary="facebook login">
-      <created>1406909662784</created>
-      <updated>1406909662784</updated>
-    </task>
-    <task id="LOCAL-00022" summary="facebook login">
-      <created>1406912276130</created>
-      <updated>1406912276130</updated>
-    </task>
-    <task id="LOCAL-00023" summary="google login">
-      <created>1406913728608</created>
-      <updated>1406913728608</updated>
-    </task>
-    <task id="LOCAL-00024" summary="monster, items classes">
-      <created>1406974844821</created>
-      <updated>1406974844822</updated>
-    </task>
-    <task id="LOCAL-00025" summary="damageCalculation (TODO critical calculation and applying effects)">
-      <created>1407161103096</created>
-      <updated>1407161103096</updated>
-    </task>
-    <task id="LOCAL-00026" summary="demo">
-      <created>1407161587166</created>
-      <updated>1407161587166</updated>
-    </task>
-    <task id="LOCAL-00027" summary="scale balancing">
-      <created>1407162126931</created>
-      <updated>1407162126931</updated>
-    </task>
-    <task id="LOCAL-00028" summary="bet">
-      <created>1407244593339</created>
-      <updated>1407244593339</updated>
-    </task>
-    <task id="LOCAL-00029" summary="monster editor fix">
-      <created>1407244975997</created>
-      <updated>1407244975997</updated>
-    </task>
-    <task id="LOCAL-00030" summary="monster editor fix">
-      <created>1407245364244</created>
-      <updated>1407245364244</updated>
-    </task>
-    <task id="LOCAL-00031" summary="form group fix">
-      <created>1407248071560</created>
-      <updated>1407248071560</updated>
-    </task>
-    <task id="LOCAL-00032" summary="smaller fixes and ob bonus">
-      <created>1407250170026</created>
-      <updated>1407250170027</updated>
     </task>
     <task id="LOCAL-00033" summary="missile table when throwing weapon">
       <created>1407250419146</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
       <updated>1407250419146</updated>
     </task>
     <task id="LOCAL-00034" summary="obbonus fix">
       <created>1407250720514</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
       <updated>1407250720514</updated>
     </task>
     <task id="LOCAL-00035" summary="login">
       <created>1407250780682</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
       <updated>1407250780682</updated>
     </task>
     <task id="LOCAL-00036" summary="fix for special input">
       <created>1407251328815</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
       <updated>1407251328815</updated>
     </task>
     <task id="LOCAL-00037" summary="min of 9 in damagetables">
       <created>1407251788611</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
       <updated>1407251788611</updated>
     </task>
     <task id="LOCAL-00038" summary="advanced spell calc + performance fix">
       <created>1407337941819</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
       <updated>1407337941819</updated>
     </task>
     <task id="LOCAL-00039" summary="spell bonus vs special armors">
       <created>1407338267631</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
       <updated>1407338267631</updated>
     </task>
     <task id="LOCAL-00040" summary="login switch">
       <created>1407338283920</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
       <updated>1407338283920</updated>
     </task>
     <task id="LOCAL-00041" summary="magical attack well optimized">
       <created>1407338410376</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
       <updated>1407338410376</updated>
     </task>
     <task id="LOCAL-00042" summary="set to production test1">
       <created>1407338634892</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
       <updated>1407338634892</updated>
     </task>
     <task id="LOCAL-00043" summary="set to production test1">
       <created>1407339101171</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
       <updated>1407339101171</updated>
     </task>
     <task id="LOCAL-00044" summary="doku">
       <created>1407339665701</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
       <updated>1407339665701</updated>
     </task>
     <task id="LOCAL-00045" summary="max critical of weapons">
       <created>1407340385119</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
       <updated>1407340385119</updated>
     </task>
     <task id="LOCAL-00046" summary="base url">
       <created>1407340549030</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
       <updated>1407340549030</updated>
     </task>
     <task id="LOCAL-00047" summary="base url">
       <created>1407340625804</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
       <updated>1407340625804</updated>
     </task>
     <task id="LOCAL-00048" summary="uiValidation">
       <created>1407400863254</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
       <updated>1407400863254</updated>
     </task>
     <task id="LOCAL-00049" summary="several fixes">
       <created>1407403113009</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
       <updated>1407403113009</updated>
     </task>
     <task id="LOCAL-00050" summary="new monster fix">
       <created>1407500671339</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
       <updated>1407500671339</updated>
     </task>
     <task id="LOCAL-00051" summary="new monster fix">
       <created>1411895086920</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
       <updated>1411895086920</updated>
     </task>
     <task id="LOCAL-00052" summary="battleLog for tablet">
       <created>1412010742700</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
       <updated>1412010742701</updated>
     </task>
     <task id="LOCAL-00053" summary="random id">
       <created>1412011500913</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
       <updated>1412011500913</updated>
     </task>
     <task id="LOCAL-00054" summary="random id">
       <created>1412011843520</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
       <updated>1412011843520</updated>
     </task>
     <task id="LOCAL-00055" summary="random id">
       <created>1412012090210</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
       <updated>1412012090210</updated>
     </task>
     <task id="LOCAL-00056" summary="timer">
       <created>1412094455219</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
       <updated>1412094455219</updated>
     </task>
     <task id="LOCAL-00057" summary="timer in seconds">
       <created>1412094675925</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
       <updated>1412094675925</updated>
     </task>
     <task id="LOCAL-00058" summary="log buttons">
       <created>1412241582292</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
       <updated>1412241582292</updated>
     </task>
     <task id="LOCAL-00059" summary="log buttons">
       <created>1412242054576</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
       <updated>1412242054576</updated>
     </task>
     <task id="LOCAL-00060" summary="log buttons">
       <created>1412242135118</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
       <updated>1412242135118</updated>
     </task>
     <task id="LOCAL-00061" summary="log buttons">
       <created>1412242518310</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
       <updated>1412242518310</updated>
     </task>
     <task id="LOCAL-00062" summary="no device width">
       <created>1412242613199</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
       <updated>1412242613199</updated>
     </task>
     <task id="LOCAL-00063" summary="no device width">
       <created>1412242673337</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
       <updated>1412242673337</updated>
     </task>
     <task id="LOCAL-00064" summary="disable tab zoom">
       <created>1412243334446</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
       <updated>1412243334446</updated>
     </task>
     <task id="LOCAL-00065" summary="disable tab zoom">
       <created>1412243519464</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
       <updated>1412243519464</updated>
     </task>
     <task id="LOCAL-00066" summary="disable tab zoom">
       <created>1412243596667</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
       <updated>1412243596667</updated>
     </task>
     <task id="LOCAL-00067" summary="counter continues on chanigin speed">
       <created>1412247731113</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
       <updated>1412247731113</updated>
     </task>
     <task id="LOCAL-00068" summary="counter stop on reset">
       <created>1412247753746</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
       <updated>1412247753746</updated>
     </task>
     <task id="LOCAL-00069" summary="counter stop on reset">
       <created>1412247952269</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
       <updated>1412247952269</updated>
     </task>
     <task id="LOCAL-00070" summary="counter stop on reset">
       <created>1412248056994</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
       <updated>1412248056994</updated>
     </task>
     <task id="LOCAL-00071" summary="counter stop on reset">
       <created>1412248151806</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
       <updated>1412248151806</updated>
     </task>
     <task id="LOCAL-00072" summary="counter stop on reset">
       <created>1412248280415</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
       <updated>1412248280415</updated>
     </task>
     <task id="LOCAL-00073" summary="counter stop on reset">
       <created>1412585658927</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
       <updated>1412585658927</updated>
     </task>
     <task id="LOCAL-00074" summary="counter stop on reset">
       <created>1412585942179</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
       <updated>1412585942179</updated>
     </task>
     <task id="LOCAL-00075" summary="no progress striped active">
       <created>1412586037001</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
       <updated>1412586037001</updated>
     </task>
     <task id="LOCAL-00076" summary="session management">
       <created>1412589665298</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
       <updated>1412589665298</updated>
     </task>
     <task id="LOCAL-00077" summary="test">
       <created>1412591072577</created>
+      <option name="number" value="00077" />
+      <option name="project" value="LOCAL" />
       <updated>1412591072577</updated>
     </task>
     <task id="LOCAL-00078" summary="test">
       <created>1412591207902</created>
+      <option name="number" value="00078" />
+      <option name="project" value="LOCAL" />
       <updated>1412591207902</updated>
     </task>
     <task id="LOCAL-00079" summary="test">
       <created>1412591399836</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
       <updated>1412591399836</updated>
     </task>
     <task id="LOCAL-00080" summary="manual overwrite save">
       <created>1412591696963</created>
+      <option name="number" value="00080" />
+      <option name="project" value="LOCAL" />
       <updated>1412591696963</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="manual overwrite save">
+      <created>1412591749514</created>
+      <option name="number" value="00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1412591749514</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -961,23 +727,24 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.4997367" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299435" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3318535" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4682981" sideWeight="0.5002633" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15903106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4682981" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39822024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4672586" sideWeight="0.4997367" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4672586" sideWeight="0.5002633" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3318535" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1049,6 +816,7 @@
     <breakpoint-manager>
       <option name="time" value="5" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <PATH>
@@ -1063,13 +831,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api_v1.0.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="221">
@@ -1175,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/deepCopy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5712">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11657143" vertical-offset="0" max-vertical-offset="875">
@@ -1266,13 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8057143" vertical-offset="2100" max-vertical-offset="3009">
-          <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/frameworks/flipclock.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="862">
@@ -1312,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,7 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
           <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1328,7 +1073,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1813" max-vertical-offset="2380">
           <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1336,23 +1080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="2329">
           <caret line="119" column="45" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2557" max-vertical-offset="3417">
-          <caret line="185" column="73" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="173" max-vertical-offset="1309">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,7 +1087,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2669">
           <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,7 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3995">
           <caret line="179" column="26" selection-start-line="179" selection-start-column="26" selection-end-line="179" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,7 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2712264" vertical-offset="76" max-vertical-offset="5355">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="91" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,29 +1108,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2982456" vertical-offset="0" max-vertical-offset="2176">
           <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/knockout/battleLog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.52" vertical-offset="2820" max-vertical-offset="3417">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2820" max-vertical-offset="3417">
           <caret line="174" column="34" selection-start-line="174" selection-start-column="34" selection-end-line="174" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="4505">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/settings/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="612">
+        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
           <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
         </state>
@@ -1422,7 +1137,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/js/API.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.56" vertical-offset="8532" max-vertical-offset="9129">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8721" max-vertical-offset="9129">
           <caret line="513" column="21" selection-start-line="513" selection-start-column="21" selection-end-line="513" selection-end-column="21" />
           <folding />
         </state>
@@ -1430,7 +1145,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/classDefinitions/monsters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5641593" vertical-offset="714" max-vertical-offset="2822">
+        <state vertical-scroll-proportion="-10.2" vertical-offset="714" max-vertical-offset="2822">
           <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
           <folding>
             <element signature="e#1110#1158#0" expanded="false" />
@@ -1500,6 +1215,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="454">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="3009">
+          <caret line="167" column="20" selection-start-line="167" selection-start-column="20" selection-end-line="167" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/deepCopy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.61674" vertical-offset="2550" max-vertical-offset="5457">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleLog.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4134616" vertical-offset="2557" max-vertical-offset="3417">
+          <caret line="185" column="73" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleInterface/battleUI.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1033654" vertical-offset="0" max-vertical-offset="1309">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/battleLog/battleLog.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4278846" vertical-offset="2729" max-vertical-offset="4573">
+          <caret line="171" column="38" selection-start-line="171" selection-start-column="38" selection-end-line="171" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="heroku-plugin-app">
     <option name="name" value="merpg" />
@@ -1524,4 +1287,3 @@
     </states>
   </component>
 </project>
-
