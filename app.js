@@ -9,6 +9,8 @@ var bodyParser = require('body-parser');
 //start app
 var app = express();
 
+app.locals.os     = require('os');
+
 //program config
 global.config = require('./server/settings/config.json')[app.get('env')];
 
