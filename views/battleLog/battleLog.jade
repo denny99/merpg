@@ -69,7 +69,7 @@ block battleLog
                                                     .container-fluid
                                                         .row.form-group
                                                             .col-xs-6
-                                                                input#inputCount.form-control(type='text', placeholder='Anzahl', data-bind = "value: count, valueUpdate: 'afterkeydown'")
+                                                                input#inputCount.form-control(type='text', placeholder='Anzahl', data-bind = "value: $parent.count, valueUpdate: 'afterkeydown'")
                                                             .col-xs-6
                                                                 .checkbox-inline
                                                                     label
