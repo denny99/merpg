@@ -1,8 +1,0 @@
-<component name="libraryTable">
-  <library name="Bootstrap" type="javaScript">
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/public/js/frameworks/bootstrap.min.js" />
-    </CLASSES>
-    <SOURCES />
-  </library>
-</component>
