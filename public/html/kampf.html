@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> Kampf </title>
+
+<meta charset="UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="Format.css">
+
+</head>
+
+<body>
+
+<h1> <a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Kampf </h1>
+
+<div id="nav">
+</div>
+
+<div id="section">
+
+<img src="../images/baustelle.jpg" border = 1 align=center width=750px height=500px>
+
+
+<script type="text/javascript" src="../js/frameworks/jquery-1.11.1.min.js"></script>
+			<script type="text/javascript" src="../js/frameworks/easing.js"></script>
+			<script type="text/javascript" src="../js/frameworks/jquery.ui.totop.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					/*
+					var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear'
+					};
+					*/
+
+					$().UItoTop({ easingType: 'easeOutQuart' });
+
+				});
+			</script>
+			<a href="#" id="toTop" style="display: inline;">
+				<span id="toTopHover" style="opacity: 0;"></span>
+			</a>
+</div>
+</body>
+</html>

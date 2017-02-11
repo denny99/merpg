@@ -1,5 +1,8 @@
 block mainMenu
     .container.merpg-strong-pad-top
+        .row
+            .col-md-6.col-md-offset-3.text-center
+                a.btn.btn-primary.btn-block(href="/html/Prolog.html") Charakter-Setup
         if (!loginStatus)
             .row
                 .col-md-6.col-md-offset-3.text-center
@@ -22,8 +25,6 @@ block mainMenu
                     a#buttonItemEditor.btn.btn-primary.btn-block Item-Editor
             .row
                 .col-md-6.col-md-offset-3.text-center
-                    a.btn.btn-primary.btn-block.disabled Charakter-Setup
-            .row
-                .col-md-6.col-md-offset-3.text-center
                     a.btn.btn-primary.btn-block.disabled Charakter-Verwaltung
+
 
