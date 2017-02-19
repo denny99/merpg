@@ -110,5 +110,10 @@ tr:hover {
   outline:none;
 }
 
+.border {
+	border-bottom: 1px #000;
+	border-top: none;
+}
+
 				
 		
