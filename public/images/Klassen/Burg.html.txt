@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+<title> Das verwunschene Tal </Titel>
+
+<meta charset="UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="Formate.css">
+</head>
+
+<body>
+<p>
+<i> Grau bemooste Trümmer liegen <br /> um die Burg, ihr Raum ist leer. <br /> An verfall' nen Mauern schmiegen <br /> DOrn und Nessel sich und wiegen <br/>
+ihre Häupter träg und schwer <br /> auf den Zinnen hin und her.
+</body>
+
+</html>

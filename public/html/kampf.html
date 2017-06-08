@@ -13,37 +13,39 @@
 
 <body>
 
-<h1> <a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Kampf </h1>
+	<h1> <a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Kampf </h1>
 
-<div id="nav">
-</div>
+	<div id="nav">
+	</div>
 
-<div id="section">
+	<div id="section">
 
-<img src="../images/baustelle.jpg" border = 1 align=center width=750px height=500px>
+		<img src="../images/baustelle.jpg" border = 1 align=center width=750px height=500px>
+		
+		<a href="tab_angr_1-8.htm"> 	Angriffstabellen 1-4 	</a>
+		<a href="tab_krit.htm"> 	Kritische Treffertabellen 	</a>
 
+		<script type="text/javascript" src="../js/frameworks/jquery-1.11.1.min.js"></script>
+					<script type="text/javascript" src="../js/frameworks/easing.js"></script>
+					<script type="text/javascript" src="../js/frameworks/jquery.ui.totop.js"></script>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+								containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear'
+							};
+							*/
 
-<script type="text/javascript" src="../js/frameworks/jquery-1.11.1.min.js"></script>
-			<script type="text/javascript" src="../js/frameworks/easing.js"></script>
-			<script type="text/javascript" src="../js/frameworks/jquery.ui.totop.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					/*
-					var defaults = {
-						containerID: 'toTop', // fading element id
-						containerHoverID: 'toTopHover', // fading element hover id
-						scrollSpeed: 1200,
-						easingType: 'linear'
-					};
-					*/
+							$().UItoTop({ easingType: 'easeOutQuart' });
 
-					$().UItoTop({ easingType: 'easeOutQuart' });
-
-				});
-			</script>
-			<a href="#" id="toTop" style="display: inline;">
-				<span id="toTopHover" style="opacity: 0;"></span>
-			</a>
-</div>
+						});
+					</script>
+					<a href="#" id="toTop" style="display: inline;">
+						<span id="toTopHover" style="opacity: 0;"></span>
+					</a>
+	</div>
 </body>
 </html>

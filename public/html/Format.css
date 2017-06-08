@@ -66,7 +66,9 @@ tr:hover {
 	text-align: center;
 	font-weight: bold;
 	color: #ffffff;
-	 background:#ffffff url(../bilder/kampf.jpg) no-repeat scroll;
+	background:#ffffff url(../images/kampf.jpg) no-repeat scroll;
+
+	 
 }
 
 .z_liste {
