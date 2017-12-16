@@ -13,34 +13,40 @@
 
 <body>
 
-<h1> <a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Charaktererstellung </h1>
+<div id=header>
+<a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Charaktererstellung 
+</div>
 
 <div id="nav">
-<ol> <u> Reihenfolge: </u>
-	<li> <a href="#volk"> 			Volkswahl 		</a></li>
+<ol class="drop-menu menu-1"> <u> Reihenfolge: </u>
+	<li>  <a href="#volk"> 			Volkswahl 		</a></li>
 	<li> <a href="#beruf"> 			Berufswahl 		</a></li>
-	<li> <a href=<"#eigenschaften"> Eigenschaften 	</a></li>
-	<li> <a href="#jugend"> 		Jugend			</a></li>
-	<li> <a href="#werdegang"> 		Werdegang		</a></li>
-	<li> <a href="#lehrzeit">		Lehrzeit		</a></li>
-	<li> <a href="#ausruestung"> 	Ausrüstung		</a></li>
-	<li> <a href="#berechnung">		Berechnung		</a></li>
-	<li> <a href="#persoenlichkeit">Persönlichkeit	</li></a>
+	<li>  <a href="#eigenschaften"> Eigenschaften 	</a></li>
+	<li>  <a href="#jugend"> 		Jugend			</a></li>
+	<li>  <a href="#werdegang"> 		Werdegang		</a></li>
+	<li>  <a href="#lehrzeit">		Lehrzeit		</a></li>
+	<li>  <a href="#ausruestung"> 	Ausrüstung		</a></li>
+	<li>  <a href="#berechnung">		Berechnung		</a></li>
+	<li>  <a href="#persoenlichkeit">Persönlichkeit	</li></a>
 </ol>
 </div>
 
 <div id="section">
 <ol> 
-
-	<h2 id=volk> <li>  Volkswahl 	</li> </h2>
+	<div id=volk>
+	<h2> <li>  Volkswahl 	</li> </h2>
 		Für eine Auswahl der Völker siehe <a href="voelker.html"> hier </a>
+	</div>	
 		
-	<h2> <li id=beruf> Berufswahl 	</li> </h2>
+	<div id=beruf>	
+	<h2> <li> Berufswahl 	</li> </h2>
 		Für eine Auswahl der Berufung siehe <a href="Berufe.html"> hier </a>
-		
-	<h2 id=eigenschaften> <li> Eigenschaften	</li> </h2>
+	</div>
+	
+	<div id=eigenschaften>	
+	<h2> <li> Eigenschaften	</li> </h2>
 		<p> Die Eigenschaften des Charaktes werden mit 1w100 (entspricht 2w10) ausgewürfelt. Es werden 6 Würfe hintereinander ausgeführt, <br> 
-		wobei alle Ergebisse unter 25 wiederholt werden. 
+		wobei alle Ergebisse unter 26 wiederholt werden. 
 		Danach werden die Boni bestimmt und den einzelnen Attributen nach Belieben zugeordnet. <br> 
 		Die Boni bestimmen sich nach folgender Tabelle: </p>
 		
@@ -288,9 +294,10 @@
 				<td> +25	</td>
 			</tr>
 		</table>
-		
-	<h2 id=jugend> <li> Jugend </li> </h2>
-		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. <br>
+	</div>
+	<div id=jugend>	
+	<h2 > <li> Jugend </li> </h2>
+		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. 
 		Die Werte aus folgender Tabelle müssen eingetragen werden: </p>
 		
 		<table align="center"; border="1"> <!-- Jugend -->
@@ -616,6 +623,9 @@
 				</tr>
 				
 		</table>
+				<p> *Würfelt der Spieler mit W100 kleiner oder gleich dieser Zahl, hat sein Charakter eine Spruchliste erlernt. Falls dies nicht gelingt,
+				wird der Wert dem Zauberspruch gutgeschrieben und kann zu einem anderen Zeitpunkt (z.B.: LvL-Up) zum Erlernen des Spruchs beitragen. <br>
+				** Hiermit kann der Spieler seine Sprachwerte steigern oder neue Sprachen hinzulernen. Auch Kombinationen von beidem sind möglich.</p>
 		<table align="center"; border="1"> <!-- Jugend 2 -->
 			<thead> Fortsetzung Völker </thead>
 				<tr>
@@ -939,13 +949,13 @@
 					<td> 5 </td>
 				</tr>
 		</table>
-		<p> *Würfelt der Spieler mit W100 kleiner oder gleich dieser Zahl, hat sein Charakter eine Spruchliste erlernt. Falls dies nicht gelingt,
+				<p> *Würfelt der Spieler mit W100 kleiner oder gleich dieser Zahl, hat sein Charakter eine Spruchliste erlernt. Falls dies nicht gelingt,
 				wird der Wert dem Zauberspruch gutgeschrieben und kann zu einem anderen Zeitpunkt (z.B.: LvL-Up) zum Erlernen des Spruchs beitragen. <br>
 				** Hiermit kann der Spieler seine Sprachwerte steigern oder neue Sprachen hinzulernen. Auch Kombinationen von beidem sind möglich.</p>
-	
-			
-	<h2 id=werdegang> <li> Werdegang	</li> </h2>
-		<p> Wesen zeichnen sich durch Vererbung oder den Einfluss des Schicksals auf sie aus. Diese Einflüsse werden durch Werdegangspunkte charakterisiert. 
+	</div>
+	<div id=werdegang>		
+	<h2> <li> Werdegang	</li> </h2>
+		<p> Lebewesen zeichnen sich durch Vererbung oder den Einfluss des Schicksals auf sie aus. Diese Einflüsse werden durch Werdegangspunkte charakterisiert. 
 		Diese Werdegangspunkte können in den Volksbeschreibungen nachgelesen werden. Die Punkte dürfen nach den vier folgenden Tabellen für 
 		Eigenschaften/Fertigkeiten, Besonderen Fähigkeiten, Magische Gegenstände oder Gold vergeben werden. </p>
 		<table align="center"; border="1"> <!-- Werdegang#1 -->
@@ -962,7 +972,7 @@
 						3 Eigenschaften um je +1 erhöhen.</td>
 			</tr>
 		</table>
-		<p>
+		<div id = "tab_besFaehig">
 		<table align="center"; border="1"> <b> Besondere Fähigkeiten </b> <br> 
 			 <p> Erste Fähigkeit frei wählbar, jede weitere muss erwürfelt werden. Jede Fähigkeit ist einmalig erlernbar. <br> </p>
 			<tr>
@@ -1056,7 +1066,7 @@
 					beim Auswürfeln der Treffer im Rahmen der Fertigkeit der Körperentwicklung.</td>
 			</tr>
 		</table>
-		</p>
+		</div>
 		<table align="center"; border="1"> <b> Magische Gegenstände </b>
 			<tr>
 				<td> 01-60 </td>
@@ -1139,8 +1149,9 @@
 				<td> 200 GS </td>
 			</tr>
 		</table>
-		
-	<h2 id=lehrzeit> <li> Lehrzeit </li> </h2>
+	</div>
+	<div id=lehrzeit> 	
+	<h2> <li> Lehrzeit </li> </h2>
 
 		<p> Die Tabelle der Lehrzeit wird im weiteren Verlauf auch immer wieder bei einer Stufenerhöhung benutzt. 
 		<b> Punktevergabe: </b> Die Zahlen geben die zu vergebenden Punkte in der entsprechenden Kategorie an, dabei ist zu beachten, dass der erste 
@@ -1149,16 +1160,18 @@
 		<ul> <b> Überschüssige Punkte: </b> Ungenutzte Punkte können in andere Kategorien übertragen werden. Die Umrechnungskosten betragen dabei: </br>
 			<li> 4 Punkte für eine völlig neue, bisher ungenutzte Kategorie (z.B. Waffenfertigkeiten beim Magier) </li>
 			<li> 2 Punkte für eine bisher schon genutzte Kategorie </li>
+			<b> Unbedingt Beachten! </b> Beim Übertragen der Punkte gilt weiterhin, dass das zweite Erhöhen den Einsatz dreier Punkte erfordert, d.h. im Falle einer bisher
+			ungenutzten Kategorie würden 8 Punkte (4 für die erstmalige Verwendung und 2 und 2 für die zweite Erhöhung) an übertragenen Punkten anfallen! </br>
 		</ul>
-		<b> Unbedingt Beachten! </b> Beim Übertragen der Punkte gilt weiterhin, dass das zweite Erhöhen den Einsatz dreier Punkte erfordert, d.h. im Falle einer bisher
-		ungenutzten Kategorie würden 8 Punkte (4 für die erstmalige Verwendung und 2 und 2 für die zweite Erhöhung) an übertragenen Punkten anfallen! </br>
+		
 		 <ul> <b> Ausnahmen: </b>
 			<li> Innerhalb der Kategorie <i> Bewegung und Manöver </i> kostet die Erhöhung um 2 nicht 3, sondern nur 2 Punkte (max. Erhöhung um 2-Regel bleibt bestehen!). </li>
 			<li> Punkte für <i> Wahrnehmung </i> können im Verhältnis 1:1 übertragen werden (max. Erhöhung um 2 und Kosten von 3 Punkten für zweimalige Erhöhung bleiben bestehen!). </li>
 		</ul>
 		</p>
-
-		<table align="center"; border="1"> Lehrzeit/LvL-Up
+		</div>
+		<div id=dreckstab>
+		<table align="center"; border="1"> <b>Lehrzeit/LvL-Up</b>
 			<tr>
 				<td> Gruppe </td>
 				<td> Bewegung und <br>
@@ -1172,7 +1185,7 @@
 				<td> Spruchlisten </td>
 				<td> Nebenfertigkeiten </td>
 				<td> Sprachem </td>
-				<td> SPruchlisten </td>
+				<td> Spruchlisten </td>
 			</tr>
 			<tr>
 				<th> Kämpfer </th>
@@ -1259,33 +1272,35 @@
 				<td> 150% </td>
 			</tr>
 		</table>
+		</div>
 		
-		<ul> <b>Sprachen:</b>
-			<li> Adûnaic </li>
-			<li> Apysaic </li>
-			<li> Atliduk </li>
-			<li> Dunael </li>
-			<li> Haradaic </li>
-			<li> Khuzdul </li>
-			<li> Kuduk </li>
-			<li> Labba </li>
-			<li> Logathig </li>
-			<li> Nahaiduk </li>
-			<li> Orkisch </li>
-			<li> Pûckael </li>
-			<li> Quenya </li>
-			<li> Rohirrisch </li>
-			<li> Schwarze Sprache </li>
-			<li> Sindarin </li>
-			<li> Umitisch </li>
-			<li> Varadja </li>
-			<li> Waildyth </li>
-			<li> Waldsprachen/Betheur </li>
-			<li> Westron (Allgemeinsprache)</li>
-		</ul>
-			
-	<h2 id=ausruestung> <li> Ausrüstung </li> </h2>
-	<p> Jeder Charakter beginnt mit 2 Goldmünzen, 2 Waffen (min. 1 Fertigkeitspunkt) und alltäglicher Kleidung. Hinzu kommen noch eventuell die Gegenstände durch den Werdegang und dort erlangtes Vermögen </p>
+		<div id=sprachen> <ul> <b>Sprachen:</b>
+				<li> Adûnaic (Alte Sprache der Menschen von Númenor des Zweiten Zeitalters. Hat in einer Abwandlung im Volk der Schwarzen Númenor überlebt.) </li>
+				<li> Apysaic </li>
+				<li> Atliduk </li>
+				<li> Dunael </li>
+				<li> Haradaic </li>
+				<li> Khuzdul </li>
+				<li> Kuduk </li>
+				<li> Labba </li>
+				<li> Logathig </li>
+				<li> Nahaiduk </li>
+				<li> Orkisch </li>
+				<li> Pûckael </li>
+				<li> Quenya </li>
+				<li> Rohirrisch </li>
+				<li> Schwarze Sprache </li>
+				<li> Sindarin </li>
+				<li> Umitisch </li>
+				<li> Varadja </li>
+				<li> Waildyth </li>
+				<li> Waldsprachen/Betheur </li>
+				<li> Westron (Allgemeinsprache)</li>
+			</ul>
+		</div>
+	<div id=ausruestung>		
+	<h2><li> Ausrüstung </li></h2>
+		<p> Jeder Charakter beginnt mit 2 Goldmünzen, 2 Waffen (min. 1 Fertigkeitspunkt nötig) und alltäglicher Kleidung. Hinzu kommen noch durch den Werdegang erlangte Gegenstände und Vermögen </p>
 		
 		<a href="../images/grundausstattung.jpg"> Grundausrüstung </a> <br>
 		<a href="tab_nahrung_hygiene.xhtml"> Nahrung und Hygieneartikel</a> <br>
@@ -1298,8 +1313,9 @@
 		<a href="tab_fernkampf.html"> Fernkampfwaffen </a> <br>
 		<a href="tab_ruestung1.xhtml"> Helme und Schilde </a> <br>
 		<a href="tab_ruestung2.xhtml"> Rüstung </a> <br>
+		</p>
 		
-		<table border="1"; align="center"> <thead>Panzerungswerte</thead>
+	<table border="1"; align="center"> <thead><b>Panzerungswerte</b></thead> 
 			<tr> 
 				<td> 0-4 </td>
 				<td> ohne Rüstung </td>
@@ -1321,15 +1337,15 @@
 				<td> Platte </td>
 			</tr>
 		</table>
-			
+	</div>
 	
 
+	<div id= berechnung>
+	<h2> <li> Berechnung </li> </h2>
 	
-	<h2 id= berechnung> <li> Berechnung </li> </h2>
-	
-		<p> Jetzt können alle Eigenschaftswerte und Fertigkeitswerte zusammengerechnet werden und das Ergebnis notiert werden. Hier zu beachten ist, dass Fertigkeiten ohne Punkt einen Malus von -25 haben. </p>
+		<p> Jetzt können alle Eigenschaftswerte und Fertigkeitswerte zusammengerechnet werden und das Ergebnis notiert werden. Hier ist zu beachten, dass Fertigkeiten ohne einen Punkt einen Malus von -25 haben. </p>
 
-		<p> <b>Traglastbehinderung:</b> Ab 7kg Gepäck kann es zu einer Einschränkung der Bewegunsfreiheit eines Charakters kommen. Die folgende Tabelle dient zur Berechnung dieser: </p>
+		<p> <b>Traglastbehinderung:</b> Ab 7kg Gepäck kann es zu einer Einschränkung der Bewegunsfreiheit eines Charakters kommen. Anhand folgender Tabelle kann die Einschränkung abgelesen werden: </p>
 
 		<table align="center"; border="1"> <!-- Traglastbehinderung-->
 			<tr> 
@@ -1345,7 +1361,7 @@
 				<td> <b>37-45</b> </td>
 				<td> <b>46-54</b> </td>
 				<td> <b>55-63</b> </td>
-				<td> <b>64-72</b> </td> </b>
+				<td> <b>64-72</b> </td> 
 			</tr>
 			<tr>
 				<td> 19-27 </td>
@@ -1528,15 +1544,16 @@
 				<td> 30 </td>
 			</tr>
 	</table>
-	
-	<h2 id=persoenlichkeit> <li> Persönlichkeit	</li> </h2>
+	</div>
+	<div id=persoenlichkeit>
+	<h2> <li> Persönlichkeit	</li> </h2>
 		<p> Schmückt euren Charakter aus!. Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
 		
 	<h2> <li> Sonstiges </li> </h2>
 		<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
 		<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
 		<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a>
-
+	</div>
 </ol>
 </div>
 
