@@ -51,4 +51,42 @@ body {background-color: #26272c;}
   height: auto;
   width: 100%;
 }
+
+#port_links {
+	margin-top: 2%;
+	color: white;
+	float: left;
+	width: 45%;
+	margin-left:5%;
+		}
+
+#port_links img {	
+	position: center;
+	height: auto;
+	width: 80%;
+  }		
+  
+ #port_links p {
+	 width:80%;
+ }
+		
+#port_rechts {
+	float: right;
+	color: white;
+	width: 45%;
+	margin-top:20%;
+	margin-right: 5%;
+}
+
+#port_rechts img {	
+	position: center;
+	height: auto;
+	width: 80%;
+  }	
+  
+ #port_rechts p {
+	 width:80%;
+ }
+  
+
 	
