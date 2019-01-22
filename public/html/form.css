@@ -16,7 +16,7 @@ body {background-color: #26272c;}
 
 		
 #navbar {
-
+		font-size: large;
 		color: white;
 		margin-left: 20%;
 		margin-right: 20%;
@@ -52,7 +52,7 @@ body {background-color: #26272c;}
   width: 100%;
 }
 
-#port_links {
+.port_links {
 	margin-top: 2%;
 	color: white;
 	float: left;
@@ -60,17 +60,17 @@ body {background-color: #26272c;}
 	margin-left:5%;
 		}
 
-#port_links img {	
+.port_links img {	
 	position: center;
 	height: auto;
-	width: 80%;
+	width: 95%;
   }		
   
- #port_links p {
-	 width:80%;
+.port_links p {
+	 width:95%;
  }
 		
-#port_rechts {
+.port_rechts {
 	float: right;
 	color: white;
 	width: 45%;
@@ -78,15 +78,23 @@ body {background-color: #26272c;}
 	margin-right: 5%;
 }
 
-#port_rechts img {	
+.port_rechts img {	
 	position: center;
 	height: auto;
-	width: 80%;
+	width: 95%;
   }	
   
- #port_rechts p {
-	 width:80%;
+.port_rechts p {
+	 width:95%;
  }
-  
+ 
+.trenner {
+	clear: both;
+	padding-top:5%;
+	background-color: #dac7be;
+	
+}
+
+
 
 	
