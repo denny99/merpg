@@ -91,8 +91,12 @@ body {background-color: #26272c;}
 .trenner {
 	clear: both;
 	padding-top:5%;
-	background-color: #dac7be;
+	background-color: #26272c;
 	
+}
+
+#totale img {
+	width: 100%;
 }
 
 
