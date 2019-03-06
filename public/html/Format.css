@@ -13,7 +13,7 @@ h3{ text-align: middle}
 		height:50px;
 		font-size:30pt;
 		text-decoration:underline;
-}
+		}
 
 #startseite {
 		display:inline;
@@ -23,26 +23,37 @@ h3{ text-align: middle}
 		margin-left:1%;
 		margin-top:0.6%;
 		text-decoration: underline;
-		
 		}
+		
 #nav {
 		float: left; 
 		width: 20%;
-		height: 100%;
+		height: 85%;
 		background-color: #5B0400;
 		color: white;
 		border: 1px solid black;
 		position:fixed;
-		padding-left: 1%;
+		padding: 1%;
+		padding-left:0.5%;
 		margin-top:1%;
-		margin-left:0.5%;
+		margin-left:0.4%;
 		border-color:white;
 		border-width:3px;
+		overflow-x:auto
 		}	
 		
 #nav a {
 		color:white;
-}
+		}
+
+.nav_prolog {
+		text-align:left;
+		}
+		
+.nav_prolog h3 {
+		text-align:left;
+		margin-left: 10%;
+		}
 
 #section   {
 		text-align: center;
@@ -60,7 +71,11 @@ h3{ text-align: middle}
 	margin-left: 10%;	
 	margin-right: 10%;	 
 	width: 80%;
-	}
+		}
+		
+#drop-menu {
+	
+}
 
 
 /*Ab hier beginnen die allgemeinen Einstellungen für Standardelemente*/
@@ -105,9 +120,20 @@ tr:hover {background-color: #5B0400;
 }
 
 .block {
-		margin-left: 18%;
+		margin-left: 10%;
+		margin-right: 15%;
 		text-align:left;
+		display:block; 
 		
+}
+
+.beruf_block {
+		text-align: left;
+		list-style: none;
+		margin-left:15%;
+		margin-right:10%;
+		
+	
 }
 
 
@@ -140,6 +166,9 @@ div.block > ul li {
 	width: 200px;
 }
 
+.char_tabellen{
+		overflow-x:auto;
+	}
 
 #werdegang tr, #werdegang td{
 	padding:10px;
@@ -150,26 +179,25 @@ div.block > ul li {
 	height:20px;
 }
 
-#jugend table {width:10%}
+#jugend table {
+	width:10%;
+	}
 
 /*#eigenschaften > table td { height:35px;}*/
 	
 #tab_lehrzeit {
 	align:center;
 }
-#lehrzeit > ul{
-	text-align:left;
-	margin-left: 20%;
-	
-}
 
-#dreckstab {
-	margin-left: 20%;
-}
+	#lehrzeit > ul{
+		text-align:left;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
 
 #sprachen {
-	text-align:left;
-	margin-left:43%;
+	text-align:center;
 	margin-top:5%;
 }
 
@@ -203,5 +231,30 @@ div.block > ul li {
 
 #toTop:active, #toTop:focus {
   outline:none;
-}			
+}	
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+		
 		
