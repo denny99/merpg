@@ -3,16 +3,26 @@ h1 { color: white; background-color: #5B0400; text-align: center;}
 h2 {text-align: middle; text-decoration:underline;}
 h3{ text-align: middle}
 
-#header{
+#header {
+		height:10%;
+		background-color: #ecc396;
+		width: 100%;
+		
+		
+}
+
+#header-box{
 		color: white; 
 		background-color: #5B0400;
 		margin-left:0.5%;
+		margin-right:0.5%;
 		margin-top:7px;
 		text-align: center;
-		width:100%;
+		max-width:100%;
 		height:50px;
 		font-size:30pt;
 		text-decoration:underline;
+		
 		}
 
 #startseite {
@@ -34,17 +44,28 @@ h3{ text-align: middle}
 		border: 1px solid black;
 		position:fixed;
 		padding: 1%;
-		padding-left:0.5%;
+		padding-left:3%;
 		margin-top:1%;
 		margin-left:0.4%;
 		border-color:white;
 		border-width:3px;
-		overflow-x:auto
+		overflow-x:auto;
+		
 		}	
 		
 #nav a {
 		color:white;
+		font-size: 1.0em;
 		}
+		
+#nav ol{
+		list-style-type: upper-roman;
+		font-size: 1.3em;
+		
+		
+}
+
+
 
 .nav_prolog {
 		text-align:left;
@@ -59,11 +80,13 @@ h3{ text-align: middle}
 		text-align: center;
 		float: left;
 		background-color: #ECC396;
-		width: 80%;
+		width: 65%;
 		height: max-height;
-		margin-left: 20%;
+		margin-left: 24%;
 		margin-right: 10%;
 		margin-top:4%;
+		display:flex;
+		
 		}
 		
 #section  p {			
@@ -73,13 +96,40 @@ h3{ text-align: middle}
 	width: 80%;
 		}
 		
-#drop-menu {
+.section-box {
+	border: 2px solid black;
+	border-style: dashed;
+	padding: 2%;
+	margin: auto;
 	
+}
+
+#mittelteil {
+	flex-grow: 3;
+}
+		
+#char-building {
+	/*float:right;
+	text-align: center;
+	background-color: #ECC396;
+	width: 10%;
+	position:absolute;
+	height: 100%;
+	border: 1px solid black;
+	margin-left: 90%;
+	margin-right: 1%;
+	margin-top:4%;*/
+	flex-grow:1;
 }
 
 
 /*Ab hier beginnen die allgemeinen Einstellungen für Standardelemente*/
 	
+
+#charakter-ol {
+	  margin-top: 0px;
+ 
+}
 	
 li a {
 		display: block;
@@ -96,15 +146,20 @@ li a:hover {
 }
 
 table {	width:80%;
-		align: center;}
+		border-collapse: collapse;
+		border: 1px solid black;
+		}
 	
 tr:nth-child(even){background-color: #DBB285;}
 tr:hover {background-color: #5B0400;
 		color: #fff;}
 		
+caption {
+	font-weight: bold;
+}
+		
 		
 /* Ab hier beginnen die classes und ids*/
-
 
 .volk_box {
 		text-align: left;
@@ -166,9 +221,9 @@ div.block > ul li {
 	width: 200px;
 }
 
-.char_tabellen{
+/*.char_tabellen{
 		overflow-x:auto;
-	}
+	}*/
 
 #werdegang tr, #werdegang td{
 	padding:10px;
@@ -179,9 +234,7 @@ div.block > ul li {
 	height:20px;
 }
 
-#jugend table {
-	width:10%;
-	}
+
 
 /*#eigenschaften > table td { height:35px;}*/
 	
