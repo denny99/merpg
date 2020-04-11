@@ -14,37 +14,40 @@
 
 <body>
 
-<div id=header>
-<a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Charaktererstellung 
+<div id="header">
+	<div id="header-box">
+		<a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Charaktererstellung 
+	</div>
 </div>
 
 <div id="nav">
-<ol class="drop-menu menu-1"> <u> Reihenfolge: </u>
+<ol class="drop-menu"> <u> Reihenfolge: </u>
 	<li>  <a href="#volk"> 			Volkswahl 		</a></li>
 	<li> <a href="#beruf"> 			Berufswahl 		</a></li>
 	<li>  <a href="#eigenschaften"> Eigenschaften 	</a></li>
 	<li>  <a href="#jugend"> 		Jugend			</a></li>
-	<li>  <a href="#werdegang"> 		Werdegang		</a></li>
+	<li>  <a href="#werdegang"> 		Werdegang	</a></li>
 	<li>  <a href="#lehrzeit">		Lehrzeit		</a></li>
 	<li>  <a href="#ausruestung"> 	Ausrüstung		</a></li>
-	<li>  <a href="#berechnung">		Berechnung		</a></li>
-	<li>  <a href="#persoenlichkeit">Persönlichkeit	</li></a>
+	<li>  <a href="#berechnung">		Berechnung	</a></li>
+	<li>  <a href="#persoenlichkeit">Persönlichkeit	</a></li>
 </ol>
 </div>
 
 <div id="section">
-<ol> 
-	<div id=volk>
+<div id="mittelteil">
+<ol id="charakter-ol"> 
+	<div id="volk" class="section-box">
 	<h2> <li>  Volkswahl 	</li> </h2>
 		Für eine Auswahl der Völker siehe <a href="voelker.html" target="_blank"> hier. </a>
 	</div>	
 		
-	<div id=beruf>	
+	<div id="beruf" class="section-box">	
 	<h2> <li> Berufswahl 	</li> </h2>
 		Für eine Auswahl der Berufung siehe <a href="Berufe.html" target="_blank"> hier. </a>
 	</div>
 	
-	<div id=eigenschaften>	
+	<div id="eigenschaften"  class="section-box">	
 	<h2> <li> Eigenschaften	</li> </h2>
 		<p> Zunächst werden die grundlegenden Eigenschaften des Charakters festgelegt. Diese Eigenschaften werden mit 1W100 (entspricht 2W10) ausgewürfelt. Es werden 7 Würfe hintereinander ausgeführt, 
 		wobei alle Ergebnisse unter 26 wiederholt werden.<br/>
@@ -52,12 +55,16 @@
 		<span style="font-weight:bold">Wichtig! Der Haupteigenschaftswert des eigenen Berufs kann durch eine 90 ersetzt werden!</span><br><br>
 		Die Boni bestimmen sich nach folgender Tabelle: </p>
 		
+<<<<<<< HEAD
 		<table border="1"; align="center">
 			<tr>
 				<th>Eigenschaftswert</th>
 				<th>Bonus</th>
 				<th>Magiepunkte</th>
 			</tr>
+=======
+		<table>
+>>>>>>> origin/master
 			<tr> 
 				<td> 0-25 	</td>
 				<td> Wiederholung! </td>
@@ -142,6 +149,7 @@
 			<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
 		</div>
 		<br>
+<<<<<<< HEAD
 	</div>
 		
 <script type="text/javascript">
@@ -210,6 +218,13 @@ $( document ).ready(function() {
 		<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
 		<tr class="border"> <th>ST</th> <th>GE</th><th>KO</th><th>IG</th><th>IT</th><th>AF</th><th>ESS</th><th>LEI</th><th>GFT</th><th>KRH</th> </tr>
 			<tr class="volkTest"> 
+=======
+		<table> 
+		<caption>  Volksbedingte Modifikatoren </caption>
+		<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
+		<tr> <th>ST</th> <th>GE</th><th>KO</th><th>IG</th><th>IT</th><th>AF</th><th>ESS</th><th>LEI</th><th>GFT</th><th>KRH</th> </tr>
+			<tr> 
+>>>>>>> origin/master
 				<th> Hobbits </th>
 				<td> -10 	</td>
 				<td> +5 	</td>
@@ -435,13 +450,13 @@ $( document ).ready(function() {
 			</tr>
 		</table>
 	</div>
-	<div id=jugend>	
+	<div id="jugend" class="section-box">	
 	<h2> <li> Jugend </li> </h2>
 		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend trägt zur Hintergrundgeschichte des Charakters bei. Der Spieler hat beispielsweise die Wahl einen Menschen zu spielen, der unter Zwergen aufgewachsen ist und trägt sich daher die Werte aus der Spaöte Zwerge ein.
 		Die Werte aus folgender Tabelle müssen eingetragen werden: </p>
-		<div class="char_tabellen">
-			<table align="center"; border="1"> <!-- Jugend -->
-				<thead> <h3>Entwicklung der Fertigkeitswerte während der Jugend </h3></thead>
+
+			<table> <!-- Jugend -->
+				<caption> Entwicklung der Fertigkeitswerte während der Jugend </caption>
 					<tr>
 						<td>					</td>
 						<td> Zwerge <br> <input type="radio" name="jugendModAuswahl">		</td>
@@ -728,10 +743,9 @@ $( document ).ready(function() {
 						<td> 3 </td>
 					</tr>
 					<tr>
-						<th <div class="tooltip"> <u>Wahrscheinlichkeit Spruchlisten zu erlernen*<u>
-						<span class="tooltiptext"> siehe unter der Tabelle nach</span>
-								</div>  
-									</th>
+						<th class="tooltip"> <u>Wahrscheinlichkeit Spruchlisten zu erlernen*</u>
+						<span class="tooltiptext"> siehe unter der Tabelle nach</span>  
+						</th>
 						<td> 3 </td>
 						<td> 5 </td>
 						<td> 0 </td>
@@ -743,11 +757,9 @@ $( document ).ready(function() {
 						<td> 2 </td>
 					</tr>
 					<tr>
-					<th <div class="tooltip"> <u>Anzahl der zusätzlichen Sprachwerte**<u>
-						<span class="tooltiptext">siehe unter der Tabelle nach</span>
-								</div>  
-									</th>
-
+						<th class="tooltip"> <u>Anzahl der zusätzlichen Sprachwerte**</u>
+							<span class="tooltiptext">siehe unter der Tabelle nach</span>  
+						</th>
 						<td> 4 </td>
 						<td> 3 </td>
 						<td> 3 </td>
@@ -772,10 +784,16 @@ $( document ).ready(function() {
 					</tr>
 					
 			</table>
+<<<<<<< HEAD
 		</div>
 		<div class="char_tabellen">
 			<table align="center"; border="1"> <!-- Jugend 2 -->
 				<p><thead> <span style="font-size:20px;font-weight:bold">Fortsetzung der Völker</span> </thead></p>
+=======
+
+			<table> <!-- Jugend 2 -->
+				<p><thead> <b>Fortsetzung der Völker</b> </thead></p>
+>>>>>>> origin/master
 					<tr>
 						<td>					</td>
 						<td> Ostlinge<input type="radio" name="jugendModAuswahl">			</td>
@@ -1100,15 +1118,15 @@ $( document ).ready(function() {
 					<p> *Würfelt der Spieler mit W100 kleiner oder gleich dieser Zahl, hat sein Charakter eine Spruchliste erlernt. Falls dies nicht gelingt,
 					wird der Wert dem Zauberspruch gutgeschrieben und kann zu einem anderen Zeitpunkt (z.B.: LvL-Up) zum Erlernen des Spruchs beitragen. <br>
 					** Hiermit kann der Spieler seine Sprachwerte steigern oder neue Sprachen hinzulernen. Auch Kombinationen von beidem sind möglich.</p>
-					</div>
-		</div>
+	</div>
 	
-	<div id=werdegang>		
+		
+	<div id="werdegang" class="section-box">		
 		<h2> <li> Werdegang	</li> </h2>
 		<p> Lebewesen zeichnen sich durch Vererbung oder den Einfluss des Schicksals auf sie aus. Diese Einflüsse werden durch Werdegangspunkte charakterisiert. 
 		Diese Werdegangspunkte können in den Volksbeschreibungen nachgelesen werden. Die Punkte dürfen nach den vier folgenden Tabellen für 
 		Eigenschaften/Fertigkeiten, Besonderen Fähigkeiten, Magische Gegenstände oder Gold vergeben werden. </p>
-		<table align="center"; border="1"> <!-- Werdegang#1 -->
+		<table> <!-- Werdegang#1 -->
 			<tr>
 				<td> Einmalig <br> wählbar </td>
 				<td> </td>
@@ -1321,7 +1339,7 @@ $( document ).ready(function() {
 	</div>
 	</div>
 	
-	<div id=lehrzeit> 	
+	<div id="lehrzeit"  class="section-box"> 	
 		<h2> <li> Lehrzeit </li> </h2>
 
 		<p> Die Tabelle der Lehrzeit wird im weiteren Verlauf auch immer wieder bei einer Stufenerhöhung benutzt. 
@@ -1446,7 +1464,7 @@ $( document ).ready(function() {
 		</div>
 	</div>
 		
-		<div id=sprachen> <ul> <b>Sprachen:</b>
+		<div id="sprachen"  class="section-box"> <ul> <b>Sprachen:</b>
 				<li> Adûnaic (Alte Sprache der Menschen von Númenor des Zweiten Zeitalters. Hat in einer Abwandlung im Volk der Schwarzen Númenor überlebt.) </li>
 				<li> Apysaic </li>
 				<li> Atliduk </li>
@@ -1470,8 +1488,9 @@ $( document ).ready(function() {
 				<li> Westron (Allgemeinsprache)</li>
 			</ul>
 		</div>
-	<div id=ausruestung>		
-	<h2><li> Ausrüstung </li></h2>
+	
+	<div id="ausruestung" class="section-box">		
+		<h2><li> Ausrüstung </li></h2>
 		<p> Jeder Charakter beginnt mit 2 Goldmünzen, 2 Waffen (min. 1 Fertigkeitspunkt nötig) und alltäglicher Kleidung. Hinzu kommen noch durch den Werdegang erlangte Gegenstände und Vermögen </p>
 		
 		<a href="../images/grundausstattung.jpg"> Grundausrüstung </a> <br>
@@ -1512,8 +1531,8 @@ $( document ).ready(function() {
 	</div>
 	
 
-	<div id=berechnung>
-	<h2> <li> Berechnung </li> </h2>
+	<div id="berechnung" class="section-box">
+		<h2> <li> Berechnung </li> </h2>
 	
 		<p> Jetzt können alle Eigenschaftswerte und Fertigkeitswerte zusammengerechnet werden und das Ergebnis notiert werden. Hier ist zu beachten, dass Fertigkeiten ohne einen Punkt einen Malus von -25 haben. </p>
 
@@ -1715,8 +1734,9 @@ $( document ).ready(function() {
 				<td> 25 </td>
 				<td> 30 </td>
 			</tr>
-	</table>
+		</table>
 	</div>
+<<<<<<< HEAD
 	<div id=persoenlichkeit>
 		<h2> <li> Persönlichkeit	</li> </h2>
 			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
@@ -1753,9 +1773,26 @@ $( document ).ready(function() {
 
 			<br>
 		</form>
+=======
+	<div id="persoenlichkeit" class="section-box">
+		<h2> <li> Persönlichkeit	</li> </h2>
+			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
+	</div>
+	<div id="sonstiges"  class="section-box">
+	<h2> <li> Sonstiges </li> </h2>
+		<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
+		<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
+		<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a>
+>>>>>>> origin/master
 	</div>
 </ol>
 </div>
+<div id="char-building">
+	<div class="section-box">
+	</div>
+</div>
+</div>
+
 
 <script type="text/javascript" src="../js/frameworks/jquery-1.11.1.min.js"></script>
 			<script type="text/javascript" src="../js/frameworks/easing.js"></script>
@@ -1778,5 +1815,5 @@ $( document ).ready(function() {
 			<a href="#" id="toTop" style="display: inline;">
 				<span id="toTopHover" style="opacity: 0;"></span>
 			</a>
-</div>
+</html>
 
