@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="Format.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -35,57 +36,180 @@
 <ol> 
 	<div id=volk>
 	<h2> <li>  Volkswahl 	</li> </h2>
-		Für eine Auswahl der Völker siehe <a href="voelker.html"> hier. </a>
+		Für eine Auswahl der Völker siehe <a href="voelker.html" target="_blank"> hier. </a>
 	</div>	
 		
 	<div id=beruf>	
 	<h2> <li> Berufswahl 	</li> </h2>
-		Für eine Auswahl der Berufung siehe <a href="Berufe.html"> hier. </a>
+		Für eine Auswahl der Berufung siehe <a href="Berufe.html" target="_blank"> hier. </a>
 	</div>
 	
 	<div id=eigenschaften>	
 	<h2> <li> Eigenschaften	</li> </h2>
-		<p> Die Eigenschaften des Charaktes werden mit 1w100 (entspricht 2w10) ausgewürfelt. Es werden 6 Würfe hintereinander ausgeführt, <br> 
-		wobei alle Ergebisse unter 26 wiederholt werden. 
-		Danach werden die Boni bestimmt und den einzelnen Attributen nach Belieben zugeordnet. <br> 
+		<p> Zunächst werden die grundlegenden Eigenschaften des Charakters festgelegt. Diese Eigenschaften werden mit 1W100 (entspricht 2W10) ausgewürfelt. Es werden 7 Würfe hintereinander ausgeführt, 
+		wobei alle Ergebnisse unter 26 wiederholt werden.<br/>
+		Danach werden die Boni bestimmt und den einzelnen Attributen nach Belieben zugeordnet. <br><br>
+		<span style="font-weight:bold">Wichtig! Der Haupteigenschaftswert des eigenen Berufs kann durch eine 90 ersetzt werden!</span><br><br>
 		Die Boni bestimmen sich nach folgender Tabelle: </p>
 		
 		<table border="1"; align="center">
+			<tr>
+				<th>Eigenschaftswert</th>
+				<th>Bonus</th>
+				<th>Magiepunkte</th>
+			</tr>
 			<tr> 
-				<td> 0-25 </td>
+				<td> 0-25 	</td>
 				<td> Wiederholung! </td>
+				<td> 0		</td>
 			</tr>
 			<tr>
-				<td> 26-49 </td>
-				<td> 0 </td>
+				<td> 26-49 	</td>
+				<td> +0 	</td>
+				<td> 0 		</td>
 			</tr>
 			<tr>
-				<td> 50-70 </td>
-				<td> 5 </td>
+				<td> 50-70 	</td>
+				<td> +5 	</td>
+				<td> 1 		</td>
 			</tr>
 			<tr>
-				<td> 71-87 </td>
-				<td> 10 </td>
+				<td> 71-87 	</td>
+				<td> +10 	</td>
+				<td> 1		</td>
 			</tr>
 			<tr>
-				<td> 88-96 </td>
-				<td> 15 </td>
+				<td> 88-96 	</td>
+				<td> +15 	</td>
+				<td> 2		</td>
 			</tr>
 			<tr>
-				<td> 97-99 </td>
-				<td> 20 </td>
+				<td> 97-99 	</td>
+				<td> +20 	</td>
+				<td> 2 	 	</td>
 			</tr>
 			<tr>
-				<td> 100 </td>
-				<td> 25 </td>
+				<td> 100 	</td>
+				<td> +25 	</td>
+				<td> 3 	 	</td>
 			</tr>
 		</table>
+		
+	
+	<br/>
+	<br/>
+	<div>
+		<button onclick="toggeln()"> Eigenschaften eingeben </button>	
+	</div>
+	<br/>
+	<br/>
+	
+	<div class="flexbox">
+		<div>
+			<label for="eigenschaftswert-ST"> Wert Stärke (ST):</label>
+			<br/>
+			<input name="eigenschaftswert-ST" type="text" id="eigenschaftswert-ST" value="" required>
+			
+			<label for="eigenschaftswert-GE"> Wert Geschicklichkeit (GE):</label>
+			<br/>
+			<input name="eigenschaftswert-GE" type="text" id="eigenschaftswert-GE" value="" required>
+			
+			<label for="eigenschaftswert-KO"> Wert Konstitution (KO): </label>
+			<br/>
+			<input name="eigenschaftswert-KO" type="text" id="eigenschaftswert-KO" value="" required>
+			
+			<label for="eigenschaftswert-IG"> Wert Intelligenz (IG): </label>
+			<br/>
+			<input name="eigenschaftswert-IG" type="text" id="eigenschaftswert-IG" value="" required>
+		</div>
+		<div>
+			<label for="eigenschaftswert-IT"> Wert Intuition (IT): </label>
+			<br/>
+			<input name="eigenschaftswert-IT" type="text" id="eigenschaftswert-IT" value="" required>
+			
+			<label for="eigenschaftswert-AF"> Wert Auftreten (AF): </label>
+			<br/>
+			<input name="eigenschaftswert-AF" type="text" id="eigenschaftswert-AF" value="" required>
+			
+			<label for="eigenschaftswert-AU"> Wert Aussehen (AU): </label>
+			<br/>
+			<input name="eigenschaftswert-AU" type="text" id="eigenschaftswert-AU" value="" required>
+		</div>
+		<div>
+			<button> Alle Eigenschaften <br/> zufällig bestücken</button>
+			<label for="ausgabeNormbonusWerte"> Ausgabe des Normbonus:</label>
+			<textarea name="ausgabeNormbonusWerte" type="text" id="ausgabeNormbonusWerte">Ergebnisse</textarea>
+			<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
+		</div>
 		<br>
+	</div>
+		
+<script type="text/javascript">
+$( document ).ready(function() {
+	$('.flexbox').hide();
+	$("#werte-abschicken").prop("disabled","disabled")
+	$(document).change(function() {
+		let st = parseInt($('input[name="eigenschaftswert-ST"]').val(),10);
+		let ge = parseInt($('input[name="eigenschaftswert-GE"]').val(),10);
+		let ko = parseInt($('input[name="eigenschaftswert-KO"]').val(),10);
+		let ig = parseInt($('input[name="eigenschaftswert-IG"]').val(),10);
+		let it = parseInt($('input[name="eigenschaftswert-IT"]').val(),10);
+		let af = parseInt($('input[name="eigenschaftswert-AF"]').val(),10);
+		let au = parseInt($('input[name="eigenschaftswert-AU"]').val(),10);
+		$('textarea[name="ausgabeNormbonusWerte"]').val(
+			"ST " + 
+			wertInNormbonus(st) + "| GE" + 
+			wertInNormbonus(ge) + "| KO" +
+			wertInNormbonus(ko) + "| IG" +
+			wertInNormbonus(ig) + "| IT" +
+			wertInNormbonus(it) + "| AF" +
+			wertInNormbonus(af) + "| AU" +
+			wertInNormbonus(au));
+				
+		function wertInNormbonus(x) {
+			
+			if (x > 0 || x <= 100) {
+				if (x > 0 && x <=25) {	alert("Wurf wiederholen");
+										$("input[name=\""+ event.target.name +"\"]").val(""); <!--Feld leeren-->	
+									 }
+				if(x >= 26 && x <= 49) 	{return 0;};
+				if(x >= 50 && x <= 70) 	{return 5;}; 
+				if(x >= 71 && x <= 87) 	{return 10;};
+				if(x >= 88 && x <= 96) 	{return 15;};
+				if(x >= 97 && x <= 99) 	{return 20;};
+				if(x >= 100)			{return 25;};
+			} else {
+				$("#werte-abschicken").prop("disabled","disabled")
+			}
+		
+			$('.flexbox').each(function(){
+				console.log($("input[name^='eigenschaft']").val())
+				
+			});
+			
+		}
+			
+	});
+});
+
+	function toggeln(){	
+		$( ".flexbox" ).toggle();
+	}	
+	
+	$(".volk").each(function(){
+		console.log($(".volk").css("color","red"));
+	})
+	
+	function zufaelligeWerte(){
+		console.log(Math.random()*100);
+	}
+</script>
+		
 		<table border="1"; align="center"> 
 		<thead> <b> Volksbedingte Modifikatoren </b> </thead>
 		<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
 		<tr class="border"> <th>ST</th> <th>GE</th><th>KO</th><th>IG</th><th>IT</th><th>AF</th><th>ESS</th><th>LEI</th><th>GFT</th><th>KRH</th> </tr>
-			<tr> 
+			<tr class="volkTest"> 
 				<th> Hobbits </th>
 				<td> -10 	</td>
 				<td> +5 	</td>
@@ -97,6 +221,7 @@
 				<td> +5		</td>
 				<td> -10	</td>
 				<td> -10	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Umli 	</th>
@@ -110,6 +235,7 @@
 				<td> +5		</td>
 				<td> 0		</td>
 				<td> 0		</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Zwerge </th>
@@ -123,6 +249,7 @@
 				<td> +5		</td>
 				<td> 0		</td>
 				<td> 0		</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Wasa 	</th>
@@ -136,6 +263,7 @@
 				<td> +5		</td>
 				<td> 0		</td>
 				<td> +5		</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Menschen </th>
@@ -149,6 +277,7 @@
 				<td> 0		</td>
 				<td> 0		</td>
 				<td> 0		</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Dúnedain </th>
@@ -162,6 +291,7 @@
 				<td> 0		</td>
 				<td> +5		</td>
 				<td> +5		</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Halbelben </th>
@@ -175,6 +305,7 @@
 				<td> 0		</td>
 				<td> 0		</td>
 				<td> +100	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Waldelben </th>
@@ -188,6 +319,7 @@
 				<td> 0		</td>
 				<td> +10	</td>
 				<td> +100	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Sinda </th>
@@ -201,6 +333,7 @@
 				<td> 0		</td>
 				<td> 0		</td>
 				<td> +100	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Noldor </th>
@@ -214,6 +347,7 @@
 				<td> 0		</td>
 				<td> 0		</td>
 				<td> +100	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Halborks </th>
@@ -227,6 +361,7 @@
 				<td> 0		</td>
 				<td> +10	</td>
 				<td> +5		</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Orks </th>
@@ -240,6 +375,7 @@
 				<td> 0		</td>
 				<td> +15	</td>
 				<td> +10	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Uruk-hai </th>
@@ -253,6 +389,7 @@
 				<td> 0		</td>
 				<td> +20	</td>
 				<td> +15	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Halbtrolle </th>
@@ -266,6 +403,7 @@
 				<td> 0		</td>
 				<td> +10	</td>
 				<td> +15	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Trolle </th>
@@ -279,6 +417,7 @@
 				<td> 0		</td>
 				<td> +15	</td>
 				<td> +20	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 			<tr>
 				<th> Olog-hai </th>
@@ -292,30 +431,32 @@
 				<td> 0		</td>
 				<td> +20	</td>
 				<td> +25	</td>
+				<td><input type="radio" name="volkModAuswahl"></td>
 			</tr>
 		</table>
 	</div>
 	<div id=jugend>	
 	<h2> <li> Jugend </li> </h2>
-		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. 
+		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend trägt zur Hintergrundgeschichte des Charakters bei. Der Spieler hat beispielsweise die Wahl einen Menschen zu spielen, der unter Zwergen aufgewachsen ist und trägt sich daher die Werte aus der Spaöte Zwerge ein.
 		Die Werte aus folgender Tabelle müssen eingetragen werden: </p>
 		<div class="char_tabellen">
 			<table align="center"; border="1"> <!-- Jugend -->
 				<thead> <h3>Entwicklung der Fertigkeitswerte während der Jugend </h3></thead>
 					<tr>
 						<td>					</td>
-						<td> Zwerge 			</td>
-						<td> Umli				</td>
-						<td> Hobbits			</td>
-						<td> Beorninger			</td>
-						<td> Schwarze <br> Númenor	</td>
-						<td> Corsaren			</td>
-						<td> Dorwinrim			</td>
-						<td> Dúnedain			</td>
-						<td> Dunländer			</td>
+						<td> Zwerge <br> <input type="radio" name="jugendModAuswahl">		</td>
+						<td> Umli<input type="radio" name="jugendModAuswahl">				</td>
+						<td> Hobbits<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Beorninger<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Schwarze <br> Númenor<input type="radio" name="jugendModAuswahl">	</td>
+						<td> Corsaren<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Dorwinrim<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Dúnedain<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Dunländer<input type="radio" name="jugendModAuswahl">			</td>
 					</tr>
 					<tr>
 						<th> Bewegung und Manöver </th>
+						<th colspan="9"></th>
 					</tr>
 					<tr>
 						<td> Ohne Rüstung </td>
@@ -367,6 +508,7 @@
 					</tr>
 					<tr>
 						<th> Waffenfertigkeiten	</th>
+						<th colspan="9"></th>
 						
 					</tr>
 					<tr>
@@ -633,18 +775,18 @@
 		</div>
 		<div class="char_tabellen">
 			<table align="center"; border="1"> <!-- Jugend 2 -->
-				<p><thead> <b>Fortsetzung der Völker</b> </thead></p>
+				<p><thead> <span style="font-size:20px;font-weight:bold">Fortsetzung der Völker</span> </thead></p>
 					<tr>
 						<td>					</td>
-						<td> Ostlinge			</td>
-						<td> Haradrim			</td>
-						<td> Lossoth			</td>
-						<td> Rohirrim			</td>
-						<td> Land-<br>bewohner		</td>
-						<td> Stadt-<br>bewohner		</td>
-						<td> Variags			</td>
-						<td> Waldmenschen		</td>
-						<td> Wasa				</td>
+						<td> Ostlinge<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Haradrim<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Lossoth<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Rohirrim<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Land-<br>bewohner<input type="radio" name="jugendModAuswahl">		</td>
+						<td> Stadt-<br>bewohner<input type="radio" name="jugendModAuswahl">		</td>
+						<td> Variags<input type="radio" name="jugendModAuswahl">			</td>
+						<td> Waldmenschen<input type="radio" name="jugendModAuswahl">		</td>
+						<td> Wasa<input type="radio" name="jugendModAuswahl">				</td>
 					</tr>
 									<tr>
 						<th> Bewegung und Manöver </th>
@@ -1375,7 +1517,7 @@
 	
 		<p> Jetzt können alle Eigenschaftswerte und Fertigkeitswerte zusammengerechnet werden und das Ergebnis notiert werden. Hier ist zu beachten, dass Fertigkeiten ohne einen Punkt einen Malus von -25 haben. </p>
 
-		<p> <b>Traglastbehinderung:</b> Ab 7kg Gepäck kann es zu einer Einschränkung der Bewegunsfreiheit eines Charakters kommen. Anhand folgender Tabelle kann die Einschränkung abgelesen werden: </p>
+		<p> <b>Traglastbehinderung:</b> Ab 7kg Gepäck kann es zu einer Einschränkung der Bewegunsfreiheit eines Charakters kommen. Bewegungen und Bewegungsmanöver werden hierdurch erschwert. Anhand folgender Tabelle kann die Einschränkung abgelesen werden: </p>
 
 		<table align="center"; border="1"> <!-- Traglastbehinderung-->
 			<tr> 
@@ -1576,13 +1718,41 @@
 	</table>
 	</div>
 	<div id=persoenlichkeit>
-	<h2> <li> Persönlichkeit	</li> </h2>
-		<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
-		
-	<h2> <li> Sonstiges </li> </h2>
-		<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
-		<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
-		<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a>
+		<h2> <li> Persönlichkeit	</li> </h2>
+			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
+			<br>
+			<textarea rows="10" cols="100">
+				Vervollständige deinen Charakter. Fülle ihn mit Hintergrundideen- und geschichten aus und hauche ihm Leben ein.
+			</textarea>
+			
+		<h2> <li> Sonstiges </li> </h2>
+			<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
+			<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
+			<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a><br>
+			<br>
+		<form action="ch_erstellung.html" method="POST">
+			<label for="zeugausruesten"> Suche dir deine Ausrüstung zusammen oder erstelle eigene:</label>
+			<input list="zeug" id="zeugausruesten" name="zeugausruesten" >
+			<datalist id="zeug">
+				<option value="Schwert"> Schwert</option>
+				<option value="Messer">Messer</option>
+				<option value="Dolch">Dolch</option>
+			</datalist>
+			<label for="ausruestungsKosten"> Trage hier die Kosten ein:</label>
+			<input type="number" id="ausruestungsKosten" name="ausruestungsKosten">
+			<select>
+				<option value="zinn">Zinn</option>
+				<option value="kupfer">Kupfer</option>
+				<option value="bronze">Bronze</option>
+				<option value="silber">Silber</option>
+				<option value="gold">Gold</option>
+				<option value="mithril">Mithril</option>
+			</select>
+			<br>
+			<br>
+
+			<br>
+		</form>
 	</div>
 </ol>
 </div>

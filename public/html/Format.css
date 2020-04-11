@@ -105,7 +105,22 @@ tr:hover {background-color: #5B0400;
 		
 /* Ab hier beginnen die classes und ids*/
 
-
+.flexbox {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin: 1em;
+		}
+		
+.flexbox div{
+		display:flex;
+		flex-direction:column;
+		margin:1%;
+		}
+.flexbox div input{
+		margin-bottom: 0.5em;
+		}
+		
 .volk_box {
 		text-align: left;
 		margin-left: 40px;
@@ -166,22 +181,17 @@ div.block > ul li {
 	width: 200px;
 }
 
-.char_tabellen{
-		overflow-x:auto;
-	}
-
 #werdegang tr, #werdegang td{
 	padding:10px;
 	height: 20px;
 }
 
 #jugend td, #eigenschaften td {
-	height:20px;
+	padding:0.3em;
 }
-
-#jugend table {
-	width:10%;
-	}
+#jugend th{
+	font-size:1.2em;
+}	
 
 /*#eigenschaften > table td { height:35px;}*/
 	
