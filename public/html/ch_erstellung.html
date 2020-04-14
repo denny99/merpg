@@ -26,10 +26,10 @@
 	<li> <a href="#beruf"> 			Berufswahl 		</a></li>
 	<li>  <a href="#eigenschaften"> Eigenschaften 	</a></li>
 	<li>  <a href="#jugend"> 		Jugend			</a></li>
-	<li>  <a href="#werdegang"> 		Werdegang	</a></li>
+	<li>  <a href="#werdegang"> 	Werdegang		</a></li>
 	<li>  <a href="#lehrzeit">		Lehrzeit		</a></li>
 	<li>  <a href="#ausruestung"> 	Ausrüstung		</a></li>
-	<li>  <a href="#berechnung">		Berechnung	</a></li>
+	<li>  <a href="#berechnung">	Berechnung		</a></li>
 	<li>  <a href="#persoenlichkeit">Persönlichkeit	</a></li>
 </ol>
 </div>
@@ -55,16 +55,13 @@
 		<span style="font-weight:bold">Wichtig! Der Haupteigenschaftswert des eigenen Berufs kann durch eine 90 ersetzt werden!</span><br><br>
 		Die Boni bestimmen sich nach folgender Tabelle: </p>
 		
-<<<<<<< HEAD
+ 
 		<table border="1"; align="center">
 			<tr>
 				<th>Eigenschaftswert</th>
 				<th>Bonus</th>
 				<th>Magiepunkte</th>
 			</tr>
-=======
-		<table>
->>>>>>> origin/master
 			<tr> 
 				<td> 0-25 	</td>
 				<td> Wiederholung! </td>
@@ -149,7 +146,6 @@
 			<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
 		</div>
 		<br>
-<<<<<<< HEAD
 	</div>
 		
 <script type="text/javascript">
@@ -212,19 +208,13 @@ $( document ).ready(function() {
 		console.log(Math.random()*100);
 	}
 </script>
-		
-		<table border="1"; align="center"> 
-		<thead> <b> Volksbedingte Modifikatoren </b> </thead>
-		<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
-		<tr class="border"> <th>ST</th> <th>GE</th><th>KO</th><th>IG</th><th>IT</th><th>AF</th><th>ESS</th><th>LEI</th><th>GFT</th><th>KRH</th> </tr>
-			<tr class="volkTest"> 
-=======
-		<table> 
+
+		<table align="center"> 
 		<caption>  Volksbedingte Modifikatoren </caption>
 		<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
 		<tr> <th>ST</th> <th>GE</th><th>KO</th><th>IG</th><th>IT</th><th>AF</th><th>ESS</th><th>LEI</th><th>GFT</th><th>KRH</th> </tr>
 			<tr> 
->>>>>>> origin/master
+
 				<th> Hobbits </th>
 				<td> -10 	</td>
 				<td> +5 	</td>
@@ -455,8 +445,9 @@ $( document ).ready(function() {
 		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend trägt zur Hintergrundgeschichte des Charakters bei. Der Spieler hat beispielsweise die Wahl einen Menschen zu spielen, der unter Zwergen aufgewachsen ist und trägt sich daher die Werte aus der Spaöte Zwerge ein.
 		Die Werte aus folgender Tabelle müssen eingetragen werden: </p>
 
-			<table> <!-- Jugend -->
-				<caption> Entwicklung der Fertigkeitswerte während der Jugend </caption>
+			<table align="center"> <!-- Jugend -->
+				<caption> Entwicklung der Fertigkeitswerte während der Jugend 
+				</caption>
 					<tr>
 						<td>					</td>
 						<td> Zwerge <br> <input type="radio" name="jugendModAuswahl">		</td>
@@ -470,8 +461,7 @@ $( document ).ready(function() {
 						<td> Dunländer<input type="radio" name="jugendModAuswahl">			</td>
 					</tr>
 					<tr>
-						<th> Bewegung und Manöver </th>
-						<th colspan="9"></th>
+						<td colspan="10"> Bewegung und Manöver </td>
 					</tr>
 					<tr>
 						<td> Ohne Rüstung </td>
@@ -522,7 +512,7 @@ $( document ).ready(function() {
 						<td> 0 </td>
 					</tr>
 					<tr>
-						<th> Waffenfertigkeiten	</th>
+						<th colspan="10"> Waffenfertigkeiten	</th>
 						<th colspan="9"></th>
 						
 					</tr>
@@ -599,7 +589,7 @@ $( document ).ready(function() {
 						<td> 2 </td>
 					</tr>
 					<tr>
-						<th> Allgemeine Fertigkeiten </th>
+						<th colspan="10"> Allgemeine Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Klettern </td>
@@ -638,7 +628,7 @@ $( document ).ready(function() {
 						<td> 1 </td>
 					</tr>
 					<tr>
-						<th> Besondere Fertigkeiten </th>
+						<th colspan="10"> Besondere Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Auflauern </td>
@@ -689,7 +679,7 @@ $( document ).ready(function() {
 						<td> 0 </td>
 					</tr>
 					<tr>
-						<th> Magische Fertigkeiten </th>
+						<th colspan="10"> Magische Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Runen lesen </td>
@@ -716,7 +706,7 @@ $( document ).ready(function() {
 						<td> 0 </td>
 					</tr>
 					<tr>
-						<th> Verschiedene Fertigkeiten </th>
+						<th colspan="10"> Verschiedene Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Wahrnehmung </td>
@@ -743,9 +733,8 @@ $( document ).ready(function() {
 						<td> 3 </td>
 					</tr>
 					<tr>
-						<th class="tooltip"> <u>Wahrscheinlichkeit Spruchlisten zu erlernen*</u>
-						<span class="tooltiptext"> siehe unter der Tabelle nach</span>  
-						</th>
+						<td class="tooltip"> <u><b></b>Wahrscheinlichkeit Spruchlisten zu erlernen*</b></u>
+						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td>
 						<td> 3 </td>
 						<td> 5 </td>
 						<td> 0 </td>
@@ -757,9 +746,8 @@ $( document ).ready(function() {
 						<td> 2 </td>
 					</tr>
 					<tr>
-						<th class="tooltip"> <u>Anzahl der zusätzlichen Sprachwerte**</u>
-							<span class="tooltiptext">siehe unter der Tabelle nach</span>  
-						</th>
+						<td class="tooltip"> <u><b>Anzahl der zusätzlichen Sprachwerte** </b></u>
+						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td> 
 						<td> 4 </td>
 						<td> 3 </td>
 						<td> 3 </td>
@@ -771,7 +759,7 @@ $( document ).ready(function() {
 						<td> 2 </td>
 					</tr>
 					<tr>
-						<th> Werdegangspunkte </th>
+						<td> Werdegangspunkte </td>
 						<td> 4 </td>
 						<td> 4 </td>
 						<td> 5 </td>
@@ -784,16 +772,13 @@ $( document ).ready(function() {
 					</tr>
 					
 			</table>
-<<<<<<< HEAD
-		</div>
-		<div class="char_tabellen">
-			<table align="center"; border="1"> <!-- Jugend 2 -->
-				<p><thead> <span style="font-size:20px;font-weight:bold">Fortsetzung der Völker</span> </thead></p>
-=======
-
-			<table> <!-- Jugend 2 -->
-				<p><thead> <b>Fortsetzung der Völker</b> </thead></p>
->>>>>>> origin/master
+		
+		<!-- <div class="char_tabellen"> -->
+			<table align="center"> <!-- Jugend 2 -->
+				<thead> 
+				<span style="font-size:20px;font-weight:bold">Fortsetzung der Völker</span>
+				</thead>
+				<tbody>
 					<tr>
 						<td>					</td>
 						<td> Ostlinge<input type="radio" name="jugendModAuswahl">			</td>
@@ -807,7 +792,7 @@ $( document ).ready(function() {
 						<td> Wasa<input type="radio" name="jugendModAuswahl">				</td>
 					</tr>
 									<tr>
-						<th> Bewegung und Manöver </th>
+						<th colspan="10"> Bewegung und Manöver </th>
 						
 					</tr>
 					<tr>
@@ -859,7 +844,7 @@ $( document ).ready(function() {
 						<td> 0 </td>
 					</tr>
 					<tr>
-						<th> Waffenfertigkeiten	</th>
+						<th colspan="10"> Waffenfertigkeiten	</th>
 						
 					</tr>
 					<tr>
@@ -935,7 +920,7 @@ $( document ).ready(function() {
 						<td> 1 </td>
 					</tr>
 					<tr>
-						<th> Allgemeine Fertigkeiten </th>
+						<th colspan="10"> Allgemeine Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Klettern </td>
@@ -974,7 +959,7 @@ $( document ).ready(function() {
 						<td> 2 </td>
 					</tr>
 					<tr>
-						<th> Besondere Fertigkeiten </th>
+						<th colspan="10"> Besondere Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Auflauern </td>
@@ -1025,7 +1010,7 @@ $( document ).ready(function() {
 						<td> 0 </td>
 					</tr>
 					<tr>
-						<th> Magische Fertigkeiten </th>
+						<th colspan="10"> Magische Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Runen lesen </td>
@@ -1052,7 +1037,7 @@ $( document ).ready(function() {
 						<td> 0 </td>
 					</tr>
 					<tr>
-						<th> Verschiedene Fertigkeiten </th>
+						<th colspan="10"> Verschiedene Fertigkeiten </th>
 					</tr>
 					<tr>
 						<td> Wahrnehmung </td>
@@ -1078,8 +1063,9 @@ $( document ).ready(function() {
 						<td> 2 </td>
 						<td> 3 </td>
 					</tr>
-					<tr>
-						<th> Wahrscheinlichkeit Spruchlisten zu erlernen* </th>
+					<tr>						
+						<td class="tooltip"> <u><b>Wahrscheinlichkeit Spruchlisten zu erlernen* </b></u>
+						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td>
 						<td> 2 </td>
 						<td> 2 </td>
 						<td> 5 </td>
@@ -1091,7 +1077,8 @@ $( document ).ready(function() {
 						<td> 5 </td>
 					</tr>
 					<tr>
-						<th> Anzahl der zusätzlichen Sprachwerte** </th>
+						<td class="tooltip"> <u><b>Anzahl der zusätzlichen Sprachwerte** </b></u>
+						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td>
 						<td> 2 </td>
 						<td> 3 </td>
 						<td> 1 </td>
@@ -1103,7 +1090,7 @@ $( document ).ready(function() {
 						<td> 2 </td>
 					</tr>
 					<tr>
-						<th> Werdegangspunkte </th>
+						<td>Werdegangspunkte </td>
 						<td> 4 </td>
 						<td> 5 </td>
 						<td> 4 </td>
@@ -1114,6 +1101,7 @@ $( document ).ready(function() {
 						<td> 5 </td>
 						<td> 5 </td>
 					</tr>
+				</tbody>
 			</table>
 					<p> *Würfelt der Spieler mit W100 kleiner oder gleich dieser Zahl, hat sein Charakter eine Spruchliste erlernt. Falls dies nicht gelingt,
 					wird der Wert dem Zauberspruch gutgeschrieben und kann zu einem anderen Zeitpunkt (z.B.: LvL-Up) zum Erlernen des Spruchs beitragen. <br>
@@ -1126,7 +1114,8 @@ $( document ).ready(function() {
 		<p> Lebewesen zeichnen sich durch Vererbung oder den Einfluss des Schicksals auf sie aus. Diese Einflüsse werden durch Werdegangspunkte charakterisiert. 
 		Diese Werdegangspunkte können in den Volksbeschreibungen nachgelesen werden. Die Punkte dürfen nach den vier folgenden Tabellen für 
 		Eigenschaften/Fertigkeiten, Besonderen Fähigkeiten, Magische Gegenstände oder Gold vergeben werden. </p>
-		<table> <!-- Werdegang#1 -->
+		<table align="center"> <b> <h3> 1. Option: Fertigkeit oder Eigenschaft erhöhen (1 Werdegangspunkt) </h3></b>  <!-- Werdegang#1 -->
+		<p></p>
 			<tr>
 				<td> Einmalig <br> wählbar </td>
 				<td> </td>
@@ -1142,8 +1131,8 @@ $( document ).ready(function() {
 		</table>
 		<p>
 
-		<table align="center"; border="1"> <b> <h3> 1. Besondere Fähigkeiten </h3></b>  
-			 <p> Erste Fähigkeit frei wählbar, jede weitere muss erwürfelt werden. Jede Fähigkeit ist einmalig erlernbar. <br> </p>
+		<table align="center"> <b> <h3> 2. Option: Besondere Fähigkeiten (1 Werdegangspunkt) </h3></b>  
+			 <p> Die erste Fähigkeit darf frei gewählt werden, jeder weitere investierte Werdegangspunkt muss ausgewürfelt werden. Jede Fähigkeit ist einmalig erlernbar. <br> </p>
 			<tr>
 				<td> 01-20 </td>
 				<td> +15 in einer Nebenfertigkeit </td>
@@ -1156,7 +1145,7 @@ $( document ).ready(function() {
 			<tr>
 				
 				<td> 26-30 </td>
-				<td> Händler: + 10% Gewinn bei Verkauf von Waren. <br> -5% auf Einkaufspreis.
+				<td> Händler: +10% Gewinn bei Verkauf von Waren. <br> -5% auf Einkaufspreis.
 								 </td>
 			</tr>
 			<tr>
@@ -1211,7 +1200,7 @@ $( document ).ready(function() {
 			<tr>
 				
 				<td> 76-80 </td>
-				<td> Besonders beweglich: +10 auf alle Bewegungsmanöver. </td>
+				<td> Akrobat: +10 auf alle Bewegungsmanöver. </td>
 			</tr>
 			<tr>
 				
@@ -1226,7 +1215,7 @@ $( document ).ready(function() {
 			<tr>
 				
 				<td> 91-95 </td>
-				<td> Charismatisch: +10 auf Menschenführung und Einfluss. </td>
+				<td> Charismatisch: +10 auf ein beliebiges soziales Talent. </td>
 			</tr>
 			<tr>
 				
@@ -1235,7 +1224,7 @@ $( document ).ready(function() {
 					beim Auswürfeln der Treffer im Rahmen der Fertigkeit der Körperentwicklung.</td>
 			</tr>
 		</table>
-		<table align="center"; border="1"> <b> <h3> 2. Magische Gegenstände </h3></b>
+		<table align="center"; border="1"> <b> <h3> 3. Option: Magische Gegenstände (1 Werdegangspunkt) </h3></b>
 			<tr>
 				<td> 01-60 </td>
 				<td> Magischer Gegenstand mit einem Bonus von +10: <br>
@@ -1262,7 +1251,7 @@ $( document ).ready(function() {
 			</tr>
 		</table>
 		<div class="char_tabellen">
-			<table align="center"> <b> <h3> 3. Gold </h3></b>
+			<table align="center"> <b> <h3> 4. Option: Gold (1 Werdegangspunkt)</h3></b>
 			<tr>
 				<td> 01-02 </td>
 				<td> 1 GS </td>
@@ -1736,7 +1725,7 @@ $( document ).ready(function() {
 			</tr>
 		</table>
 	</div>
-<<<<<<< HEAD
+
 	<div id=persoenlichkeit>
 		<h2> <li> Persönlichkeit	</li> </h2>
 			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
@@ -1752,14 +1741,14 @@ $( document ).ready(function() {
 			<br>
 		<form action="ch_erstellung.html" method="POST">
 			<label for="zeugausruesten"> Suche dir deine Ausrüstung zusammen oder erstelle eigene:</label>
-			<input list="zeug" id="zeugausruesten" name="zeugausruesten" >
-			<datalist id="zeug">
+			<input list="zeug" id="zeugausruesten" name="zeugausruesten" placeholder="Knüppel">
+			<datalist id="zeug" >
 				<option value="Schwert"> Schwert</option>
 				<option value="Messer">Messer</option>
 				<option value="Dolch">Dolch</option>
 			</datalist>
 			<label for="ausruestungsKosten"> Trage hier die Kosten ein:</label>
-			<input type="number" id="ausruestungsKosten" name="ausruestungsKosten">
+			<input type="number" id="ausruestungsKosten" name="ausruestungsKosten" value="1">
 			<select>
 				<option value="zinn">Zinn</option>
 				<option value="kupfer">Kupfer</option>
@@ -1773,7 +1762,7 @@ $( document ).ready(function() {
 
 			<br>
 		</form>
-=======
+
 	<div id="persoenlichkeit" class="section-box">
 		<h2> <li> Persönlichkeit	</li> </h2>
 			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
@@ -1783,7 +1772,7 @@ $( document ).ready(function() {
 		<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
 		<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
 		<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a>
->>>>>>> origin/master
+
 	</div>
 </ol>
 </div>

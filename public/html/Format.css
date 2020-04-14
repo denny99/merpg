@@ -85,7 +85,7 @@ h3{ text-align: middle}
 		margin-left: 24%;
 		margin-right: 10%;
 		margin-top:4%;
-		display:flex;
+		//display:flex;
 		
 		}
 		
@@ -101,6 +101,7 @@ h3{ text-align: middle}
 	border-style: dashed;
 	padding: 2%;
 	margin: auto;
+	
 	
 }
 
@@ -147,7 +148,7 @@ li a:hover {
 
 table {	width:80%;
 		border-collapse: collapse;
-		border: 1px solid black;
+		border: 0.2em solid #5b0400;
 		}
 	
 tr:nth-child(even){background-color: #DBB285;}
@@ -161,7 +162,6 @@ caption {
 		
 /* Ab hier beginnen die classes und ids*/
 
-<<<<<<< HEAD
 .flexbox {
 		display: flex;
 		flex-direction: row;
@@ -178,8 +178,6 @@ caption {
 		margin-bottom: 0.5em;
 		}
 		
-=======
->>>>>>> origin/master
 .volk_box {
 		text-align: left;
 		margin-left: 40px;
@@ -240,13 +238,12 @@ div.block > ul li {
 	width: 200px;
 }
 
-<<<<<<< HEAD
-=======
+
 /*.char_tabellen{
 		overflow-x:auto;
 	}*/
 
->>>>>>> origin/master
+
 #werdegang tr, #werdegang td{
 	padding:10px;
 	height: 20px;
@@ -255,14 +252,17 @@ div.block > ul li {
 #jugend td, #eigenschaften td {
 	padding:0.3em;
 }
-<<<<<<< HEAD
+
 #jugend th{
 	font-size:1.2em;
+	text-align: left;
+	padding: 0.2em;
+	border-bottom-color: white;
+	border-top-color: white;
+	border-bottom-style: dashed;
+	border-top-style: dashed;
 }	
-=======
 
-
->>>>>>> origin/master
 
 /*#eigenschaften > table td { height:35px;}*/
 	
