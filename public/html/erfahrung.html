@@ -3,27 +3,47 @@
 <html>
 
 <head>
+<link rel="stylesheet" type="text/css" href="Format.css">
 	<title>Erfahrung</title>
 </head>
 
 <body>
-	<h2> Benötigte Erfahrungspunkte</h2>
-		<table>
+<div id="header">
+	<div id="header-box">
+		<h2> Erfahrungspunkte</h2>
+	</div>
+</div>
+
+
+<div id="nav">
+	<ol class="drop-menu"> <u> Erfahrung sammeln: </u>
+		<li><a href="#kampf">Kampf</a></li>
+		<li><a href="#zaubern">Zaubern</a></li>
+		<li><a href="#manöver">Manöver</a></li>
+		<li><a href="#reisen">Reisen</a></li>
+	</ol>
+</div>
+
+
+<div id="section">
+	<div class="section-box">
+		<h3> Benötigte Erfahrungspunkte für den Stufenaufstieg</h3>
+		<table align="center">
 			<tr>
 				<th>Stufe</th>
 				<th>Erfahrungspunkte</th>
 			</tr>
 			<tr>
 				<th scope="cols">1</th>
-				<td>10.000</td>
+				<td>3.000</td>
 			</tr>
 			<tr>
 				<th scope="cols">2</th>
-				<td>20.000</td>
+				<td>10.000</td>
 			</tr>
 			<tr>
 				<th scope="cols">3</th>
-				<td>30.000</td>
+				<td>20.000</td>
 			</tr>
 			<tr>
 				<th scope="cols">4</th>
@@ -54,9 +74,13 @@
 				<td>150.000</td>
 			</tr>
 		</table>
+		<br><br>
+</div>
+		
+<div class="section-box #kampf">
 	<h2>Kampf</h2>
-		<h3>Verletzung</h3>
-			<table>
+		<h3>Verletzung durch kritische Treffer</h3>
+			<table align="center">
 				<tr>
 					<th>Stufe des Gegners</th>
 					<th>A</th>
@@ -181,8 +205,9 @@
 				<p><strong>Anmerkung:</strong> Punkte für kritische Treffer dürfen den Gesamtpunktwert für das Bezwingen des Gegners nicht überschreiten.</p>
 			</tfoot>
 			</table>
+			
 		<h3>Töten</h3>
-			<table>
+			<table align="center">
 				<thead>
 					Punkte durch Kämpfe
 				</thead>
@@ -348,9 +373,12 @@
 					Anmerkung: Ist die Stufe des Gegners höher als 10, wird der Betrag pro Stufe um weitere 50 Punkte erhöht.
 				</tfoot>
 			</table>
+			<br><br>
+</div>
+<div class="section-box #zaubern">
 		<h3>Zaubern</h3>
 		<p>Punkte für erfolgreiche Zaubersprüche werden nur gewährt, wenn sie gelingen und einen Sinn erfüllten. Formel: 100 - (10x Stufe des Zaubernden) + (10x Stufe Zauberspruch)</p>
-			<table>
+			<table align="center">
 				<tr>
 					<th>Stufe des Spruches</th>
 					<th>1</th>
@@ -495,14 +523,11 @@
 					<td>100</td>
 				</tr>
 			</table>
-		<h3>Kritische Treffer</h3>
-			<table>
-				<tr>
-					<td></td>
-				</tr>
-			</table>
+			<br><br>
+</div>
+<div class="section-box #manöver">
 	<h2>Manöver</h2>
-		<table>
+		<table align="center">
 			<tr>
 				<td>Routine-Manöver</td>
 				<td>0</td>
@@ -540,6 +565,9 @@
 				<td>500</td>
 			</tr>
 		</table>
+		<br><br>
+</div>
+<div class="section-box" id="reisen">
 	<h2>Reisen</h2>
 		<p> Bei der Zuteilung von Reise-EP ist es wichtig, dass der Charakter bei Bewusstsein war und er sich in für ihm unbekanntem Territorium bewegte.<br>
 		<ul>
@@ -551,6 +579,7 @@
 		</ul>
 		
 		</p>
-
+</div>
+</div>
 </body>
 </html>

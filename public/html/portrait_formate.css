@@ -1,0 +1,128 @@
+section {
+	height: 900px; 
+	width:80%;
+}
+
+.portrait {
+	width: 90%;
+	min-height: 600px; 
+	margin: 0 auto;
+	background-color: lightcoral;	
+}
+
+.oben {
+	display: flex;
+	/*! flex-direction: column; */
+	background-color: lightgray;
+	flex-wrap:wrap;
+	height: 350px;
+	justify-content: center;
+	flex-grow: ;
+}
+
+.unten {
+	display: flex;
+}
+
+.linke-spalte {
+	max-height: inherit;
+	width: 400px;
+	display:flex;
+	flex-direction: row;
+	background-color: lightblue;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.rechte-Spalte {
+	max-height: inherit;
+	min-width: 400px;
+	display:flex;
+	flex-direction: column;
+	background-color: lightred;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+.char-Bild {
+	max-height: 250px;
+	max-width: 150px;
+	 //border: 1px solid black;
+	 margin: 20px; 
+	 margin-bottom: 0px;
+}
+
+.char-Bild img{
+	max-height: 250px;
+	max-width: 150px;
+}
+
+.char-Werte {
+	padding: 0.5em;
+}
+
+.waffen-werte input{
+	font-size: 1em !important;
+	
+}
+
+p {
+	font-size: 0.8em;
+
+}
+
+.char-Werte ul{
+	list-style:none;
+}
+
+.char-Werte input{
+	font-size: 1.2em;
+}
+
+.vorab-wuerfe {
+	padding: 5%;
+}
+
+.char-Zustaende {
+	padding: 5%;
+	display: flex;
+	min-height: 100px;
+	justify-content: center;
+	align-self: flex-end;
+}
+
+
+.char-Zustaende button{
+	font-size: 1.2em;
+	
+}
+
+.zustand-bild {
+	align-self: center;
+	display: grid;
+}
+
+.char-Fertigkeiten {
+	margin: 5%;
+	font-size: 1.2em;
+	flex-grow: 8;
+}
+
+.notizen {
+	
+}
+
+.zustaende-box {
+	min-height: 80px;
+	display: flex;
+	align-items: baseline;
+	flex-direction: column;
+}
+
+.buttons {
+	flex-grow: 1;
+	min-width:30px;
+	align-self: flex-end;
+	padding: 1%;
+}

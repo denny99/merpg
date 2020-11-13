@@ -20,7 +20,7 @@ h3{ text-align: middle}
 		text-align: center;
 		max-width:100%;
 		height:50px;
-		font-size:30pt;
+		font-size:1.5em;
 		text-decoration:underline;
 		
 		}
@@ -80,11 +80,11 @@ h3{ text-align: middle}
 		text-align: center;
 		float: left;
 		background-color: #ECC396;
-		width: 65%;
+		width: 70%; //65
 		height: max-height;
-		margin-left: 24%;
-		margin-right: 10%;
-		margin-top:4%;
+		margin-left: 28%;
+		margin-right: 5%;
+		margin-top:2%;
 		//display:flex;
 		
 		}
@@ -129,6 +129,7 @@ h3{ text-align: middle}
 
 #charakter-ol {
 	  margin-top: 0px;
+	  padding-left: 0px;
  
 }
 	
@@ -239,16 +240,6 @@ div.block > ul li {
 }
 
 
-/*.char_tabellen{
-		overflow-x:auto;
-	}*/
-
-
-#werdegang tr, #werdegang td{
-	padding:10px;
-	height: 20px;
-}
-
 #jugend td, #eigenschaften td {
 	padding:0.3em;
 }
@@ -266,14 +257,44 @@ div.block > ul li {
 
 /*#eigenschaften > table td { height:35px;}*/
 	
-#tab_lehrzeit {
-	align:center;
+#lehrzeit-tab {
+	height: auto;
+	width: 100%;
+	display: block;
+}
+
+#werdegang tr, #werdegang td{
+	padding:10px;
+	height: 20px;
+}
+
+#gold-tab {
+	display: inline-flex;
+	
+	
+	
+}
+
+#gold-tab table{
+	min-width: 200px;
+	width: 0px;
+}
+
+#lehrzeit-tab tbody{
+	display: inline-block;
+}
+
+@media only screen and (max-width: 1440px) {
+	#lehrzeit-tab {
+		overflow-x: scroll;
+	}
 }
 
 	#lehrzeit > ul{
 		text-align:left;
 		margin-left: 10%;
 		margin-right: 10%;
+		
 	}
 
 
