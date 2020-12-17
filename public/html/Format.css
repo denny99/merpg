@@ -2,16 +2,10 @@ body {background-color: #ECC396; position: relative;}
 h1 { color: white; background-color: #5B0400; text-align: center;}
 h2 {text-align: middle; text-decoration:underline;}
 h3{ text-align: middle}
+h4 {text-decoration: underline; padding-top: 1rem;}
 
-#header {
-		height:10%;
-		background-color: #ecc396;
-		width: 100%;
-		
-		
-}
 
-#header-box{
+#header{
 		color: white; 
 		background-color: #5B0400;
 		margin-left:0.5%;
@@ -19,26 +13,23 @@ h3{ text-align: middle}
 		margin-top:7px;
 		text-align: center;
 		max-width:100%;
-		height:50px;
-		font-size:1.5em;
-		text-decoration:underline;
-		
+		font-size:3em;
 		}
 
 #startseite {
 		display:inline;
 		color: white; 
 		float:left;
-		font-size:14pt;
+		font-size:1.2rem;
 		margin-left:1%;
 		margin-top:0.6%;
 		text-decoration: underline;
 		}
 		
 #nav {
-		float: left; 
-		width: 20%;
 		height: 85%;
+		min-width: 13rem;
+		width: 20%;
 		background-color: #5B0400;
 		color: white;
 		border: 1px solid black;
@@ -50,49 +41,50 @@ h3{ text-align: middle}
 		border-color:white;
 		border-width:3px;
 		overflow-x:auto;
+		font-size: 1.5rem;
+		
 		
 		}	
 		
 #nav a {
 		color:white;
-		font-size: 1.0em;
+		padding: 2% 0;
+		
 		}
 		
 #nav ol{
 		list-style-type: upper-roman;
-		font-size: 1.3em;
+		font-size: 1.7rem;
 		
 		
 }
-
-
-
-.nav_prolog {
-		text-align:left;
-		}
 		
-.nav_prolog h3 {
-		text-align:left;
-		margin-left: 10%;
-		}
+.hauptbild {
+	padding: 1.5%; 
+	background-color: grey;
+	margin-left:0;
+	margin-top:-1%; 
+	max-width:80rem;
+	display: flex;
+}
+
 
 #section   {
 		text-align: center;
-		float: left;
+		display: flex;
+		flex-direction: column;
 		background-color: #ECC396;
 		width: 70%; //65
 		height: max-height;
 		margin-left: 28%;
 		margin-right: 5%;
 		margin-top:2%;
-		//display:flex;
-		
+		font-family: 'Playfair Display', serif;
+		font-size: 1.5rem;
 		}
 		
 #section  p {			
-	text-align: left;	
-	margin-left: 10%;	
-	margin-right: 10%;	 
+	margin: 0 10%;		 
 	width: 80%;
 		}
 		
@@ -100,9 +92,19 @@ h3{ text-align: middle}
 	border: 2px solid black;
 	border-style: dashed;
 	padding: 2%;
-	margin: auto;
-	
-	
+	margin: 5%;
+	padding: 1%;
+	font-size: 1.6rem;
+	background-color: #ebcaa8cc;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;*/	
+}
+
+.section-box span {
+	font-size: 1.8rem;
+	font-weight: bold;
 }
 
 #mittelteil {
@@ -125,7 +127,9 @@ h3{ text-align: middle}
 
 
 /*Ab hier beginnen die allgemeinen Einstellungen für Standardelemente*/
-	
+#accordion {
+	width: 80%;
+}
 
 #charakter-ol {
 	  margin-top: 0px;
@@ -303,6 +307,23 @@ div.block > ul li {
 	margin-top:5%;
 }
 
+.wichtig {
+	width: 70%;
+	margin-left: 15%;
+	padding: 1rem;
+	background-color: #5b0400;
+	color: white;
+	font-size: 1.7rem;
+	font-weight: 600;
+}
+
+.glossarBegriff {
+	border-bottom: 1px dotted white;
+}
+
+.glossarBegriff:hover {
+	background-color: #555;
+}
 
 /* ab hier folgen die Einstellungen für die Menüs*/
 	#toTop {

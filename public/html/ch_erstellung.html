@@ -8,16 +8,25 @@
 <meta charset="UTF-8" />
 
 <link rel="stylesheet" type="text/css" href="Format.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+	$( function() {
+	  $( "#accordion" ).accordion({
+		collapsible: true
+	  });
+	} );
+	</script>
+
 </head>
 
 <body>
 
-<div id="header">
-	<div id="header-box">
-		<a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Charaktererstellung 
-	</div>
+<div id="header">	
+	<a href="prolog.html"> <div id="startseite"> Zurück </div> </a> Charaktererstellung 	
 </div>
 
 <div id="nav">
@@ -38,21 +47,23 @@
 <div id="mittelteil">
 <ol id="charakter-ol"> 
 	<div id="volk" class="section-box">
-	<h2> <li>  Volkswahl 	</li> </h2>
+		<span><li> Volkswahl </li> </span>
 		Für eine Auswahl der Völker siehe <a href="voelker.html" target="_blank"> hier. </a>
 	</div>	
 		
 	<div id="beruf" class="section-box">	
-	<h2> <li> Berufswahl 	</li> </h2>
+		<span> <li> Berufswahl 	</li> </span>
 		Für eine Auswahl der Berufung siehe <a href="Berufe.html" target="_blank"> hier. </a>
 	</div>
 	
 	<div id="eigenschaften"  class="section-box">	
-	<h2> <li> Eigenschaften	</li> </h2>
-		<p> Zunächst werden die grundlegenden Eigenschaften des Charakters festgelegt. Diese Eigenschaften werden mit 1W100 (entspricht 2W10) ausgewürfelt. Es werden 7 Würfe hintereinander ausgeführt, 
-		wobei alle Ergebnisse unter 26 wiederholt werden.<br/>
-		Danach werden die Boni bestimmt und den einzelnen Attributen nach Belieben zugeordnet. <br><br>
-		<span style="font-weight:bold">Wichtig! Der Haupteigenschaftswert des eigenen Berufs kann durch eine 90 ersetzt werden!</span><br><br>
+	<span> <li> Eigenschaften	</li> </span>
+		<br>
+		<p> Zunächst werden die sechs grundlegenden Eigenschaften eines Charakters festgelegt. Diese Eigenschaften werden mit <b>1W100</b> (entspricht 2W10) ausgewürfelt. 
+			Es werden <b>7 Würfe</b> hintereinander ausgeführt, 
+			wobei alle Ergebnisse <b>unter 26 wiederholt</b> werden.<br/>
+			Danach werden die Boni anhand untenstehender Tabelle bestimmt und den einzelnen Attributen nach Belieben des Spielers zugeordnet. <br><br>
+		<br>
 		Die Boni bestimmen sich nach folgender Tabelle: </p>
 		
  
@@ -65,7 +76,7 @@
 			<tr> 
 				<td> 0-25 	</td>
 				<td> Wiederholung! </td>
-				<td> 0		</td>
+				<td> 		</td>
 			</tr>
 			<tr>
 				<td> 26-49 	</td>
@@ -98,55 +109,53 @@
 				<td> 3 	 	</td>
 			</tr>
 		</table>
-		
-	
-	<br/>
-	<br/>
-	<div>
-		<button onclick="toggeln()"> Eigenschaften eingeben </button>	
-	</div>
-	<br/>
-	<br/>
-	
-	<div class="flexbox">
 		<div>
-			<label for="eigenschaftswert-ST"> Wert Stärke (ST):</label>
-			<br/>
-			<input name="eigenschaftswert-ST" type="text" id="eigenschaftswert-ST" value="" required>
-			
-			<label for="eigenschaftswert-GE"> Wert Geschicklichkeit (GE):</label>
-			<br/>
-			<input name="eigenschaftswert-GE" type="text" id="eigenschaftswert-GE" value="" required>
-			
-			<label for="eigenschaftswert-KO"> Wert Konstitution (KO): </label>
-			<br/>
-			<input name="eigenschaftswert-KO" type="text" id="eigenschaftswert-KO" value="" required>
-			
-			<label for="eigenschaftswert-IG"> Wert Intelligenz (IG): </label>
-			<br/>
-			<input name="eigenschaftswert-IG" type="text" id="eigenschaftswert-IG" value="" required>
+			<button onclick="toggeln()"> Eigenschaften eingeben </button>	
 		</div>
-		<div>
-			<label for="eigenschaftswert-IT"> Wert Intuition (IT): </label>
-			<br/>
-			<input name="eigenschaftswert-IT" type="text" id="eigenschaftswert-IT" value="" required>
-			
-			<label for="eigenschaftswert-AF"> Wert Auftreten (AF): </label>
-			<br/>
-			<input name="eigenschaftswert-AF" type="text" id="eigenschaftswert-AF" value="" required>
-			
-			<label for="eigenschaftswert-AU"> Wert Aussehen (AU): </label>
-			<br/>
-			<input name="eigenschaftswert-AU" type="text" id="eigenschaftswert-AU" value="" required>
+		<br/>	
+			<div class="wichtig">Wichtig! Der <span class="glossarBegriff">Haupteigenschaftswert</span> des eigenen Berufs kann durch eine 90 ersetzt werden!</div>
+		<br/>
+		<br/>
+		<br/>
+		<div class="flexbox">
+			<div>
+				<label for="eigenschaftswert-ST"> Wert Stärke (ST):</label>
+				<br/>
+				<input name="eigenschaftswert-ST" type="text" id="eigenschaftswert-ST" value="" required>
+				
+				<label for="eigenschaftswert-GE"> Wert Geschicklichkeit (GE):</label>
+				<br/>
+				<input name="eigenschaftswert-GE" type="text" id="eigenschaftswert-GE" value="" required>
+				
+				<label for="eigenschaftswert-KO"> Wert Konstitution (KO): </label>
+				<br/>
+				<input name="eigenschaftswert-KO" type="text" id="eigenschaftswert-KO" value="" required>
+				
+				<label for="eigenschaftswert-IG"> Wert Intelligenz (IG): </label>
+				<br/>
+				<input name="eigenschaftswert-IG" type="text" id="eigenschaftswert-IG" value="" required>
+			</div>
+			<div>
+				<label for="eigenschaftswert-IT"> Wert Intuition (IT): </label>
+				<br/>
+				<input name="eigenschaftswert-IT" type="text" id="eigenschaftswert-IT" value="" required>
+				
+				<label for="eigenschaftswert-AF"> Wert Auftreten (AF): </label>
+				<br/>
+				<input name="eigenschaftswert-AF" type="text" id="eigenschaftswert-AF" value="" required>
+				
+				<label for="eigenschaftswert-AU"> Wert Aussehen (AU): </label>
+				<br/>
+				<input name="eigenschaftswert-AU" type="text" id="eigenschaftswert-AU" value="" required>
+			</div>
+			<div>
+				<button> Alle Eigenschaften <br/> zufällig bestücken</button>
+				<label for="ausgabeNormbonusWerte"> Ausgabe des Normbonus:</label>
+				<textarea name="ausgabeNormbonusWerte" type="text" id="ausgabeNormbonusWerte">Ergebnisse</textarea>
+				<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
+			</div>
+			<br>
 		</div>
-		<div>
-			<button> Alle Eigenschaften <br/> zufällig bestücken</button>
-			<label for="ausgabeNormbonusWerte"> Ausgabe des Normbonus:</label>
-			<textarea name="ausgabeNormbonusWerte" type="text" id="ausgabeNormbonusWerte">Ergebnisse</textarea>
-			<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
-		</div>
-		<br>
-	</div>
 		
 <script type="text/javascript">
 $( document ).ready(function() {
@@ -441,10 +450,11 @@ $( document ).ready(function() {
 		</table>
 	</div>
 	<div id="jugend" class="section-box">	
-	<h2> <li> Jugend </li> </h2>
+	<span> <li> Jugend </li> </span>
+		<br>
 		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend trägt zur Hintergrundgeschichte des Charakters bei. Der Spieler hat beispielsweise die Wahl einen Menschen zu spielen, der unter Zwergen aufgewachsen ist und trägt sich daher die Werte aus der Spaöte Zwerge ein.
 		Die Werte aus folgender Tabelle müssen eingetragen werden: </p>
-
+		<br>
 			<table align="center"> <!-- Jugend -->
 				<caption> Entwicklung der Fertigkeitswerte während der Jugend 
 				</caption>
@@ -793,8 +803,8 @@ $( document ).ready(function() {
 						<td> 3 </td>
 					</tr>
 					<tr>
-						<td class="tooltip"> <u><b></b>Wahrscheinlichkeit Spruchlisten zu erlernen*</b></u>
-						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td>
+						<td class="tooltip"> <u><b>Wahrscheinlichkeit Spruchlisten zu erlernen*</b></u>
+						<span class="tooltiptext"> siehe unten</span></td>
 						<td> 3 </td>
 						<td> 5 </td>
 						<td> 0 </td>
@@ -807,7 +817,7 @@ $( document ).ready(function() {
 					</tr>
 					<tr>
 						<td class="tooltip"> <u><b>Anzahl der zusätzlichen Sprachwerte** </b></u>
-						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td> 
+						<span class="tooltiptext"> siehe unten</span></td> 
 						<td> 4 </td>
 						<td> 3 </td>
 						<td> 3 </td>
@@ -1184,7 +1194,7 @@ $( document ).ready(function() {
 					</tr>
 					<tr>						
 						<td class="tooltip"> <u><b>Wahrscheinlichkeit Spruchlisten zu erlernen* </b></u>
-						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td>
+						<span class="tooltiptext"> siehe unten</span></td>
 						<td> 2 </td>
 						<td> 2 </td>
 						<td> 5 </td>
@@ -1197,7 +1207,7 @@ $( document ).ready(function() {
 					</tr>
 					<tr>
 						<td class="tooltip"> <u><b>Anzahl der zusätzlichen Sprachwerte** </b></u>
-						<span class="tooltiptext"> siehe unter der Tabelle nach</span></td>
+						<span class="tooltiptext"> siehe unten</span></td>
 						<td> 2 </td>
 						<td> 3 </td>
 						<td> 1 </td>
@@ -1229,10 +1239,22 @@ $( document ).ready(function() {
 	
 		
 	<div id="werdegang" class="section-box">		
-		<h2> <li> Werdegang	</li> </h2>
+		<span> <li> Werdegang	</li> </span>
 		<p> Lebewesen zeichnen sich durch Vererbung oder den Einfluss des Schicksals auf sie aus. Diese Einflüsse werden durch Werdegangspunkte charakterisiert. 
 		Diese Werdegangspunkte können in den Volksbeschreibungen nachgelesen werden. Die Punkte dürfen nach den vier folgenden Tabellen für 
 		Eigenschaften/Fertigkeiten, Besonderen Fähigkeiten, Magische Gegenstände oder Gold vergeben werden. </p>
+
+		<div id="accordion">
+			<div>Spezialist (01 - 20)</div>
+			<div>+15 in einer Nebenfertigkeit</div>
+			<div>Triathlet (21 - 25)</div>
+			<div>+5 auf Schwimmen, Reiten und Klettern</div>
+			<div>Händler (26 - 30)</div>
+			<div>bessere Preise beim ein- oder verkaufen</div>
+			<div>Meister-Dieb (31 - 35)</div>
+			<div>+10 auf Schleichen und Schlösser öffnen.</div>
+		</div>
+
 		<table align="center"> <b> <h3> 1. Option: Fertigkeit oder Eigenschaft erhöhen (1 Werdegangspunkt) </h3></b>  <!-- Werdegang#1 -->
 		<p></p>
 			<tr>
@@ -1249,6 +1271,9 @@ $( document ).ready(function() {
 			</tr>
 		</table>
 		<p>
+
+
+
 
 		<table align="center"> <b> <h3> 2. Option: Besondere Fähigkeiten (1 Werdegangspunkt) </h3></b>  
 			 <p> Die erste Fähigkeit darf frei gewählt werden, jeder weitere investierte Werdegangspunkt muss ausgewürfelt werden. Jede Fähigkeit ist einmalig erlernbar. <br> </p>
@@ -1453,7 +1478,7 @@ $( document ).ready(function() {
 	</div>
 	
 	<div id="lehrzeit"  class="section-box"> 	
-		<h2> <li> Lehrzeit </li> </h2>
+		<span> <li> Lehrzeit </li> </span>
 
 		<p> Die Tabelle der Lehrzeit wird im weiteren Verlauf wieder bei einer Stufenerhöhung benutzt. 
 		<b> Punktevergabe: </b> Die Zahlen geben die zu vergebenden Punkte in der entsprechenden Kategorie an, dabei ist zu beachten, dass der erste 
@@ -1615,7 +1640,7 @@ $( document ).ready(function() {
 		</div>
 	
 	<div id="ausruestung" class="section-box">		
-		<h2><li> Ausrüstung </li></h2>
+		<span><li> Ausrüstung </li></span>
 		<p> Jeder Charakter beginnt mit 2 Goldmünzen, 2 Waffen (min. 1 Fertigkeitspunkt nötig) und alltäglicher Kleidung. Hinzu kommen noch durch den Werdegang erlangte Gegenstände und Vermögen </p>
 		
 		<a href="../images/grundausstattung.jpg"> Grundausrüstung </a> <br>
@@ -1682,7 +1707,7 @@ $( document ).ready(function() {
 	</div>
 	
 	<div id="berechnung" class="section-box">
-		<h2> <li> Berechnung </li> </h2>
+		<span> <li> Berechnung </li> </span>
 	
 		<p> Jetzt können alle Eigenschaftswerte und Fertigkeitswerte zusammengerechnet werden und das Ergebnis notiert werden. Hier ist zu beachten, dass Fertigkeiten ohne einen Punkt einen Malus von -25 haben. </p>
 
@@ -1888,14 +1913,14 @@ $( document ).ready(function() {
 	</div>
 
 	<div id=persoenlichkeit>
-		<h2> <li> Persönlichkeit	</li> </h2>
+		<span> <li> Persönlichkeit	</li> </span>
 			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
 			<br>
 			<textarea rows="10" cols="100">
 				Vervollständige deinen Charakter. Fülle ihn mit Hintergrundideen- und geschichten aus und hauche ihm Leben ein.
 			</textarea>
 			
-		<h2> <li> Sonstiges </li> </h2>
+		<span> <li> Sonstiges </li> </span>
 			<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
 			<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
 			<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a><br>
@@ -1903,11 +1928,11 @@ $( document ).ready(function() {
 		
 
 	<div id="persoenlichkeit" class="section-box">
-		<h2> <li> Persönlichkeit	</li> </h2>
+		<span> <li> Persönlichkeit	</li> </span>
 			<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
 	</div>
 	<div id="sonstiges"  class="section-box">
-	<h2> <li> Sonstiges </li> </h2>
+	<span> <li> Sonstiges </li> </span>
 		<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
 		<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
 		<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a>
@@ -1922,26 +1947,26 @@ $( document ).ready(function() {
 </div>
 
 
-<script type="text/javascript" src="../js/frameworks/jquery-1.11.1.min.js"></script>
-			<script type="text/javascript" src="../js/frameworks/easing.js"></script>
-			<script type="text/javascript" src="../js/frameworks/jquery.ui.totop.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function() {
-					/*
-					var defaults = {
-						containerID: 'toTop', // fading element id
-						containerHoverID: 'toTopHover', // fading element hover id
-						scrollSpeed: 1200,
-						easingType: 'linear'
-					};
-					*/
 
-					$().UItoTop({ easingType: 'easeOutQuart' });
+<script type="text/javascript" src="../js/frameworks/easing.js"></script>
+<script type="text/javascript" src="../js/frameworks/jquery.ui.totop.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+		var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear'
+		};
+		*/
 
-				});
-			</script>
-			<a href="#" id="toTop" style="display: inline;">
-				<span id="toTopHover" style="opacity: 0;"></span>
-			</a>
+		$().UItoTop({ easingType: 'easeOutQuart' });
+
+	});
+</script>
+<a href="#" id="toTop" style="display: inline;">
+	<span id="toTopHover" style="opacity: 0;"></span>
+</a>
 </html>
 
