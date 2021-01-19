@@ -49,6 +49,34 @@
 	<div id="volk" class="section-box">
 		<span><li> Volkswahl </li> </span>
 		Für eine Auswahl der Völker siehe <a href="voelker.html" target="_blank"> hier. </a>
+	<div>
+		<ul> Menschen
+			<li><a href="voelker.html#beorninger"></a>Beorninger</li>
+			<li><a href="voelker.html#corsaren"></a>Corsaren</li>
+			<li><a href="voelker.html#dorwinrim"></a>Dorwinrim</li>
+			<li><a href="voelker.html#dunedain"></a>Dúnedain </li>
+			<li><a href="voelker.html#dunlaender"></a>Dunländer</li>
+			<li><a href="voelker.html#haradrim"></a>Haradrim</li>
+			<li><a href="voelker.html#landbewohner"></a>Landbewohner</li>
+			<li><a href="voelker.html#lossoth"></a>Lossoth</li>
+			<li><a href="voelker.html#ostlinge"></a>Ostlinge</li>
+			<li><a href="voelker.html#rohirrim"></a>Rohirrim</li>
+			<li><a href="voelker.html#schw_numenorer"></a>Schwarze Númenorer </li>
+			<li><a href="voelker.html#stadtbewohner"></a>Stadtbewohner</li>
+			<li><a href="voelker.html#variags"></a>Variags</li>
+			<li><a href="voelker.html#wasa"></a>Wasa</li>
+		</ul>
+		<ul> Zwerge
+			<li><a href="voelker.html#khazad"></a>Khazad</li>
+			<li><a href="voelker.html#umli"></a>Umli</li>
+			<li><a href="voelker.html#blaue_berge"></a>Blaue Berge</li>
+		</ul>
+		<ul>
+			<li><a href="voelker.html#starre"></a></li>
+			<li><a href="voelker.html#starre"></a></li>
+			<li><a href="voelker.html#starre"></a></li>
+		</ul>
+	</div>
 	</div>	
 		
 	<div id="beruf" class="section-box">	
@@ -59,12 +87,29 @@
 	<div id="eigenschaften"  class="section-box">	
 	<span> <li> Eigenschaften	</li> </span>
 		<br>
-		<p> Zunächst werden die sechs grundlegenden Eigenschaften eines Charakters festgelegt. Diese Eigenschaften werden mit <b>1W100</b> (entspricht 2W10) ausgewürfelt. 
-			Es werden <b>7 Würfe</b> hintereinander ausgeführt, 
-			wobei alle Ergebnisse <b>unter 26 wiederholt</b> werden.<br/>
-			Danach werden die Boni anhand untenstehender Tabelle bestimmt und den einzelnen Attributen nach Belieben des Spielers zugeordnet. <br><br>
+		<p> 
+			Zuerst werden die sieben grundlegenden Eigenschaften eines Charakters festgelegt. Diese Eigenschaften werden mit <b>1W100</b> 
+			(entspricht 2W10) ausgewürfelt.
+			<br> 
+			Es werden <b>7 Würfe</b> hintereinander ausgeführt und zunächst ohne Zuordnung aufgeschrieben, wobei alle Ergebnisse
+			<b>unter 26 wiederholt</b> werden.
+			<br>
+			Danach wird der <b>Normbonus</b> der notierten Werte anhand untenstehender Tabelle bestimmt.
+			<br>
+			Jetzt können die Werte mit ihren Boni den Eigenschaften nach den eigenen Wünschen zugeordnet werden.
+			<br>
+			<div class="beispiel-box">
+				Möchte man den klassichen Krieger spielen, der besonders mächtige Angriffe führen kann und dabei auch noch 
+				viele Treffer einstecken kann, so sollte man die Eigenschaften Stärke und Konstitution bevorzugen.<br>
+				Für einen "zufälligeren" Charakter kann es sich aber auch anbieten die Werte nach ihrer Wurfreihenfolge 
+				von oben bis unten zuzuweisen.
+			</div>
 		<br>
-		Die Boni bestimmen sich nach folgender Tabelle: </p>
+		<br/>	
+		<div class="wichtig">Wichtig! Der <span class="glossarBegriff">Haupteigenschaftswert</span> des eigenen Berufs kann durch eine 90 ersetzt werden!</div>
+		<br/>
+		Die Boni bestimmen sich nach folgender Tabelle: 
+		</p>
 		
  
 		<table border="1"; align="center">
@@ -112,9 +157,6 @@
 		<div>
 			<button onclick="toggeln()"> Eigenschaften eingeben </button>	
 		</div>
-		<br/>	
-			<div class="wichtig">Wichtig! Der <span class="glossarBegriff">Haupteigenschaftswert</span> des eigenen Berufs kann durch eine 90 ersetzt werden!</div>
-		<br/>
 		<br/>
 		<br/>
 		<div class="flexbox">
@@ -217,7 +259,19 @@ $( document ).ready(function() {
 		console.log(Math.random()*100);
 	}
 </script>
-
+		<p>
+			Bevor der endültige Eigenschaftswert bestimmt werden kann müssen noch die volksbedingten Boni hinzu gerechnet werden. 
+			Diese werden in die Spalte <b>Volksbonus</b> eingetragen. Sind diese alle notiert werden die Werte vom <b>Normbonus</b> 
+			und dem <b>Volksbonus</b> addiert. Dieser <b>Gesamtbonus</b> beeinflusst alle Fertigkeiten eines Charakters. 
+			<br/>
+			Die Werte für die Werdegangspunkte und Spruchlisten finden erst später Verwendung und sollten lediglich irgendwo am 
+			Rand vermerkt werden.
+			<br/>
+			<br/>
+			<i>Waffenfertigkeiten
+			profitieren i.d.R. von den Eigenschaften Stärke und Geschick, während magische Fertigkeiten durch Intelligenz und Intuition
+			geprägt sind.</i>
+		</p>
 		<table align="center"> 
 		<caption>  Volksbedingte Modifikatoren </caption>
 		<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
@@ -452,8 +506,14 @@ $( document ).ready(function() {
 	<div id="jugend" class="section-box">	
 	<span> <li> Jugend </li> </span>
 		<br>
-		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend trägt zur Hintergrundgeschichte des Charakters bei. Der Spieler hat beispielsweise die Wahl einen Menschen zu spielen, der unter Zwergen aufgewachsen ist und trägt sich daher die Werte aus der Spaöte Zwerge ein.
-		Die Werte aus folgender Tabelle müssen eingetragen werden: </p>
+		<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene 
+			Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend ist Teil der Hintergrundgeschichte 
+			des eigenen Charakters und daher kann es durchaus möglich sein, dass man als Mensch unter Zwergen aufwuchs. In diesem Fall übernimmt man 
+			die Werte aus der Spalte Zwerge.
+
+			Die Werte aus folgender Tabelle werden direkt als Fertigkeitswerte eingetragen, d.h. die Fertigkeit wird entsprechend oft der angegeben 
+			Zahl angekreuzt (Ein angekreuztes Kästchen bedeutet +5 auf den Wert, das ist aber erst für die Endabrechnung wirklich relevant): 
+		</p>
 		<br>
 			<table align="center"> <!-- Jugend -->
 				<caption> Entwicklung der Fertigkeitswerte während der Jugend 

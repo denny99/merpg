@@ -21,13 +21,19 @@
 			<div class="linke-spalte">
 				<div class="char-Bild">
 					
-					<img src="images/portraits/assassin1.jpg"><input type="text" name="bildtitel"></img>
+					<img src="images/portraits/bilwiss1.jpg"><input type="text" name="bildtitel"></img>
 				</div>
 				<div class="char-Werte">
 					<ul> <h3> Kampfwerte </h3>
 						<li><input type="number" name="obH" size="4"><label for="obH"> OB - HW</label></li>
 						<li><input type="number" name="obN" size="4" ><label for="obN"> OB - NW</label></li>
-						<li><input type="number" name="db" size="4"><label for="db"> DB </label><input type="text" size="15"> </li>
+						<li><input type="number" name="db" size="4"><label for="db"> DB </label>
+							<button>OR</button>
+							<button>LE</button>
+							<button>VL</button>
+							<button>KE</button>
+							<button>PL</button>
+						</li>
 						<li><input type="number" name="bm" size="4"><label for="bm"> BM</label></li>
 					</ul>
 						<div class="treffer-regler">
@@ -274,6 +280,11 @@
 				<tr> <td><input type="text" size="1" value="0"></td> <td><input type="text" size="1" value="0"></td></tr>
 				<tr> <td><input type="text" size="1" value="0"></td> <td><input type="text" size="1" value="0"></td></tr>
 			</table>
+		</div>
+		<div>
+			<form action="charakter_portraits.html">
+				<input type="text" name="test">
+			</form>
 		</div>
 		<div class="buttons">
 			<button type="submit" name="speichern"> Speichern </button>
