@@ -7,6 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   background-image: url("Augustus_Caesar_(Civ5).webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
