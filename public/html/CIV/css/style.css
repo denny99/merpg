@@ -11,6 +11,8 @@ body {
   background-image: url("Augustus_Caesar_(Civ5).webp");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: black;
+  background-size: cover;
 }
 
 .wrapper {
