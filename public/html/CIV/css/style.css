@@ -15,10 +15,17 @@ body {
   background-size: cover;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .wrapper {
   margin: 0 auto;
   padding: 40px;
   max-width: 800px;
+  min-width: 50rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +42,11 @@ body {
 @media screen and (max-width: 580px) {
   .table {
     display: block;
+    background-color: red;
+  }
+
+  .container {
+    height: 100%;
   }
 }
 
