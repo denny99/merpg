@@ -20,9 +20,22 @@
 		
 			<div class="linke-spalte">
 				<div class="char-Bild">
-					
-					<img src="images/portraits/bilwiss1.jpg"><input type="text" name="bildtitel"></img>
+					<img src="images/portraits/bilwiss1.jpg">
+					<input type="text" name="bildtitel">
+					</img>
+					<input type="submit" onclick="bildAendern()" name="bildtitel">
 				</div>
+				
+
+
+				<script>
+					function bildAendern(){
+						let name = $(".char-Bild > input").val();
+						let pfadname = "images/portraits/" + name;
+						$(".char-Bild > img").attr("src", pfadname);
+					}
+				</script>
+
 				<div class="char-Werte">
 					<ul> <h3> Kampfwerte </h3>
 						<li><input type="number" name="obH" size="4"><label for="obH"> OB - HW</label></li>
@@ -281,12 +294,13 @@
 				<tr> <td><input type="text" size="1" value="0"></td> <td><input type="text" size="1" value="0"></td></tr>
 			</table>
 		</div>
-		<div>
-			<form action="charakter_portraits.html">
-				<input type="text" name="test">
-			</form>
-		</div>
-		<div class="buttons">
+
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="submit" name="Upload Image" id="submit">
+		</form>
+
+		<!--<div class="buttons">
 			<button type="submit" name="speichern"> Speichern </button>
 			<button type="submit" name="hochladen"> Hochladen </button>
 			<input name="datensatz" type="text">
@@ -294,7 +308,7 @@
 			let arr = [];
 			
 			$("button[name='speichern']").on("click",
-				function speichern() {
+				/*function speichern() {
 					
 					arr += $("input[name='bildtitel']").val() + " ";
 					$("input[type='number']").each(function() {
@@ -306,10 +320,18 @@
 					arr += checkEingeschr;
 					console.log(arr);
 					arr = [];
-				});
+				});*/
+				function phpspeichern() {
+					<?php 
+						fopen("save.txt","a+");
+						$inhalt = "Name, Waffe, etc \n";
+						fwrite("save.txt","$inhalt")
+						fclose("save.txt")
+					?>
+				}
 				
 			$("button[name='hochladen']").on("click",hochladen(arr));
-				function hochladen (arr){
+				/*function hochladen (arr){
 				arr = ["a",1,2,3,4,5,,,,,,,12,13,14,15,16,18]
 					$("input[name='bildtitel']").val(arr.shift())
 					$("input[type='number']").each(function() {
@@ -317,9 +339,16 @@
 						console.log($(this).val());
 					});
 					$("textarea").val(arr.shift());
+				}*/
+				function phpladen() {
+					<?php 
+						$speicherstand = fopen("save.txt", "r") or die ("Datei konnte nicht geladen werden!");
+						echo fread("save.txt");
+						fclose($speicherstand);
+					?>
 				}
 			</script>
-					</div>
+		</div>-->
 	</div>
 </div>
 
