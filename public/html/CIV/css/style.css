@@ -58,14 +58,23 @@ body {
 .row.header {
   font-weight: 900;
   color: #ffffff;
-  background: #6f2d31;
+  background: #f6f6f6e3;
   opacity: 0.85;
 }
+
+.row.red {
+  background: #6f2d31;
+}
+
 .row.green {
   background: #27ae60;
 }
 .row.blue {
   background: #2980b9;
+}
+
+.row.yellow {
+  background: #d0dd12;
 }
 
 .row.team5 {
