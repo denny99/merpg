@@ -72,6 +72,9 @@ h4 {text-decoration: underline; padding-top: 1rem;}
 	overflow: hidden;
 }
 
+.hauptbild img {
+	max-width: inherit;
+}
 
 #section   {
 		text-align: center;
