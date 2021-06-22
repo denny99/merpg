@@ -78,7 +78,7 @@ h4 {text-decoration: underline; padding-top: 1rem;}
 		display: flex;
 		flex-direction: column;
 		background-color: #ECC396;
-		width: 70%; //65
+		width: 70%; 
 		height: max-height;
 		margin-left: 28%;
 		margin-top: 2rem;
