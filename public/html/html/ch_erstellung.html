@@ -1,0 +1,2112 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+<title> Charaktererstellung </title>
+
+<meta charset="UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="Format.css">
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+
+<body>
+
+<header>	
+	<a href="prolog.html"> <div id="startseite"> Startseite </div> </a> 
+	<div>Charaktererstellung</div> 	
+	<div></div> 	
+</header>
+
+<nav>
+<ol class="drop-menu"> <u> Reihenfolge: </u>
+	<li>  <a href="#volk"> 			Volkswahl 		</a></li>
+	<li> <a href="#beruf"> 			Berufswahl 		</a></li>
+	<li>  <a href="#eigenschaften"> Eigenschaften 	</a></li>
+	<li>  <a href="#jugend"> 		Jugend			</a></li>
+	<li>  <a href="#werdegang"> 	Werdegang		</a></li>
+	<li>  <a href="#lehrzeit">		Lehrzeit		</a></li>
+	<li>  <a href="#ausruestung"> 	Ausrüstung		</a></li>
+	<li>  <a href="#berechnung">	Berechnung		</a></li>
+	<li>  <a href="#persoenlichkeit">Persönlichkeit	</a></li>
+</ol>
+</nav>
+
+<section id="mittelteil">
+	<ol id="charakter-ol"> 
+		<div id="volk" class="section-box">
+			<span class="section-box-title"><li> Volkswahl </li> </span>
+			<p>Als erstes solltest du ein Volk wählen.</p>
+			
+			<p> Dein Volk bestimmt, welche Fähigkeiten dir von Geburt an eigen sind.</p>
+			
+			<p>Für mehr Details zu den Völkern siehe <a href="voelker.html" target="_blank"> hier. </a></p>
+			<form name="charakter-erstellung" action="" method="get">
+				<div class="liste">
+				<ul> <strong>Menschen</strong>
+					<li><input type="radio" class="beorninger" name="wahlVolk"><a href="voelker.html#beorninger">Beorninger</a></li>
+					<li><input type="radio" class="corsaren" name="wahlVolk"><a href="voelker.html#corsaren">Corsaren</a></li>
+					<li><input type="radio" class="dorwinrim" name="wahlVolk"><a href="voelker.html#dorwinrim">Dorwinrim</a></li>
+					<li><input type="radio" class="dunedain" name="wahlVolk"><a href="voelker.html#dunedain">Dúnedain </a></li>
+					<li><input type="radio" class="dunlaender" name="wahlVolk"><a href="voelker.html#dunlaender">Dunländer</a></li>
+					<li><input type="radio" class="haradrim" name="wahlVolk"><a href="voelker.html#haradrim">Haradrim</a></li>
+					<li><input type="radio" class="landbewohner" name="wahlVolk"><a href="voelker.html#landbewohner">Landbewohner</a></li>
+				</ul>
+				<ul> <strong>Menschen</strong>
+					<li><input type="radio" class="lossoth" name="wahlVolk"><a href="voelker.html#lossoth">Lossoth</a></li>
+					<li><input type="radio" class="ostlinge" name="wahlVolk"><a href="voelker.html#ostlinge">Ostlinge</a></li>
+					<li><input type="radio" class="rohirrim" name="wahlVolk"><a href="voelker.html#rohirrim">Rohirrim</a></li>
+					<li><input type="radio" class="schw_numenorer" name="wahlVolk"><a href="voelker.html#schw_numenorer">Schwarze Númenorer </a></li>
+					<li><input type="radio" class="stadtbewohner" name="wahlVolk"><a href="voelker.html#stadtbewohner">Stadtbewohner</a></li>
+					<li><input type="radio" class="variags" name="wahlVolk"><a href="voelker.html#variags">Variags</a></li>
+					<li><input type="radio" class="wasa" name="wahlVolk"><a href="voelker.html#wasa">Wasa</a></li>
+				</ul>
+				<ul> <strong>Zwerge</strong>
+					<li><input type="radio" class="khazad" name="wahlVolk"><a href="voelker.html#khazad">Khazad</a></li>
+					<li><input type="radio" class="umli" name="wahlVolk"><a href="voelker.html#umli">Umli</a></li>
+					<li><input type="radio" class="blaue_berge" name="wahlVolk"><a href="voelker.html#blaue_berge">Blaue Berge</a></li>
+				</ul>
+				<ul> <strong>Hobbits</strong>
+					<li><input type="radio" class="starre" name="wahlVolk"><a href="voelker.html#starre">Starre</a></li>
+					<li><input type="radio" class="falbhaeute" name="wahlVolk"><a href="voelker.html#starre">Falbhäute</a></li>
+					<li><input type="radio" class="harfuesse" name="wahlVolk"><a href="voelker.html#starre">Harfüße</a></li>
+				</ul>
+				<ul> <strong>Elben</strong>
+					<li><input type="radio" class="noldor" name="wahlVolk"><a href="voelker.html#noldor">Noldor</a></li>
+					<li><input type="radio" class="silvan" name="wahlVolk"><a href="voelker.html#silvan">Silvan</a></li>
+					<li><input type="radio" class="sindar" name="wahlVolk"><a href="voelker.html#sindar">Sindar</a></li>
+					<li><input type="radio" class="peredhil" name="wahlVolk"><a href="voelker.html#peredhil">Peredhil</a></li>
+				</ul>
+				</div>
+			</form>
+		</div>
+
+		<div id="beruf" class="section-box">	
+			<span class="section-box-title"> <li> Berufswahl </li> </span>
+			<p>Dein Beruf repräsentiert deine speziellen Fähigkeiten und gibt deiner Entwicklung einen Rahmen.</p>
+			<a class="animateBerufeLogo" href="Berufe.html" target="_blank"><img src="../images/beruf.jpg" ></a>
+
+			<div class="liste">
+				<ul> 
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#animist">Animist</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#barde">Barde</a></li>
+				</ul>
+				<ul>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#dieb">Dieb</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#krieger">Krieger </a></li>
+				</ul>
+				<ul>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#magier">Magier</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#waldlaeufer">Waldläufer</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="eigenschaften" class="section-box">
+			<span class="section-box-title"> <li> Eigenschaften	</li> </span>
+			<br>
+			<p> 
+				Im nächsten Schritt werden die sieben grundlegenden Eigenschaften eines Charakters festgelegt. Diese Eigenschaften werden mit <span class="tooltipOne"><b>1W100</b> 
+				(entspricht 2W10)</span> ausgewürfelt.
+			</p> 
+			<p>
+				Diese Eigenschaften stellen die grundlegenden Stärken und Schwächen eines Wesens dar:
+				<ul class="eingerueckte-liste">
+					<li><b>Stärke:</b> Rohe Muskelkraft, die bestimmt, wie hart ein Charakter zuschlagen kann, Gegenstände hieven oder bewegen kann.</li>
+					<li><b>Geschicklichkeit:</b> Fingerfertigkeit, aber auch Balance werden hiermit ausgedrückt. </li>
+					<li><b>Konstitution:</b> Dies meint nicht nur wie viele Schläge ein Charakter einstecken kann, bis er/sie umfällt, sondern auch die Widerstandsfähigkeit seines Immunsystems gegen Krankheiten.</li>
+					<li><b>Intelligenz:</b> Diese drückt aus, wie bildungshungrig ein Charakter ist und wieviel Wissen er/sie anhäufen konnte. Auf seinem Gebiet ist er in der Regel Experte oder strebt diesen Status an.
+						Im Negativen handelt es sich um einen Charakter, der nicht nachdenkt, sondern spricht und handelt, wie es ihm in den Sinn kommt. Bücher sind Zeitverschwendung und Pläne etwas für Zauderer.
+						 Außerdem liegt die Intelligenz der Leitmagie zugrunde.</li>
+					<li><b>Intuition:</b> Diese drückt die Weisheit eines Charakters aus. Es handelt sich weniger um einen aktiven Akt des (Nach-)Denkens, sondern ein Treiben lassen von Gefühlen.
+						 Die richtige Entscheidung wird aus dem Bauch heraus, auf Basis eines erfahrenen Wissens getroffen. Bücher helfen daher wenig. Erlebnisse und Eingebungen sind zentral.
+						 Im Negativen Fall handelt es sich um einen abgestumpften oder allzu rationalen Charakter, der nicht in der Lage ist Emotionen zu erkennen oder empathisch mit Wesen, Tieren oder Pflanzen zu interagieren.
+						Daher liegt der Intuition die Elementarmagie zugrunde.</li>
+					<li><b>Auftreten:</b> Dies drückt die sozialen Fähigkeiten eines Charakters aus. Dieser kann seine Mitwesen beeindrucken, indem er Furcht einflößend, einschleimend, autoritär oder zuvorkommend auftritt.
+						 Im Negativen werden Wesen nicht auf Forderungen eingehen und den Charakter weniger Respekt entgegenbringen.  </li>
+					<li><b>Aussehen:</b> Ein hoher Wert muss keine Ästhetik ausdrücken, sondern kann auch ein besonders einprägsames Aussehen darstellen.
+						Diese Eigenschaft kann Charaktern im Umgang mit anderen Personen helfen oder sie abschrecken. </li>
+				</ul>
+			</p>
+			<h3>Vorgehensweise:</h3>
+			<p>Es werden <b>7 Würfe</b> mit einem W100 hintereinander ausgeführt und zunächst ohne Zuordnung aufgeschrieben, wobei alle Ergebnisse
+				<b>unter 26 wiederholt</b> werden.</p>
+			<p>Danach wird der <b>Bonus</b> der notierten Werte anhand untenstehender Tabelle bestimmt. </p>
+			<p>Jetzt können die Werte mit ihren Boni den Eigenschaften nach den eigenen Wünschen zugeordnet werden.</p>
+			<p class="beispiel-box">
+				Beispiel: 
+				Möchte man den klassichen Krieger spielen wollen, der besonders mächtige Angriffe führen kann und dabei auch noch 
+				viele Treffer einstecken kann, so sollte man seine höchsten Werte in die Eigenschaften Stärke und Konstitution stecken.<br>
+				Für einen "zufälligeren" Charakter kann es sich aber auch anbieten die Werte nach ihrer Wurfreihenfolge 
+				von oben nach unten zu zuweisen.
+			</p>	
+			<br>
+			<p class="wichtig">Wichtig! Der Haupteigenschaftswert</span> des eigenen Berufs kann durch eine 90 ersetzt werden!</p>
+			<br>
+			<ul> Haupteigenschaftswerte:
+				<li>Animist: Intuition</li>
+				<li>Barde: Auftreten</li>
+				<li>Kundschafter: Geschicklichkeit</li>
+				<li>Krieger: Stärke</li>
+				<li>Magier: Intelligenz</li>
+				<li>Waldläufer: Konstitution</li>
+			</ul>
+			<p>
+				Die Boni bestimmen sich nach folgender Tabelle: 
+			</p>
+			
+	 
+			<table border="1"; align="center">
+				<tr>
+					<th>Eigenschaftswert</th>
+					<th>Bonus</th>
+					<th>Magiepunkte</th>
+				</tr>
+				<tr> 
+					<td> 0-25 	</td>
+					<td> Wiederholung! </td>
+					<td> 		</td>
+				</tr>
+				<tr>
+					<td> 26-49 	</td>
+					<td> +0 	</td>
+					<td> 0 		</td>
+				</tr>
+				<tr>
+					<td> 50-70 	</td>
+					<td> +5 	</td>
+					<td> 1 		</td>
+				</tr>
+				<tr>
+					<td> 71-87 	</td>
+					<td> +10 	</td>
+					<td> 1		</td>
+				</tr>
+				<tr>
+					<td> 88-96 	</td>
+					<td> +15 	</td>
+					<td> 2		</td>
+				</tr>
+				<tr>
+					<td> 97-99 	</td>
+					<td> +20 	</td>
+					<td> 2 	 	</td>
+				</tr>
+				<tr>
+					<td> 100 	</td>
+					<td> +25 	</td>
+					<td> 3 	 	</td>
+				</tr>
+			</table>
+			<div>
+				<button onclick="toggeln()"> Eigenschaften eingeben </button>	
+			</div>
+			<br/>
+			<br/>
+			<div class="flexbox">
+				<div>
+					<label for="eigenschaftswert-ST"> Wert Stärke (ST):</label>
+					<br/>
+					<input name="eigenschaftswert-ST" type="text" id="eigenschaftswert-ST" value="" required>
+					
+					<label for="eigenschaftswert-GE"> Wert Geschicklichkeit (GE):</label>
+					<br/>
+					<input name="eigenschaftswert-GE" type="text" id="eigenschaftswert-GE" value="" required>
+					
+					<label for="eigenschaftswert-KO"> Wert Konstitution (KO): </label>
+					<br/>
+					<input name="eigenschaftswert-KO" type="text" id="eigenschaftswert-KO" value="" required>
+					
+					<label for="eigenschaftswert-IG"> Wert Intelligenz (IG): </label>
+					<br/>
+					<input name="eigenschaftswert-IG" type="text" id="eigenschaftswert-IG" value="" required>
+				</div>
+				<div>
+					<label for="eigenschaftswert-IT"> Wert Intuition (IT): </label>
+					<br/>
+					<input name="eigenschaftswert-IT" type="text" id="eigenschaftswert-IT" value="" required>
+					
+					<label for="eigenschaftswert-AF"> Wert Auftreten (AF): </label>
+					<br/>
+					<input name="eigenschaftswert-AF" type="text" id="eigenschaftswert-AF" value="" required>
+					
+					<label for="eigenschaftswert-AU"> Wert Aussehen (AU): </label>
+					<br/>
+					<input name="eigenschaftswert-AU" type="text" id="eigenschaftswert-AU" value="" required>
+				</div>
+				<div>
+					<button> Alle Eigenschaften <br/> zufällig bestücken</button>
+					<label for="ausgabeNormbonusWerte"> Ausgabe des Normbonus:</label>
+					<textarea name="ausgabeNormbonusWerte" type="text" id="ausgabeNormbonusWerte">Ergebnisse</textarea>
+					<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
+				</div>
+				<br>
+			</div>
+			
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		$('.flexbox').hide();
+		$("#werte-abschicken").prop("disabled","disabled")
+		$(document).change(function() {
+			let st = parseInt($('input[name="eigenschaftswert-ST"]').val(),10);
+			let ge = parseInt($('input[name="eigenschaftswert-GE"]').val(),10);
+			let ko = parseInt($('input[name="eigenschaftswert-KO"]').val(),10);
+			let ig = parseInt($('input[name="eigenschaftswert-IG"]').val(),10);
+			let it = parseInt($('input[name="eigenschaftswert-IT"]').val(),10);
+			let af = parseInt($('input[name="eigenschaftswert-AF"]').val(),10);
+			let au = parseInt($('input[name="eigenschaftswert-AU"]').val(),10);
+			$('textarea[name="ausgabeNormbonusWerte"]').val(
+				"ST " + 
+				wertInNormbonus(st) + "| GE" + 
+				wertInNormbonus(ge) + "| KO" +
+				wertInNormbonus(ko) + "| IG" +
+				wertInNormbonus(ig) + "| IT" +
+				wertInNormbonus(it) + "| AF" +
+				wertInNormbonus(af) + "| AU" +
+				wertInNormbonus(au));
+					
+			function wertInNormbonus(x) {
+				
+				if (x > 0 || x <= 100) {
+					if (x > 0 && x <=25) {	alert("Wurf wiederholen");
+											$("input[name=\""+ event.target.name +"\"]").val(""); <!--Feld leeren-->	
+										 }
+					if(x >= 26 && x <= 49) 	{return 0;};
+					if(x >= 50 && x <= 70) 	{return 5;}; 
+					if(x >= 71 && x <= 87) 	{return 10;};
+					if(x >= 88 && x <= 96) 	{return 15;};
+					if(x >= 97 && x <= 99) 	{return 20;};
+					if(x >= 100)			{return 25;};
+				} else {
+					$("#werte-abschicken").prop("disabled","disabled")
+				}
+			
+				$('.flexbox').each(function(){
+					console.log($("input[name^='eigenschaft']").val())
+					
+				});
+				
+			}
+				
+		});
+	});
+
+		function toggeln(){	
+			$( ".flexbox" ).toggle();
+		}	
+		
+		$(".volk").each(function(){
+			console.log($(".volk").css("color","red"));
+		})
+		
+		function zufaelligeWerte(){
+			console.log(Math.random()*100);
+		}
+	</script>
+			<p>
+				Bevor der endültige Eigenschaftswert bestimmt werden kann müssen noch die volksbedingten Boni hinzu gerechnet werden. 
+				Diese werden in die Spalte <b>Volksbonus</b> eingetragen. Sind diese alle notiert werden die Werte vom <b>Normbonus</b> 
+				und dem <b>Volksbonus</b> addiert. Dieser <b>Gesamtbonus</b> beeinflusst alle Fertigkeiten eines Charakters. 
+				<br/>
+				Die Werte für die Werdegangspunkte und Spruchlisten finden erst später Verwendung und sollten lediglich irgendwo am 
+				Rand vermerkt werden.
+				<br/>
+				<br/>
+				<i>Waffenfertigkeiten
+				profitieren i.d.R. von den Eigenschaften Stärke und Geschick, während magische Fertigkeiten durch Intelligenz und Intuition
+				geprägt sind.</i>
+			</p>
+			<table align="center"> 
+			<caption>  Volksbedingte Modifikatoren </caption>
+			<tr> <td rowspan="2"> </td> <td colspan="6"> Modifikationen der Eigenschaftsbonusse </td> <td colspan="4"> Modifikationen der Widerstandswürfe </td></tr>
+			<tr> <th>ST</th> <th>GE</th><th>KO</th><th>IG</th><th>IT</th><th>AF</th><th>ESS</th><th>LEI</th><th>GFT</th><th>KRH</th> </tr>
+				<tr> 
+
+					<th> Hobbits </th>
+					<td> -10 	</td>
+					<td> +5 	</td>
+					<td> +10	</td>
+					<td> 0 		</td>
+					<td> 0		</td>
+					<td> -5		</td>
+					<td> +20	</td>
+					<td> +5		</td>
+					<td> -10	</td>
+					<td> -10	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Umli 	</th>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> +10 	</td>
+					<td> 0 		</td>
+					<td> -5 	</td>
+					<td> -5 	</td>
+					<td> +5		</td>
+					<td> +5		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Zwerge </th>
+					<td> +5 	</td>
+					<td> -5 	</td>
+					<td> +15 	</td>
+					<td> 0 		</td>
+					<td> -5 	</td>
+					<td> -5 	</td>
+					<td> +10	</td>
+					<td> +5		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Wasa 	</th>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> -5 	</td>
+					<td> +5		</td>
+					<td> +5		</td>
+					<td> 0		</td>
+					<td> +5		</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Menschen </th>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> 0	 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Dúnedain </th>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> +5		</td>
+					<td> 0		</td>
+					<td> +5		</td>
+					<td> +5		</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Halbelben </th>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +100	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Waldelben </th>
+					<td> 0 		</td>
+					<td> +10 	</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> +5 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +10	</td>
+					<td> +100	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Sinda </th>
+					<td> 0 		</td>
+					<td> +10 	</td>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> +10 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +100	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Noldor </th>
+					<td> 0 		</td>
+					<td> +15 	</td>
+					<td> +10 	</td>
+					<td> +5 	</td>
+					<td> +5 	</td>
+					<td> +15 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +100	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Halborks </th>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> 0 		</td>
+					<td> -5 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +10	</td>
+					<td> +5		</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Orks </th>
+					<td> +5 	</td>
+					<td> 0 		</td>
+					<td> +5 	</td>
+					<td> -0 	</td>
+					<td> -10 	</td>
+					<td> 0 		</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +15	</td>
+					<td> +10	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Uruk-hai </th>
+					<td> +10 	</td>
+					<td> 0 		</td>
+					<td> +15 	</td>
+					<td> -10 	</td>
+					<td> -10 	</td>
+					<td> +10 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +20	</td>
+					<td> +15	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Halbtrolle </th>
+					<td> +10 	</td>
+					<td> -5 	</td>
+					<td> +10 	</td>
+					<td> -5 	</td>
+					<td> -5 	</td>
+					<td> -5 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +10	</td>
+					<td> +15	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Trolle </th>
+					<td> +20 	</td>
+					<td> -5 	</td>
+					<td> +20 	</td>
+					<td> -15 	</td>
+					<td> -15 	</td>
+					<td> -15 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +15	</td>
+					<td> +20	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+				<tr>
+					<th> Olog-hai </th>
+					<td> +15 	</td>
+					<td> -5   	</td>
+					<td> +15 	</td>
+					<td> -5 	</td>
+					<td> -10 	</td>
+					<td> -10 	</td>
+					<td> 0		</td>
+					<td> 0		</td>
+					<td> +20	</td>
+					<td> +25	</td>
+					<td><input type="radio" name="volkModAuswahl"></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="jugend" class="section-box">	
+			<span class="section-box-title"> <li> Jugend </li> </span>
+			<br>
+			<p> Jeder entwickelt in seiner Jugend bestimmte Fähigkeiten, welche von Volk zu Volk verschieden sind. Diese sind jedoch nicht an die eigene 
+				Ethnie gebunden, sondern können in gewissem Rahmen frei gewählt werden. Die Entwicklung in der Jugend ist Teil der Hintergrundgeschichte 
+				des eigenen Charakters und daher kann es durchaus möglich sein, dass man als Mensch unter Zwergen aufwuchs. In diesem Fall übernimmt man 
+				die Werte aus der Spalte Zwerge.
+
+				Die Werte aus folgender Tabelle werden direkt als Fertigkeitswerte eingetragen, d.h. die Fertigkeit wird entsprechend oft der angegeben 
+				Zahl angekreuzt (Ein angekreuztes Kästchen bedeutet +5 auf den Wert, das ist aber erst für die Endabrechnung wirklich relevant): 
+			</p>
+			<br>
+				<table align="center"> <!-- Jugend -->
+					<caption> Entwicklung der Fertigkeitswerte während der Jugend 
+					</caption>
+						<tr>
+							<td>					</td>
+							<td> Zwerge <br> <input type="radio" name="jugendModAuswahl">		</td>
+							<td> Umli<input type="radio" name="jugendModAuswahl">				</td>
+							<td> Hobbits<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Beorninger<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Schwarze <br> Númenor<input type="radio" name="jugendModAuswahl">	</td>
+							<td> Corsaren<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Dorwinrim<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Dúnedain<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Dunländer<input type="radio" name="jugendModAuswahl">			</td>
+						</tr>
+						<tr>
+							<td colspan="10"> Bewegung und Manöver </td>
+						</tr>
+						<tr>
+							<td> Ohne Rüstung </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Leder </td>
+							<td> 0 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Verstärktes Leder </td>
+							<td> 1 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Kette </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Platte </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Waffenfertigkeiten	</th>
+							<th colspan="9"></th>
+							
+						</tr>
+						<tr>
+							<td> einh. Klingenwaffe </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> einh. Schlagwaffe </td>
+							<td> 4 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Zweihandwaffe </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Wurfwaffe </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> Schußwaffe </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Stangenwaffe </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Allgemeine Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Klettern </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 5 </td>
+						</tr>
+						<tr>
+							<td> Reiten </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Schwimmen </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 5 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Besondere Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Auflauern </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Schleichen/Verbergen</td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 5 </td>
+							<td> 4 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> Schlösser öffnen </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Fallen entschärfen </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Magische Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Runen lesen </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Gegenstände benutzen</td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Soziale Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Bedrohen </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 4</td>
+							<td> 5 </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 3 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> Lügen/Betrügen </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 1</td>
+							<td> 3 </td>
+							<td> 4 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 5 </td>
+						</tr>
+						<tr>
+							<td> Bezirzen </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 3 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Handeln </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 5 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> Wahrnehmung </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 4 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Körperentwicklung </td>
+							<td> 3 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+						</tr>
+						<tr>
+							<td class="tooltip"> <u><b>Wahrscheinlichkeit Spruchlisten zu erlernen*</b></u>
+							<span class="tooltiptext"> siehe unten</span></td>
+							<td> 3 </td>
+							<td> 5 </td>
+							<td> 0 </td>
+							<td> 3 </td>
+							<td> 10</td>
+							<td> 5 </td>
+							<td> 10</td>
+							<td> 10</td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td class="tooltip"> <u><b>Anzahl der zusätzlichen Sprachwerte** </b></u>
+							<span class="tooltiptext"> siehe unten</span></td> 
+							<td> 4 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+							<td> 6 </td>
+							<td> 5 </td>
+							<td> 5 </td>
+							<td> 6 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> Werdegangspunkte </td>
+							<td> 4 </td>
+							<td> 4 </td>
+							<td> 5 </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 5 </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 4 </td>
+						</tr>
+						
+				</table>
+			
+				<table align="center"> <!-- Jugend 2 -->
+					<thead> 
+					<span style="font-size:20px;font-weight:bold">Fortsetzung der Völker</span>
+					</thead>
+					<tbody>
+						<tr>
+							<td>					</td>
+							<td> Ostlinge<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Haradrim<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Lossoth<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Rohirrim<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Land-<br>bewohner<input type="radio" name="jugendModAuswahl">		</td>
+							<td> Stadt-<br>bewohner<input type="radio" name="jugendModAuswahl">		</td>
+							<td> Variags<input type="radio" name="jugendModAuswahl">			</td>
+							<td> Waldmenschen<input type="radio" name="jugendModAuswahl">		</td>
+							<td> Wasa<input type="radio" name="jugendModAuswahl">				</td>
+						</tr>
+										<tr>
+							<th colspan="10"> Bewegung und Manöver </th>
+							
+						</tr>
+						<tr>
+							<td> Ohne Rüstung </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Leder </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 3 </td>
+						</tr>
+						<tr>
+							<td> Verstärktes Leder </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Kette </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Platte </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Waffenfertigkeiten	</th>
+							
+						</tr>
+						<tr>
+							<td> einh. Klingenwaffe </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> einh. Schlagwaffe </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Zweihandwaffe </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Wurfwaffe </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 4 </td>
+						</tr>
+						<tr>
+							<td> Schußwaffe </td>
+							<td> 2 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Stangenwaffe </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Allgemeine Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Klettern </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+						</tr>
+						<tr>
+							<td> Reiten </td>
+							<td> 5 </td>
+							<td> 7 </td>
+							<td> 0 </td>
+							<td> 8 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 4 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Schwimmen </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Besondere Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Auflauern </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td> Schleichen/Verbergen</td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 4 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 4 </td>
+							<td> 4 </td>
+						</tr>
+						<tr>
+							<td> Schlösser öffnen </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Fallen entschärfen </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<th colspan="10"> Magische Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Runen lesen </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Gegenstände benutzen</td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+											<tr>
+							<th colspan="10"> Soziale Fertigkeiten </th>
+						</tr>
+						<tr>
+							<td> Bedrohen </td>
+							<td> 4 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+							<td> 2</td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 4 </td>
+						</tr>
+						<tr>
+							<td> Lügen/Betrügen </td>
+							<td> 2 </td>
+							<td> 4 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Bezirzen </td>
+							<td> 0 </td>
+							<td> 1 </td>
+							<td> 0 </td>
+							<td> 3 </td>
+							<td> 4 </td>
+							<td> 3 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+							<td> 0 </td>
+						</tr>
+						<tr>
+							<td> Handeln </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+							<td> 2 </td>
+							<td> 4 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Wahrnehmung </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+							<td> 1 </td>
+						</tr>
+						<tr>
+							<td> Körperentwicklung </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 1 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 3 </td>
+						</tr>
+						<tr>						
+							<td class="tooltip"> <u><b>Wahrscheinlichkeit Spruchlisten zu erlernen* </b></u>
+							<span class="tooltiptext"> siehe unten</span></td>
+							<td> 2 </td>
+							<td> 2 </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 3 </td>
+							<td> 15</td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 5 </td>
+						</tr>
+						<tr>
+							<td class="tooltip"> <u><b>Anzahl der zusätzlichen Sprachwerte** </b></u>
+							<span class="tooltiptext"> siehe unten</span></td>
+							<td> 2 </td>
+							<td> 3 </td>
+							<td> 1 </td>
+							<td> 4 </td>
+							<td> 4 </td>
+							<td> 5 </td>
+							<td> 3 </td>
+							<td> 2 </td>
+							<td> 2 </td>
+						</tr>
+						<tr>
+							<td>Werdegangspunkte </td>
+							<td> 4 </td>
+							<td> 5 </td>
+							<td> 4 </td>
+							<td> 5 </td>
+							<td> 5 </td>
+							<td> 5 </td>
+							<td> 4 </td>
+							<td> 5 </td>
+							<td> 5 </td>
+						</tr>
+					</tbody>
+				</table>
+						<p> *Würfelt der Spieler mit W100 kleiner oder gleich dieser Zahl, hat sein Charakter eine Spruchliste erlernt. Falls dies nicht gelingt,
+						wird der Wert dem Zauberspruch gutgeschrieben und kann zu einem anderen Zeitpunkt (z.B.: LvL-Up) zum Erlernen des Spruchs beitragen. <br>
+						** Hiermit kann der Spieler seine Sprachwerte steigern oder neue Sprachen hinzulernen. Auch Kombinationen von beidem sind möglich.</p>
+		</div>
+		
+			
+		<div id="werdegang" class="section-box">		
+			<span class="section-box-title"> <li> Werdegang	</li> </span>
+			<p> Lebewesen zeichnen sich durch Vererbung oder den Einfluss des Schicksals auf sie aus. Diese Einflüsse werden durch Werdegangspunkte charakterisiert. 
+			Diese Werdegangspunkte können in den Volksbeschreibungen nachgelesen werden. Die Punkte dürfen nach den vier folgenden Tabellen für 
+			Eigenschaften/Fertigkeiten, Besonderen Fähigkeiten, Magische Gegenstände oder Gold vergeben werden. </p>
+
+			<div class="accordion">
+				<div class="panel">
+					<p>Hey</p>
+					<!--<div>Spezialist (01 - 20)</div>
+					<div>+15 in einer Nebenfertigkeit</div>
+					<div>Triathlet (21 - 25)</div>
+					<div>+5 auf Schwimmen, Reiten und Klettern</div>
+					<div>Händler (26 - 30)</div>
+					<div>bessere Preise beim ein- oder verkaufen</div>
+					<div>Meister-Dieb (31 - 35)</div>
+					<div>+10 auf Schleichen und Schlösser öffnen.</div>-->
+				</div>
+			</div>
+
+			<table align="center"> <b> <h3> 1. Option: Fertigkeit oder Eigenschaft erhöhen (1 Werdegangspunkt) </h3></b>  <!-- Werdegang#1 -->
+			<p></p>
+				<tr>
+					<td> Einmalig <br> wählbar </td>
+					<td> </td>
+					<td> <b> Fertigkeiten </b> <br> Eine Hauptfertigkeit um +2 erhöhen ODER <br> 
+						eine Nebenfertigkeit um +5 erhöhen. </td>
+				</tr>
+				<tr>
+					<td> Einmalig <br> wählbar </td>
+					<td> </td>
+					<td> <b> Eigenschaften </b> <br> Eine Eigenschaft um +2 erhöhen ODER <br> 
+							3 Eigenschaften um je +1 erhöhen.</td>
+				</tr>
+			</table>
+			<p>
+
+
+
+
+			<table align="center"> <b> <h3> 2. Option: Besondere Fähigkeiten (1 Werdegangspunkt) </h3></b>  
+				 <p> Die erste Fähigkeit darf frei gewählt werden, jeder weitere investierte Werdegangspunkt muss ausgewürfelt werden. Jede Fähigkeit ist einmalig erlernbar. <br> </p>
+				<tr>
+					<td> 01-20 </td>
+					<td> +15 in einer Nebenfertigkeit </td>
+				</tr>
+				<tr>
+					
+					<td> 21-25 </td>
+					<td> Triathlet: +5 auf Schwimmen, Reiten und Klettern. </td>
+				</tr>
+				<tr>
+					
+					<td> 26-30 </td>
+					<td> Händler: +10% Gewinn bei Verkauf von Waren. <br> -5% auf Einkaufspreis.
+									 </td>
+				</tr>
+				<tr>
+					
+					<td> 31-35 </td>
+					<td> Meister-Dieb: +10 auf Schleichen und Schlösser öffnen. </td>
+				</tr>
+				<tr>
+					
+					<td> 36-40 </td>
+					<td> Adlerauge: +10 OB auf alle Fernkämpfe. </td>
+				</tr>
+				<tr>
+					
+					<td> 41-45 </td>
+					<td> Klingenmeister: +10 OB auf alle Klingenwaffen. </td>
+				</tr>
+				<tr>
+					
+					<td> 46-50 </td>
+					<td> Zerschmetterer: +10 OB auf alle Schlagwaffen. </td>
+				</tr>
+				<tr>
+					
+					<td> 51-55 </td>
+					<td> Silberzunge: +10 auf euer Auftreten. Entlockt eurem Gegenüber mit süßer Rede zart, was er nicht tuen mag. </td>
+				</tr>
+				<tr>
+					
+					<td> 56-60 </td>
+					<td> Gefühlsbindung zu einem Tier: Ein treuer Begleiter steht euch zur Seite (z.B.: Falke, Wiesel, Katze, Hund, etc.). <br> 
+						Jedes Manöver mit einem solchen Tier erhält einen besonderen Bonus von +25.</td>
+				</tr>
+				<tr>
+					
+					<td> 61-65 </td>
+					<td> Nachtsicht: Die Fähigkeit, in der Dunkelheit Wärmequellen zu sehen (RW 30m). <br> 
+						Stattdessen kann auch ein anderer Sinn entsprechend verbessert werden. </td>
+				</tr>
+				<tr>
+					
+					<td> 66-70 </td>
+					<td> Widerstandskraft: Ein besonderer Bonus von +10 auf Rettungswürfe gegen eine bestimmte Gefahr, <br>
+						meistens Zaubersprüche der Essenz oder Leitmagie, Gifte oder Krankheiten. </td>
+				</tr>
+				<tr>
+					
+					<td> 71-75 </td>
+					<td> Besondere Zauberkenntnisse: Sie haben eine zusätzliche Spruchliste gelernt. <br>
+						Die Art der Spruchliste unterliegt nach wie vor den Beschränkungen durch Beruf und Volk. </td>
+				</tr>
+				<tr>
+					
+					<td> 76-80 </td>
+					<td> Akrobat: +10 auf alle Bewegungsmanöver. </td>
+				</tr>
+				<tr>
+					
+					<td> 81-85 </td>
+					<td> Gute Beobachtungsgabe: +10 auf Wahrnehmung und Spuren lesen. </td>
+				</tr>
+				<tr>
+					
+					<td> 86-90 </td>
+					<td> Blitzartige Reaktionen: +5 auf alle OB und DB. </td>
+				</tr>
+				<tr>
+					
+					<td> 91-95 </td>
+					<td> Charismatisch: +10 auf ein beliebiges soziales Talent. </td>
+				</tr>
+				<tr>
+					
+					<td> 96-100 </td>
+					<td> Unempfindlichkeit gegen Schmerzen: Bonus von +3 auf jeden Wurf mit dem W10 <br> 
+						beim Auswürfeln der Treffer im Rahmen der Fertigkeit der Körperentwicklung.</td>
+				</tr>
+			</table>
+			<table align="center"; border="1"> <b> <h3> 3. Option: Magische Gegenstände (1 Werdegangspunkt) </h3></b>
+				<tr>
+					<td> 01-60 </td>
+					<td> Magischer Gegenstand mit einem Bonus von +10: <br>
+						Bonus wird auf ein beliebiges Objekt angewendet <br>
+						(Streitkolben, Einbruchswerkzeug, Sattel, Panzerung)</td>
+				</tr>
+				<tr>
+					<td> 61-89 </td>
+					<td> Täglich benutzbarer magischer Gegenstand: <br> 
+						Spruch oder Gegenstand kann ohne Einsatz von MP verwendet werden. <br>
+						Stufe 1: 4x/d <br> 
+						Stufe 2: 3x/d <br>
+						Stufe 3: 2x/d <br>
+						Stufe 4: 1x/d <br>
+						(Alternativ: Selbstbefüllende Feldflasche; Seil, welches sich selbst bindet; <br>
+						Rucksack, welcher trotz Füllung federleicht bleibt)</td>
+				</tr>
+				<tr>
+					<td> 90-100 </td>
+					<td> Magischer Gegenstand von +15 (s. oben). <br> 
+					ODER <br>
+					Spruchvermehrer +2: Es erlaubt dem Anwender 2 Sprüche pro Tag ohne MP zu verwenden <br>
+					(min. 1m Länge des Gegenstandes). </td>
+				</tr>
+			</table>
+			
+			<b> <h3> 4. Option: Gold (1 Werdegangspunkt)</h3></b>
+			
+			<div id="gold-tab">
+				<table> 
+					<tr>
+						<td> 01-02 </td>
+						<td> 1 GS </td>
+					</tr>
+					<tr>
+						<td> 03-05 </td>
+						<td> 2 GS </td>
+					</tr>
+					<tr>
+						<td> 06-15 </td>
+						<td> 5 GS </td>
+					</tr>
+					<tr>
+						<td> 16-25 </td>
+						<td> 10 GS </td>
+					</tr>
+					<tr>
+						<td> 26-35 </td>
+						<td> 15 GS </td>
+					</tr>
+					<tr>
+						<td> 36-45 </td>
+						<td> 20 GS </td>
+					</tr>
+					<tr>
+						<td> 46-55 </td>
+						<td> 30 GS </td>
+					</tr>
+					<tr>
+						<td> 56-65 </td>
+						<td> 35 GS </td>
+					</tr>
+					<tr>
+						<td> 66-70 </td>
+						<td> 40 GS </td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td> 71-75 </td>
+						<td> 50 GS </td>
+					</tr>
+					<tr>
+						<td> 66-70 </td>
+						<td> 40 GS </td>
+					</tr>
+					<tr>
+						<td> 76-80 </td>
+						<td> 60 GS </td>
+					</tr>
+					<tr>
+						<td> 81-85 </td>
+						<td> 70 GS </td>
+					</tr>
+					<tr>
+						<td> 86-90 </td>
+						<td> 80 GS </td>
+					</tr>
+					<tr>
+						<td> 91-94 </td>
+						<td> 100 GS </td>
+					</tr>
+					<tr>
+						<td> 98-99 </td>
+						<td> 150 GS </td>
+					</tr>
+					<tr>
+						<td> 95-97 </td>
+						<td> 125 GS </td>
+					</tr>
+					<tr>
+						<td> 100 </td>
+						<td> 200 GS </td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div id="lehrzeit"  class="section-box"> 	
+			<span class="section-box-title"> <li> Lehrzeit </li> </span>
+
+			<p> Die Tabelle der Lehrzeit wird im weiteren Verlauf wieder bei einer Stufenerhöhung benutzt. 
+			<b> Punktevergabe: </b> Die Zahlen geben die zu vergebenden Punkte in der entsprechenden Kategorie an, dabei ist zu beachten, dass der erste 
+			vergebene Punkt den Fertigkeitswert um 1 erhöht. Für eine Erhöhung des Fertigkeitwertes um 2, ist der Einsatz von 3 Punkten notwendig. 
+			Der Fertigkeitswert darf in der Lehrzeit nicht um mehr als 2 erhöht werden. </br>
+			<ul> <b> Überschüssige Punkte: </b> Ungenutzte Punkte können in andere Kategorien übertragen werden. Die Umrechnungskosten betragen dabei: </br>
+				<li> 4 Punkte für eine völlig neue, bisher ungenutzte Kategorie (z.B. Waffenfertigkeiten beim Magier) </li>
+				<li> 2 Punkte für eine bisher schon genutzte Kategorie </li>
+				<b> Unbedingt Beachten! </b> Beim Übertragen der Punkte gilt weiterhin, dass das zweite Erhöhen den Einsatz dreier Punkte erfordert, d.h. im Falle einer bisher
+				ungenutzten Kategorie würden 8 Punkte (4 für die erstmalige Verwendung und 2 und 2 für die zweite Erhöhung) an übertragenen Punkten anfallen! </br>
+			</ul>
+			
+			 <ul> <b> Ausnahmen: </b>
+				<li> Innerhalb der Kategorie <i> Bewegung und Manöver </i> kostet die Erhöhung um 2 nicht 3, sondern nur 2 Punkte (max. Erhöhung um 2-Regel bleibt bestehen!). </li>
+				<li> Punkte für <i> Wahrnehmung </i> können im Verhältnis 1:1 übertragen werden (max. Erhöhung um 2 und Kosten von 3 Punkten für zweimalige Erhöhung bleiben bestehen!). </li>
+			</ul>
+			</p>
+			
+			<table id="lehrzeit-tab" align: "center"> <b>Lehrzeit/LvL-Up</b>
+				<tr>
+					<td> Gruppe </td>
+					<td> Bewegung<br> und<br> <br>
+						Manöver </td>
+					<td> Waffen<br>Fertigk. </td>
+					<td> Allgemeine<br> Fertigk. </td>
+					<td> Besondere<br> Fertigk. </td>
+					<td> Magische<br> Fertigk. </td>
+					<td> Soziale<br> Fertigk.</td>
+					<td> Körper-<br>entwicklung </td>
+					<td> Soziales </td>
+					<td> Sprachen </td>
+					<td> Spruch-<br>listen </td>
+					<td> Neben-<br>fertigk. </td>
+					<td> Sprachen </td>
+					<td> Spruch-<br>listen </td>
+				</tr>
+				<tr>
+					<th> Kämpfer </th>
+					<td> 3 </td>
+					<td> 5 </td>
+					<td> 2 </td>
+					<td> 2 </td>
+					<td> 0 </td>
+					<td> ? </td>
+					<td> 2 </td>
+					<td> 3 </td>
+					<td> 0 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> 0 </td>
+					<td> 10% </td>
+				</tr>
+				<tr>
+					<th> Magier </th>
+					<td> 0 </td>
+					<td> 0 </td>
+					<td> 2 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> ? </td>
+					<td> 1 </td>
+					<td> 1 </td>
+					<td> 2 </td>
+					<td> 5 </td>
+					<td> 5 </td>
+					<td> 3 </td>
+					<td> 250% </td>
+				</tr>
+				<tr>
+					<th> Animist </th>
+					<td> 1 </td>
+					<td> 1 </td>
+					<td> 2 </td>
+					<td> 1 </td>
+					<td> 2 </td>
+					<td> ? </td>
+					<td> 3 </td>
+					<td> 1 </td>
+					<td> 2 </td>
+					<td> 5 </td>
+					<td> 5 </td>
+					<td> 2 </td>
+					<td> 200% </td>
+				</tr>
+				<tr>
+					<th> Kundschafter </th>
+					<td> 1 </td>
+					<td> 3 </td>
+					<td> 3 </td>
+					<td> 5 </td>
+					<td> 0 </td>
+					<td> ? </td>
+					<td> 2 </td>
+					<td> 2 </td>
+					<td> 1 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> 1 </td>
+					<td> 40% </td>
+				</tr>
+				<tr>
+					<th> Waldläufer </th>
+					<td> 2 </td>
+					<td> 3 </td>
+					<td> 4 </td>
+					<td> 2</td>
+					<td> 0 </td>
+					<td> ? </td>
+					<td> 0 </td>
+					<td> 2 </td>
+					<td> 1 </td>
+					<td> 1 </td>
+					<td> 5 </td>
+					<td> 1 </td>
+					<td> 60% </td>
+				</tr>
+				<tr>
+					<th> Barde </th>
+					<td> 0 </td>
+					<td> 2 </td>
+					<td> 2 </td>
+					<td> 2</td>
+					<td> 3 </td>
+					<td> 5 </td>
+					<td> 5 </td>
+					<td> 1 </td>
+					<td> 3 </td>
+					<td> 2 </td>
+					<td> 5 </td>
+					<td> 4 </td>
+					<td> 150% </td>
+				</tr>
+			</table>
+		</div>
+			
+			<div id="sprachen"  class="section-box"> <ul> <b>Sprachen:</b>
+					<li> Adûnaic (Alte Sprache der Menschen von Númenor des Zweiten Zeitalters. Hat in einer Abwandlung im Volk der Schwarzen Númenor überlebt.) </li>
+					<li> Apysaic </li>
+					<li> Atliduk </li>
+					<li> Dunael </li>
+					<li> Haradaic </li>
+					<li> Khuzdul </li>
+					<li> Kuduk </li>
+					<li> Labba </li>
+					<li> Logathig </li>
+					<li> Nahaiduk </li>
+					<li> Orkisch </li>
+					<li> Pûckael </li>
+					<li> Quenya </li>
+					<li> Rohirrisch </li>
+					<li> Schwarze Sprache </li>
+					<li> Sindarin </li>
+					<li> Umitisch </li>
+					<li> Varadja </li>
+					<li> Waildyth </li>
+					<li> Waldsprachen/Betheur </li>
+					<li> Westron (Allgemeinsprache)</li>
+				</ul>
+			</div>
+		
+		<div id="ausruestung" class="section-box">		
+			<span class="section-box-title"><li> Ausrüstung </li></span>
+			<p> Jeder Charakter beginnt mit 2 Goldmünzen, 2 Waffen (min. 1 Fertigkeitspunkt nötig) und alltäglicher Kleidung. Hinzu kommen noch durch den Werdegang erlangte Gegenstände und Vermögen </p>
+			
+			<a href="../images/grundausstattung.jpg"> Grundausrüstung </a> <br>
+			<a href="tab_nahrung_hygiene.xhtml"> Nahrung und Hygieneartikel</a> <br>
+			<a href="tab_guertel_koecher_geschirr.xhtml"> Guertel, Köcher und Geschirr </a> <br>
+			<a href="tab_beleuchtung_werkzeuge.xhtml"> Beleuchtung und Werkzeuge </a> <br>
+			<a href="tab_transportmittel.xhtml"> Transportmittel </a> <br>
+			<a href="tab_behaelnisse_seile.xhtml"> Behältnisse, Seile, Netze und Ketten</a> <br>
+			<a href="tab_reisebedarf_schreibwaren.xhtml"> Reisebedarf und Schreibwaren </a> <br>
+			<a href="tab_nahkampf.html"> Nahkampfwaffen </a> <br>
+			<a href="tab_fernkampf.html"> Fernkampfwaffen </a> <br>
+			<a href="tab_ruestung1.xhtml"> Helme und Schilde </a> <br>
+			<a href="tab_ruestung2.xhtml"> Rüstung </a> <br>
+			</p>
+			
+		<br/>
+		<form action="ch_erstellung.html" method="POST">
+				<label for="zeugausruesten"> Suche dir deine Ausrüstung zusammen oder erstelle eigene:</label>
+				<input list="zeug" id="zeugausruesten" name="zeugausruesten" placeholder="Knüppel">
+				<datalist id="zeug" >
+					<option value="Schwert"> Schwert</option>
+					<option value="Messer">Messer</option>
+					<option value="Dolch">Dolch</option>
+				</datalist>
+				<label for="ausruestungsKosten"> Trage hier die Kosten ein:</label>
+				<input type="number" id="ausruestungsKosten" name="ausruestungsKosten" value="1">
+				<select>
+					<option value="zinn">Zinn</option>
+					<option value="kupfer">Kupfer</option>
+					<option value="bronze">Bronze</option>
+					<option value="silber">Silber</option>
+					<option value="gold">Gold</option>
+					<option value="mithril">Mithril</option>
+				</select>
+				<br>
+				<br>
+
+				<br>
+			</form>
+			
+				<table border="1"; align="center"> <thead><b>Panzerungswerte</b></thead> 
+				<tr> 
+					<td> 0-4 </td>
+					<td> ohne Rüstung </td>
+				</tr>
+				<tr>
+					<td> 5-8 </td>
+					<td> Leder </td>
+				</tr>
+				<tr>
+					<td> 9-12 </td>
+					<td> Verstärktes Leder </td>
+				</tr>
+				<tr>
+					<td> 13-16 </td>
+					<td> Kette </td>
+				</tr>
+				<tr>
+					<td> 17-20 </td>
+					<td> Platte </td>
+				</tr>
+			</table>
+			<br/>
+		</div>
+		
+		<div id="berechnung" class="section-box">
+			<span class="section-box-title"> <li> Berechnung </li> </span>
+		
+			<p> Jetzt können alle Eigenschaftswerte und Fertigkeitswerte zusammengerechnet werden und das Ergebnis notiert werden. Hier ist zu beachten, dass Fertigkeiten ohne einen Punkt einen Malus von -25 haben. </p>
+
+			<p> <b>Traglastbehinderung:</b> Ab 7kg Gepäck kann es zu einer Einschränkung der Bewegunsfreiheit eines Charakters kommen. Bewegungen und Bewegungsmanöver werden hierdurch erschwert. Anhand folgender Tabelle kann die Einschränkung abgelesen werden: </p>
+
+			<table align="center"; border="1"> <!-- Traglastbehinderung-->
+				<tr> 
+					<td colspan="10"> <b> Getragenes Gewicht in kg (außer Panzerung und Kleidung) </b></td>
+				</tr>
+				<tr>
+					<td> <b> Gewicht des Charakters in kg </b> </td>
+					<td> <b>7-11</b> </td>
+					<td> <b>12-16</b> </td>
+					<td> <b>17-20</b> </td>
+					<td> <b>21-27</b> </td>
+					<td> <b>28-36</b> </td>
+					<td> <b>37-45</b> </td>
+					<td> <b>46-54</b> </td>
+					<td> <b>55-63</b> </td>
+					<td> <b>64-72</b> </td> 
+				</tr>
+				<tr>
+					<td> 19-27 </td>
+					<td> 30 </td>
+					<td> 60 </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 28-36 </td>
+					<td> 20 </td>
+					<td> 35 </td>
+					<td> 60 </td>
+					<td> 80 </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 37-45 </td>
+					<td> 15 </td>
+					<td> 25 </td>
+					<td> 40 </td>
+					<td> 60 </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 46-54 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 30 </td>
+					<td> 40 </td>
+					<td> 60 </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 55-63 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 25 </td>
+					<td> 35 </td>
+					<td> 40 </td>
+					<td> 60 </td>
+					<td> - </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 64-72 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 30 </td>
+					<td> 35 </td>
+					<td> 40 </td>
+					<td> 60 </td>
+					<td> - </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 73-81 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 35 </td>
+					<td> 45 </td>
+					<td> 60 </td>
+					<td> - </td>
+				</tr>
+				<tr>
+					<td> 82-90 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 35 </td>
+					<td> 50 </td>
+					<td> 60 </td>
+				</tr>
+				<tr>
+					<td> 91-100 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 35 </td>
+					<td> 45 </td>
+					<td> 55 </td>
+				</tr>
+				<tr>
+					<td> 101-108 </td>
+					<td> 0 </td>
+					<td> 10 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 40 </td>
+					<td> 50 </td>
+				</tr>
+				<tr>
+					<td> 109-117 </td>
+					<td> 0 </td>
+					<td> 10 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 35 </td>
+					<td> 45 </td>
+				</tr>
+				<tr>
+					<td> 118-126 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 40 </td>
+				</tr>
+				<tr>
+					<td> 127-135 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 45 </td>
+				</tr>
+				<tr>
+					<td> 136-158 </td>
+					<td> 0 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 10 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+					<td> 35 </td>
+				</tr>
+				<tr>
+					<td> 159-180 </td>
+					<td> 0 </td>
+					<td> 0 </td>
+					<td> 0 </td>
+					<td> 5 </td>
+					<td> 10 </td>
+					<td> 15 </td>
+					<td> 20 </td>
+					<td> 25 </td>
+					<td> 30 </td>
+				</tr>
+			</table>
+		</div>
+
+		<div id=persoenlichkeit>
+			<span class="section-box-title"> <li> Persönlichkeit	</li> </span>
+				<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
+				<br>
+				<textarea rows="10" cols="100">
+					Vervollständige deinen Charakter. Fülle ihn mit Hintergrundideen- und geschichten aus und hauche ihm Leben ein.
+				</textarea>
+				
+			<span> <li> Sonstiges </li> </span>
+				<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
+				<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
+				<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a><br>
+				<br>
+			
+
+		<div id="persoenlichkeit" class="section-box">
+			<span class="section-box-title"> <li> Persönlichkeit	</li> </span>
+				<p> Schmückt euren Charakter aus! Kreiert eine lebendige und eurem Volk entsprechende Geschichte und werdet mit Neben-, Schicksals- und Familienaufgaben belohnt.
+		</div>
+		<div id="sonstiges"  class="section-box">
+		<span class="section-box-title"> <li> Sonstiges </li> </span>
+			<a href="../images/Charakterbögen/Char_Bogen.jpg"> 			Standard-Charakterbogen 		</a><br>
+			<a href="../images/Charakterbögen/cb.pdf"> 					Anlehnung an TOR-Charakterbogen </a><br>
+			<a href="../images/Charakterbögen/mers-Chb1_Version5.pdf"> 	Komplettierter-Charakterbogen 	</a>
+
+		</div>
+	</ol>
+	</div>
+	<div id="char-building">
+		<div class="section-box">
+		</div>
+	</div>
+</section>
+
+
+
+	<script type="text/javascript" src="../js/frameworks/easing.js"></script>
+	<script type="text/javascript" src="../js/frameworks/jquery.ui.totop.js"></script>
+	<script type="text/javascript">
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			/* Toggle between adding and removing the "active" class,
+			to highlight the button that controls the panel */
+			this.classList.toggle("active");
+
+			/* Toggle between hiding and showing the active panel */
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+		} 
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+			
+			$('class^=tooltip').hover(function(){
+				$(this+'text').show();
+			});
+			$().UItoTop({ easingType: 'easeOutQuart' });
+*/
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(#beruf).animate({left: '800'})
+		})
+	</script>
+	<a href="#" id="toTop" style="display: inline;">
+		<span id="toTopHover" style="opacity: 0;"></span>
+	</a>
+	</html>
+
