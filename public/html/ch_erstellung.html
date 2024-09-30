@@ -243,7 +243,8 @@
 					<button> Alle Eigenschaften <br/> zufällig bestücken</button>
 					<label for="ausgabeNormbonusWerte"> Ausgabe des Normbonus:</label>
 					<textarea name="ausgabeNormbonusWerte" type="text" id="ausgabeNormbonusWerte">Ergebnisse</textarea>
-					<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em;disabled;" <!-- onclick="alleWerteAbschicken(st)" -->> Werte abschicken</button>
+					<button name="werte-abschicken-button" type="button" id="werte-abschicken" style="height: 3em; width:11em" 
+					<!-- onclick="alleWerteAbschicken(st)" --> > Werte abschicken</button>
 				</div>
 				<br>
 			</div>
@@ -2102,9 +2103,10 @@
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$(#beruf).animate({left: '800'})
+			$("#beruf").animate({left: '800'})
 		})
 	</script>
+
 	<a href="html/#" id="toTop" style="display: inline;">
 		<span id="toTopHover" style="opacity: 0;"></span>
 	</a>
