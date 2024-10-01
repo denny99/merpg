@@ -7,8 +7,12 @@
 
 <meta charset="UTF-8" />
 
-<link rel="stylesheet" type="text/css" href="css/Format.css">
+<link rel="stylesheet" type="text/css" href="../css/Format.css">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rosarivo:ital@0;1&display=swap" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -25,15 +29,15 @@
 
 <nav>
 <ol class="drop-menu"> <u> Reihenfolge: </u>
-	<li> <a href="html/#volk">Volkswahl </a></li>
-	<li> <a href="html/#beruf">Berufswahl </a></li>
-	<li> <a href="html/#eigenschaften"> Eigenschaften </a></li>
-	<li> <a href="html/#jugend">Jugend </a></li>
-	<li> <a href="html/#werdegang">Werdegang	</a></li>
-	<li> <a href="html/#lehrzeit">Lehrzeit </a></li>
-	<li> <a href="html/#ausruestung">Ausrüstung </a></li>
-	<li> <a href="html/#berechnung">	Berechnung </a></li>
-	<li> <a href="html/#persoenlichkeit">Persönlichkeit </a></li>
+	<li> <a href="#volk">Volkswahl </a></li>
+	<li> <a href="#beruf">Berufswahl </a></li>
+	<li> <a href="#eigenschaften"> Eigenschaften </a></li>
+	<li> <a href="#jugend">Jugend </a></li>
+	<li> <a href="#werdegang">Werdegang	</a></li>
+	<li> <a href="#lehrzeit">Lehrzeit </a></li>
+	<li> <a href="#ausruestung">Ausrüstung </a></li>
+	<li> <a href="#berechnung"> Berechnung </a></li>
+	<li> <a href="#persoenlichkeit">Persönlichkeit </a></li>
 </ol>
 </nav>
 
@@ -45,42 +49,42 @@
 			
 			<p> Dein Volk bestimmt, welche Fähigkeiten dir von Geburt an eigen sind.</p>
 			
-			<p>Für mehr Details zu den Völkern siehe <a href="html/voelker.html" target="_blank"> hier. </a></p>
+			<p>Für mehr Details zu den Völkern siehe <a href="voelker.html" target="_blank"> hier. </a></p>
 			<form name="charakter-erstellung" action="" method="get">
 				<div class="liste">
-				<ul> <strong>Menschen</strong>
-					<li><input type="radio" class="beorninger" name="wahlVolk"><a href="html/voelker.html#beorninger">Beorninger</a></li>
-					<li><input type="radio" class="corsaren" name="wahlVolk"><a href="html/voelker.html#corsaren">Corsaren</a></li>
-					<li><input type="radio" class="dorwinrim" name="wahlVolk"><a href="html/voelker.html#dorwinrim">Dorwinrim</a></li>
-					<li><input type="radio" class="dunedain" name="wahlVolk"><a href="html/voelker.html#dunedain">Dúnedain </a></li>
-					<li><input type="radio" class="dunlaender" name="wahlVolk"><a href="html/voelker.html#dunlaender">Dunländer</a></li>
-					<li><input type="radio" class="haradrim" name="wahlVolk"><a href="html/voelker.html#haradrim">Haradrim</a></li>
-					<li><input type="radio" class="landbewohner" name="wahlVolk"><a href="html/voelker.html#landbewohner">Landbewohner</a></li>
+				<ul> <strong>Menschen des nördlichen Mittelerde</strong>
+					<li><input type="radio" class="beorninger" name="wahlVolk"><a href="voelker.html#beorninger" target="_blank">Beorninger</a></li>
+					<li><input type="radio" class="lossoth" name="wahlVolk"><a href="voelker.html#lossoth" target="_blank">Lossoth</a></li>
+					<li><input type="radio" class="dorwinrim" name="wahlVolk"><a href="voelker.html#dorwinrim" target="_blank">Dorwinrim</a></li>
+					<li><input type="radio" class="dunedain" name="wahlVolk"><a href="voelker.html#dunedain" target="_blank">Dúnedain </a></li>
+					<li><input type="radio" class="dunlaender" name="wahlVolk"><a href="voelker.html#dunlaender" target="_blank">Dunländer</a></li>
+					<li><input type="radio" class="schw_numenorer" name="wahlVolk"><a href="voelker.html#schw_numenorer" target="_blank">Schwarze Númenorer </a></li>
+					<li><input type="radio" class="wasa" name="wahlVolk"><a href="voelker.html#wasa" target="_blank">Wasa</a></li>
+					<li><input type="radio" class="landbewohner" name="wahlVolk"><a href="voelker.html#landbewohner" target="_blank">Landbewohner</a></li>
 				</ul>
-				<ul> <strong>Menschen</strong>
-					<li><input type="radio" class="lossoth" name="wahlVolk"><a href="html/voelker.html#lossoth">Lossoth</a></li>
-					<li><input type="radio" class="ostlinge" name="wahlVolk"><a href="html/voelker.html#ostlinge">Ostlinge</a></li>
-					<li><input type="radio" class="rohirrim" name="wahlVolk"><a href="html/voelker.html#rohirrim">Rohirrim</a></li>
-					<li><input type="radio" class="schw_numenorer" name="wahlVolk"><a href="html/voelker.html#schw_numenorer">Schwarze Númenorer </a></li>
-					<li><input type="radio" class="stadtbewohner" name="wahlVolk"><a href="html/voelker.html#stadtbewohner">Stadtbewohner</a></li>
-					<li><input type="radio" class="variags" name="wahlVolk"><a href="html/voelker.html#variags">Variags</a></li>
-					<li><input type="radio" class="wasa" name="wahlVolk"><a href="html/voelker.html#wasa">Wasa</a></li>
+				<ul> <strong>Menschen des südlichen Mittelerde</strong>
+					<li><input type="radio" class="haradrim" name="wahlVolk"><a href="voelker.html#haradrim" target="_blank">Haradrim</a></li>
+					<li><input type="radio" class="corsaren" name="wahlVolk"><a href="voelker.html#corsaren target="_blank"">Corsaren</a></li>
+					<li><input type="radio" class="ostlinge" name="wahlVolk"><a href="voelker.html#ostlinge" target="_blank">Ostlinge</a></li>
+					<li><input type="radio" class="rohirrim" name="wahlVolk"><a href="voelker.html#rohirrim" target="_blank">Rohirrim</a></li>
+					<li><input type="radio" class="stadtbewohner" name="wahlVolk"><a href="voelker.html#stadtbewohner" target="_blank">Stadtbewohner</a></li>
+					<li><input type="radio" class="variags" name="wahlVolk"><a href="voelker.html#variags" target="_blank">Variags</a></li>
 				</ul>
 				<ul> <strong>Zwerge</strong>
-					<li><input type="radio" class="khazad" name="wahlVolk"><a href="html/voelker.html#khazad">Khazad</a></li>
-					<li><input type="radio" class="umli" name="wahlVolk"><a href="html/voelker.html#umli">Umli</a></li>
-					<li><input type="radio" class="blaue_berge" name="wahlVolk"><a href="html/voelker.html#blaue_berge">Blaue Berge</a></li>
+					<li><input type="radio" class="khazad" name="wahlVolk"><a href="voelker.html#khazad" target="_blank">Khazad</a></li>
+					<li><input type="radio" class="umli" name="wahlVolk"><a href="voelker.html#umli" target="_blank">Umli</a></li>
+					<li><input type="radio" class="blaue_berge" name="wahlVolk"><a href="voelker.html#blaue_berge" target="_blank">Blaue Berge</a></li>
 				</ul>
 				<ul> <strong>Hobbits</strong>
-					<li><input type="radio" class="starre" name="wahlVolk"><a href="html/voelker.html#starre">Starre</a></li>
-					<li><input type="radio" class="falbhaeute" name="wahlVolk"><a href="html/voelker.html#starre">Falbhäute</a></li>
-					<li><input type="radio" class="harfuesse" name="wahlVolk"><a href="html/voelker.html#starre">Harfüße</a></li>
+					<li><input type="radio" class="starre" name="wahlVolk"><a href="voelker.html#starre" target="_blank">Starre</a></li>
+					<li><input type="radio" class="falbhaeute" name="wahlVolk"><a href="voelker.html#starre" target="_blank">Falbhäute</a></li>
+					<li><input type="radio" class="harfuesse" name="wahlVolk"><a href="voelker.html#starre" target="_blank">Harfüße</a></li>
 				</ul>
 				<ul> <strong>Elben</strong>
-					<li><input type="radio" class="noldor" name="wahlVolk"><a href="html/voelker.html#noldor">Noldor</a></li>
-					<li><input type="radio" class="silvan" name="wahlVolk"><a href="html/voelker.html#silvan">Silvan</a></li>
-					<li><input type="radio" class="sindar" name="wahlVolk"><a href="html/voelker.html#sindar">Sindar</a></li>
-					<li><input type="radio" class="peredhil" name="wahlVolk"><a href="html/voelker.html#peredhil">Peredhil</a></li>
+					<li><input type="radio" class="noldor" name="wahlVolk"><a href="voelker.html#noldor" target="_blank">Noldor</a></li>
+					<li><input type="radio" class="silvan" name="wahlVolk"><a href="voelker.html#silvan" target="_blank">Silvan</a></li>
+					<li><input type="radio" class="sindar" name="wahlVolk"><a href="voelker.html#sindar" target="_blank">Sindar</a></li>
+					<li><input type="radio" class="peredhil" name="wahlVolk"><a href="voelker.html#peredhil" target="_blank">Peredhil</a></li>
 				</ul>
 				</div>
 			</form>
@@ -93,16 +97,16 @@
 
 			<div class="liste">
 				<ul> 
-					<li><input type="radio" name="wahlBeruf"><a href="html/Berufe.html#animist">Animist</a></li>
-					<li><input type="radio" name="wahlBeruf"><a href="html/Berufe.html#barde">Barde</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#animist" target="_blank">Animist</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#barde" target="_blank">Barde</a></li>
 				</ul>
 				<ul>
-					<li><input type="radio" name="wahlBeruf"><a href="html/Berufe.html#dieb">Dieb</a></li>
-					<li><input type="radio" name="wahlBeruf"><a href="html/Berufe.html#krieger">Krieger </a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#dieb" target="_blank">Dieb</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#krieger" target="_blank">Krieger </a></li>
 				</ul>
 				<ul>
-					<li><input type="radio" name="wahlBeruf"><a href="html/Berufe.html#magier">Magier</a></li>
-					<li><input type="radio" name="wahlBeruf"><a href="html/Berufe.html#waldlaeufer">Waldläufer</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#magier" target="_blank">Magier</a></li>
+					<li><input type="radio" name="wahlBeruf"><a href="Berufe.html#waldlaeufer" target="_blank">Waldläufer</a></li>
 				</ul>
 			</div>
 		</div>
@@ -140,8 +144,8 @@
 			<p>Jetzt können die Werte mit ihren Boni den Eigenschaften nach den eigenen Wünschen zugeordnet werden.</p>
 			<p class="beispiel-box">
 				Beispiel: 
-				Möchte man den klassichen Krieger spielen wollen, der besonders mächtige Angriffe führen kann und dabei auch noch 
-				viele Treffer einstecken kann, so sollte man seine höchsten Werte in die Eigenschaften Stärke und Konstitution stecken.<br>
+				Möchte man den klassichen Krieger spielen, der besonders mächtige Angriffe führen kann und dabei auch noch 
+				viele Treffer einstecken kann, so sollte man seine höchsten Werte in die Eigenschaften <b>Stärke</b> und <b>Konstitution</b> stecken.<br>
 				Für einen "zufälligeren" Charakter kann es sich aber auch anbieten die Werte nach ihrer Wurfreihenfolge 
 				von oben nach unten zu zuweisen.
 			</p>	
