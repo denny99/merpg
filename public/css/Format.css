@@ -34,46 +34,35 @@ header{
 #startseite {
 	justify-self: flex-start;
 	color: white; 
-	float:left;
 	font-size:1.2rem;
 	margin-left:1%;
 	margin-top:0.6%;
-	text-decoration: underline;
 	font-size:2rem;
 	}
 		
 nav {
-	height: 500rem;
-	max-height: 85%;
-	min-width: 13rem;
-	width: 20%;
-	background-color: #5B0400;
-	color: white;
-	border: 1px solid black;
 	position: absolute;
-	padding: 1%;
-	margin-top:1%;
-	margin-left:0.4%;
-	border-color:white;
-	border-width:3px;
-	overflow-x:auto;
-	font-size: 1.5rem;
-	}	
+	height: 50vh;
+	/* max-height: 30%; */
+	/* min-width: 13rem; */
+	width: 15%;
+	color:white;
+	padding: 0.7rem;
+}	
 		
 nav a {
-	color:white;
 	padding: 2% 0;	
 	}
 		
 nav ol{
-		list-style-type: upper-roman;
-		font-size: 1.7rem;	
+	list-style-type: upper-roman;
+	font-size: 1.2rem;	
 }
 
 nav .drop-menu {
 	position: fixed;
 	background-color: #5B0400;
-	padding: 1rem 7rem;
+	padding: 1rem 4rem;
 	border: 1px solid white;
 }
 		
@@ -96,7 +85,7 @@ section {
 	background-color: #ECC396;
 	width: 70%; 
 	height: max-height;
-	margin-left: 28%;
+	margin-left: 20%;
 	margin-top: 2rem;
 	margin-right: 5%;
 	font-family: 'Playfair Display', serif;
@@ -217,8 +206,10 @@ caption {
 	display: flex;
 	justify-content: space-evenly;
 	background-color: #dbb285;
-	padding: 1rem;
-	margin: 1rem 1rem;
+}
+
+.liste-item {
+	flex-basis: 1;
 }
 
 .liste ul {
